@@ -15,21 +15,21 @@
       }
     ],
     "guns": {
-      "grau": [
+      "Grau": [
         "Monolithic Supressor",
         "Tempus 26.4",
         "Commando Foregrip",
         "60 Round",
         "XRK Void II"
       ],
-      "m4": [
+      "M4": [
         "stock m16",
         "ranger foregrip",
         "60 round mag",
         "mono supressor",
         "stippled griptape"
       ],
-      "mp5": [
+      "MP5": [
         "Operator Foregrip",
         "10mm Auto 30-round",
         "Stippled grip",
