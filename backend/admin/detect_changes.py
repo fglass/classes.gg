@@ -2,7 +2,7 @@ import json
 import logging
 import requests
 
-DEFINITIONS_FILE = "../database.json"
+DEFINITIONS_FILE = "../db/database.json"
 NIGHTBOT_CHANNEL_URL = "https://api.nightbot.tv/1/channels/t/"
 NIGHTBOT_COMMANDS_URL = "https://api.nightbot.tv/1/commands"
 

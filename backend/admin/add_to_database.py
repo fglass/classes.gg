@@ -1,6 +1,6 @@
 import json
 
-DEFINITIONS_FILE = "../database.json"
+DEFINITIONS_FILE = "../db/database.json"
 
 NEW_USER = (
     "scump", {
