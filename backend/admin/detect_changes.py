@@ -1,22 +1,21 @@
-import json
 import logging
 import requests
+from backend.db.json_database_engine import JSONDatabaseEngine
+from backend.player import Player
 
-DEFINITIONS_FILE = "../db/database.json"
 NIGHTBOT_CHANNEL_URL = "https://api.nightbot.tv/1/channels/t/"
 NIGHTBOT_COMMANDS_URL = "https://api.nightbot.tv/1/commands"
 
 
 def main():
-    with open(DEFINITIONS_FILE, "r+") as file:
-        database = json.load(file)
-        [query_nightbot(entry) for entry in database.items()]
-        logging.info(f"{len(database)} users checked")
+    db = JSONDatabaseEngine()
+    players = db.select_players()
+    [query_nightbot(player) for player in players]
+    logging.info(f"{len(players)} players checked")
 
 
-def query_nightbot(entry):
-    username, data = entry
-    url = NIGHTBOT_CHANNEL_URL + username
+def query_nightbot(player: Player):
+    url = NIGHTBOT_CHANNEL_URL + player.username
     response = requests.get(url).json()
 
     if response.get("status") == 200:
@@ -26,10 +25,10 @@ def query_nightbot(entry):
         for cmd in query_commands(user_id):
             commands[cmd["name"]] = cmd["message"]
 
-        compare_commands(username, previous=data.get("commands", []), current=commands)
+        compare_commands(player.username, previous=player.commands, current=commands)
 
 
-def query_commands(user_id):
+def query_commands(user_id: str):
     headers = {"nightbot-channel": user_id}
     response = requests.get(NIGHTBOT_COMMANDS_URL, headers=headers).json()
 
@@ -39,12 +38,9 @@ def query_commands(user_id):
     return []
 
 
-def compare_commands(username, previous, current):
-    for entry in previous:
-        cmd = entry["command"]
-        msg = entry["message"]
+def compare_commands(username: str, previous: dict, current: dict):
+    for cmd, msg in previous.items():
         new_msg = current.get(cmd)
-
         if msg != new_msg:
             logging.info(f"[{username}] [{cmd}]: {new_msg}")
 
