@@ -3,25 +3,19 @@ import json
 from backend.db.database_engine import DatabaseEngine
 from backend.player import Player
 
-DEFINITIONS_FILE = "backend/db/database.json"
+JSON_FILE = "backend/db/database.json"
+TEST_JSON_FILE = "backend/db/test/test_database.json"
 
 
 class JSONDatabaseEngine(DatabaseEngine):
 
-    def __init__(self):
+    def __init__(self, test_mode=False):
         self._database = {}
-        with open(DEFINITIONS_FILE, 'r+') as file:
-            self._database = json.load(file)
+        self._file = TEST_JSON_FILE if test_mode else JSON_FILE
+        self._test_mode = test_mode
 
-    def add_player(self, player: Player):
-        self._database[player.username] = player.serialise()
-        self._commit()
-
-    def _commit(self):
-        with open(DEFINITIONS_FILE, 'r+') as file:
-            file.seek(0)
-            json.dump(self._database, file, indent=2)
-            file.truncate()
+        with open(self._file, 'r+') as f:
+            self._database = json.load(f)
 
     def select_player(self, username) -> Player:
         data = self._database.get(username, {})
@@ -32,3 +26,15 @@ class JSONDatabaseEngine(DatabaseEngine):
             Player(username, data.get("weapons", {}), data.get("commands", {}))
             for username, data in self._database.items()
         ]
+
+    def add_player(self, player: Player):
+        self._database[player.username] = player.serialise()
+
+    def _commit(self):
+        if self._test_mode:
+            return
+
+        with open(self._file, 'r+') as file:
+            file.seek(0)
+            json.dump(self._database, file, indent=2)
+            file.truncate()

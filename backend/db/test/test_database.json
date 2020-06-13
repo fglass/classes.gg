@@ -1,0 +1,16 @@
+{
+  "scump": {
+    "weapons": {
+      "Grau": [
+        "Monolithic Supressor",
+        "Tempus 26.4",
+        "Commando Foregrip",
+        "60 Round",
+        "XRK Void II"
+      ]
+    },
+    "commands": {
+      "!grau": "Monolithic Supressor, Tempus 26.4, Commando Foregrip, 60 Round, XRK Void II"
+    }
+  }
+}
