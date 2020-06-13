@@ -16,3 +16,10 @@ def get_player(username):
 def get_players():
     usernames = [player.username for player in db.select_players()]
     return jsonify(usernames)
+
+
+@app.after_request
+def after_request(response):
+    header = response.headers
+    header['Access-Control-Allow-Origin'] = '*'
+    return response

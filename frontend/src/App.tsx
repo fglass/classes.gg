@@ -2,7 +2,7 @@ import React from 'react';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import Footer from "./Footer";
 import Header from "./Header";
-import Landing from "./Landing";
+import LandingPage from "./LandingPage";
 import { blue } from '@material-ui/core/colors';
 import { createMuiTheme, ThemeProvider } from '@material-ui/core/styles';
 
@@ -19,7 +19,7 @@ export default function App() {
             <ThemeProvider theme={darkTheme}>
                 <CssBaseline />
                 <Header />
-                <Landing />
+                <LandingPage />
                 <Footer />
             </ThemeProvider>
         </React.Fragment>
