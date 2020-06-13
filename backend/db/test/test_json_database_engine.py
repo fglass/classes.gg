@@ -1,5 +1,4 @@
 import unittest
-
 from backend.db.json_database_engine import JSONDatabaseEngine
 from backend.player import Player
 

@@ -29,6 +29,7 @@ class JSONDatabaseEngine(DatabaseEngine):
 
     def add_player(self, player: Player):
         self._database[player.username] = player.serialise()
+        self._commit()
 
     def _commit(self):
         if self._test_mode:
