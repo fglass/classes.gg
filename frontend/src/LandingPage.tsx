@@ -7,7 +7,8 @@ import CardMedia from "@material-ui/core/CardMedia";
 import Container from "@material-ui/core/Container";
 import Grid from "@material-ui/core/Grid";
 import Typography from "@material-ui/core/Typography";
-import { makeStyles } from "@material-ui/core/styles";
+import {makeStyles} from "@material-ui/core/styles";
+import {Player} from "./player";
 
 const useStyles = makeStyles(theme => ({
     cardGrid: {
@@ -32,7 +33,7 @@ interface IProps {
 }
 
 interface IState {
-    players: Array<String>
+    players: Array<Player>
 }
 
 class LandingPage extends React.Component<IProps, IState> {
@@ -43,11 +44,14 @@ class LandingPage extends React.Component<IProps, IState> {
         }
     }
 
-    queryPlayers() {
-        fetch("http://localhost:5000/players")
-        .then(res => res.json())
-        .then(res => this.setState({ players: res }))
-        .catch(err => err);
+    async http<T>(request: string): Promise<T> {
+        const response = await fetch(request);
+        return await response.json();
+    }
+
+    async queryPlayers() {
+        const players = await this.http<Array<Player>>("http://localhost:5000/players")
+        this.setState({players})
     }
 
     componentDidMount() {
@@ -69,10 +73,10 @@ class LandingPage extends React.Component<IProps, IState> {
                                 />
                                 <CardContent className={classes.cardContent}>
                                     <Typography gutterBottom variant="h5" component="h2">
-                                        {player}
+                                        {player.username}
                                     </Typography>
                                     <Typography>
-                                        This is {player}'s loadout
+                                        {Object.keys(player.weapons).join(", ")}
                                     </Typography>
                                 </CardContent>
                                 <CardActions>

@@ -2,7 +2,7 @@ from backend.db.json_database_engine import JSONDatabaseEngine
 from backend.player import Player
 
 NEW_PLAYER = Player(
-    username="georgina",
+    username="scump",
     weapons={
         "Grau": ["Monolithic Supressor", "Tempus 26.4", "Commando Foregrip", "60 Round", "XRK Void II"],
         "M4": ["stock m16", "ranger foregrip", "60 round mag", "mono supressor", "stippled griptape"],

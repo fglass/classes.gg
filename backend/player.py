@@ -6,6 +6,7 @@ class Player:
 
     def serialise(self) -> dict:
         return {
+            "username": self.username,
             "weapons": self.weapons,
             "commands": self.commands
         }

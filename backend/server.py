@@ -9,13 +9,13 @@ db = JSONDatabaseEngine()
 @app.route('/player/<username>')
 def get_player(username):
     player = db.select_player(username=escape(username))
-    return jsonify(username=player.username, weapons=player.weapons, commands=player.commands)
+    return jsonify(player.serialise())
 
 
 @app.route('/players')
 def get_players():
-    usernames = [player.username for player in db.select_players()]
-    return jsonify(usernames)
+    players = [player.serialise() for player in db.select_players()]
+    return jsonify(players)
 
 
 @app.after_request
