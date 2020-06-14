@@ -17,15 +17,12 @@ class JSONDatabaseEngine(DatabaseEngine):
         with open(self._file, 'r+') as f:
             self._database = json.load(f)
 
-    def select_player(self, username) -> Player:
+    def select_player(self, username: str) -> Player:
         data = self._database.get(username, {})
-        return Player(username, data.get("weapons", {}), data.get("commands", {}))
+        return _deserialise_player(data)
 
     def select_players(self) -> list:
-        return [
-            Player(username, data.get("weapons", {}), data.get("commands", {}))
-            for username, data in self._database.items()
-        ]
+        return [_deserialise_player(data) for _, data in self._database.items()]
 
     def add_player(self, player: Player):
         self._database[player.username] = player.serialise()
@@ -39,3 +36,9 @@ class JSONDatabaseEngine(DatabaseEngine):
             file.seek(0)
             json.dump(self._database, file, indent=2)
             file.truncate()
+
+
+def _deserialise_player(data: dict) -> Player:
+    return Player(
+        data.get("username", "Unknown"), data.get("avatar", ""), data.get("weapons", {}), data.get("commands", {})
+    )

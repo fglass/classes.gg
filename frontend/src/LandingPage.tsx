@@ -44,6 +44,11 @@ class LandingPage extends React.Component<IProps, IState> {
         }
     }
 
+    capitalise = (s: any) => {
+        if (typeof s !== 'string') return ''
+        return s.charAt(0).toUpperCase() + s.slice(1)
+    }
+
     async http<T>(request: string): Promise<T> {
         const response = await fetch(request);
         return await response.json();
@@ -68,12 +73,12 @@ class LandingPage extends React.Component<IProps, IState> {
                             <Card className={classes.card}>
                                 <CardMedia
                                     className={classes.cardMedia}
-                                    image="https://static-cdn.jtvnw.net/jtv_user_pictures/9ea9d6d3-cc64-42e2-a66f-f74624ff81be-profile_image-300x300.png"
-                                    title="Image title"
+                                    image={player.avatar}
+                                    title="Avatar"
                                 />
                                 <CardContent className={classes.cardContent}>
                                     <Typography gutterBottom variant="h5" component="h2">
-                                        {player.username}
+                                        {this.capitalise(player.username)}
                                     </Typography>
                                     <Typography>
                                         {Object.keys(player.weapons).join(", ")}
