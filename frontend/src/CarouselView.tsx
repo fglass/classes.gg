@@ -9,6 +9,7 @@ import Grid from "@material-ui/core/Grid";
 import Typography from "@material-ui/core/Typography";
 import {makeStyles} from "@material-ui/core/styles";
 import {Player} from "./player";
+import {Link} from "react-router-dom";
 
 const useStyles = makeStyles(theme => ({
     cardGrid: {
@@ -36,7 +37,7 @@ interface IState {
     players: Array<Player>
 }
 
-class LandingPage extends React.Component<IProps, IState> {
+class CarouselView extends React.Component<IProps, IState> {
     constructor(props: IProps) {
         super(props);
         this.state = {
@@ -74,7 +75,7 @@ class LandingPage extends React.Component<IProps, IState> {
                                 <CardMedia
                                     className={classes.cardMedia}
                                     image={player.avatar}
-                                    title="Avatar"
+                                    title=""
                                 />
                                 <CardContent className={classes.cardContent}>
                                     <Typography gutterBottom variant="h5" component="h2">
@@ -85,9 +86,11 @@ class LandingPage extends React.Component<IProps, IState> {
                                     </Typography>
                                 </CardContent>
                                 <CardActions>
-                                    <Button size="small" variant="contained" color="primary">
-                                        View
-                                    </Button>
+                                    <Link to={`/player/${player.username}`}>
+                                        <Button size="small" variant="contained" color="primary">
+                                            View
+                                        </Button>
+                                    </Link>
                                 </CardActions>
                             </Card>
                         </Grid>
@@ -101,6 +104,6 @@ class LandingPage extends React.Component<IProps, IState> {
 export default () => {
     const classes = useStyles()
     return (
-        <LandingPage classes={classes} />
+        <CarouselView classes={classes} />
     )
 }
