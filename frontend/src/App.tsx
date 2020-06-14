@@ -23,7 +23,7 @@ export default function App() {
                     <CssBaseline />
                     <Header />
                     <Switch>
-                        <Route path="/player">
+                        <Route path="/player/:username">
                             <PlayerView />
                         </Route>
                         <Route path="/">
