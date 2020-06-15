@@ -6,10 +6,13 @@ import CardContent from "@material-ui/core/CardContent";
 import CardMedia from "@material-ui/core/CardMedia";
 import Container from "@material-ui/core/Container";
 import Grid from "@material-ui/core/Grid";
+import Slider from "react-slick";
 import Typography from "@material-ui/core/Typography";
 import {makeStyles} from "@material-ui/core/styles";
 import {Player} from "./player";
 import {Link} from "react-router-dom";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 const useStyles = makeStyles(theme => ({
     cardGrid: {
@@ -66,9 +69,18 @@ class CarouselView extends React.Component<IProps, IState> {
 
     render() {
         const classes = this.props.classes;
+        const settings = {
+            dots: true,
+            infinite: true,
+            slidesToShow: 2,
+            autoplay: true,
+            autoplaySpeed: 100,
+            speed: 2000,
+        };
         return (
-            <Container className={classes.cardGrid} maxWidth="md">
-                <Grid container spacing={4}>
+            <Slider className={classes.cardGrid} {...settings}>
+            {/*<Container className={classes.cardGrid} maxWidth="md">*/}
+            {/*    <Grid container spacing={4}>*/}
                     {this.state.players.map((player, index) => (
                         <Grid item key={index} xs={12} sm={6} md={4}>
                             <Card className={classes.card}>
@@ -81,9 +93,6 @@ class CarouselView extends React.Component<IProps, IState> {
                                     <Typography gutterBottom variant="h5" component="h2">
                                         {this.capitalise(player.username)}
                                     </Typography>
-                                    <Typography>
-                                        {Object.keys(player.weapons).join(", ")}
-                                    </Typography>
                                 </CardContent>
                                 <CardActions>
                                     <Link to={`/player/${player.username}`}>
@@ -95,8 +104,9 @@ class CarouselView extends React.Component<IProps, IState> {
                             </Card>
                         </Grid>
                     ))}
-                </Grid>
-            </Container>
+                {/*</Grid>*/}
+            {/*</Container>*/}
+            </Slider>
         )
     }
 }
