@@ -55,7 +55,5 @@ class PlayerView extends React.Component<IProps, IState> {
 
 export default () => {
     const { username } = useParams();
-    return (
-        <PlayerView username={username} />
-    )
+    return <PlayerView username={username} />
 }

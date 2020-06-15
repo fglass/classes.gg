@@ -2,8 +2,8 @@ from backend.db.json_database_engine import JSONDatabaseEngine
 from backend.player import Player
 
 NEW_PLAYER = Player(
-    username="spratt",
-    avatar="https://static-cdn.jtvnw.net/jtv_user_pictures/68e25fb7-62f1-4192-b637-72ead12d140a-profile_image-300x300.png",
+    username="JukeyzL",
+    avatar="https://static-cdn.jtvnw.net/jtv_user_pictures/9a0369b8-d6e3-4ce3-a3fe-cbbf35cfb068-profile_image-300x300.png",
     weapons={},
     commands={}
 )

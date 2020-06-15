@@ -4,22 +4,24 @@ import Card from "@material-ui/core/Card";
 import CardActions from "@material-ui/core/CardActions";
 import CardContent from "@material-ui/core/CardContent";
 import CardMedia from "@material-ui/core/CardMedia";
-import Container from "@material-ui/core/Container";
-import Grid from "@material-ui/core/Grid";
 import Slider from "react-slick";
 import Typography from "@material-ui/core/Typography";
-import {makeStyles} from "@material-ui/core/styles";
-import {Player} from "./player";
-import {Link} from "react-router-dom";
+import { makeStyles } from "@material-ui/core/styles";
+import { Player } from "./player";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+
+// TODO: https://mui-treasury.com/components/card/
 
 const useStyles = makeStyles(theme => ({
     cardGrid: {
         paddingTop: theme.spacing(8),
+        paddingLeft: theme.spacing(8),
+        paddingRight: theme.spacing(8),
         paddingBottom: theme.spacing(8),
     },
     card: {
+        maxWidth: 260,
         height: '100%',
         display: 'flex',
         flexDirection: 'column',
@@ -70,42 +72,33 @@ class CarouselView extends React.Component<IProps, IState> {
     render() {
         const classes = this.props.classes;
         const settings = {
-            dots: true,
             infinite: true,
-            slidesToShow: 2,
+            slidesToShow: 5,
             autoplay: true,
             autoplaySpeed: 100,
             speed: 2000,
         };
         return (
             <Slider className={classes.cardGrid} {...settings}>
-            {/*<Container className={classes.cardGrid} maxWidth="md">*/}
-            {/*    <Grid container spacing={4}>*/}
-                    {this.state.players.map((player, index) => (
-                        <Grid item key={index} xs={12} sm={6} md={4}>
-                            <Card className={classes.card}>
-                                <CardMedia
-                                    className={classes.cardMedia}
-                                    image={player.avatar}
-                                    title=""
-                                />
-                                <CardContent className={classes.cardContent}>
-                                    <Typography gutterBottom variant="h5" component="h2">
-                                        {this.capitalise(player.username)}
-                                    </Typography>
-                                </CardContent>
-                                <CardActions>
-                                    <Link to={`/player/${player.username}`}>
-                                        <Button size="small" variant="contained" color="primary">
-                                            View
-                                        </Button>
-                                    </Link>
-                                </CardActions>
-                            </Card>
-                        </Grid>
-                    ))}
-                {/*</Grid>*/}
-            {/*</Container>*/}
+                {this.state.players.map((player, index) => (
+                    <Card className={classes.card}>
+                        <CardMedia
+                            className={classes.cardMedia}
+                            image={player.avatar}
+                            title=""
+                        />
+                        <CardContent className={classes.cardContent}>
+                            <Typography gutterBottom variant="h5" component="h2">
+                                {this.capitalise(player.username)}
+                            </Typography>
+                        </CardContent>
+                        <CardActions>
+                            <Button href={`/player/${player.username}`} size="small" variant="contained" color="primary">
+                                View
+                            </Button>
+                        </CardActions>
+                    </Card>
+                ))}
             </Slider>
         )
     }
@@ -113,7 +106,5 @@ class CarouselView extends React.Component<IProps, IState> {
 
 export default () => {
     const classes = useStyles()
-    return (
-        <CarouselView classes={classes} />
-    )
+    return <CarouselView classes={classes} />
 }
