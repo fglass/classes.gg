@@ -17,9 +17,9 @@ interface IState {
 const useStyles = makeStyles(theme => ({
     container: {
         paddingTop: theme.spacing(8),
-        paddingRight: theme.spacing(8),
-        paddingLeft: theme.spacing(8),
         paddingBottom: theme.spacing(8),
+        marginRight: theme.spacing(8),
+        marginLeft: theme.spacing(8),
     },
 }));
 

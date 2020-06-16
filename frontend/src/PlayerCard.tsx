@@ -13,22 +13,20 @@ interface IProps {
 
 const useStyles = makeStyles(() => ({
     actionArea: {
+        maxWidth: 265,
         borderRadius: 16,
         transition: '0.2s',
         '&:hover': {
-          transform: 'scale(1.1)',
+            transform: 'scale(0.9)',
+        },
+        "&:hover $focusHighlight": {
+            opacity: 0
         },
     },
+    focusHighlight: { },
     card: {
-        maxWidth: 265,
         borderRadius: 16,
         boxShadow: 'none',
-        // '&:hover': {
-        //   boxShadow: `0 6px 12px 0 ${Color("#203f52")
-        //     .rotate(-12)
-        //     .darken(0.2)
-        //     .fade(0.5)}`,
-        // },
     },
     content: {
         backgroundColor: "#2196f3",
@@ -36,6 +34,7 @@ const useStyles = makeStyles(() => ({
     },
     title: {
         fontSize: '1.75rem',
+        fontWeight: 450,
         color: '#fff',
         textTransform: 'uppercase',
     },
@@ -47,7 +46,13 @@ const useStyles = makeStyles(() => ({
 const PlayerCard = ({ avatar, username }: IProps) => {
     const classes = useStyles()
     return (
-        <CardActionArea className={classes.actionArea} href={`/player/${username}`}>
+        <CardActionArea
+            classes={{
+                root: classes.actionArea,
+                focusHighlight: classes.focusHighlight
+            }}
+            href={`/player/${username}`}
+        >
             <Card className={classes.card}>
                 <CardMedia
                     className={classes.media}
