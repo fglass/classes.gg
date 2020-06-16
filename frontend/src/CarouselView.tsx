@@ -1,38 +1,10 @@
 import React from "react";
-import Button from "@material-ui/core/Button";
-import Card from "@material-ui/core/Card";
-import CardActions from "@material-ui/core/CardActions";
-import CardContent from "@material-ui/core/CardContent";
-import CardMedia from "@material-ui/core/CardMedia";
 import Slider from "react-slick";
-import Typography from "@material-ui/core/Typography";
+import PlayerCard from "./PlayerCard";
 import { makeStyles } from "@material-ui/core/styles";
 import { Player } from "./player";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-
-// TODO: https://mui-treasury.com/components/card/
-
-const useStyles = makeStyles(theme => ({
-    cardGrid: {
-        paddingTop: theme.spacing(8),
-        paddingLeft: theme.spacing(8),
-        paddingRight: theme.spacing(8),
-        paddingBottom: theme.spacing(8),
-    },
-    card: {
-        maxWidth: 260,
-        height: '100%',
-        display: 'flex',
-        flexDirection: 'column',
-    },
-    cardMedia: {
-        paddingTop: '56.25%', // 16:9
-    },
-    cardContent: {
-        flexGrow: 1,
-    },
-}));
 
 interface IProps {
     classes: any
@@ -42,17 +14,21 @@ interface IState {
     players: Array<Player>
 }
 
+const useStyles = makeStyles(theme => ({
+    container: {
+        paddingTop: theme.spacing(8),
+        paddingRight: theme.spacing(8),
+        paddingLeft: theme.spacing(8),
+        paddingBottom: theme.spacing(8),
+    },
+}));
+
 class CarouselView extends React.Component<IProps, IState> {
     constructor(props: IProps) {
         super(props);
         this.state = {
             players: []
         }
-    }
-
-    capitalise = (s: any) => {
-        if (typeof s !== 'string') return ''
-        return s.charAt(0).toUpperCase() + s.slice(1)
     }
 
     async http<T>(request: string): Promise<T> {
@@ -79,25 +55,12 @@ class CarouselView extends React.Component<IProps, IState> {
             speed: 2000,
         };
         return (
-            <Slider className={classes.cardGrid} {...settings}>
-                {this.state.players.map((player, index) => (
-                    <Card className={classes.card}>
-                        <CardMedia
-                            className={classes.cardMedia}
-                            image={player.avatar}
-                            title=""
-                        />
-                        <CardContent className={classes.cardContent}>
-                            <Typography gutterBottom variant="h5" component="h2">
-                                {this.capitalise(player.username)}
-                            </Typography>
-                        </CardContent>
-                        <CardActions>
-                            <Button href={`/player/${player.username}`} size="small" variant="contained" color="primary">
-                                View
-                            </Button>
-                        </CardActions>
-                    </Card>
+            <Slider className={classes.container} {...settings}>
+                {this.state.players.map((player) => (
+                    <PlayerCard
+                        avatar={player.avatar}
+                        username={player.username}
+                    />
                 ))}
             </Slider>
         )

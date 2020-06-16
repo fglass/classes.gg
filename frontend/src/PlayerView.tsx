@@ -18,7 +18,7 @@ class PlayerView extends React.Component<IProps, IState> {
         }
     }
 
-    async http<T>(request: string): Promise<T> {
+    async http<T>(request: string): Promise<T> { // TODO: reuse
         const response = await fetch(request);
         return await response.json();
     }
