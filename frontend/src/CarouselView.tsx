@@ -1,5 +1,6 @@
 import React from "react";
 import Slider from "react-slick";
+import Api from "./api"
 import PlayerCard from "./PlayerCard";
 import { makeStyles } from "@material-ui/core/styles";
 import { Player } from "./player";
@@ -31,18 +32,12 @@ class CarouselView extends React.Component<IProps, IState> {
         }
     }
 
-    async http<T>(request: string): Promise<T> {
-        const response = await fetch(request);
-        return await response.json();
-    }
-
-    async queryPlayers() {
-        const players = await this.http<Array<Player>>("http://localhost:5000/players")
-        this.setState({players})
+    async getPlayers() {
+        this.setState({players: await Api.getPlayers()})
     }
 
     componentDidMount() {
-        this.queryPlayers()
+        this.getPlayers().catch(err => console.log(err))
     }
 
     render() {

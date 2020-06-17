@@ -1,4 +1,5 @@
 import React from "react";
+import Api from "./api";
 import { useParams } from "react-router";
 import { Player } from "./player";
 
@@ -18,18 +19,12 @@ class PlayerView extends React.Component<IProps, IState> {
         }
     }
 
-    async http<T>(request: string): Promise<T> { // TODO: reuse
-        const response = await fetch(request);
-        return await response.json();
-    }
-
-    async queryPlayer() {
-        const player = await this.http<Player>(`http://localhost:5000/player/${this.props.username}`)
-        this.setState({player})
+    async getPlayer() {
+        this.setState({player: await Api.getPlayer(this.props.username)})
     }
 
     componentDidMount() {
-        this.queryPlayer()
+        this.getPlayer().catch(err => console.log(err))
     }
 
     render() {
