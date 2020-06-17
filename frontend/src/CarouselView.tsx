@@ -19,8 +19,6 @@ const useStyles = makeStyles(theme => ({
     container: {
         paddingTop: theme.spacing(8),
         paddingBottom: theme.spacing(8),
-        marginRight: theme.spacing(8),
-        marginLeft: theme.spacing(8),
     },
 }));
 
@@ -43,8 +41,9 @@ class CarouselView extends React.Component<IProps, IState> {
     render() {
         const classes = this.props.classes;
         const settings = {
-            infinite: true,
             slidesToShow: 5,
+            arrows: false,
+            infinite: true,
             autoplay: true,
             autoplaySpeed: 100,
             speed: 2000,

@@ -11,9 +11,10 @@ interface IProps {
     username: string
 }
 
-const useStyles = makeStyles(() => ({
+const useStyles = makeStyles((theme) => ({
     actionArea: {
-        maxWidth: 265,
+        marginLeft: theme.spacing(4),
+        paddingRight: theme.spacing(8),
         borderRadius: 16,
         transition: '0.2s',
         '&:hover': {
@@ -33,8 +34,8 @@ const useStyles = makeStyles(() => ({
         padding: '1rem 1.5rem 1.5rem',
     },
     title: {
-        fontSize: '1.75rem',
-        fontWeight: 450,
+        fontFamily: 'Bebas Neue',
+        fontSize: '2.25rem',
         color: '#fff',
         textTransform: 'uppercase',
     },
