@@ -1,21 +1,42 @@
 import React from "react";
 import Api from "./api";
+import InputLabel from '@material-ui/core/InputLabel';
+import MenuItem from '@material-ui/core/MenuItem';
+import FormControl from '@material-ui/core/FormControl';
+import Select from '@material-ui/core/Select';
+import { makeStyles } from "@material-ui/core/styles";
 import { useParams } from "react-router";
 import { Player } from "./player";
 
+
 interface IProps {
     username: string
+    classes: any
 }
 
 interface IState {
     player: Player | null
+    selectedWeapon: string
 }
+
+const useStyles = makeStyles(theme => ({
+    container: {
+        paddingTop: theme.spacing(8),
+        paddingBottom: theme.spacing(8),
+        marginLeft: theme.spacing(8),
+    },
+    formControl: {
+        marginLeft: theme.spacing(4),
+        minWidth: 120,
+    },
+}));
 
 class PlayerView extends React.Component<IProps, IState> {
     constructor(props: IProps) {
         super(props);
         this.state = {
-            player: null
+            player: null,
+            selectedWeapon: ""
         }
     }
 
@@ -27,6 +48,10 @@ class PlayerView extends React.Component<IProps, IState> {
         this.getPlayer().catch(err => console.log(err))
     }
 
+    onSelectWeapon = (event: any) => {
+        this.setState({selectedWeapon: event.target.value})
+    };
+
     render() {
         const player = this.state.player
 
@@ -34,15 +59,29 @@ class PlayerView extends React.Component<IProps, IState> {
             return null
         }
 
+        const classes = this.props.classes
+
         return (
-            <div>
+            <div className={classes.container}>
                 <h2>{player.username}</h2>
-                {Object.entries(player.weapons).map((weapon) => {
-                    const [name, attachments] = weapon;
-                    return (
-                        <h3>{name}: {attachments.join(", ")}</h3>
-                    )
-                })}
+                <img src={player.avatar} alt={"Avatar"}/>
+
+                <FormControl variant="outlined" className={classes.formControl}>
+                    <InputLabel id="loadout-select-label">Loadout</InputLabel>
+                    <Select
+                        id="loadout-select"
+                        labelId="loadout-select-label"
+                        label="Loadout"
+                        value={this.state.selectedWeapon}
+                        onChange={this.onSelectWeapon}
+                    >
+                        {
+                            Object.keys(player.weapons).map((weapon) =>
+                                <MenuItem key={weapon} value={weapon}>{weapon}</MenuItem>
+                            )
+                        }
+                    </Select>
+                  </FormControl>
             </div>
         );
     }
@@ -50,5 +89,6 @@ class PlayerView extends React.Component<IProps, IState> {
 
 export default () => {
     const { username } = useParams();
-    return <PlayerView username={username} />
+    const classes = useStyles()
+    return <PlayerView username={username} classes={classes}/>
 }
