@@ -5,6 +5,7 @@ import MenuItem from '@material-ui/core/MenuItem';
 import FormControl from '@material-ui/core/FormControl';
 import Select from '@material-ui/core/Select';
 import { makeStyles } from "@material-ui/core/styles";
+import { List, ListItem, ListItemText } from "@material-ui/core";
 import { useParams } from "react-router";
 import { Player } from "./player";
 
@@ -21,13 +22,17 @@ interface IState {
 
 const useStyles = makeStyles(theme => ({
     container: {
-        paddingTop: theme.spacing(8),
-        paddingBottom: theme.spacing(8),
         marginLeft: theme.spacing(8),
     },
     formControl: {
         marginLeft: theme.spacing(4),
         minWidth: 120,
+    },
+    attachment: {
+        borderRadius: 5,
+        backgroundColor: theme.palette.background.paper,
+        marginBottom: theme.spacing(4),
+        maxWidth: '50%',
     },
 }));
 
@@ -60,10 +65,12 @@ class PlayerView extends React.Component<IProps, IState> {
         }
 
         const classes = this.props.classes
+        const weapon = this.state.selectedWeapon
+        const attachments = weapon !== "" ? Object.values(player.weapons[this.state.selectedWeapon]) : ['', '', '', '', '']
 
         return (
             <div className={classes.container}>
-                <h2>{player.username}</h2>
+                <h1>{player.username}</h1>
                 <img src={player.avatar} alt={"Avatar"}/>
 
                 <FormControl variant="outlined" className={classes.formControl}>
@@ -72,16 +79,22 @@ class PlayerView extends React.Component<IProps, IState> {
                         id="loadout-select"
                         labelId="loadout-select-label"
                         label="Loadout"
-                        value={this.state.selectedWeapon}
+                        value={weapon}
                         onChange={this.onSelectWeapon}
                     >
-                        {
-                            Object.keys(player.weapons).map((weapon) =>
-                                <MenuItem key={weapon} value={weapon}>{weapon}</MenuItem>
-                            )
-                        }
+                        {Object.keys(player.weapons).map((weapon) =>
+                            <MenuItem key={weapon} value={weapon}>{weapon}</MenuItem>
+                        )}
                     </Select>
                   </FormControl>
+
+                <List>
+                    {attachments.map((attachment, index) =>
+                        <ListItem key={index} className={classes.attachment}>
+                          <ListItemText primary={attachment} />
+                        </ListItem>
+                    )}
+                 </List>
             </div>
         );
     }
