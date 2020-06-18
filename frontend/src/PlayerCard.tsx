@@ -36,8 +36,6 @@ const useStyles = makeStyles((theme) => ({
     title: {
         fontFamily: 'Bebas Neue',
         fontSize: '2.25rem',
-        color: '#fff',
-        textTransform: 'uppercase',
     },
     media: {
         paddingTop: '70%',

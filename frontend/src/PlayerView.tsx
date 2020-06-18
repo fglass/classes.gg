@@ -1,14 +1,17 @@
 import React from "react";
 import Api from "./api";
-import InputLabel from '@material-ui/core/InputLabel';
-import MenuItem from '@material-ui/core/MenuItem';
 import FormControl from '@material-ui/core/FormControl';
+import Grid from '@material-ui/core/Grid';
+import InputLabel from '@material-ui/core/InputLabel';
+import List from '@material-ui/core/List';
+import ListItem from '@material-ui/core/ListItem';
+import ListItemText from '@material-ui/core/ListItemText';
+import MenuItem from '@material-ui/core/MenuItem';
 import Select from '@material-ui/core/Select';
+import Typography from '@material-ui/core/Typography';
 import { makeStyles } from "@material-ui/core/styles";
-import { List, ListItem, ListItemText } from "@material-ui/core";
 import { useParams } from "react-router";
 import { Player } from "./player";
-
 
 interface IProps {
     username: string
@@ -22,17 +25,36 @@ interface IState {
 
 const useStyles = makeStyles(theme => ({
     container: {
+        marginTop: theme.spacing(8),
         marginLeft: theme.spacing(8),
+        marginBottom: theme.spacing(8),
+    },
+    title: {
+        paddingTop: 8,
+        fontFamily: 'Bebas Neue',
+        fontSize: '2.25rem',
+    },
+    firstRow: {
+        height: 75,
+    },
+    secondRow: {
+        height: 300,
+    },
+    avatar: {
+        borderRadius: '2%',
     },
     formControl: {
-        marginLeft: theme.spacing(4),
-        minWidth: 120,
+        minWidth: '20%',
+    },
+    list: {
+        padding: 0,
     },
     attachment: {
         borderRadius: 5,
         backgroundColor: theme.palette.background.paper,
-        marginBottom: theme.spacing(4),
-        maxWidth: '50%',
+        marginBottom: theme.spacing(1.9),
+        maxWidth: '60%',
+        maxHeight: 50,
     },
 }));
 
@@ -46,7 +68,11 @@ class PlayerView extends React.Component<IProps, IState> {
     }
 
     async getPlayer() {
-        this.setState({player: await Api.getPlayer(this.props.username)})
+        const player = await Api.getPlayer(this.props.username)
+        this.setState({
+            player,
+            selectedWeapon: Object.keys(player.weapons)[0]
+        })
     }
 
     componentDidMount() {
@@ -66,35 +92,51 @@ class PlayerView extends React.Component<IProps, IState> {
 
         const classes = this.props.classes
         const weapon = this.state.selectedWeapon
-        const attachments = weapon !== "" ? Object.values(player.weapons[this.state.selectedWeapon]) : ['', '', '', '', '']
+        const attachments = Object.values(player.weapons[this.state.selectedWeapon])
 
         return (
             <div className={classes.container}>
-                <h1>{player.username}</h1>
-                <img src={player.avatar} alt={"Avatar"}/>
+                <Grid container spacing={3}>
+                    <Grid item xs={12} md={3} container direction="column">
+                        <Grid item className={classes.firstRow}>
+                            <Typography className={classes.title} variant="h4">
+                                {player.username}
+                            </Typography>
+                        </Grid>
+                        <Grid item className={classes.secondRow}>
+                            <img className={classes.avatar} src={player.avatar} alt={"Avatar"} />
+                        </Grid>
+                    </Grid>
 
-                <FormControl variant="outlined" className={classes.formControl}>
-                    <InputLabel id="loadout-select-label">Loadout</InputLabel>
-                    <Select
-                        id="loadout-select"
-                        labelId="loadout-select-label"
-                        label="Loadout"
-                        value={weapon}
-                        onChange={this.onSelectWeapon}
-                    >
-                        {Object.keys(player.weapons).map((weapon) =>
-                            <MenuItem key={weapon} value={weapon}>{weapon}</MenuItem>
-                        )}
-                    </Select>
-                  </FormControl>
+                    <Grid item xs={12} md={9} container direction="column">
+                        <Grid item className={classes.firstRow}>
+                            <FormControl variant="outlined" className={classes.formControl}>
+                                <InputLabel id="loadout-select-label">Loadout</InputLabel>
+                                <Select
+                                    id="loadout-select"
+                                    labelId="loadout-select-label"
+                                    label="Loadout"
+                                    value={weapon}
+                                    onChange={this.onSelectWeapon}
+                                >
+                                    {Object.keys(player.weapons).map((weapon) =>
+                                        <MenuItem key={weapon} value={weapon}>{weapon}</MenuItem>
+                                    )}
+                                </Select>
+                            </FormControl>
+                        </Grid>
+                        <Grid item className={classes.secondRow}>
+                            <List classes={{ root: classes.list }}>
+                                {attachments.map((attachment, index) =>
+                                    <ListItem key={index} className={classes.attachment}>
+                                        <ListItemText primary={attachment} />
+                                    </ListItem>
+                                )}
+                            </List>
+                        </Grid>
+                     </Grid>
 
-                <List>
-                    {attachments.map((attachment, index) =>
-                        <ListItem key={index} className={classes.attachment}>
-                          <ListItemText primary={attachment} />
-                        </ListItem>
-                    )}
-                 </List>
+                </Grid>
             </div>
         );
     }
@@ -103,5 +145,5 @@ class PlayerView extends React.Component<IProps, IState> {
 export default () => {
     const { username } = useParams();
     const classes = useStyles()
-    return <PlayerView username={username} classes={classes}/>
+    return <PlayerView username={username} classes={classes} />
 }
