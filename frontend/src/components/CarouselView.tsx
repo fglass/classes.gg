@@ -1,9 +1,9 @@
 import React from "react";
 import Slider from "react-slick";
-import Api from "./api"
+import Api from "../domain/api"
 import PlayerCard from "./PlayerCard";
 import { makeStyles } from "@material-ui/core/styles";
-import { Player } from "./player";
+import { Player } from "../domain/player";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 

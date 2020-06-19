@@ -1,5 +1,5 @@
 import React from "react";
-import Api from "./api";
+import Api from "../domain/api";
 import FormControl from '@material-ui/core/FormControl';
 import Grid from '@material-ui/core/Grid';
 import InputLabel from '@material-ui/core/InputLabel';
@@ -11,7 +11,7 @@ import Select from '@material-ui/core/Select';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from "@material-ui/core/styles";
 import { useParams } from "react-router";
-import { Player } from "./player";
+import { Player } from "../domain/player";
 
 interface IProps {
     username: string
