@@ -40,5 +40,5 @@ class JSONDatabaseEngine(DatabaseEngine):
 
 def _deserialise_player(data: dict) -> Player:
     return Player(
-        data.get("username", "Unknown"), data.get("avatar", ""), data.get("weapons", {}), data.get("commands", {})
+        data.get("username", "Unknown"), data.get("avatar", ""), data.get("weapons", {"?": []}), data.get("commands", {})
     )

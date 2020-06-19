@@ -1,6 +1,5 @@
 import React from "react";
 import Slider from "react-slick";
-import Api from "../domain/api"
 import PlayerCard from "./PlayerCard";
 import { makeStyles } from "@material-ui/core/styles";
 import { Player } from "../domain/player";
@@ -9,10 +8,8 @@ import "slick-carousel/slick/slick-theme.css";
 
 interface IProps {
     classes: any
-}
-
-interface IState {
     players: Array<Player>
+    selectPlayer: (username: string) => void
 }
 
 const useStyles = makeStyles(theme => ({
@@ -22,21 +19,7 @@ const useStyles = makeStyles(theme => ({
     },
 }));
 
-class CarouselView extends React.Component<IProps, IState> {
-    constructor(props: IProps) {
-        super(props);
-        this.state = {
-            players: []
-        }
-    }
-
-    async getPlayers() {
-        this.setState({players: await Api.getPlayers()})
-    }
-
-    componentDidMount() {
-        this.getPlayers().catch(err => console.log(err))
-    }
+class CarouselView extends React.Component<IProps> {
 
     render() {
         const classes = this.props.classes;
@@ -50,10 +33,12 @@ class CarouselView extends React.Component<IProps, IState> {
         };
         return (
             <Slider className={classes.container} {...settings}>
-                {this.state.players.map((player) => (
+                {this.props.players.map((player) => (
                     <PlayerCard
-                        avatar={player.avatar}
+                        key={player.username}
                         username={player.username}
+                        avatar={player.avatar}
+                        selectPlayer={this.props.selectPlayer}
                     />
                 ))}
             </Slider>
@@ -61,7 +46,11 @@ class CarouselView extends React.Component<IProps, IState> {
     }
 }
 
-export default () => {
+export default (props: any) => {
     const classes = useStyles()
-    return <CarouselView classes={classes} />
+    return <CarouselView
+        classes={classes}
+        players={props.players}
+        selectPlayer={props.selectPlayer}
+    />
 }

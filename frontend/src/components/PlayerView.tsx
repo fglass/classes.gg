@@ -10,7 +10,6 @@ import MenuItem from '@material-ui/core/MenuItem';
 import Select from '@material-ui/core/Select';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from "@material-ui/core/styles";
-import { useParams } from "react-router";
 import { Player } from "../domain/player";
 
 interface IProps {
@@ -25,7 +24,7 @@ interface IState {
 
 const useStyles = makeStyles(theme => ({
     container: {
-        marginTop: theme.spacing(8),
+        marginTop: theme.spacing(12),
         marginLeft: theme.spacing(8),
         marginBottom: theme.spacing(8),
     },
@@ -77,6 +76,12 @@ class PlayerView extends React.Component<IProps, IState> {
 
     componentDidMount() {
         this.getPlayer().catch(err => console.log(err))
+    }
+
+    componentDidUpdate(prevProps: Readonly<IProps>, prevState: Readonly<IState>, snapshot?: any) {
+        if (this.props.username !== prevProps.username) {
+            this.getPlayer().catch(err => console.log(err))
+        }
     }
 
     onSelectWeapon = (event: any) => {
@@ -142,8 +147,7 @@ class PlayerView extends React.Component<IProps, IState> {
     }
 }
 
-export default () => {
-    const { username } = useParams();
+export default (props: any) => {
     const classes = useStyles()
-    return <PlayerView username={username} classes={classes} />
+    return <PlayerView username={props.username} classes={classes} />
 }

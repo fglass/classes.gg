@@ -7,8 +7,9 @@ import Typography from "@material-ui/core/Typography";
 import { makeStyles } from "@material-ui/core/styles";
 
 interface IProps {
+    username: string,
     avatar: string,
-    username: string
+    selectPlayer: (username: string) => void,
 }
 
 const useStyles = makeStyles((theme) => ({
@@ -42,7 +43,7 @@ const useStyles = makeStyles((theme) => ({
     },
 }));
 
-const PlayerCard = ({ avatar, username }: IProps) => {
+const PlayerCard = ({ avatar, username, selectPlayer }: IProps) => {
     const classes = useStyles()
     return (
         <CardActionArea
@@ -50,7 +51,7 @@ const PlayerCard = ({ avatar, username }: IProps) => {
                 root: classes.actionArea,
                 focusHighlight: classes.focusHighlight
             }}
-            href={`/player/${username}`}
+            onClick={_ => selectPlayer(username)}
         >
             <Card className={classes.card}>
                 <CardMedia
