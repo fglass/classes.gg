@@ -3,12 +3,15 @@ import Api from "../domain/api";
 import FormControl from '@material-ui/core/FormControl';
 import Grid from '@material-ui/core/Grid';
 import InputLabel from '@material-ui/core/InputLabel';
+import LinkIcon from "@material-ui/icons/Link";
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
 import MenuItem from '@material-ui/core/MenuItem';
 import Select from '@material-ui/core/Select';
+import Tooltip from '@material-ui/core/Tooltip';
 import Typography from '@material-ui/core/Typography';
+import UpdateIcon from "@material-ui/icons/Update";
 import { makeStyles } from "@material-ui/core/styles";
 import { Player } from "../domain/player";
 
@@ -24,21 +27,12 @@ interface IState {
 
 const useStyles = makeStyles(theme => ({
     container: {
-        marginTop: theme.spacing(10),
+        paddingTop: theme.spacing(10),
         margin: 'auto',
         width: '50%',
-        // marginLeft: theme.spacing(8),
-        // marginBottom: theme.spacing(8),
-        //   display: 'flex',
-        //   justifyContent: 'center',
-        //   alignItems: 'center',
-        //   position: 'relative',
-        //   top:'100%',
-        //   width: '100%',
-
     },
     title: {
-        paddingTop: 8,
+        paddingTop: theme.spacing(0.75),
         fontFamily: 'Bebas Neue',
         fontSize: '2.25rem',
     },
@@ -52,7 +46,7 @@ const useStyles = makeStyles(theme => ({
         borderRadius: '2%',
     },
     formControl: {
-        minWidth: '50%',
+        minWidth: '100%',
     },
     list: {
         padding: 0,
@@ -64,6 +58,16 @@ const useStyles = makeStyles(theme => ({
         maxWidth: '100%',
         maxHeight: 50,
     },
+    iconContainer: {
+        paddingTop: theme.spacing(1),
+    },
+    sourceIcon: {
+        color: "#FFF",
+        paddingRight: theme.spacing(1),
+    },
+    sourceIconTooltip: {
+        paddingLeft: theme.spacing(1),
+    }
 }));
 
 class PlayerView extends React.Component<IProps, IState> {
@@ -119,6 +123,22 @@ class PlayerView extends React.Component<IProps, IState> {
                         </Grid>
                         <Grid item className={classes.secondRow} style={{width: 300}}>
                             <img className={classes.avatar} src={player.avatar} alt={"Avatar"} />
+                        </Grid>
+                        <Grid item>
+                            <div className={classes.iconContainer}>
+                                <Tooltip title="Last updated: 20/06/2020">
+                                    <UpdateIcon />
+                                </Tooltip>
+                                <Tooltip title="Source" className={classes.sourceIconTooltip}>
+                                    <a
+                                        className={classes.sourceIcon}
+                                        href="http://www.twitch.tv/scump"
+                                        target="_blank" rel="noopener noreferrer"
+                                    >
+                                        <LinkIcon />
+                                    </a>
+                                </Tooltip>
+                            </div>
                         </Grid>
                     </Grid>
 
