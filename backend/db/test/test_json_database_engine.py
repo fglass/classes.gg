@@ -8,7 +8,7 @@ class TestJSONDatabaseEngine(unittest.TestCase):
     def test_select_player(self):
         db = JSONDatabaseEngine(test_mode=True)
         player = db.select_player("scump")
-        self.assertIn("Grau", player.weapons)
+        self.assertIn("Grau", player.loadouts)
         self.assertIn("!grau", player.commands)
 
     def test_select_players(self):
@@ -20,10 +20,6 @@ class TestJSONDatabaseEngine(unittest.TestCase):
     def test_add_player(self):
         db = JSONDatabaseEngine(test_mode=True)
         username = "test_player"
-        player = Player(username, avatar="", weapons={}, commands={})
+        player = Player(username, avatar="", loadouts={}, commands={})
         db.add_player(player)
         self.assertIn(username, db._database)
-
-
-if __name__ == '__main__':
-    unittest.main()

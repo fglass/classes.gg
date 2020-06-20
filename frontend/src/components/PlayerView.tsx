@@ -22,7 +22,7 @@ interface IProps {
 
 interface IState {
     player: Player | null
-    selectedWeapon: string
+    selectedLoadout: string
 }
 
 const useStyles = makeStyles(theme => ({
@@ -59,6 +59,7 @@ const useStyles = makeStyles(theme => ({
         maxHeight: 50,
     },
     iconContainer: {
+        float: 'right',
         paddingTop: theme.spacing(1),
     },
     sourceIcon: {
@@ -75,7 +76,7 @@ class PlayerView extends React.Component<IProps, IState> {
         super(props);
         this.state = {
             player: null,
-            selectedWeapon: ""
+            selectedLoadout: ""
         }
     }
 
@@ -83,7 +84,7 @@ class PlayerView extends React.Component<IProps, IState> {
         const player = await Api.getPlayer(this.props.username)
         this.setState({
             player,
-            selectedWeapon: Object.keys(player.weapons)[0]
+            selectedLoadout: Object.keys(player.loadouts)[0]
         })
     }
 
@@ -98,7 +99,7 @@ class PlayerView extends React.Component<IProps, IState> {
     }
 
     onSelectWeapon = (event: any) => {
-        this.setState({selectedWeapon: event.target.value})
+        this.setState({selectedLoadout: event.target.value})
     };
 
     render() {
@@ -109,8 +110,9 @@ class PlayerView extends React.Component<IProps, IState> {
         }
 
         const classes = this.props.classes
-        const weapon = this.state.selectedWeapon
-        const attachments = Object.values(player.weapons[this.state.selectedWeapon])
+        const weapon = this.state.selectedLoadout
+        const loadout = player.loadouts[this.state.selectedLoadout]
+        console.log(loadout)
 
         return (
             <div className={classes.container}>
@@ -123,22 +125,6 @@ class PlayerView extends React.Component<IProps, IState> {
                         </Grid>
                         <Grid item className={classes.secondRow} style={{width: 300}}>
                             <img className={classes.avatar} src={player.avatar} alt={"Avatar"} />
-                        </Grid>
-                        <Grid item>
-                            <div className={classes.iconContainer}>
-                                <Tooltip title="Last updated: 20/06/2020">
-                                    <UpdateIcon />
-                                </Tooltip>
-                                <Tooltip title="Source" className={classes.sourceIconTooltip}>
-                                    <a
-                                        className={classes.sourceIcon}
-                                        href="http://www.twitch.tv/scump"
-                                        target="_blank" rel="noopener noreferrer"
-                                    >
-                                        <LinkIcon />
-                                    </a>
-                                </Tooltip>
-                            </div>
                         </Grid>
                     </Grid>
 
@@ -153,7 +139,7 @@ class PlayerView extends React.Component<IProps, IState> {
                                     value={weapon}
                                     onChange={this.onSelectWeapon}
                                 >
-                                    {Object.keys(player.weapons).map((weapon) =>
+                                    {Object.keys(player.loadouts).map((weapon) =>
                                         <MenuItem key={weapon} value={weapon}>{weapon}</MenuItem>
                                     )}
                                 </Select>
@@ -161,12 +147,28 @@ class PlayerView extends React.Component<IProps, IState> {
                         </Grid>
                         <Grid item className={classes.secondRow}>
                             <List classes={{ root: classes.list }}>
-                                {attachments.map((attachment, index) =>
+                                {loadout.attachments.map((attachment, index) =>
                                     <ListItem key={index} className={classes.attachment}>
                                         <ListItemText primary={attachment} />
                                     </ListItem>
                                 )}
                             </List>
+                        </Grid>
+                        <Grid item>
+                            <div className={classes.iconContainer}>
+                                <Tooltip title="Source" className={classes.sourceIconTooltip}>
+                                    <a
+                                        className={classes.sourceIcon}
+                                        href={loadout.source}
+                                        target="_blank" rel="noopener noreferrer"
+                                    >
+                                        <LinkIcon />
+                                    </a>
+                                </Tooltip>
+                                <Tooltip title={`Last updated: ${loadout.lastUpdated}`}>
+                                    <UpdateIcon />
+                                </Tooltip>
+                            </div>
                         </Grid>
                      </Grid>
                 </Grid>

@@ -42,6 +42,11 @@ def _deserialise_player(data: dict) -> Player:
     return Player(
         data.get("username", "Unknown"),
         data.get("avatar", ""),
-        data.get("weapons", {"?": ["#1", "#2", "#3", "#4", "#5"]}),
+        data.get("loadouts", {"?": {
+                "source": "",
+                "lastUpdated": "",
+                "attachments": ["#1", "#2", "#3", "#4", "#5"]
+            }}
+        ),
         data.get("commands", {})
     )

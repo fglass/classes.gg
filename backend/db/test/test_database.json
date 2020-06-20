@@ -1,14 +1,18 @@
 {
   "scump": {
     "username": "scump",
-    "weapons": {
-      "Grau": [
-        "Monolithic Supressor",
-        "Tempus 26.4",
-        "Commando Foregrip",
-        "60 Round",
-        "XRK Void II"
-      ]
+    "loadouts": {
+      "Grau": {
+        "source": "https://www.twitch.tv/scump",
+        "lastUpdated": "20/06/2020",
+        "attachments": [
+          "Monolithic Supressor",
+          "Tempus 26.4",
+          "Commando Foregrip",
+          "60 Round",
+          "XRK Void II"
+        ]
+      }
     },
     "commands": {
       "!grau": "Monolithic Supressor, Tempus 26.4, Commando Foregrip, 60 Round, XRK Void II"
