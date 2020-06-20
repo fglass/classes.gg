@@ -7,7 +7,7 @@ import CarouselView from "./CarouselView";
 import PlayerView from "./PlayerView";
 import { blue } from '@material-ui/core/colors';
 import { createMuiTheme, ThemeProvider } from '@material-ui/core/styles';
-import {Player} from "../domain/player";
+import { Player } from "../domain/player";
 
 const darkTheme = createMuiTheme({
     palette: {

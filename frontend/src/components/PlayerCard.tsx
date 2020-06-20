@@ -13,9 +13,11 @@ interface IProps {
 }
 
 const useStyles = makeStyles((theme) => ({
-    actionArea: {
+    container: {
         marginLeft: theme.spacing(4),
-        paddingRight: theme.spacing(8),
+        paddingRight: theme.spacing(4),
+    },
+    actionArea: {
         borderRadius: 16,
         transition: '0.2s',
         '&:hover': {
@@ -46,26 +48,28 @@ const useStyles = makeStyles((theme) => ({
 const PlayerCard = ({ avatar, username, selectPlayer }: IProps) => {
     const classes = useStyles()
     return (
-        <CardActionArea
-            classes={{
-                root: classes.actionArea,
-                focusHighlight: classes.focusHighlight
-            }}
-            onClick={_ => selectPlayer(username)}
-        >
-            <Card className={classes.card}>
-                <CardMedia
-                    className={classes.media}
-                    image={avatar}
-                    title=""
-                />
-                <CardContent className={classes.content}>
-                  <Typography className={classes.title} variant={'h2'}>
-                    {username}
-                  </Typography>
-                </CardContent>
-            </Card>
-        </CardActionArea>
+        <div className={classes.container}>
+            <CardActionArea
+                classes={{
+                    root: classes.actionArea,
+                    focusHighlight: classes.focusHighlight
+                }}
+                onClick={_ => selectPlayer(username)}
+            >
+                <Card className={classes.card}>
+                    <CardMedia
+                        className={classes.media}
+                        image={avatar}
+                        title=""
+                    />
+                    <CardContent className={classes.content}>
+                      <Typography className={classes.title} variant={'h2'}>
+                        {username}
+                      </Typography>
+                    </CardContent>
+                </Card>
+            </CardActionArea>
+        </div>
     );
 };
 

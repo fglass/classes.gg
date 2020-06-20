@@ -24,9 +24,18 @@ interface IState {
 
 const useStyles = makeStyles(theme => ({
     container: {
-        marginTop: theme.spacing(12),
-        marginLeft: theme.spacing(8),
-        marginBottom: theme.spacing(8),
+        marginTop: theme.spacing(10),
+        margin: 'auto',
+        width: '50%',
+        // marginLeft: theme.spacing(8),
+        // marginBottom: theme.spacing(8),
+        //   display: 'flex',
+        //   justifyContent: 'center',
+        //   alignItems: 'center',
+        //   position: 'relative',
+        //   top:'100%',
+        //   width: '100%',
+
     },
     title: {
         paddingTop: 8,
@@ -43,7 +52,7 @@ const useStyles = makeStyles(theme => ({
         borderRadius: '2%',
     },
     formControl: {
-        minWidth: '20%',
+        minWidth: '50%',
     },
     list: {
         padding: 0,
@@ -52,7 +61,7 @@ const useStyles = makeStyles(theme => ({
         borderRadius: 5,
         backgroundColor: theme.palette.background.paper,
         marginBottom: theme.spacing(1.9),
-        maxWidth: '60%',
+        maxWidth: '100%',
         maxHeight: 50,
     },
 }));
@@ -101,19 +110,19 @@ class PlayerView extends React.Component<IProps, IState> {
 
         return (
             <div className={classes.container}>
-                <Grid container spacing={3}>
-                    <Grid item xs={12} md={3} container direction="column">
-                        <Grid item className={classes.firstRow}>
-                            <Typography className={classes.title} variant="h4">
+                <Grid container>
+                    <Grid item xs={12} md={5} container direction="column">
+                        <Grid item className={classes.firstRow} style={{width: 300}}>
+                            <Typography className={classes.title} variant="h4" align="center">
                                 {player.username}
                             </Typography>
                         </Grid>
-                        <Grid item className={classes.secondRow}>
+                        <Grid item className={classes.secondRow} style={{width: 300}}>
                             <img className={classes.avatar} src={player.avatar} alt={"Avatar"} />
                         </Grid>
                     </Grid>
 
-                    <Grid item xs={12} md={9} container direction="column">
+                    <Grid item xs={12} md={7} container direction="column" >
                         <Grid item className={classes.firstRow}>
                             <FormControl variant="outlined" className={classes.formControl}>
                                 <InputLabel id="loadout-select-label">Loadout</InputLabel>
@@ -140,7 +149,6 @@ class PlayerView extends React.Component<IProps, IState> {
                             </List>
                         </Grid>
                      </Grid>
-
                 </Grid>
             </div>
         );

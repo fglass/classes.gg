@@ -9,4 +9,4 @@ NEW_PLAYER = Player(
 )
 
 if __name__ == '__main__':
-    JSONDatabaseEngine().add_player(NEW_PLAYER)
+    JSONDatabaseEngine().add_player(NEW_PLAYER)  # TODO: add weapon and attachment enums
