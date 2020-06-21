@@ -16,52 +16,71 @@ const useStyles = makeStyles(theme => ({
     container: {
         paddingTop: theme.spacing(8),
         paddingBottom: theme.spacing(8),
-    },
+        backgroundColor: theme.palette.background.paper,
+    }
 }));
+
+const sliderSettings = {
+    slidesToShow: 5,
+    pauseOnHover: false,
+    swipe: false,
+    arrows: false,
+    infinite: true,
+    autoplay: true,
+    autoplaySpeed: 100,
+    speed: 2000,
+    responsive: [
+        {
+            breakpoint: 1280, // md
+            settings: {
+                slidesToShow: 4,
+            }
+        },
+        {
+            breakpoint: 960, // sm
+            settings: {
+                slidesToShow: 3,
+            }
+        },
+        {
+            breakpoint: 600, // xs
+            settings: {
+                slidesToShow: 1,
+                swipe: true,
+                swipeToSlide: true,
+                autoplay: false,
+                speed: 0,
+            }
+        }
+    ]
+};
 
 class CarouselView extends React.Component<IProps> {
 
     render() {
-        const classes = this.props.classes;
-        const settings = {
-            slidesToShow: 5,
-            arrows: false,
-            infinite: true,
-            autoplay: true,
-            autoplaySpeed: 100,
-            speed: 2000,
-            responsive: [
-                {
-                    breakpoint: 1280, // md
-                    settings: {
-                        slidesToShow: 4,
-                    }
-                },
-                {
-                    breakpoint: 960, // sm
-                    settings: {
-                        slidesToShow: 3,
-                    }
-                },
-                {
-                    breakpoint: 600, // xs
-                    settings: {
-                        slidesToShow: 2,
-                    }
-                }
-            ]
-        };
-        return (
-            <Slider className={classes.container} {...settings}>
-                {this.props.players.map((player) => (
-                    <PlayerCard
-                        key={player.username}
-                        username={player.username}
-                        avatar={player.avatar}
-                        selectPlayer={this.props.selectPlayer}
-                    />
-                ))}
+        const { classes, players } = this.props
+        const n = players.length
+
+        const cards = this.props.players.map((player) => (
+            <div key={player.username}>
+                <PlayerCard
+                    username={player.username}
+                    avatar={player.avatar}
+                    selectPlayer={this.props.selectPlayer}
+                />
+            </div>
+        ))
+
+        const isCarousel= n > 5 // TODO: replace 5
+
+        return isCarousel ? (
+            <Slider className={classes.container} {...sliderSettings}>
+                {cards}
             </Slider>
+        ) : (
+            <div className={classes.container}>
+                {cards}
+            </div>
         )
     }
 }

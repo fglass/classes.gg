@@ -18,6 +18,7 @@ const darkTheme = createMuiTheme({
 
 interface IState {
     players: Array<Player>
+    filteredPlayers: Array<Player>
     selectedPlayer: string
 }
 
@@ -26,6 +27,7 @@ export default class App extends React.Component<any, IState> {
         super(props);
         this.state = {
             players: [],
+            filteredPlayers: [],
             selectedPlayer: "Unknown"
         }
     }
@@ -34,6 +36,7 @@ export default class App extends React.Component<any, IState> {
         const players = await Api.getPlayers()
         this.setState({
             players,
+            filteredPlayers: players,
             selectedPlayer: players[0].username
         })
     }
@@ -44,15 +47,24 @@ export default class App extends React.Component<any, IState> {
 
     selectPlayer = (username: string) => {
         this.setState({selectedPlayer: username})
-    };
+    }
+
+    onSearch = (input: string) => {
+        this.setState({
+            filteredPlayers: this.state.players.filter(player => player.username.toLowerCase().startsWith((input)))
+        })
+    }
 
     render() {
         return (
             <React.Fragment>
                 <ThemeProvider theme={darkTheme}>
                     <CssBaseline />
-                    <Header />
-                    <CarouselView players={this.state.players} selectPlayer={this.selectPlayer} />
+                    <Header onSearch={this.onSearch} />
+                    <CarouselView
+                        players={this.state.filteredPlayers}
+                        selectPlayer={this.selectPlayer}
+                    />
                     <PlayerView username={this.state.selectedPlayer} />
                     <Footer />
                 </ThemeProvider>

@@ -27,7 +27,7 @@ interface IState {
 
 const useStyles = makeStyles(theme => ({
     container: {
-        paddingTop: theme.spacing(10),
+        paddingTop: theme.spacing(18),
         margin: 'auto',
         width: '50%',
     },
@@ -112,7 +112,6 @@ class PlayerView extends React.Component<IProps, IState> {
         const classes = this.props.classes
         const weapon = this.state.selectedLoadout
         const loadout = player.loadouts[this.state.selectedLoadout]
-        console.log(loadout)
 
         return (
             <div className={classes.container}>

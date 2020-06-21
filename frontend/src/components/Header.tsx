@@ -6,6 +6,10 @@ import Toolbar from '@material-ui/core/Toolbar';
 import Typography from "@material-ui/core/Typography";
 import { createStyles, fade, makeStyles, Theme } from "@material-ui/core/styles";
 
+interface IProps {
+    onSearch: (input: string) => void
+}
+
 const useStyles = makeStyles((theme: Theme) => createStyles({
     root: {
         flexGrow: 1,
@@ -26,7 +30,7 @@ const useStyles = makeStyles((theme: Theme) => createStyles({
             backgroundColor: fade(theme.palette.common.white, 0.25),
         },
         marginLeft: theme.spacing(1),
-        width: 'auto%',
+        width: 'auto',
     },
     searchIcon: {
         padding: theme.spacing(0, 2),
@@ -46,16 +50,16 @@ const useStyles = makeStyles((theme: Theme) => createStyles({
         transition: theme.transitions.create('width'),
         width: '100%',
         [theme.breakpoints.up('sm')]: {
-            width: '12ch',
+            width: '15ch',
             '&:focus': {
-                 width: '20ch',
+                 width: '22ch',
             },
         },
     },
 }));
 
 
-export default function Header() {
+export default function Header(props: IProps) {
     const classes = useStyles()
     return (
         <div className={classes.root}>
@@ -75,6 +79,7 @@ export default function Header() {
                                 root: classes.inputRoot,
                                 input: classes.inputInput,
                             }}
+                            onChange={(event) => props.onSearch(event.target.value.toLowerCase())}
                         />
                     </div>
                 </Toolbar>

@@ -14,6 +14,7 @@ interface IProps {
 
 const useStyles = makeStyles((theme) => ({
     container: {
+        maxWidth: 300,
         marginLeft: theme.spacing(4),
         paddingRight: theme.spacing(4),
     },
