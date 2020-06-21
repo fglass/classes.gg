@@ -70,6 +70,16 @@ const sliderSettings = {
 
 class SelectionView extends React.Component<IProps> {
 
+    resize = () => this.forceUpdate()
+
+    componentDidMount() {
+        window.addEventListener('resize', this.resize) // In case static view required after resize
+    }
+
+    componentWillUnmount() {
+        window.removeEventListener('resize', this.resize)
+    }
+
     render() {
         const { classes, players } = this.props
 
