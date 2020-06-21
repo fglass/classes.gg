@@ -15,7 +15,7 @@ interface IProps {
 const useStyles = makeStyles((theme) => ({
     container: {
         margin: 'auto',
-        maxWidth: 250,
+        maxWidth: 280,
     },
     actionArea: {
         borderRadius: 16,
