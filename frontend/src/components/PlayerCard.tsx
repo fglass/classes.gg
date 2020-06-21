@@ -60,7 +60,7 @@ const PlayerCard = ({ avatar, username, selectPlayer }: IProps) => {
                     />
                     <CardContent className={classes.content}>
                       <Typography className={classes.title} variant={'h2'}>
-                        {username}
+                          {username}
                       </Typography>
                     </CardContent>
                 </Card>

@@ -27,26 +27,45 @@ interface IState {
 
 const useStyles = makeStyles(theme => ({
     container: {
-        paddingTop: theme.spacing(18),
+        maxWidth: 800,
+        paddingTop: theme.spacing(2),
         margin: 'auto',
-        width: '50%',
+        [theme.breakpoints.up('sm')]: {
+            marginTop: '7.5%',
+        }
+    },
+    titleGridItem: {
+        height: 50,
+        margin: 'auto',
+        marginBottom: theme.spacing(2),
     },
     title: {
         paddingTop: theme.spacing(0.75),
         fontFamily: 'Bebas Neue',
         fontSize: '2.25rem',
     },
-    firstRow: {
-        height: 75,
-    },
-    secondRow: {
-        height: 300,
+    avatarGridItem: {
+        margin: 'auto',
     },
     avatar: {
         borderRadius: '2%',
+        height: 280,
+        [theme.breakpoints.down('sm')]: {
+            maxHeight: 230,
+        },
+    },
+    selectGridItem: {
+        height: 50,
+        margin: theme.spacing(0, 2, 2, 2),
+        [theme.breakpoints.down('sm')]: {
+            marginTop: theme.spacing(3),
+        },
     },
     formControl: {
-        minWidth: '100%',
+        width: '100%',
+    },
+    listGridItem: {
+        margin: theme.spacing(0, 2, 0, 2),
     },
     list: {
         padding: 0,
@@ -54,13 +73,13 @@ const useStyles = makeStyles(theme => ({
     attachment: {
         borderRadius: 5,
         backgroundColor: theme.palette.background.paper,
-        marginBottom: theme.spacing(1.9),
+        marginBottom: theme.spacing(1.25),
         maxWidth: '100%',
         maxHeight: 50,
     },
     iconContainer: {
         float: 'right',
-        paddingTop: theme.spacing(1),
+        marginRight: theme.spacing(2),
     },
     sourceIcon: {
         color: "#FFF",
@@ -115,20 +134,20 @@ class PlayerView extends React.Component<IProps, IState> {
 
         return (
             <div className={classes.container}>
-                <Grid container>
-                    <Grid item xs={12} md={5} container direction="column">
-                        <Grid item className={classes.firstRow} style={{width: 300}}>
-                            <Typography className={classes.title} variant="h4" align="center">
+                <Grid container alignItems="flex-start">
+                    <Grid container direction="column" item xs={12} md={5}>
+                        <Grid item className={classes.titleGridItem}>
+                            <Typography className={classes.title} variant="h4">
                                 {player.username}
                             </Typography>
                         </Grid>
-                        <Grid item className={classes.secondRow} style={{width: 300}}>
+                        <Grid item className={classes.avatarGridItem}>
                             <img className={classes.avatar} src={player.avatar} alt={"Avatar"} />
                         </Grid>
                     </Grid>
 
-                    <Grid item xs={12} md={7} container direction="column" >
-                        <Grid item className={classes.firstRow}>
+                    <Grid container direction="column" item xs={12} md={7}>
+                        <Grid item className={classes.selectGridItem}>
                             <FormControl variant="outlined" className={classes.formControl}>
                                 <InputLabel id="loadout-select-label">Loadout</InputLabel>
                                 <Select
@@ -144,7 +163,7 @@ class PlayerView extends React.Component<IProps, IState> {
                                 </Select>
                             </FormControl>
                         </Grid>
-                        <Grid item className={classes.secondRow}>
+                        <Grid item className={classes.listGridItem}>
                             <List classes={{ root: classes.list }}>
                                 {loadout.attachments.map((attachment, index) =>
                                     <ListItem key={index} className={classes.attachment}>
