@@ -14,9 +14,8 @@ interface IProps {
 
 const useStyles = makeStyles((theme) => ({
     container: {
-        maxWidth: 300,
-        marginLeft: theme.spacing(4),
-        paddingRight: theme.spacing(4),
+        margin: 'auto',
+        maxWidth: 250,
     },
     actionArea: {
         borderRadius: 16,
@@ -24,11 +23,7 @@ const useStyles = makeStyles((theme) => ({
         '&:hover': {
             transform: 'scale(0.9)',
         },
-        "&:hover $focusHighlight": {
-            opacity: 0
-        },
     },
-    focusHighlight: { },
     card: {
         borderRadius: 16,
         boxShadow: 'none',
@@ -54,10 +49,7 @@ const PlayerCard = ({ avatar, username, selectPlayer }: IProps) => {
     return (
         <div className={classes.container}>
             <CardActionArea
-                classes={{
-                    root: classes.actionArea,
-                    focusHighlight: classes.focusHighlight
-                }}
+                classes={{root: classes.actionArea,}}
                 onClick={_ => selectPlayer(username)}
             >
                 <Card className={classes.card}>

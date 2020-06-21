@@ -3,7 +3,7 @@ import Api from "../domain/api";
 import CssBaseline from '@material-ui/core/CssBaseline';
 import Footer from "./Footer";
 import Header from "./Header";
-import CarouselView from "./CarouselView";
+import SelectionView from "./SelectionView";
 import PlayerView from "./PlayerView";
 import { blue } from '@material-ui/core/colors';
 import { createMuiTheme, ThemeProvider } from '@material-ui/core/styles';
@@ -61,7 +61,7 @@ export default class App extends React.Component<any, IState> {
                 <ThemeProvider theme={darkTheme}>
                     <CssBaseline />
                     <Header onSearch={this.onSearch} />
-                    <CarouselView
+                    <SelectionView
                         players={this.state.filteredPlayers}
                         selectPlayer={this.selectPlayer}
                     />
