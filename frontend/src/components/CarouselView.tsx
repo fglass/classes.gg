@@ -30,6 +30,26 @@ class CarouselView extends React.Component<IProps> {
             autoplay: true,
             autoplaySpeed: 100,
             speed: 2000,
+            responsive: [
+                {
+                    breakpoint: 1280, // md
+                    settings: {
+                        slidesToShow: 4,
+                    }
+                },
+                {
+                    breakpoint: 960, // sm
+                    settings: {
+                        slidesToShow: 3,
+                    }
+                },
+                {
+                    breakpoint: 600, // xs
+                    settings: {
+                        slidesToShow: 2,
+                    }
+                }
+            ]
         };
         return (
             <Slider className={classes.container} {...settings}>

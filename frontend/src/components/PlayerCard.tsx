@@ -39,6 +39,9 @@ const useStyles = makeStyles((theme) => ({
     title: {
         fontFamily: 'Bebas Neue',
         fontSize: '2.25rem',
+        [theme.breakpoints.down('md')]: {
+            fontSize: '2rem',
+        },
     },
     media: {
         paddingTop: '70%',
