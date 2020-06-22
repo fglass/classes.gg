@@ -1,8 +1,9 @@
 import React from "react";
 import Slider from "react-slick";
+import Grid from "@material-ui/core/Grid";
+import Typography from "@material-ui/core/Typography";
 import PlayerCard from "./PlayerCard";
 import { makeStyles } from "@material-ui/core/styles";
-import { Grid } from "@material-ui/core";
 import { Player } from "../domain/player";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -10,15 +11,26 @@ import "slick-carousel/slick/slick-theme.css";
 interface IProps {
     classes: any
     players: Array<Player>
+    searching: boolean
     selectPlayer: (username: string) => void
 }
 
 const useStyles = makeStyles(theme => ({
     container: {
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        minHeight: 407,
         paddingTop: theme.spacing(8),
         paddingBottom: theme.spacing(8),
         backgroundColor: theme.palette.background.paper,
-    }
+    },
+    noMatches: {
+        height: '100%',
+        fontFamily: 'Bebas Neue',
+        fontSize: '5rem',
+        opacity: '50%'
+    },
 }));
 
 function getSlidesForWidth(width: number) {
@@ -86,15 +98,25 @@ class SelectionView extends React.Component<IProps> {
     resize = () => this.forceUpdate()
 
     componentDidMount() {
-        window.addEventListener('resize', this.resize) // In case static view required after resize
+        window.addEventListener("resize", this.resize) // In case static view required after resize
     }
 
     componentWillUnmount() {
-        window.removeEventListener('resize', this.resize)
+        window.removeEventListener("resize", this.resize)
     }
 
     render() {
-        const { classes, players } = this.props
+        const { classes, players, searching } = this.props
+
+        if (searching && players.length === 0) {
+            return(
+                <div className={classes.container}>
+                    <Typography className={classes.noMatches} align="center">
+                        No Matches
+                    </Typography>
+                </div>
+            )
+        }
 
         const isCarousel = players.length > getSlidesForWidth(window.innerWidth) // Sliding required
 
@@ -131,6 +153,7 @@ export default (props: any) => {
     return <SelectionView
         classes={classes}
         players={props.players}
+        searching={props.searching}
         selectPlayer={props.selectPlayer}
     />
 }

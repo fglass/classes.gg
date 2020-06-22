@@ -56,16 +56,18 @@ export default class App extends React.Component<any, IState> {
     }
 
     render() {
+        const { players, filteredPlayers, selectedPlayer } = this.state
         return (
             <React.Fragment>
                 <ThemeProvider theme={darkTheme}>
                     <CssBaseline />
                     <Header onSearch={this.onSearch} />
                     <SelectionView
-                        players={this.state.filteredPlayers}
+                        players={filteredPlayers}
+                        searching={players.length !== filteredPlayers.length}
                         selectPlayer={this.selectPlayer}
                     />
-                    <PlayerView username={this.state.selectedPlayer} />
+                    <PlayerView username={selectedPlayer} />
                     <Footer />
                 </ThemeProvider>
             </React.Fragment>

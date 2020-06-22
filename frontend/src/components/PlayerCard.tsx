@@ -15,6 +15,7 @@ interface IProps {
 const useStyles = makeStyles((theme) => ({
     container: {
         margin: 'auto',
+        padding: theme.spacing(0, 1, 0, 1),
         maxWidth: 280,
     },
     actionArea: {
@@ -44,7 +45,8 @@ const useStyles = makeStyles((theme) => ({
     },
 }));
 
-const PlayerCard = ({ avatar, username, selectPlayer }: IProps) => {
+export default function PlayerCard(props: IProps) {
+    const { selectPlayer, avatar, username } = props
     const classes = useStyles()
     return (
         <div className={classes.container}>
@@ -68,5 +70,3 @@ const PlayerCard = ({ avatar, username, selectPlayer }: IProps) => {
         </div>
     );
 };
-
-export default PlayerCard
