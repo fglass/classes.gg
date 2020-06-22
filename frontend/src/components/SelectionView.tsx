@@ -32,6 +32,17 @@ function getSlidesForWidth(width: number) {
     return 5;
 }
 
+function Arrow(props: any) {
+    const { className, existingStyle, next } = props;
+    const style = next ? { ...existingStyle, right: '5%' } : { ...existingStyle, left: '5%', zIndex: 1 }
+    return (
+        <div
+          className={className}
+          style={style}
+        />
+    );
+}
+
 const sliderSettings = {
     slidesToShow: 5,
     pauseOnHover: false,
@@ -58,7 +69,9 @@ const sliderSettings = {
             breakpoint: 600, // xs
             settings: {
                 slidesToShow: getSlidesForWidth(600),
-                //arrows: true, TODO: impl
+                arrows: true,
+                prevArrow: <Arrow />,
+                nextArrow: <Arrow next />,
                 swipe: true,
                 swipeToSlide: true,
                 autoplay: false,
