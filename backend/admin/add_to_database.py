@@ -1,5 +1,6 @@
 from backend.db.json_database_engine import JSONDatabaseEngine
 from backend.player import Player
+from datetime import datetime
 
 NEW_PLAYER = Player(
     username="JukeyzL",
@@ -7,7 +8,7 @@ NEW_PLAYER = Player(
     loadouts={
         "test_weapon": {
             "source": "",
-            "lastUpdated": "",
+            "lastUpdated": datetime.now().isoformat(),
             "attachments": []
         }
     },

@@ -11,7 +11,6 @@ import MenuItem from '@material-ui/core/MenuItem';
 import Select from '@material-ui/core/Select';
 import Tooltip from '@material-ui/core/Tooltip';
 import Typography from '@material-ui/core/Typography';
-import UpdateIcon from "@material-ui/icons/Update";
 import { makeStyles } from "@material-ui/core/styles";
 import { Player } from "../domain/player";
 
@@ -77,16 +76,16 @@ const useStyles = makeStyles(theme => ({
         maxWidth: '100%',
         maxHeight: 50,
     },
-    iconContainer: {
-        float: 'right',
-        marginRight: theme.spacing(2),
+    infoContainer: {
+        display: 'flex',
+        margin: theme.spacing(0, 2, 0, 2),
     },
     sourceIcon: {
         color: "#FFF",
-        paddingRight: theme.spacing(1),
     },
-    sourceIconTooltip: {
+    lastUpdatedLabel: {
         paddingLeft: theme.spacing(1),
+        opacity: '50%',
     }
 }));
 
@@ -131,6 +130,7 @@ class PlayerView extends React.Component<IProps, IState> {
         const classes = this.props.classes
         const weapon = this.state.selectedLoadout
         const loadout = player.loadouts[this.state.selectedLoadout]
+        const updated = new Date(loadout.lastUpdated)
 
         return (
             <div className={classes.container}>
@@ -173,8 +173,8 @@ class PlayerView extends React.Component<IProps, IState> {
                             </List>
                         </Grid>
                         <Grid item>
-                            <div className={classes.iconContainer}>
-                                <Tooltip title="Source" className={classes.sourceIconTooltip}>
+                            <div className={classes.infoContainer}>
+                                <Tooltip title="Source">
                                     <a
                                         className={classes.sourceIcon}
                                         href={loadout.source}
@@ -183,9 +183,9 @@ class PlayerView extends React.Component<IProps, IState> {
                                         <LinkIcon />
                                     </a>
                                 </Tooltip>
-                                <Tooltip title={`Last updated: ${loadout.lastUpdated}`}>
-                                    <UpdateIcon />
-                                </Tooltip>
+                                <Typography className={classes.lastUpdatedLabel}>
+                                    {`Last updated: ${updated.toLocaleDateString()}`}
+                                </Typography>
                             </div>
                         </Grid>
                      </Grid>
