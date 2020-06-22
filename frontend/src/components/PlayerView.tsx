@@ -142,7 +142,7 @@ class PlayerView extends React.Component<IProps, IState> {
                             </Typography>
                         </Grid>
                         <Grid item className={classes.avatarGridItem}>
-                            <img className={classes.avatar} src={player.avatar} alt={"Avatar"} />
+                            <img className={classes.avatar} src={player.avatar} alt="Avatar "/>
                         </Grid>
                     </Grid>
 

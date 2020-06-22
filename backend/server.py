@@ -7,8 +7,8 @@ db = JSONDatabaseEngine()
 
 
 @app.route('/player/<username>')
-def get_player(username):
-    player = db.select_player(username=escape(username))
+def get_player(username: str):
+    player = db.select_player(username=escape(username.lower()))
     return jsonify(player.serialise())
 
 

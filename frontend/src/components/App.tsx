@@ -19,7 +19,6 @@ const darkTheme = createMuiTheme({
 interface IState {
     players: Array<Player>
     filteredPlayers: Array<Player>
-    selectedPlayer: string
 }
 
 export default class App extends React.Component<any, IState> {
@@ -28,7 +27,6 @@ export default class App extends React.Component<any, IState> {
         this.state = {
             players: [],
             filteredPlayers: [],
-            selectedPlayer: "Unknown"
         }
     }
 
@@ -37,7 +35,6 @@ export default class App extends React.Component<any, IState> {
         this.setState({
             players,
             filteredPlayers: players,
-            selectedPlayer: players[0].username
         })
     }
 
@@ -46,7 +43,9 @@ export default class App extends React.Component<any, IState> {
     }
 
     selectPlayer = (username: string) => {
-        this.setState({selectedPlayer: username})
+        const suffix = `/${username}`
+        window.history.pushState({urlPath: suffix}, "", suffix) // Update URL
+        this.forceUpdate()
     }
 
     onSearch = (input: string) => {
@@ -56,7 +55,7 @@ export default class App extends React.Component<any, IState> {
     }
 
     render() {
-        const { players, filteredPlayers, selectedPlayer } = this.state
+        const { players, filteredPlayers } = this.state
         return (
             <React.Fragment>
                 <ThemeProvider theme={darkTheme}>
@@ -67,7 +66,9 @@ export default class App extends React.Component<any, IState> {
                         searching={players.length !== filteredPlayers.length}
                         selectPlayer={this.selectPlayer}
                     />
-                    <PlayerView username={selectedPlayer} />
+                    {players.length > 0 &&
+                        <PlayerView username={window.location.pathname.replace("/", "") || players[0].username} />
+                    }
                     <Footer />
                 </ThemeProvider>
             </React.Fragment>
