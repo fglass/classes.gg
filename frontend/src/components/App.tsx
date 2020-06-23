@@ -1,4 +1,5 @@
 import React from 'react';
+import ReactGA from 'react-ga';
 import Api from "../domain/api";
 import CssBaseline from '@material-ui/core/CssBaseline';
 import Footer from "./Footer";
@@ -22,6 +23,9 @@ interface IState {
 }
 
 export default class App extends React.Component<any, IState> {
+
+    private static ANALYTICS_TRACKING_CODE = "UA-131273827-2"
+
     constructor(props: any) {
         super(props);
         this.state = {
@@ -39,6 +43,8 @@ export default class App extends React.Component<any, IState> {
     }
 
     componentDidMount() {
+        ReactGA.initialize(App.ANALYTICS_TRACKING_CODE)
+        ReactGA.pageview(window.location.pathname + window.location.search)
         this.getPlayers().catch(err => console.log(err))
     }
 
