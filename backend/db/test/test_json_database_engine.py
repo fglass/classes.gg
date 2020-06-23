@@ -1,6 +1,6 @@
 import unittest
 from backend.db.json_database_engine import JSONDatabaseEngine
-from backend.player import Player
+from backend.model.player import Player
 
 
 class TestJSONDatabaseEngine(unittest.TestCase):

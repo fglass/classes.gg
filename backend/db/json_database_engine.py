@@ -1,7 +1,7 @@
 import json
 
 from backend.db.database_engine import DatabaseEngine
-from backend.player import Player
+from backend.model.player import Player
 
 JSON_FILE = "backend/db/database.json"
 TEST_JSON_FILE = "backend/db/test/test_database.json"
@@ -40,12 +40,12 @@ class JSONDatabaseEngine(DatabaseEngine):
 
 def _deserialise_player(data: dict) -> Player:
     return Player(
-        data.get("username", "Unknown"),
+        data.get("username", "N/A"),
         data.get("avatar", ""),
-        data.get("loadouts", {"?": {
+        data.get("loadouts", {"N/A": {
                 "source": "",
                 "lastUpdated": "",
-                "attachments": ["#1", "#2", "#3", "#4", "#5"]
+                "attachments": ["N/A", "N/A", "N/A", "N/A", "N/A"]
             }}
         ),
         data.get("commands", {})

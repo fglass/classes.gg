@@ -1,7 +1,7 @@
 import logging
 import requests
 from backend.db.json_database_engine import JSONDatabaseEngine
-from backend.player import Player
+from backend.model.player import Player
 
 NIGHTBOT_CHANNEL_URL = "https://api.nightbot.tv/1/channels/t/"
 NIGHTBOT_COMMANDS_URL = "https://api.nightbot.tv/1/commands"
