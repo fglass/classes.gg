@@ -54,4 +54,4 @@ class Attachment(Enum):
 
     # Perk
     SLEIGHT_OF_HAND = "Sleight of Hand"
-    FMJ = "FMG"
+    FMJ = "FMJ"

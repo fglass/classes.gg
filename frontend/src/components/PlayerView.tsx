@@ -33,6 +33,11 @@ const useStyles = makeStyles(theme => ({
             marginTop: '7.5%',
         }
     },
+    leftColumn: {
+        [theme.breakpoints.up('md')]: {
+            paddingRight: theme.spacing(24),
+        }
+    },
     titleGridItem: {
         height: 50,
         margin: 'auto',
@@ -49,6 +54,7 @@ const useStyles = makeStyles(theme => ({
     avatar: {
         borderRadius: '2%',
         height: 280,
+        border: '3px solid #555',
         [theme.breakpoints.down('sm')]: {
             maxHeight: 230,
         },
@@ -135,7 +141,7 @@ class PlayerView extends React.Component<IProps, IState> {
         return (
             <div className={classes.container}>
                 <Grid container alignItems="flex-start">
-                    <Grid container direction="column" item xs={12} md={5}>
+                    <Grid container className={classes.leftColumn} direction="column" item xs={12} md={5}>
                         <Grid item className={classes.titleGridItem}>
                             <Typography className={classes.title} variant="h4">
                                 {player.username}
