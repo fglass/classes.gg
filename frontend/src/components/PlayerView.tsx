@@ -26,16 +26,12 @@ interface IState {
 
 const useStyles = makeStyles(theme => ({
     container: {
-        maxWidth: 800,
+        maxWidth: 900,
         paddingTop: theme.spacing(2),
+        paddingBottom: theme.spacing(2),
         margin: 'auto',
         [theme.breakpoints.up('sm')]: {
             marginTop: '7.5%',
-        }
-    },
-    leftColumn: {
-        [theme.breakpoints.up('md')]: {
-            paddingRight: theme.spacing(24),
         }
     },
     titleGridItem: {
@@ -58,6 +54,11 @@ const useStyles = makeStyles(theme => ({
         [theme.breakpoints.down('sm')]: {
             maxHeight: 230,
         },
+    },
+    rightColumn: {
+        [theme.breakpoints.up('md')]: {
+            paddingLeft: theme.spacing(4),
+        }
     },
     selectGridItem: {
         height: 50,
@@ -135,13 +136,13 @@ class PlayerView extends React.Component<IProps, IState> {
 
         const classes = this.props.classes
         const weapon = this.state.selectedLoadout
-        const loadout = player.loadouts[this.state.selectedLoadout]
+        const loadout = player.loadouts[this.state.selectedLoadout] // TODO: order attachments
         const updated = new Date(loadout.lastUpdated)
 
         return (
             <div className={classes.container}>
                 <Grid container alignItems="flex-start">
-                    <Grid container className={classes.leftColumn} direction="column" item xs={12} md={5}>
+                    <Grid container direction="column" item xs={12} md={5}>
                         <Grid item className={classes.titleGridItem}>
                             <Typography className={classes.title} variant="h4">
                                 {player.username}
@@ -152,7 +153,7 @@ class PlayerView extends React.Component<IProps, IState> {
                         </Grid>
                     </Grid>
 
-                    <Grid container direction="column" item xs={12} md={7}>
+                    <Grid container className={classes.rightColumn} direction="column" item xs={12} md={7}>
                         <Grid item className={classes.selectGridItem}>
                             <FormControl variant="outlined" className={classes.formControl}>
                                 <InputLabel id="loadout-select-label">Loadout</InputLabel>
