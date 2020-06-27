@@ -2,7 +2,7 @@ import { Player } from "./player";
 
 export default class Api {
 
-    private static SERVER_URL = "http://192.168.5.87:5000"
+    private static SERVER_URL = "http://192.168.0.46:5000"
 
     private static async request<T>(endpoint: string): Promise<T> {
         const response = await fetch(`${this.SERVER_URL}/${endpoint}`);

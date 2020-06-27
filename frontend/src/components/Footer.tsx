@@ -15,7 +15,7 @@ const useStyles = makeStyles(theme => ({
     },
 }));
 
-export default function Footer() {
+export default function Footer() { // TODO: fix stickiness
     const classes = useStyles();
     return (
         <footer className={classes.footer}>
