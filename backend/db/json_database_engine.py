@@ -1,10 +1,10 @@
 import json
-from backend.db.database_engine import DatabaseEngine
-from backend.model.player import Player
+from ..db.database_engine import DatabaseEngine
+from ..model.player import Player
 from typing import Optional
 
-JSON_FILE = "backend/db/database.json"
-TEST_JSON_FILE = "backend/db/test/test_database.json"
+JSON_FILE = "db/database.json"
+TEST_JSON_FILE = "db/test/test_database.json"
 
 
 class JSONDatabaseEngine(DatabaseEngine):

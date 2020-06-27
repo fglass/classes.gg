@@ -1,5 +1,5 @@
 from abc import ABC, abstractmethod
-from backend.model.player import Player
+from ..model.player import Player
 
 
 class DatabaseEngine(ABC):
