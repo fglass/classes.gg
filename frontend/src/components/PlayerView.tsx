@@ -30,8 +30,9 @@ const useStyles = makeStyles(theme => ({
         paddingTop: theme.spacing(2),
         paddingBottom: theme.spacing(2),
         margin: 'auto',
-        [theme.breakpoints.up('sm')]: {
+        [theme.breakpoints.up('md')]: {
             marginTop: '7.5%',
+            marginBottom: '7.5%',
         }
     },
     titleGridItem: {
