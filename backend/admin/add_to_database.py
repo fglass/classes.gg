@@ -47,5 +47,6 @@ NEW_PLAYER = Player(
 )
 
 if __name__ == '__main__':
+    [v["attachments"].sort() for k, v in NEW_PLAYER.loadouts.items()]
     JSONDatabaseEngine().add_player(NEW_PLAYER)
     print(f"Added {NEW_PLAYER.username}")
