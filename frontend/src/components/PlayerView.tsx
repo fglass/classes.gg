@@ -137,7 +137,7 @@ class PlayerView extends React.Component<IProps, IState> {
 
         const classes = this.props.classes
         const weapon = this.state.selectedLoadout
-        const loadout = player.loadouts[this.state.selectedLoadout] // TODO: order attachments
+        const loadout = player.loadouts[this.state.selectedLoadout]
         const updated = new Date(loadout.lastUpdated)
 
         return (

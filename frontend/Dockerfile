@@ -9,8 +9,8 @@ COPY . .
 RUN npm run build
 
 FROM nginx:alpine
-COPY --from=build ./build /usr/share/nginx/html
-COPY nginx.conf /etc/nginx/nginx.conf
+COPY --from=build /usr/src/app/build /usr/share/nginx/html
+COPY nginx.conf /etc/nginx/nginx.dev.conf
 
 EXPOSE 80
 CMD ["nginx", "-g", "daemon off;"]

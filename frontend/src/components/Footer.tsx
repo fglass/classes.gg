@@ -15,14 +15,15 @@ const useStyles = makeStyles(theme => ({
     },
 }));
 
-export default function Footer() { // TODO: fix stickiness
-    const classes = useStyles();
+export default function Footer() {
+    const classes = useStyles()
+    const discordLink = "https://discord.com/invite/AdB3jey"
     return (
         <footer className={classes.footer}>
             <Grid container spacing={1}>
                 <Grid item>
                     <a
-                        href={"https://discord.com/invite/AdB3jey"}
+                        href={discordLink}
                         target="_blank" rel="noopener noreferrer"
                     >
                         <img src={"/images/discord.svg"} alt="Discord" width={22} />
