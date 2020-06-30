@@ -1,6 +1,6 @@
 import unittest
-from ...db.json_database_engine import JSONDatabaseEngine
-from ...model.player import Player
+from db.json_database_engine import JSONDatabaseEngine
+from model.player import Player
 
 
 class TestJSONDatabaseEngine(unittest.TestCase):

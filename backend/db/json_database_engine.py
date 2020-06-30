@@ -1,6 +1,6 @@
 import json
-from ..db.database_engine import DatabaseEngine
-from ..model.player import Player
+from db.database_engine import DatabaseEngine
+from model.player import Player
 from typing import Optional
 
 JSON_FILE = "db/database.json"

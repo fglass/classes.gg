@@ -1,4 +1,4 @@
-from .db.json_database_engine import JSONDatabaseEngine
+from db.json_database_engine import JSONDatabaseEngine
 from flask import Flask, jsonify, abort
 from markupsafe import escape
 

@@ -7,5 +7,5 @@ RUN pip install --no-cache-dir -r requirements.txt
 
 COPY . .
 
-ENTRYPOINT [ "flask" ]
-CMD ["run", "--host=0.0.0.0", "--port=5000"]
+ENTRYPOINT ["gunicorn"]
+CMD ["--bind=0.0.0.0:5000", "app:app"]
