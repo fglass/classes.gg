@@ -1,7 +1,7 @@
-from backend.db.json_database_engine import JSONDatabaseEngine
-from backend.model.attachment import Attachment
-from backend.model.player import Player
-from backend.model.weapon import Weapon
+from db.json_database_engine import JSONDatabaseEngine
+from model.attachment import Attachment
+from model.player import Player
+from model.weapon import Weapon
 from datetime import datetime
 
 
