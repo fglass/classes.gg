@@ -68,7 +68,7 @@ export default function Header(props: IProps) {
         <div className={classes.root}>
             <AppBar position="static">
                 <Toolbar>
-                    <img src={"/images/logo.svg"} alt="Logo" />
+                    <img src={"images/logo.svg"} alt="Logo" />
                     <Typography className={classes.title}>
                         Classes.gg
                     </Typography>

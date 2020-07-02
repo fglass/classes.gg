@@ -26,7 +26,7 @@ export default function Footer() {
                         href={discordLink}
                         target="_blank" rel="noopener noreferrer"
                     >
-                        <img src={"/images/discord.svg"} alt="Discord" width={22} />
+                        <img src={"images/discord.svg"} alt="Discord" width={22} />
                     </a>
                 </Grid>
                 <Grid item>
