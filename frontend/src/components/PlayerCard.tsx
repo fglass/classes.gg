@@ -21,7 +21,7 @@ const useStyles = makeStyles((theme) => ({
     actionArea: {
         borderRadius: 16,
         transition: '0.2s',
-        [theme.breakpoints.up('md')]: {
+        [theme.breakpoints.up('sm')]: {
             '&:hover': {
                 transform: 'scale(0.9)',
             },

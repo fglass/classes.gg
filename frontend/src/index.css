@@ -12,6 +12,11 @@ code {
     monospace;
 }
 
+a {
+  color: inherit;
+  text-decoration: inherit;
+}
+
 .slick-slide div {
   outline: none !important;
 }

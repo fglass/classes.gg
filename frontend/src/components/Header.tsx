@@ -11,16 +11,18 @@ interface IProps {
 }
 
 const useStyles = makeStyles((theme: Theme) => createStyles({
-    root: {
+    logo: {
         flexGrow: 1,
     },
+    home: {
+        display: 'flex',
+        maxWidth: 125,
+    },
     title: {
-        flexGrow: 1,
-        display: 'block',
-        paddingTop: theme.spacing(0.5),
-        paddingLeft: theme.spacing(1),
         fontFamily: 'Bebas Neue',
         fontSize: '1.52rem',
+        paddingTop: theme.spacing(0.5),
+        paddingLeft: theme.spacing(1),
     },
     search: {
         position: 'relative',
@@ -65,13 +67,17 @@ const useStyles = makeStyles((theme: Theme) => createStyles({
 export default function Header(props: IProps) {
     const classes = useStyles()
     return (
-        <div className={classes.root}>
+        <div>
             <AppBar position="static">
                 <Toolbar>
-                    <img src={"images/logo.svg"} alt="Logo" />
-                    <Typography className={classes.title}>
-                        Classes.gg
-                    </Typography>
+                    <div className={classes.logo}>
+                        <a className={classes.home} href="/">
+                           <img src={"images/logo.svg"} alt="Logo" />
+                            <Typography className={classes.title}>
+                                Classes.gg
+                            </Typography>
+                        </a>
+                    </div>
                     <div className={classes.search}>
                         <div className={classes.searchIcon}>
                             <SearchIcon />

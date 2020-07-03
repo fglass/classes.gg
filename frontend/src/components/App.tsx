@@ -48,16 +48,16 @@ export default class App extends React.Component<any, IState> {
         this.getPlayers().catch(err => console.log(err))
     }
 
-    selectPlayer = (username: string) => {
-        const suffix = `/${username}`
-        window.history.pushState({urlPath: suffix}, "", suffix) // Update URL
-        this.forceUpdate()
-    }
-
     onSearch = (input: string) => {
         this.setState({
             filteredPlayers: this.state.players.filter(player => player.username.toLowerCase().startsWith((input)))
         })
+    }
+
+    selectPlayer = (username: string) => {
+        const suffix = `/${username}`
+        window.history.pushState({urlPath: suffix}, "", suffix) // Update URL
+        this.forceUpdate()
     }
 
     render() {

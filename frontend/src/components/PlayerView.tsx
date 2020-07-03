@@ -88,9 +88,6 @@ const useStyles = makeStyles(theme => ({
         display: 'flex',
         margin: theme.spacing(0, 2, 0, 2),
     },
-    sourceIcon: {
-        color: "#FFF",
-    },
     lastUpdatedLabel: {
         paddingLeft: theme.spacing(1),
         opacity: '50%',
@@ -184,9 +181,9 @@ class PlayerView extends React.Component<IProps, IState> {
                             <div className={classes.infoContainer}>
                                 <Tooltip title="Source">
                                     <a
-                                        className={classes.sourceIcon}
                                         href={loadout.source}
-                                        target="_blank" rel="noopener noreferrer"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
                                     >
                                         <LinkIcon />
                                     </a>
