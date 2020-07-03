@@ -21,8 +21,10 @@ const useStyles = makeStyles((theme) => ({
     actionArea: {
         borderRadius: 16,
         transition: '0.2s',
-        '&:hover': {
-            transform: 'scale(0.9)',
+        [theme.breakpoints.up('md')]: {
+            '&:hover': {
+                transform: 'scale(0.9)',
+            },
         },
     },
     card: {
