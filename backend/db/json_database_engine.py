@@ -34,7 +34,7 @@ class JSONDatabaseEngine(DatabaseEngine):
 
         with open(self._file, "r+") as file:
             file.seek(0)
-            json.dump(self._database, file, indent=2)
+            json.dump(self._database, file, indent=2, sort_keys=True)
             file.truncate()
 
 

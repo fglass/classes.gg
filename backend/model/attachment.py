@@ -6,6 +6,7 @@ class Attachment(Enum):
     COLLOSUS_SUPPRESSOR = "Collosus Suppressor"
     MONOLITHIC_SUPPRESSOR = "Monolithic Suppressor"
     ZLR_SABRE = "ZLR Sabre"
+    COMPENSATOR = "Compensator"
 
     # Barrel
     TEMPUS_ARCHANGEL = "Tempus 26.4\" Archangel"
@@ -28,6 +29,8 @@ class Attachment(Enum):
     EXTENDED_BARREL = "26.9\" Extended Barrel"
     XRK_RANGER = "XRK Ranger"
     FACTORY_CARBINE = "16.5\" Factory Carbine"
+    CORVUS_CUSTOM_MARKSMAN = "Corvus Custom Marksman"
+    FSS_CARBINE_PRO = "FSS Carbine Pro"
 
     # Underbarrel
     COMMANDO_FOREGRIP = "Commando Foregrip"
@@ -45,6 +48,8 @@ class Attachment(Enum):
     VARIABLE_ZOOM_SCOPE = "Variable Zoom Scope"
     SNIPER_SCOPE = "Sniper Scope"
     VIPER_REFLEX_SIGHT = "Viper Reflex Sight"
+    APX5_HOLOGRAPHIC_SIGHT = "APX5 Holographic Sight"
+    GI_MINI_REFLEX = "G.I. Mini Reflex"
 
     # Ammunition
     ROUND_MAGS_7 = "7 Round Mags"
@@ -54,6 +59,7 @@ class Attachment(Enum):
     ROUND_MAGS_50 = "50 Round Mags"
     ROUND_MAGS_60 = "60 Round Mags"
     AUTO_30_ROUND_MAGS_10MM = "10mm Auto 30-Round Mags"
+    AE_ROUND_MAGS_32 = ".41 AE 32-Round Mags"
 
     # Rear grip
     XRK_VOID_II = "XRK Void II"
@@ -65,9 +71,11 @@ class Attachment(Enum):
     NO_STOCK = "No Stock"
     FTAC_COLLAPSIBLE = "FTAC Collapsible"
     FTAC_CHAMPION = "FTAC Champion"
+    FTAC_SPORT_COMB = "FTAC Sport Comb"
     FTAC_STALKER_SCOUT = "FTAC Stalker Scout"
     SINGUARD_ARMS_EVADER = "Singuard Arms Evader"
 
     # Perk
     SLEIGHT_OF_HAND = "Sleight of Hand"
+    PRESENCE_OF_MIND = "Presence of Mind"
     FMJ = "FMJ"

@@ -16,6 +16,7 @@ def main():
             _compare_commands(player.username, previous=player.commands, current=query_nightbot(player))
         elif source == CommandSource.STREAMLABS.value:
             _compare_commands(player.username, previous=player.commands, current=query_streamlabs(player))
+        # TODO: add stream elements API
 
     logging.info(f"{len(players)} players checked")
 

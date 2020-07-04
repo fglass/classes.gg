@@ -1,4 +1,3 @@
-from db.admin.command.command_source import CommandSource
 from db.json_database_engine import JSONDatabaseEngine
 
 if __name__ == '__main__':
@@ -6,5 +5,5 @@ if __name__ == '__main__':
     players = db.select_players()
 
     for player in players:
-        player.commands["source"] = CommandSource.NIGHTBOT.value
+        [v["attachments"].sort() for k, v in player.loadouts.items()]
         db.add_player(player)
