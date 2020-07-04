@@ -5,6 +5,9 @@ class Player:
         self.loadouts = loadouts
         self.commands = commands
 
+    def get_command_source(self) -> str:
+        return self.commands.get("source")
+
     def serialise(self) -> dict:
         return {
             "username": self.username,
