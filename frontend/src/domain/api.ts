@@ -2,7 +2,7 @@ import { Player } from "./player";
 
 export default class Api {
 
-    private static SERVER_URL = "https://classes.gg/api"
+    private static SERVER_URL = process.env.NODE_ENV === "production" ? "/api" : "http://0.0.0.0:5000/api"
 
     private static async request<T>(endpoint: string): Promise<T> {
         const response = await fetch(`${this.SERVER_URL}/${endpoint}`);
