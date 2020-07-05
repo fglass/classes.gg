@@ -6,21 +6,21 @@ from model.weapon import Weapon
 
 if __name__ == '__main__':
     db = JSONDatabaseEngine()
-    player = db.select_player("huskerrs")
+    player = db.select_player("symfuhny")
 
-    player.loadouts[Weapon.UZI.value] = {
-        "source": "https://www.twitch.tv/huskerrs",
+    player.loadouts[Weapon.MP5.value] = {
+        "source": "https://clips.twitch.tv/CourteousBlueStinkbugMcaT",
         "lastUpdated": datetime.now().isoformat(),
         "attachments": [
             Attachment.MONOLITHIC_SUPPRESSOR.value,
-            Attachment.FSS_CARBINE_PRO.value,
-            Attachment.TAC_LASER.value,
-            Attachment.COMMANDO_FOREGRIP.value,
-            Attachment.AE_ROUND_MAGS_32.value
+            Attachment.ROUND_MAGS_45.value,
+            Attachment.MERC_FOREGRIP.value,
+            Attachment.FTAC_COLLAPSIBLE.value,
+            Attachment.SLEIGHT_OF_HAND.value
         ]
     }
 
-    player.commands["!uzi"] = "Monolithic Suppressor, FSS Carbine Pro, Tac Laser, Commando Foregrip, .41 AE 32-Round Mags"
+    player.commands["!mp5"] = "@{touser.name} https://clips.twitch.tv/CourteousBlueStinkbugMcaT"
 
     db.add_player(player)
     print(f"Edited {player.username}")

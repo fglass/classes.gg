@@ -31,6 +31,10 @@ class Attachment(Enum):
     FACTORY_CARBINE = "16.5\" Factory Carbine"
     CORVUS_CUSTOM_MARKSMAN = "Corvus Custom Marksman"
     FSS_CARBINE_PRO = "FSS Carbine Pro"
+    SINGUARD_ARMS_PRO = "Singuard Arms Pro"
+    FSS_ORION = "FSS Orion"
+    FSS_RANGER = "FSS Ranger"
+    XRK_MARKSMAN = "XRK Marksman"
 
     # Underbarrel
     COMMANDO_FOREGRIP = "Commando Foregrip"
@@ -42,6 +46,7 @@ class Attachment(Enum):
 
     # Laser
     TAC_LASER = "Tac Laser"
+    MW_LASER_5 = "5mW Laser"
 
     # Optic
     VLK_3X_OPTIC = "VLK 3.0x Optic"
@@ -50,15 +55,22 @@ class Attachment(Enum):
     VIPER_REFLEX_SIGHT = "Viper Reflex Sight"
     APX5_HOLOGRAPHIC_SIGHT = "APX5 Holographic Sight"
     GI_MINI_REFLEX = "G.I. Mini Reflex"
+    CORP_COMBAT_HOLO_SIGHT = "Corp Combat Holo Sight"
+    THERMAL_DUAL_POWER_SCOPE = "Thermal Dual Power Scope"
+    SCOUT_COMBAT_OPTIC = "Scout Combat Optic"
+    THERMAL_SNIPER_SCOPE = "Thermal Sniper Scope"
+    CANTED_HYBRID = "Canted Hybrid"
 
     # Ammunition
     ROUND_MAGS_7 = "7 Round Mags"
+    ROUND_MAGS_30 = "30 Round Mags"
     ROUND_DRUM_MAGS_40 = "40 Round Drum Mags"
     ROUND_MAGS_40 = "40 Round Mags"
     ROUND_MAGS_45 = "45 Round Mags"
     ROUND_MAGS_50 = "50 Round Mags"
     ROUND_MAGS_60 = "60 Round Mags"
     AUTO_30_ROUND_MAGS_10MM = "10mm Auto 30-Round Mags"
+    AE_ROUND_MAGS_25 = ".41 AE 25-Round Mags"
     AE_ROUND_MAGS_32 = ".41 AE 32-Round Mags"
 
     # Rear grip
@@ -69,13 +81,17 @@ class Attachment(Enum):
 
     # Stock
     NO_STOCK = "No Stock"
+    FLY_STRAP = "Fly Strap"
     FTAC_COLLAPSIBLE = "FTAC Collapsible"
     FTAC_CHAMPION = "FTAC Champion"
     FTAC_SPORT_COMB = "FTAC Sport Comb"
     FTAC_STALKER_SCOUT = "FTAC Stalker Scout"
     SINGUARD_ARMS_EVADER = "Singuard Arms Evader"
+    SINGUARD_ARMS_ASSASSIN = "Singuard Arms Assassin"
+    FORGE_TAC_CQS = "FORGE TAC CQS"
 
     # Perk
     SLEIGHT_OF_HAND = "Sleight of Hand"
     PRESENCE_OF_MIND = "Presence of Mind"
     FMJ = "FMJ"
+    FOCUS = "Focus"
