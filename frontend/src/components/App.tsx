@@ -43,8 +43,10 @@ export default class App extends React.Component<any, IState> {
     }
 
     componentDidMount() {
-        ReactGA.initialize(App.ANALYTICS_TRACKING_CODE)
-        ReactGA.pageview(window.location.pathname + window.location.search)
+        if (process.env.NODE_ENV === "production") {
+            ReactGA.initialize(App.ANALYTICS_TRACKING_CODE)
+            ReactGA.pageview(window.location.pathname + window.location.search)
+        }
         this.getPlayers().catch(err => console.log(err))
     }
 
