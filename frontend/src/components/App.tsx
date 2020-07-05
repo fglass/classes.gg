@@ -84,14 +84,16 @@ class App extends React.Component<IProps, IState> {
         let main = <div className={classes.main} />
 
         if (players.length > 0) {
+            const selectedPlayer = window.location.pathname.replace("/", "") || players[0].username
             main = (
                 <div className={classes.main} >
                     <SelectionView
                         players={filteredPlayers}
+                        firstPlayer={players.findIndex(player => player.username === selectedPlayer)}
                         selectPlayer={this.selectPlayer}
                         searching={players.length !== filteredPlayers.length}
                     />
-                    <PlayerView username={window.location.pathname.replace("/", "") || players[0].username} />
+                    <PlayerView username={selectedPlayer} />
                 </div>
             )
         }

@@ -11,6 +11,7 @@ import "slick-carousel/slick/slick-theme.css";
 interface IProps {
     classes: any
     players: Array<Player>
+    firstPlayer: number,
     selectPlayer: (username: string) => void
     searching: boolean
 }
@@ -57,6 +58,7 @@ function Arrow(props: any) {
 }
 
 const sliderSettings = {
+    initialSlide: 0,
     slidesToShow: 5,
     pauseOnHover: false,
     swipe: false,
@@ -107,7 +109,7 @@ class SelectionView extends React.Component<IProps> {
     }
 
     render() {
-        const { classes, players, selectPlayer, searching } = this.props
+        const { classes, players, firstPlayer, selectPlayer, searching } = this.props
 
         if (searching && players.length === 0) {
             return(
@@ -119,33 +121,45 @@ class SelectionView extends React.Component<IProps> {
             )
         }
 
-        const isCarousel = players.length > getSlidesForWidth(window.innerWidth) // Sliding required
+        let view;
 
-        const cards = players.map((player) => (
-            <div key={player.username}>
-                <PlayerCard
-                    username={player.username}
-                    avatar={player.avatar}
-                    selectPlayer={selectPlayer}
-                />
-            </div>
-        ))
-
-        return isCarousel ? (
-            <Slider className={classes.container} {...sliderSettings}>
-                {cards}
-            </Slider>
-        ) : (
-            <div className={classes.container}>
-                <Grid container>
-                    {cards.map((card, index) => (
-                        <Grid item xs key={index}>
-                            {card}
-                        </Grid>
+        // Carousel view
+        if (players.length > getSlidesForWidth(window.innerWidth)) {
+            sliderSettings["initialSlide"] = firstPlayer
+            view = (
+                <Slider className={classes.container} {...sliderSettings}>
+                    {players.map((player) => (
+                        <div key={player.username}>
+                            <PlayerCard
+                                username={player.username}
+                                avatar={player.avatar}
+                                selectPlayer={selectPlayer}
+                            />
+                        </div>
                     ))}
-                </Grid>
-            </div>
-        )
+                </Slider>
+            )
+
+        // Static view
+        } else {
+            view = (
+                <div className={classes.container}>
+                    <Grid container>
+                        {players.map((player) => (
+                            <Grid item xs key={player.username}>
+                                <PlayerCard
+                                    username={player.username}
+                                    avatar={player.avatar}
+                                    selectPlayer={selectPlayer}
+                                />
+                            </Grid>
+                        ))}
+                    </Grid>
+                </div>
+            )
+        }
+
+        return view;
     }
 }
 
@@ -154,6 +168,7 @@ export default (props: any) => {
     return <SelectionView
         classes={classes}
         players={props.players}
+        firstPlayer={props.firstPlayer}
         selectPlayer={props.selectPlayer}
         searching={props.searching}
     />
