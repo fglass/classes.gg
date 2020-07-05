@@ -7,7 +7,7 @@ import Header from "./Header";
 import SelectionView from "./SelectionView";
 import PlayerView from "./PlayerView";
 import { blue } from '@material-ui/core/colors';
-import {createMuiTheme, makeStyles, ThemeProvider} from '@material-ui/core/styles';
+import { createMuiTheme, makeStyles, ThemeProvider } from '@material-ui/core/styles';
 import { Player } from "../domain/player";
 
 interface IProps {
@@ -94,12 +94,12 @@ class App extends React.Component<IProps, IState> {
             const selectedPlayer = window.location.pathname.replace("/", "") || players[0].username
             content = (
                 <React.Fragment>
-                     <SelectionView
-                            players={filteredPlayers}
-                            firstPlayer={players.findIndex(player => player.username === selectedPlayer)}
-                            selectPlayer={this.selectPlayer}
-                            searching={players.length !== filteredPlayers.length}
-                        />
+                    <SelectionView
+                        players={filteredPlayers}
+                        firstPlayer={players.findIndex(player => player.username === selectedPlayer)}
+                        selectPlayer={this.selectPlayer}
+                        searching={players.length !== filteredPlayers.length}
+                    />
                     <div className={classes.main}>
                         <PlayerView username={selectedPlayer} />
                     </div>

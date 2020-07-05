@@ -19,7 +19,7 @@ def query_nightbot(player: Player) -> dict:
     return commands
 
 
-def _query_commands(user_id: str):
+def _query_commands(user_id: str) -> list:
     headers = {"nightbot-channel": user_id}
     response = requests.get(NIGHTBOT_COMMANDS_URL, headers=headers).json()
 

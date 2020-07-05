@@ -1,8 +1,9 @@
 import logging
 
+from db.admin.command.api.nightbot_api import query_nightbot
+from db.admin.command.api.streamelements_api import query_streamelements
+from db.admin.command.api.streamlabs_api import query_streamlabs
 from db.admin.command.command_source import CommandSource
-from db.admin.command.nightbot_api import query_nightbot
-from db.admin.command.streamlabs_api import query_streamlabs
 from db.json_database_engine import JSONDatabaseEngine
 
 
@@ -11,12 +12,18 @@ def main():
     players = db.select_players()
 
     for player in players:
+
+        current_commands = []
         source = player.get_command_source()
+
         if source == CommandSource.NIGHTBOT.value:
-            _compare_commands(player.username, previous=player.commands, current=query_nightbot(player))
+            current_commands = query_nightbot(player)
         elif source == CommandSource.STREAMLABS.value:
-            _compare_commands(player.username, previous=player.commands, current=query_streamlabs(player))
-        # TODO: add stream elements API
+            current_commands = query_streamlabs(player)
+        elif source == CommandSource.STREAMELEMENTS.value:
+            current_commands = query_streamelements(player)
+
+        _compare_commands(player.username, previous=player.commands, current=current_commands)
 
     logging.info(f"{len(players)} players checked")
 
@@ -24,7 +31,7 @@ def main():
 def _compare_commands(username: str, previous: dict, current: dict):
     for cmd, msg in previous.items():
         new_msg = current.get(cmd)
-        if cmd != "source" and msg != new_msg:
+        if msg != new_msg and cmd != "source":
             logging.info(f"[{username}] [{cmd}]: {new_msg}")
 
 

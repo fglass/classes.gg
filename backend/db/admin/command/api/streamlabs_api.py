@@ -1,5 +1,4 @@
 import requests
-
 from model.player import Player
 
 STREAMLABS_CHANNEL_URL = "https://streamlabs.com/api/v6/user/"
@@ -20,7 +19,7 @@ def query_streamlabs(player: Player) -> dict:
     return commands
 
 
-def _query_commands(token: str):
+def _query_commands(token: str) -> list:
     commands_url = STREAMLABS_COMMANDS_URL % token
     response = requests.get(commands_url)
 
