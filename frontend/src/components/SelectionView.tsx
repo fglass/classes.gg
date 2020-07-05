@@ -11,8 +11,8 @@ import "slick-carousel/slick/slick-theme.css";
 interface IProps {
     classes: any
     players: Array<Player>
-    searching: boolean
     selectPlayer: (username: string) => void
+    searching: boolean
 }
 
 const useStyles = makeStyles(theme => ({
@@ -34,11 +34,11 @@ const useStyles = makeStyles(theme => ({
 }));
 
 function getSlidesForWidth(width: number) {
-    if (width <= 600) {
+    if (width <= 600) {             // xs
         return 1
-    } else if (width <= 960) {
+    } else if (width <= 960) {      // sm
         return 3
-    } else if (width <= 1280) {
+    } else if (width <= 1280) {     // md
         return 4
     }
     return 5;
@@ -107,7 +107,7 @@ class SelectionView extends React.Component<IProps> {
     }
 
     render() {
-        const { classes, players, searching } = this.props
+        const { classes, players, selectPlayer, searching } = this.props
 
         if (searching && players.length === 0) {
             return(
@@ -126,7 +126,7 @@ class SelectionView extends React.Component<IProps> {
                 <PlayerCard
                     username={player.username}
                     avatar={player.avatar}
-                    selectPlayer={this.props.selectPlayer}
+                    selectPlayer={selectPlayer}
                 />
             </div>
         ))
@@ -154,7 +154,7 @@ export default (props: any) => {
     return <SelectionView
         classes={classes}
         players={props.players}
-        searching={props.searching}
         selectPlayer={props.selectPlayer}
+        searching={props.searching}
     />
 }

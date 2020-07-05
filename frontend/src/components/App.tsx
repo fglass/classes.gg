@@ -7,8 +7,17 @@ import Header from "./Header";
 import SelectionView from "./SelectionView";
 import PlayerView from "./PlayerView";
 import { blue } from '@material-ui/core/colors';
-import { createMuiTheme, ThemeProvider } from '@material-ui/core/styles';
+import {createMuiTheme, makeStyles, ThemeProvider} from '@material-ui/core/styles';
 import { Player } from "../domain/player";
+
+interface IProps {
+    classes: any
+}
+
+interface IState {
+    players: Array<Player>
+    filteredPlayers: Array<Player>
+}
 
 const darkTheme = createMuiTheme({
     palette: {
@@ -17,16 +26,22 @@ const darkTheme = createMuiTheme({
     },
 });
 
-interface IState {
-    players: Array<Player>
-    filteredPlayers: Array<Player>
-}
+const useStyles = makeStyles(() => ({
+    root: {
+        display: 'flex',
+        flexDirection: 'column',
+        minHeight: '100vh',
+    },
+    main: {
+        flexGrow: 1,
+    },
+}));
 
-export default class App extends React.Component<any, IState> {
+class App extends React.Component<IProps, IState> {
 
     private static ANALYTICS_TRACKING_CODE = "UA-131273827-2"
 
-    constructor(props: any) {
+    constructor(props: IProps) {
         super(props);
         this.state = {
             players: [],
@@ -63,23 +78,38 @@ export default class App extends React.Component<any, IState> {
     }
 
     render() {
+        const { classes } = this.props;
         const { players, filteredPlayers } = this.state
+
+        let main = <div className={classes.main} />
+
+        if (players.length > 0) {
+            main = (
+                <div className={classes.main} >
+                    <SelectionView
+                        players={filteredPlayers}
+                        selectPlayer={this.selectPlayer}
+                        searching={players.length !== filteredPlayers.length}
+                    />
+                    <PlayerView username={window.location.pathname.replace("/", "") || players[0].username} />
+                </div>
+            )
+        }
+
         return (
-            <React.Fragment>
+            <div className={classes.root} >
                 <ThemeProvider theme={darkTheme}>
                     <CssBaseline />
                     <Header onSearch={this.onSearch} />
-                    <SelectionView
-                        players={filteredPlayers}
-                        searching={players.length !== filteredPlayers.length}
-                        selectPlayer={this.selectPlayer}
-                    />
-                    {players.length > 0 &&
-                        <PlayerView username={window.location.pathname.replace("/", "") || players[0].username} />
-                    }
+                    {main}
                     <Footer />
                 </ThemeProvider>
-            </React.Fragment>
+            </div>
         );
     }
+}
+
+export default () => {
+    const classes = useStyles()
+    return <App classes={classes}/>
 }

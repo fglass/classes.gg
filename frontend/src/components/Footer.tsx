@@ -8,10 +8,6 @@ const useStyles = makeStyles(theme => ({
         backgroundColor: theme.palette.background.paper,
         width: '100%',
         padding: theme.spacing(2.1),
-        [theme.breakpoints.up('md')]: {
-            position: 'fixed',
-            bottom: 0,
-        },
     },
 }));
 
