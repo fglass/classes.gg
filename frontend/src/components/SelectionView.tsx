@@ -21,9 +21,9 @@ const useStyles = makeStyles(theme => ({
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
-        minHeight: 407,
-        paddingTop: theme.spacing(8),
-        paddingBottom: theme.spacing(8),
+        minHeight: 359,
+        paddingTop: theme.spacing(5),
+        paddingBottom: theme.spacing(5),
         backgroundColor: theme.palette.background.paper,
     },
     noMatches: {
@@ -35,14 +35,11 @@ const useStyles = makeStyles(theme => ({
 }));
 
 function getSlidesForWidth(width: number) {
-    if (width <= 600) {             // xs
+    if (width <= 600) { // xs
         return 1
-    } else if (width <= 960) {      // sm
-        return 3
-    } else if (width <= 1280) {     // md
-        return 4
     }
-    return 5;
+    const cardWidth = 300;
+    return Math.floor(width / cardWidth);
 }
 
 function Arrow(props: any) {
@@ -68,18 +65,6 @@ const sliderSettings = {
     autoplaySpeed: 100,
     speed: 2000,
     responsive: [
-        {
-            breakpoint: 1280, // md
-            settings: {
-                slidesToShow: getSlidesForWidth(1280),
-            }
-        },
-        {
-            breakpoint: 960, // sm
-            settings: {
-                slidesToShow: getSlidesForWidth(960),
-            }
-        },
         {
             breakpoint: 600, // xs
             settings: {
@@ -123,9 +108,17 @@ class SelectionView extends React.Component<IProps> {
 
         let view;
 
+        const slides = getSlidesForWidth(window.innerWidth);
+
         // Carousel view
-        if (players.length > getSlidesForWidth(window.innerWidth)) {
-            sliderSettings["initialSlide"] = firstPlayer
+        if (players.length > slides) {
+
+            sliderSettings["slidesToShow"] = slides // Dynamic number of slides
+
+            if (slides === 1) {
+                sliderSettings["initialSlide"] = firstPlayer // Mobile only
+            }
+
             view = (
                 <Slider className={classes.container} {...sliderSettings}>
                     {players.map((player) => (

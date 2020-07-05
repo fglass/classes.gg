@@ -26,14 +26,21 @@ const darkTheme = createMuiTheme({
     },
 });
 
-const useStyles = makeStyles(() => ({
+const useStyles = makeStyles((theme) => ({
     root: {
         display: 'flex',
         flexDirection: 'column',
         minHeight: '100vh',
     },
     main: {
+        display: 'flex',
         flexGrow: 1,
+        justifyContent: 'center',
+        alignItems: 'center',
+        [theme.breakpoints.up('md')]: {
+            marginTop: theme.spacing(5),
+            marginBottom: theme.spacing(5),
+        }
     },
 }));
 
@@ -81,20 +88,22 @@ class App extends React.Component<IProps, IState> {
         const { classes } = this.props;
         const { players, filteredPlayers } = this.state
 
-        let main = <div className={classes.main} />
+        let content = <div className={classes.main} />
 
         if (players.length > 0) {
             const selectedPlayer = window.location.pathname.replace("/", "") || players[0].username
-            main = (
-                <div className={classes.main} >
-                    <SelectionView
-                        players={filteredPlayers}
-                        firstPlayer={players.findIndex(player => player.username === selectedPlayer)}
-                        selectPlayer={this.selectPlayer}
-                        searching={players.length !== filteredPlayers.length}
-                    />
-                    <PlayerView username={selectedPlayer} />
-                </div>
+            content = (
+                <React.Fragment>
+                     <SelectionView
+                            players={filteredPlayers}
+                            firstPlayer={players.findIndex(player => player.username === selectedPlayer)}
+                            selectPlayer={this.selectPlayer}
+                            searching={players.length !== filteredPlayers.length}
+                        />
+                    <div className={classes.main}>
+                        <PlayerView username={selectedPlayer} />
+                    </div>
+                </React.Fragment>
             )
         }
 
@@ -103,7 +112,7 @@ class App extends React.Component<IProps, IState> {
                 <ThemeProvider theme={darkTheme}>
                     <CssBaseline />
                     <Header onSearch={this.onSearch} />
-                    {main}
+                    {content}
                     <Footer />
                 </ThemeProvider>
             </div>

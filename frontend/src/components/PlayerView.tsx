@@ -26,14 +26,15 @@ interface IState {
 
 const useStyles = makeStyles(theme => ({
     container: {
-        maxWidth: 900,
+        flexGrow: 1,
+        margin: 'auto',
+        maxWidth: 1100,
         paddingTop: theme.spacing(2),
         paddingBottom: theme.spacing(2),
-        margin: 'auto',
-        [theme.breakpoints.up('md')]: {
-            marginTop: '7.5%',
-            marginBottom: '7.5%',
-        }
+        // [theme.breakpoints.up('md')]: {
+        //     marginTop: theme.spacing(5),
+        //     marginBottom: theme.spacing(5),
+        // }
     },
     titleGridItem: {
         height: 50,
