@@ -49,6 +49,7 @@ const useStyles = makeStyles(theme => ({
         borderRadius: '2%',
         height: 280,
         border: '3px solid #555',
+        backgroundColor: theme.palette.background.paper,
         [theme.breakpoints.down('sm')]: {
             maxHeight: 230,
         },

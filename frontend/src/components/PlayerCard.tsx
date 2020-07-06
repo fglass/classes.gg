@@ -42,6 +42,7 @@ const useStyles = makeStyles((theme) => ({
         },
     },
     media: {
+        backgroundColor: theme.palette.background.default,
         paddingTop: '70%',
     },
 }));

@@ -15,7 +15,7 @@ def get_player(username: str):
 
 @api.route("/players")
 def get_players():
-    players = [{"username": player.username, "avatar": player.avatar} for player in db.select_players()]
+    players = [dict(username=player.username, avatar=player.avatar) for player in db.select_players()]
     return jsonify(players)
 
 
