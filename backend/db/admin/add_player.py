@@ -4,8 +4,8 @@ from model.player import Player
 
 
 NEW_PLAYER = Player(
-    username="Swagg",
-    avatar="https://static-cdn.jtvnw.net/jtv_user_pictures/swagg-profile_image-a0898c1b75f6094d-300x300.png",
+    username="SweetSurrenderD",
+    avatar="https://imgur.com/zc1fAZ4.png",
     loadouts={},
     commands={"source": CommandSource.NIGHTBOT.value}
 )

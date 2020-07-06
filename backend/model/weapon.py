@@ -17,13 +17,16 @@ class Weapon(Enum):
     # LMG
     HOLGER = "Holger-26"
     PKM = "PKM"
+    BRUEN = "MK9 Bruen"
 
     # SMG
+    AUG = "AUG"
     FENNEC = "Fennec"
     MP5 = "MP5"
     MP7 = "MP7"
     P90 = "P90"
     PP19_BIZON = "PP19 Bizon"
+    STRIKER_45 = "Striker 45"
     UZI = "Uzi"
 
     # Sniper rifle
@@ -32,3 +35,11 @@ class Weapon(Enum):
 
     # Marksman rifle
     KAR98K = "Kar98k"
+    CROSSBOW = "Crossbow"
+
+    # Shotgun
+    MODEL_680 = "Model 680"
+    ORIGIN_12_SHOTGUN = "Origin 12 Shotgun"
+
+    # Pistol
+    RENETTI = "Renetti"
