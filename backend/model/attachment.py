@@ -49,6 +49,7 @@ class Attachment(Enum):
     XRK_HORIZON = "XRK Horizon 23.0\""
     STAINLESS_STEEL = "400mm Stainless Steel"
     FORGE_TAC_IMPALER = "FORGE TAC Impaler"
+    LONG_BARREL = "622mm Long Barrel"
 
     # Underbarrel
     COMMANDO_FOREGRIP = "Commando Foregrip"

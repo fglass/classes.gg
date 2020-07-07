@@ -6,7 +6,7 @@ class Weapon(Enum):
     AK_47 = "AK-47"
     CR_56_AMAX = "CR-56 AMAX"
     FAL = "FAL"
-    FR = "FR 5.56"
+    FAMAS = "FR 5.56"
     GRAU = "Grau 5.56"
     KILO_141 = "Kilo 141"
     M4A1 = "M4A1"
