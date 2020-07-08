@@ -2,7 +2,17 @@ from enum import Enum
 
 
 class Attachment(Enum):
-    # Muzzle
+
+    def get_type(self):
+        _type = self.__class__.__name__
+        if _type == RearGrip.__name__:
+            return "Rear Grip"
+        if _type == TriggerAction.__name__:
+            return "Trigger Action"
+        return _type
+
+
+class Muzzle(Attachment):
     COLLOSUS_SUPPRESSOR = "Collosus Suppressor"
     LIGHTWEIGHT_SUPPRESSOR = "Lightweight Suppressor"
     MONOLITHIC_SUPPRESSOR = "Monolithic Suppressor"
@@ -13,7 +23,8 @@ class Attachment(Enum):
     DESPERADO_PRO_COMPENSATOR = "Desperado Pro Compensator"
     FORGE_TAC_MARAUDER = "FORGE TAC Marauder"
 
-    # Barrel
+
+class Barrel(Attachment):
     TEMPUS_ARCHANGEL = "Tempus 26.4\" Archangel"
     STOCK_M16_GRENADIER = "Stock M16 Grenadier"
     MONOLITHIC_INTEGRAL_SUPPRESSOR = "Monolithic Integral Suppressor"
@@ -51,7 +62,8 @@ class Attachment(Enum):
     FORGE_TAC_IMPALER = "FORGE TAC Impaler"
     LONG_BARREL = "622mm Long Barrel"
 
-    # Underbarrel
+
+class Underbarrel(Attachment):
     COMMANDO_FOREGRIP = "Commando Foregrip"
     MERC_FOREGRIP = "Merc Foregrip"
     RANGER_FOREGRIP = "Ranger Foregrip"
@@ -60,14 +72,8 @@ class Attachment(Enum):
     SNATCH_GRIP = "Snatch Grip"
     XRK_TRUEGRIP_TACTICAL = "XRK Truegrip Tactical"
 
-    # Trigger action
-    LIGHTWEIGHT_TRIGGER = "Lightweight Trigger"
 
-    # Laser
-    TAC_LASER = "Tac Laser"
-    MW_LASER_5 = "5mW Laser"
-
-    # Optic
+class Optic(Attachment):
     VLK_3X_OPTIC = "VLK 3.0x Optic"
     VARIABLE_ZOOM_SCOPE = "Variable Zoom Scope"
     SNIPER_SCOPE = "Sniper Scope"
@@ -83,7 +89,8 @@ class Attachment(Enum):
     FLIP_HYBRID = "4.0x Flip Hybrid"
     PBX_HOLO_SIGHT = "PBX Holo 7 Sight"
 
-    # Ammunition
+
+class Ammunition(Attachment):
     ROUND_MAGS_7 = "7 Round Mags"
     ROUND_MAGS_24 = "24 Round Mags"
     ROUND_DRUM_MAGS_25 = "25 Round Drum Mags"
@@ -103,14 +110,16 @@ class Attachment(Enum):
     DRAGONS_BREATH_ROUNDS = "Dragon's Breath Rounds"
     HOLLOW_POINT = ".45 Hollow Point 12-R Mags"
 
-    # Rear grip
+
+class RearGrip(Attachment):
     XRK_SPEED_GRIP = "XRK Speed Grip"
     XRK_VOID_II = "XRK Void II"
     STIPPLED_GRIP_TAPE = "Stippled Grip Tape"
     RUBBERIZED_GRIP_TAPE = "Rubberized Grip Tape"
     CRONEN_SNIPER_ELITE = "Cronen Sniper Elite"
 
-    # Stock
+
+class Stock(Attachment):
     NO_STOCK = "No Stock"
     FLY_STRAP = "Fly Strap"
     FSS_CLOSE_QUARTERS_STOCK = "FSS Close Quarters Stock"
@@ -127,18 +136,31 @@ class Attachment(Enum):
     FORGE_TAC_CQB_COMB = "FORGE TAC CQB Comb"
     FSS_GUARDIAN = "FSS Guardian"
 
-    # Perk
+
+class Perk(Attachment):
     SLEIGHT_OF_HAND = "Sleight of Hand"
     PRESENCE_OF_MIND = "Presence of Mind"
     FMJ = "FMJ"
     FOCUS = "Focus"
     AKIMBO = "Akimbo"
 
-    # Cable
+
+class Laser(Attachment):
+    TAC_LASER = "Tac Laser"
+    MW_LASER_5 = "5mW Laser"
+
+
+class TriggerAction(Attachment):
+    LIGHTWEIGHT_TRIGGER = "Lightweight Trigger"
+
+
+class Cable(Attachment):
     STRAND_CABLE_28 = "28-Strand Cable"
 
-    # Arms
+
+class Arms(Attachment):
     XRK_THUNDER_200 = "XRK Thunder 200 Lb"
 
-    # Bolt
+
+class Bolt(Attachment):
     FTAC_FURY = "FTAC Fury 20\" Bolts"
