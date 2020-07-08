@@ -68,7 +68,7 @@ class Underbarrel(Attachment):
     MERC_FOREGRIP = "Merc Foregrip"
     RANGER_FOREGRIP = "Ranger Foregrip"
     OPERATOR_FOREGRIP = "Operator Foregrip"
-    STIPPLED_GRIP_TAPE_U = "Stippled Grip Tape"
+    STIPPLED_GRIP_TAPE = "Stippled Grip Tape"
     SNATCH_GRIP = "Snatch Grip"
     XRK_TRUEGRIP_TACTICAL = "XRK Truegrip Tactical"
 

@@ -168,11 +168,11 @@ class PlayerView extends React.Component<IProps, IState> {
                         </Grid>
                         <Grid item className={classes.listGridItem}>
                             <List classes={{ root: classes.list }}>
-                                {loadout.attachments.map((attachment, index) =>
-                                    <ListItem key={index} className={classes.attachment}>
-                                        <ListItemText primary={attachment} />
+                                {Object.entries(loadout.attachments).map(([type, attachment]) => (
+                                    <ListItem key={type} className={classes.attachment}>
+                                        <ListItemText primary={`${type}: ${attachment}`} />
                                     </ListItem>
-                                )}
+                                ))}
                             </List>
                         </Grid>
                         <Grid item>
