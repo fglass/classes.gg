@@ -6,31 +6,29 @@ from model.weapon import Weapon
 
 if __name__ == '__main__':
     db = JSONDatabaseEngine()
-    player = db.select_player("teepee")
+    player = db.select_player("vikkstar123")
 
-    loadout = Weapon.PP19_BIZON.value
-    source = "https://tinyurl.com/teepeeattachments"
+    loadout = Weapon.BRUEN.value
+    source = "https://www.youtube.com/watch?v=yvM_EWcIv5A"
     last_updated = datetime.now().isoformat()
     attachments = [
         Muzzle.MONOLITHIC_SUPPRESSOR,
-        Barrel.STEEL,
+        Barrel.XRK_SUMMIT,
         Laser.TAC_LASER,
-        # Underbarrel.COMMANDO_FOREGRIP,
-        Stock.NO_STOCK,
-        # Ammunition.ROUND_MAGS_60
-        RearGrip.STIPPLED_GRIP_TAPE
+        Optic.VLK_3X_OPTIC,
+        # Underbarrel.MERC_FOREGRIP,
+        # Stock.FTAC_COLLAPSIBLE,
+        Ammunition.ROUND_MAGS_60,
+        # RearGrip.STIPPLED_GRIP_TAPE,
+        # Perk.SLEIGHT_OF_HAND,
     ]
 
-    player.commands["!m4"] = "Nade's M4 Class -> Monolithic Suppressor, Commando Foregrip, Stock M16 Grenadier Barrel, 60 Round Mag, Tac Laser"
-
-    # Post-process
-    attachments.sort(key=lambda attachment: attachment.value)  # TODO: needed now?
-    attachments = {attachment.get_type(): attachment.value for attachment in attachments}
+    # player.commands["!mp5"] = "@{touser.name} https://clips.twitch.tv/AwkwardVainBottleDxAbomb"
 
     player.loadouts[loadout] = {
         "source": source,
         "lastUpdated": last_updated,
-        "attachments": attachments
+        "attachments": {attachment.get_type(): attachment.value for attachment in attachments}
     }
 
     db.add_player(player)

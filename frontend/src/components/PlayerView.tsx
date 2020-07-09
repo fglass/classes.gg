@@ -6,7 +6,6 @@ import InputLabel from '@material-ui/core/InputLabel';
 import LinkIcon from "@material-ui/icons/Link";
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
-import ListItemText from '@material-ui/core/ListItemText';
 import MenuItem from '@material-ui/core/MenuItem';
 import Select from '@material-ui/core/Select';
 import Tooltip from '@material-ui/core/Tooltip';
@@ -47,7 +46,7 @@ const useStyles = makeStyles(theme => ({
     },
     avatar: {
         borderRadius: '2%',
-        height: 280,
+        height: 290,
         border: '3px solid #555',
         backgroundColor: theme.palette.background.paper,
         [theme.breakpoints.down('sm')]: {
@@ -81,6 +80,9 @@ const useStyles = makeStyles(theme => ({
         marginBottom: theme.spacing(1.25),
         maxWidth: '100%',
         maxHeight: 50,
+    },
+    attachmentText: {
+        paddingBottom: 2,
     },
     infoContainer: {
         display: 'flex',
@@ -169,8 +171,13 @@ class PlayerView extends React.Component<IProps, IState> {
                         <Grid item className={classes.listGridItem}>
                             <List classes={{ root: classes.list }}>
                                 {Object.entries(loadout.attachments).map(([type, attachment]) => (
-                                    <ListItem key={type} className={classes.attachment}>
-                                        <ListItemText primary={`${type}: ${attachment}`} />
+                                    <ListItem className={classes.attachment} key={type}>
+                                        <div className={classes.attachmentText}>
+                                            <Typography variant="caption" color="textSecondary">
+                                                {type}
+                                            </Typography>
+                                            <Typography>{attachment}</Typography>
+                                        </div>
                                     </ListItem>
                                 ))}
                             </List>
