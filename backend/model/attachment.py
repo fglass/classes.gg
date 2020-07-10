@@ -97,6 +97,7 @@ class Ammunition(Attachment):
     ROUND_DRUM_MAGS_25 = "25 Round Drum Mags"
     ROUND_MAGS_27 = "27 Round Mags"
     ROUND_MAGS_30 = "30 Round Mags"
+    ROUND_MAGS_32 = "32 Round Mags"
     ROUND_DRUM_MAGS_40 = "40 Round Drum Mags"
     ROUND_MAGS_40 = "40 Round Mags"
     ROUND_MAGS_45 = "45 Round Mags"

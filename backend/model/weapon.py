@@ -43,3 +43,4 @@ class Weapon(Enum):
 
     # Pistol
     RENETTI = "Renetti"
+    M19 = "M19"
