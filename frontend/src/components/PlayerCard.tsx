@@ -16,6 +16,10 @@ const useStyles = makeStyles((theme) => ({
     container: {
         margin: 'auto',
         maxWidth: 280,
+        padding: theme.spacing(0, 0.5, 0, 0.5),
+        [theme.breakpoints.down('sm')]: {
+            padding: theme.spacing(0, 2, 0, 2),
+        },
     },
     actionArea: {
         borderRadius: 16,

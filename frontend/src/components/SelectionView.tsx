@@ -18,12 +18,29 @@ interface IProps {
 
 const useStyles = makeStyles(theme => ({
     container: {
+        minHeight: 348,
+        maxHeight: 348,
+        [theme.breakpoints.down('sm')]: {
+            minHeight: 329,
+            maxHeight: 329,
+        },
+        paddingTop: theme.spacing(5),
+        paddingBottom: theme.spacing(5),
+        backgroundColor: theme.palette.background.paper,
+    },
+    slider: {
+        margin: theme.spacing(0, 6.25, 0, 6.25),
+    },
+    emptyContainer: {
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
-        minHeight: 359,
-        paddingTop: theme.spacing(5),
-        paddingBottom: theme.spacing(5),
+        minHeight: 348,
+        maxHeight: 348,
+        [theme.breakpoints.down('sm')]: {
+            minHeight: 329,
+            maxHeight: 329,
+        },
         backgroundColor: theme.palette.background.paper,
     },
     noMatches: {
@@ -38,44 +55,24 @@ function getSlidesForWidth(width: number) {
     if (width <= 600) { // xs
         return 1
     }
-    const cardWidth = 300;
+    const cardWidth = 310;
     return Math.floor(width / cardWidth);
-}
-
-function Arrow(props: any) {
-    const { className, existingStyle, onClick, next } = props;
-    const style = next ? { ...existingStyle, right: '5%' } : { ...existingStyle, left: '5%', zIndex: 1 }
-    return (
-        <div
-            className={className}
-            style={style}
-            onClick={onClick}
-        />
-    );
 }
 
 const sliderSettings = {
     initialSlide: 0,
     slidesToShow: 5,
-    pauseOnHover: false,
+    slidesToScroll: 5,
     swipe: false,
-    arrows: false,
-    infinite: true,
-    autoplay: true,
-    autoplaySpeed: 100,
-    speed: 2000,
+    speed: 250,
     responsive: [
         {
             breakpoint: 600, // xs
             settings: {
                 slidesToShow: getSlidesForWidth(600),
-                prevArrow: <Arrow />,
-                nextArrow: <Arrow next />,
-                arrows: true,
+                slidesToScroll: getSlidesForWidth(600),
                 swipe: true,
                 swipeToSlide: true,
-                autoplay: false,
-                speed: 250,
             }
         }
     ]
@@ -98,7 +95,7 @@ class SelectionView extends React.Component<IProps> {
 
         if (searching && players.length === 0) {
             return(
-                <div className={classes.container}>
+                <div className={classes.emptyContainer}>
                     <Typography className={classes.noMatches} align="center">
                         No Matches
                     </Typography>
@@ -107,34 +104,33 @@ class SelectionView extends React.Component<IProps> {
         }
 
         let view;
-
         const slides = getSlidesForWidth(window.innerWidth);
 
-        // Carousel view
-        if (players.length > slides) {
+        if (players.length > slides) { // Carousel view
 
-            sliderSettings["slidesToShow"] = slides // Dynamic number of slides
+            sliderSettings["slidesToShow"] = slides
+            sliderSettings["slidesToScroll"] = slides
 
             if (slides === 1) {
-                sliderSettings["initialSlide"] = firstPlayer // Mobile only
+                sliderSettings["initialSlide"] = firstPlayer // Set first slide for mobile only
             }
 
             view = (
-                <Slider className={classes.container} {...sliderSettings}>
-                    {players.map((player) => (
-                        <div key={player.username}>
-                            <PlayerCard
-                                username={player.username}
-                                avatar={player.avatar}
-                                selectPlayer={selectPlayer}
-                            />
-                        </div>
-                    ))}
-                </Slider>
+                <div className={classes.container}>
+                    <Slider className={classes.slider} {...sliderSettings}>
+                        {players.map((player) => (
+                            <div key={player.username}>
+                                <PlayerCard
+                                    username={player.username}
+                                    avatar={player.avatar}
+                                    selectPlayer={selectPlayer}
+                                />
+                            </div>
+                        ))}
+                    </Slider>
+                </div>
             )
-
-        // Static view
-        } else {
+        } else { // Static view
             view = (
                 <div className={classes.container}>
                     <Grid container>
