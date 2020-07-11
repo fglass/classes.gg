@@ -6,25 +6,25 @@ from model.weapon import Weapon
 
 if __name__ == '__main__':
     db = JSONDatabaseEngine()
-    player = db.select_player("sweetsurrenderd")
+    player = db.select_player("symfuhny")
 
-    loadout = Weapon.MP5.value
-    source = "https://www.reddit.com/r/MWLoadouts/comments/ho6wrp/warzone_loadout_1_of_the_updated_as_of_123_patch/"
+    loadout = Weapon.MP7.value
+    source = "https://clips.twitch.tv/StupidSoftConsoleSeemsGood"
     last_updated = datetime.now().isoformat()
     attachments = [
-        # Muzzle.MONOLITHIC_SUPPRESSOR,
-        Barrel.MONOLITHIC_INTEGRAL_SUPPRESSOR,
-        # Laser.TAC_LASER,
+        Muzzle.MONOLITHIC_SUPPRESSOR,
+        Barrel.FSS_RECON,
+        Laser.TAC_LASER,
         # Optic.SNIPER_SCOPE,
-        Stock.FTAC_COLLAPSIBLE,
-        Underbarrel.MERC_FOREGRIP,
-        Ammunition.ROUND_MAGS_45,
-        RearGrip.STIPPLED_GRIP_TAPE,
+        # Stock.FTAC_COLLAPSIBLE,
+        Underbarrel.COMMANDO_FOREGRIP,
+        Ammunition.ROUND_MAGS_60,
+        # RearGrip.STIPPLED_GRIP_TAPE,
         # Perk.AKIMBO,
         # TriggerAction.LIGHTWEIGHT_TRIGGER
     ]
 
-    # player.commands["!loadouts"] = "FIND ALL OF CLOAKZY'S LOADOUTS HERE --> https://docs.google.com/spreadsheets/d/1FYQxMLATGyzFPKppIva3_eEG0J1ulwNMcUoBKtUtWEw/edit?usp=sharing (UPDATED 7/10 W/ BRUEN)"
+    player.commands["!mp7"] = "@{touser.name} https://clips.twitch.tv/StupidSoftConsoleSeemsGood"
 
     attachments = {attachment.get_type(): attachment.value for attachment in attachments}
 

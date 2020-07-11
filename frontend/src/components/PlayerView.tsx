@@ -79,6 +79,7 @@ const useStyles = makeStyles(theme => ({
         backgroundColor: theme.palette.background.paper,
         marginBottom: theme.spacing(1.25),
         maxWidth: '100%',
+        minHeight: 50,
         maxHeight: 50,
     },
     attachmentText: {
@@ -102,6 +103,8 @@ class PlayerView extends React.Component<IProps, IState> {
             selectedLoadout: ""
         }
     }
+
+    private static N_ATTACHMENTS = 5
 
     async getPlayer() {
         const player = await Api.getPlayer(this.props.username)
@@ -137,6 +140,18 @@ class PlayerView extends React.Component<IProps, IState> {
         const loadout = player.loadouts[this.state.selectedLoadout]
         const updated = new Date(loadout.lastUpdated)
 
+        const keys = Object.keys(loadout.attachments)
+        const attachments: Array<[string, string]> = []
+
+        for (let i = 0; i < PlayerView.N_ATTACHMENTS; i++) {
+            if (i < keys.length) {
+                const key = keys[i];
+                attachments.push([key, loadout.attachments[key]])
+            } else{
+                attachments.push(["", ""]) // Empty attachment slot
+            }
+        }
+
         return (
             <div className={classes.container}>
                 <Grid container alignItems="flex-start">
@@ -170,7 +185,7 @@ class PlayerView extends React.Component<IProps, IState> {
                         </Grid>
                         <Grid item className={classes.listGridItem}>
                             <List classes={{ root: classes.list }}>
-                                {Object.entries(loadout.attachments).map(([type, attachment]) => (
+                                {attachments.map(([type, attachment]) => (
                                     <ListItem className={classes.attachment} key={type}>
                                         <div className={classes.attachmentText}>
                                             <Typography variant="caption" color="textSecondary">
