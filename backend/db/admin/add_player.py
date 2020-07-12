@@ -4,10 +4,10 @@ from model.player import Player
 
 
 NEW_PLAYER = Player(
-    username="SweetSurrenderD",
-    avatar="https://imgur.com/zc1fAZ4.png",
+    username="Tfue",
+    avatar="https://static-cdn.jtvnw.net/jtv_user_pictures/82b63a01-628f-4c81-9b05-dd3a5011fdda-profile_image-300x300.png",
     loadouts={},
-    commands={"source": CommandSource.NIGHTBOT.value}
+    commands={"source": CommandSource.FOSSABOT.value}
 )
 
 if __name__ == '__main__':

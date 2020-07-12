@@ -6,16 +6,16 @@ from model.weapon import Weapon
 
 if __name__ == '__main__':
     db = JSONDatabaseEngine()
-    player = db.select_player("symfuhny")
+    player = db.select_player("tfue")
 
-    loadout = Weapon.MP7.value
-    source = "https://clips.twitch.tv/StupidSoftConsoleSeemsGood"
+    loadout = Weapon.BRUEN.value
+    source = "https://clips.twitch.tv/StylishMagnificentShingleAMPTropPunch"
     last_updated = datetime.now().isoformat()
     attachments = [
         Muzzle.MONOLITHIC_SUPPRESSOR,
-        Barrel.FSS_RECON,
-        Laser.TAC_LASER,
-        # Optic.SNIPER_SCOPE,
+        Barrel.XRK_SUMMIT,
+        # Laser.MW_LASER_5,
+        Optic.VLK_3X_OPTIC,
         # Stock.FTAC_COLLAPSIBLE,
         Underbarrel.COMMANDO_FOREGRIP,
         Ammunition.ROUND_MAGS_60,
@@ -24,7 +24,7 @@ if __name__ == '__main__':
         # TriggerAction.LIGHTWEIGHT_TRIGGER
     ]
 
-    player.commands["!mp7"] = "@{touser.name} https://clips.twitch.tv/StupidSoftConsoleSeemsGood"
+    player.commands["!bruen"] = "https://clips.twitch.tv/StylishMagnificentShingleAMPTropPunch?tt_medium=twtr"
 
     attachments = {attachment.get_type(): attachment.value for attachment in attachments}
 

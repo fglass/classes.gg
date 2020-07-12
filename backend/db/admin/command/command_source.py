@@ -2,6 +2,7 @@ from enum import Enum
 
 
 class CommandSource(Enum):
+    FOSSABOT = "fossabot"
     NIGHTBOT = "nightbot"
-    STREAMLABS = "streamlabs"
     STREAMELEMENTS = "streamelements"
+    STREAMLABS = "streamlabs"
