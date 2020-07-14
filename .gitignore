@@ -4,6 +4,8 @@ __pycache__/
 *$py.class
 
 # dependencies
+Pipfile
+Pipfile.lock
 node_modules
 /.pnp
 .pnp.js
