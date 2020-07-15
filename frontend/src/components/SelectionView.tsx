@@ -28,9 +28,6 @@ const useStyles = makeStyles(theme => ({
         paddingBottom: theme.spacing(5),
         backgroundColor: theme.palette.background.paper,
     },
-    slider: {
-        margin: theme.spacing(0, 6.25, 0, 6.25),
-    },
     emptyContainer: {
         display: 'flex',
         justifyContent: 'center',
@@ -59,19 +56,33 @@ function getSlidesForWidth(width: number) {
     return Math.floor(width / cardWidth);
 }
 
+function Arrow(props: any) {
+     const { className, existingStyle, onClick, next, offset } = props;
+     const style = next ? { ...existingStyle, right: offset } : { ...existingStyle, left: offset, zIndex: 1 }
+     return (
+         <div
+             className={className}
+             style={style}
+             onClick={onClick}
+         />
+     );
+ }
+
 const sliderSettings = {
     initialSlide: 0,
     slidesToShow: 5,
     slidesToScroll: 5,
-    swipe: false,
-    speed: 250,
+    speed: 400,
+    prevArrow: <Arrow offset={8} />,
+    nextArrow: <Arrow offset={8} next />,
     responsive: [
         {
             breakpoint: 600, // xs
             settings: {
                 slidesToShow: getSlidesForWidth(600),
                 slidesToScroll: getSlidesForWidth(600),
-                swipe: true,
+                prevArrow: <Arrow offset={'5%'} />,
+                nextArrow: <Arrow offset={'5%'} next />,
                 swipeToSlide: true,
             }
         }

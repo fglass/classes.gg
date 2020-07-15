@@ -18,7 +18,7 @@ const useStyles = makeStyles((theme) => ({
         maxWidth: 280,
         padding: theme.spacing(0, 0.5, 0, 0.5),
         [theme.breakpoints.down('sm')]: {
-            padding: theme.spacing(0, 2, 0, 2),
+            padding: theme.spacing(0, 1.5, 0, 1.5),
         },
     },
     actionArea: {

@@ -6,25 +6,25 @@ from model.weapon import Weapon
 
 if __name__ == '__main__':
     db = JSONDatabaseEngine()
-    player = db.select_player("symfuhny")
+    player = db.select_player("mutex")
 
-    loadout = Weapon.BRUEN.value
-    source = "https://clips.twitch.tv/HonorableEagerLorisTF2John"
+    loadout = Weapon.KAR98K.value
+    source = "https://www.twitch.tv/mutex"
     last_updated = datetime.now().isoformat()
     attachments = [
         Muzzle.MONOLITHIC_SUPPRESSOR,
-        Barrel.XRK_SUMMIT,
+        Barrel.SINGUARD_CUSTOM_276,
         Laser.TAC_LASER,
-        Optic.VLK_3X_OPTIC,
-        # Stock.FTAC_COLLAPSIBLE,
-        Underbarrel.COMMANDO_FOREGRIP,
-        # Ammunition.ROUND_MAGS_60,
+        Optic.VARIABLE_ZOOM_SCOPE,
+        Stock.STVOL_PRECISION_COMB,
+        # Underbarrel.MERC_FOREGRIP,
+        # Ammunition.ROUND_MAGS_45,
         # RearGrip.STIPPLED_GRIP_TAPE,
-        # Perk.AKIMBO,
+        # Perk.SLEIGHT_OF_HAND,
         # TriggerAction.LIGHTWEIGHT_TRIGGER
     ]
 
-    player.commands["!bruen"] = "@{touser.name} https://clips.twitch.tv/HonorableEagerLorisTF2John"
+    player.commands["!sniper"] = "[user] Kar98 - Muzzle - Monolithic Suppressor , Barrel - Siinguard Custom 27.6\" , Laser- Tac Laser , Optic - Variable Zoom Scope , Stock - STVOL Precision Comb"
 
     attachments = {attachment.get_type(): attachment.value for attachment in attachments}
 

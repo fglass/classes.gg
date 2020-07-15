@@ -137,6 +137,7 @@ class Stock(Attachment):
     SKELETON_STOCK = "Skeleton Stock"
     FORGE_TAC_CQB_COMB = "FORGE TAC CQB Comb"
     FSS_GUARDIAN = "FSS Guardian"
+    STVOL_PRECISION_COMB = "STVOL Precision Comb"
 
 
 class Perk(Attachment):
