@@ -38,6 +38,7 @@ class Barrel(Attachment):
     RPK_BARREL = "23.0\" RPK Barrel"
     STEEL = "8.7\" Steel"
     XRK_ZODIAC_S440 = "XRK Zodiac S440"
+    XRK_EQUINOX_S440 = "XRK Equinox S440"
     FR_SNIPER = "FR 24.4\" Sniper"
     SINGUARD_ARMS_PROWLER = "Singuard Arms 19.8\" Prowler"
     ODEN_FACTORY_810 = "Oden Factory 810mm"
@@ -93,6 +94,7 @@ class Optic(Attachment):
 
 class Ammunition(Attachment):
     ROUND_MAGS_7 = "7 Round Mags"
+    ROUND_MAGS_9 = "9 Round Mags"
     ROUND_MAGS_24 = "24 Round Mags"
     ROUND_DRUM_MAGS_25 = "25 Round Drum Mags"
     ROUND_MAGS_27 = "27 Round Mags"

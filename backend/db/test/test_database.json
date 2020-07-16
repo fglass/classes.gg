@@ -2,16 +2,16 @@
   "Scump": {
     "username": "Scump",
     "loadouts": {
-      "Grau": {
-        "source": "https://www.twitch.tv/scump",
-        "lastUpdated": "20/06/2020",
-        "attachments": [
-          "Monolithic Supressor",
-          "Tempus 26.4",
-          "Commando Foregrip",
-          "60 Round",
-          "XRK Void II"
-        ]
+      "Grau 5.56": {
+        "attachments": {
+          "Ammunition": "60 Round Mags",
+          "Barrel": "Tempus 26.4\" Archangel",
+          "Muzzle": "Monolithic Suppressor",
+          "Optic": "VLK 3.0x Optic",
+          "Underbarrel": "Commando Foregrip"
+        },
+        "lastUpdated": "2020-07-09T23:06:57.299264",
+        "source": "https://www.twitch.tv/scump"
       }
     },
     "commands": {

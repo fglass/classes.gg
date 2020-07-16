@@ -94,7 +94,7 @@ class SelectionView extends React.Component<IProps> {
     resize = () => this.forceUpdate()
 
     componentDidMount() {
-        window.addEventListener("resize", this.resize) // In case static view required after resize
+        window.addEventListener("resize", this.resize) // Redraw on resize for dynamic updating
     }
 
     componentWillUnmount() {
@@ -117,7 +117,8 @@ class SelectionView extends React.Component<IProps> {
         let view;
         const slides = getSlidesForWidth(window.innerWidth);
 
-        if (players.length > slides) { // Carousel view
+        // Carousel view
+        if (players.length > slides) {
 
             sliderSettings["slidesToShow"] = slides
             sliderSettings["slidesToScroll"] = slides
@@ -141,7 +142,8 @@ class SelectionView extends React.Component<IProps> {
                     </Slider>
                 </div>
             )
-        } else { // Static view
+        // Static view
+        } else {
             view = (
                 <div className={classes.container}>
                     <Grid container>
