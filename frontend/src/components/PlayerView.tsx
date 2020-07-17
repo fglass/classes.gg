@@ -1,15 +1,15 @@
 import React from "react";
 import Api from "../domain/api";
-import FormControl from '@material-ui/core/FormControl';
-import Grid from '@material-ui/core/Grid';
-import InputLabel from '@material-ui/core/InputLabel';
+import FormControl from "@material-ui/core/FormControl";
+import Grid from "@material-ui/core/Grid";
+import InputLabel from "@material-ui/core/InputLabel";
 import LinkIcon from "@material-ui/icons/Link";
-import List from '@material-ui/core/List';
-import ListItem from '@material-ui/core/ListItem';
-import MenuItem from '@material-ui/core/MenuItem';
-import Select from '@material-ui/core/Select';
-import Tooltip from '@material-ui/core/Tooltip';
-import Typography from '@material-ui/core/Typography';
+import List from "@material-ui/core/List";
+import ListItem from "@material-ui/core/ListItem";
+import MenuItem from "@material-ui/core/MenuItem";
+import Select from "@material-ui/core/Select";
+import Tooltip from "@material-ui/core/Tooltip";
+import Typography from "@material-ui/core/Typography";
 import { makeStyles } from "@material-ui/core/styles";
 import { Player } from "../domain/player";
 
@@ -26,47 +26,47 @@ interface IState {
 const useStyles = makeStyles(theme => ({
     container: {
         flexGrow: 1,
-        margin: 'auto',
+        margin: "auto",
         maxWidth: 1100,
         paddingTop: theme.spacing(2),
         paddingBottom: theme.spacing(2),
     },
     titleGridItem: {
         height: 50,
-        margin: 'auto',
+        margin: "auto",
         marginBottom: theme.spacing(2),
     },
     title: {
         paddingTop: theme.spacing(0.75),
-        fontFamily: 'Bebas Neue',
-        fontSize: '2.25rem',
+        fontFamily: "Bebas Neue",
+        fontSize: "2.25rem",
     },
     avatarGridItem: {
-        margin: 'auto',
+        margin: "auto",
     },
     avatar: {
-        borderRadius: '2%',
+        borderRadius: "2%",
         height: 290,
-        border: '3px solid #555',
+        border: "3px solid #555",
         backgroundColor: theme.palette.background.paper,
-        [theme.breakpoints.down('sm')]: {
+        [theme.breakpoints.down("sm")]: {
             maxHeight: 230,
         },
     },
     rightColumn: {
-        [theme.breakpoints.up('md')]: {
+        [theme.breakpoints.up("md")]: {
             paddingLeft: theme.spacing(4),
         }
     },
     selectGridItem: {
         height: 50,
         margin: theme.spacing(0, 2, 2, 2),
-        [theme.breakpoints.down('sm')]: {
+        [theme.breakpoints.down("sm")]: {
             marginTop: theme.spacing(3),
         },
     },
     formControl: {
-        width: '100%',
+        width: "100%",
     },
     listGridItem: {
         margin: theme.spacing(0, 2, 0, 2),
@@ -78,7 +78,7 @@ const useStyles = makeStyles(theme => ({
         borderRadius: 5,
         backgroundColor: theme.palette.background.paper,
         marginBottom: theme.spacing(1.25),
-        maxWidth: '100%',
+        maxWidth: "100%",
         minHeight: 50,
         maxHeight: 50,
     },
@@ -86,14 +86,68 @@ const useStyles = makeStyles(theme => ({
         paddingBottom: 2,
     },
     infoContainer: {
-        display: 'flex',
+        display: "flex",
         margin: theme.spacing(0, 2, 0, 2),
     },
     lastUpdatedLabel: {
         paddingLeft: theme.spacing(1),
-        opacity: '50%',
+        opacity: "50%",
     }
 }));
+
+const LoadoutDropdown = (props: any) => {
+    const { className, weapon, onSelectWeapon, loadouts } = props
+    return (
+        <FormControl variant="outlined" className={className}>
+            <InputLabel id="loadout-select-label">Loadout</InputLabel>
+            <Select
+                id="loadout-select"
+                labelId="loadout-select-label"
+                label="Loadout"
+                value={weapon}
+                onChange={onSelectWeapon}
+            >
+                {Object.keys(loadouts).map((weapon) =>
+                    <MenuItem key={weapon} value={weapon}>{weapon}</MenuItem>
+                )}
+            </Select>
+        </FormControl>
+    )
+}
+
+const AttachmentList = (props: any) => {
+    const { classes, attachments } = props
+    return (
+        <List classes={{ root: classes.list }}>
+            {attachments.map(([type, attachment]: [string, string]) => (
+                <ListItem className={classes.attachment} key={type}>
+                    <div className={classes.attachmentText}>
+                        <Typography variant="caption" color="textSecondary">
+                            {type}
+                        </Typography>
+                        <Typography>{attachment}</Typography>
+                    </div>
+                </ListItem>
+            ))}
+        </List>
+    )
+}
+
+const LoadoutInformation = (props: any) => {
+    const { classes, source, lastUpdated } = props
+    return (
+        <div className={classes.infoContainer}>
+            <Tooltip title="Source">
+                <a href={source} target="_blank" rel="noopener noreferrer">
+                    <LinkIcon />
+                </a>
+            </Tooltip>
+            <Typography className={classes.lastUpdatedLabel}>
+                {`Last updated: ${lastUpdated.toLocaleDateString()}`}
+            </Typography>
+        </div>
+    )
+}
 
 class PlayerView extends React.Component<IProps, IState> {
     constructor(props: IProps) {
@@ -138,23 +192,25 @@ class PlayerView extends React.Component<IProps, IState> {
         const classes = this.props.classes
         const weapon = this.state.selectedLoadout
         const loadout = player.loadouts[this.state.selectedLoadout]
-        const updated = new Date(loadout.lastUpdated)
+        const lastUpdated = new Date(loadout.lastUpdated)
 
         const keys = Object.keys(loadout.attachments)
         const attachments: Array<[string, string]> = []
 
+        // Validate attachments
         for (let i = 0; i < PlayerView.N_ATTACHMENTS; i++) {
             if (i < keys.length) {
                 const key = keys[i];
                 attachments.push([key, loadout.attachments[key]])
             } else{
-                attachments.push(["", ""]) // Empty attachment slot
+                attachments.push(["", ""]) // Empty slot
             }
         }
 
         return (
             <div className={classes.container}>
                 <Grid container alignItems="flex-start">
+
                     <Grid container direction="column" item xs={12} md={5}>
                         <Grid item className={classes.titleGridItem}>
                             <Typography className={classes.title} variant="h4">
@@ -162,56 +218,24 @@ class PlayerView extends React.Component<IProps, IState> {
                             </Typography>
                         </Grid>
                         <Grid item className={classes.avatarGridItem}>
-                            <img className={classes.avatar} src={player.avatar} alt="Avatar "/>
+                            <img className={classes.avatar} src={player.avatar} alt="Avatar" />
                         </Grid>
                     </Grid>
 
                     <Grid container className={classes.rightColumn} direction="column" item xs={12} md={7}>
                         <Grid item className={classes.selectGridItem}>
-                            <FormControl variant="outlined" className={classes.formControl}>
-                                <InputLabel id="loadout-select-label">Loadout</InputLabel>
-                                <Select
-                                    id="loadout-select"
-                                    labelId="loadout-select-label"
-                                    label="Loadout"
-                                    value={weapon}
-                                    onChange={this.onSelectWeapon}
-                                >
-                                    {Object.keys(player.loadouts).map((weapon) =>
-                                        <MenuItem key={weapon} value={weapon}>{weapon}</MenuItem>
-                                    )}
-                                </Select>
-                            </FormControl>
+                            <LoadoutDropdown
+                                className={classes.formControl}
+                                weapon={weapon}
+                                onSelectWeapon={this.onSelectWeapon}
+                                loadouts={player.loadouts}
+                            />
                         </Grid>
                         <Grid item className={classes.listGridItem}>
-                            <List classes={{ root: classes.list }}>
-                                {attachments.map(([type, attachment]) => (
-                                    <ListItem className={classes.attachment} key={type}>
-                                        <div className={classes.attachmentText}>
-                                            <Typography variant="caption" color="textSecondary">
-                                                {type}
-                                            </Typography>
-                                            <Typography>{attachment}</Typography>
-                                        </div>
-                                    </ListItem>
-                                ))}
-                            </List>
+                            <AttachmentList classes={classes} attachments={attachments} />
                         </Grid>
                         <Grid item>
-                            <div className={classes.infoContainer}>
-                                <Tooltip title="Source">
-                                    <a
-                                        href={loadout.source}
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                    >
-                                        <LinkIcon />
-                                    </a>
-                                </Tooltip>
-                                <Typography className={classes.lastUpdatedLabel}>
-                                    {`Last updated: ${updated.toLocaleDateString()}`}
-                                </Typography>
-                            </div>
+                            <LoadoutInformation classes={classes} source={loadout.source} lastUpdated={lastUpdated} />
                         </Grid>
                      </Grid>
                 </Grid>

@@ -20,7 +20,7 @@ const useStyles = makeStyles(theme => ({
     container: {
         minHeight: 348,
         maxHeight: 348,
-        [theme.breakpoints.down('sm')]: {
+        [theme.breakpoints.down("sm")]: {
             minHeight: 329,
             maxHeight: 329,
         },
@@ -29,22 +29,22 @@ const useStyles = makeStyles(theme => ({
         backgroundColor: theme.palette.background.paper,
     },
     emptyContainer: {
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
         minHeight: 348,
         maxHeight: 348,
-        [theme.breakpoints.down('sm')]: {
+        [theme.breakpoints.down("sm")]: {
             minHeight: 329,
             maxHeight: 329,
         },
         backgroundColor: theme.palette.background.paper,
     },
     noMatches: {
-        height: '100%',
-        fontFamily: 'Bebas Neue',
-        fontSize: '5rem',
-        opacity: '50%'
+        height: "100%",
+        fontFamily: "Bebas Neue",
+        fontSize: "5rem",
+        opacity: "50%"
     },
 }));
 
@@ -57,16 +57,16 @@ function getSlidesForWidth(width: number) {
 }
 
 function Arrow(props: any) {
-     const { className, existingStyle, onClick, next, offset } = props;
-     const style = next ? { ...existingStyle, right: offset } : { ...existingStyle, left: offset, zIndex: 1 }
-     return (
-         <div
-             className={className}
-             style={style}
-             onClick={onClick}
-         />
-     );
- }
+    const { className, existingStyle, onClick, next, offset } = props
+    const style = next ? { ...existingStyle, right: offset } : { ...existingStyle, left: offset, zIndex: 1 }
+    return (
+        <div
+            className={className}
+            style={style}
+            onClick={onClick}
+        />
+    );
+}
 
 const sliderSettings = {
     initialSlide: 0,
@@ -81,13 +81,51 @@ const sliderSettings = {
             settings: {
                 slidesToShow: getSlidesForWidth(600),
                 slidesToScroll: getSlidesForWidth(600),
-                prevArrow: <Arrow offset={'5%'} />,
-                nextArrow: <Arrow offset={'5%'} next />,
+                prevArrow: <Arrow offset={"5%"} />,
+                nextArrow: <Arrow offset={"5%"} next />,
                 swipeToSlide: true,
             }
         }
     ]
 };
+
+const SliderView = (props: any) => {
+    const { className, players, selectPlayer } = props
+    return (
+        <div className={className}>
+            <Slider {...sliderSettings}>
+                {players.map((player: Player) => (
+                    <div key={player.username}>
+                        <PlayerCard
+                            username={player.username}
+                            avatar={player.avatar}
+                            selectPlayer={selectPlayer}
+                        />
+                    </div>
+                ))}
+            </Slider>
+        </div>
+    )
+}
+
+const StaticView = (props: any) => {
+    const { className, players, selectPlayer } = props
+    return (
+        <div className={className}>
+            <Grid container>
+                {players.map((player: Player) => (
+                    <Grid item xs key={player.username}>
+                        <PlayerCard
+                            username={player.username}
+                            avatar={player.avatar}
+                            selectPlayer={selectPlayer}
+                        />
+                    </Grid>
+                ))}
+            </Grid>
+        </div>
+    )
+}
 
 class SelectionView extends React.Component<IProps> {
 
@@ -117,7 +155,6 @@ class SelectionView extends React.Component<IProps> {
         let view;
         const slides = getSlidesForWidth(window.innerWidth);
 
-        // Carousel view
         if (players.length > slides) {
 
             sliderSettings["slidesToShow"] = slides
@@ -127,38 +164,10 @@ class SelectionView extends React.Component<IProps> {
                 sliderSettings["initialSlide"] = firstPlayer // Set first slide for mobile only
             }
 
-            view = (
-                <div className={classes.container}>
-                    <Slider className={classes.slider} {...sliderSettings}>
-                        {players.map((player) => (
-                            <div key={player.username}>
-                                <PlayerCard
-                                    username={player.username}
-                                    avatar={player.avatar}
-                                    selectPlayer={selectPlayer}
-                                />
-                            </div>
-                        ))}
-                    </Slider>
-                </div>
-            )
-        // Static view
+            view = <SliderView className={classes.container} players={players} selectPlayer={selectPlayer} />
+
         } else {
-            view = (
-                <div className={classes.container}>
-                    <Grid container>
-                        {players.map((player) => (
-                            <Grid item xs key={player.username}>
-                                <PlayerCard
-                                    username={player.username}
-                                    avatar={player.avatar}
-                                    selectPlayer={selectPlayer}
-                                />
-                            </Grid>
-                        ))}
-                    </Grid>
-                </div>
-            )
+            view = <StaticView className={classes.container} players={players} selectPlayer={selectPlayer} />
         }
 
         return view;

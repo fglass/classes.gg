@@ -1,13 +1,13 @@
-import React from 'react';
-import ReactGA from 'react-ga';
+import React from "react";
+import ReactGA from "react-ga";
 import Api from "../domain/api";
-import CssBaseline from '@material-ui/core/CssBaseline';
+import CssBaseline from "@material-ui/core/CssBaseline";
 import Footer from "./Footer";
 import Header from "./Header";
 import SelectionView from "./SelectionView";
 import PlayerView from "./PlayerView";
-import { blue } from '@material-ui/core/colors';
-import { createMuiTheme, makeStyles, ThemeProvider } from '@material-ui/core/styles';
+import { blue } from "@material-ui/core/colors";
+import { createMuiTheme, makeStyles, ThemeProvider } from "@material-ui/core/styles";
 import { Player } from "../domain/player";
 
 interface IProps {
@@ -22,22 +22,22 @@ interface IState {
 const darkTheme = createMuiTheme({
     palette: {
         primary: blue,
-        type: 'dark',
+        type: "dark",
     },
 });
 
 const useStyles = makeStyles((theme) => ({
     root: {
-        display: 'flex',
-        flexDirection: 'column',
-        minHeight: '100vh',
+        display: "flex",
+        flexDirection: "column",
+        minHeight: "100vh",
     },
     main: {
-        display: 'flex',
+        display: "flex",
         flexGrow: 1,
-        justifyContent: 'center',
-        alignItems: 'center',
-        [theme.breakpoints.up('md')]: {
+        justifyContent: "center",
+        alignItems: "center",
+        [theme.breakpoints.up("md")]: {
             marginTop: theme.spacing(5),
             marginBottom: theme.spacing(5),
         }

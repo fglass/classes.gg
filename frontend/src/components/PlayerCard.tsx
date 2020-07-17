@@ -14,40 +14,40 @@ interface IProps {
 
 const useStyles = makeStyles((theme) => ({
     container: {
-        margin: 'auto',
+        margin: "auto",
         maxWidth: 280,
         padding: theme.spacing(0, 0.5, 0, 0.5),
-        [theme.breakpoints.down('sm')]: {
+        [theme.breakpoints.down("sm")]: {
             padding: theme.spacing(0, 1.5, 0, 1.5),
         },
     },
     actionArea: {
         borderRadius: 16,
-        transition: '0.2s',
-        [theme.breakpoints.up('sm')]: {
-            '&:hover': {
-                transform: 'scale(0.9)',
+        transition: "0.2s",
+        [theme.breakpoints.up("sm")]: {
+            "&:hover": {
+                transform: "scale(0.9)",
             },
         },
     },
     card: {
         borderRadius: 16,
-        boxShadow: 'none',
+        boxShadow: "none",
     },
     content: {
         backgroundColor: "#2196f3",
-        padding: '1rem 1.5rem 1.5rem',
+        padding: "1rem 1.5rem 1.5rem",
     },
     title: {
-        fontFamily: 'Bebas Neue',
-        fontSize: '2.25rem',
-        [theme.breakpoints.down('md')]: {
-            fontSize: '2rem',
+        fontFamily: "Bebas Neue",
+        fontSize: "2.25rem",
+        [theme.breakpoints.down("md")]: {
+            fontSize: "2rem",
         },
     },
     media: {
         backgroundColor: theme.palette.background.default,
-        paddingTop: '70%',
+        paddingTop: "70%",
     },
 }));
 
@@ -57,7 +57,7 @@ export default function PlayerCard(props: IProps) {
     return (
         <div className={classes.container}>
             <CardActionArea
-                classes={{root: classes.actionArea,}}
+                classes={{root: classes.actionArea}}
                 onClick={_ => selectPlayer(username)}
             >
                 <Card className={classes.card}>
@@ -67,7 +67,7 @@ export default function PlayerCard(props: IProps) {
                         title=""
                     />
                     <CardContent className={classes.content}>
-                      <Typography className={classes.title} variant={'h2'}>
+                      <Typography className={classes.title} variant={"h2"}>
                           {username}
                       </Typography>
                     </CardContent>
