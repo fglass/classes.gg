@@ -1,5 +1,5 @@
 import React from "react";
-import Slider from "react-slick";
+import Slider, {LazyLoadTypes} from "react-slick";
 import Grid from "@material-ui/core/Grid";
 import Typography from "@material-ui/core/Typography";
 import PlayerCard from "./PlayerCard";
@@ -74,6 +74,7 @@ const sliderSettings = {
     speed: 400,
     prevArrow: <Arrow offset={8} />,
     nextArrow: <Arrow offset={8} next />,
+    lazyLoad: "progressive" as LazyLoadTypes,
     responsive: [
         {
             breakpoint: 600, // xs
