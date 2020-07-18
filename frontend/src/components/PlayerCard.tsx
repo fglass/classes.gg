@@ -5,11 +5,11 @@ import CardMedia from "@material-ui/core/CardMedia";
 import CardContent from "@material-ui/core/CardContent";
 import Typography from "@material-ui/core/Typography";
 import { makeStyles } from "@material-ui/core/styles";
+import { Link } from "react-router-dom";
 
 interface IProps {
     username: string,
     avatar: string,
-    selectPlayer: (username: string) => void,
 }
 
 const useStyles = makeStyles((theme) => ({
@@ -52,26 +52,25 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 export default function PlayerCard(props: IProps) {
-    const { selectPlayer, avatar, username } = props
+    const { avatar, username } = props
     const classes = useStyles()
     return (
         <div className={classes.container}>
-            <CardActionArea
-                classes={{root: classes.actionArea}}
-                onClick={_ => selectPlayer(username)}
-            >
-                <Card className={classes.card}>
-                    <CardMedia
-                        className={classes.media}
-                        image={avatar}
-                        title=""
-                    />
-                    <CardContent className={classes.content}>
-                      <Typography className={classes.title} variant={"h2"}>
-                          {username}
-                      </Typography>
-                    </CardContent>
-                </Card>
+            <CardActionArea classes={{root: classes.actionArea}}>
+                <Link to={`/${username}`}>
+                    <Card className={classes.card}>
+                        <CardMedia
+                            className={classes.media}
+                            image={avatar}
+                            title=""
+                        />
+                        <CardContent className={classes.content}>
+                          <Typography className={classes.title} variant={"h2"}>
+                              {username}
+                          </Typography>
+                        </CardContent>
+                    </Card>
+                </Link>
             </CardActionArea>
         </div>
     );

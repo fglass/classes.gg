@@ -12,7 +12,6 @@ interface IProps {
     classes: any
     players: Array<Player>
     firstPlayer: number,
-    selectPlayer: (username: string) => void
     searching: boolean
 }
 
@@ -90,7 +89,7 @@ const sliderSettings = {
 };
 
 const SliderView = (props: any) => {
-    const { className, players, selectPlayer } = props
+    const { className, players } = props
     return (
         <div className={className}>
             <Slider {...sliderSettings}>
@@ -99,7 +98,6 @@ const SliderView = (props: any) => {
                         <PlayerCard
                             username={player.username}
                             avatar={player.avatar}
-                            selectPlayer={selectPlayer}
                         />
                     </div>
                 ))}
@@ -109,7 +107,7 @@ const SliderView = (props: any) => {
 }
 
 const StaticView = (props: any) => {
-    const { className, players, selectPlayer } = props
+    const { className, players } = props
     return (
         <div className={className}>
             <Grid container>
@@ -118,7 +116,6 @@ const StaticView = (props: any) => {
                         <PlayerCard
                             username={player.username}
                             avatar={player.avatar}
-                            selectPlayer={selectPlayer}
                         />
                     </Grid>
                 ))}
@@ -140,7 +137,7 @@ class SelectionView extends React.Component<IProps> {
     }
 
     render() {
-        const { classes, players, firstPlayer, selectPlayer, searching } = this.props
+        const { classes, players, firstPlayer, searching } = this.props
 
         if (searching && players.length === 0) {
             return(
@@ -156,18 +153,12 @@ class SelectionView extends React.Component<IProps> {
         const slides = getSlidesForWidth(window.innerWidth);
 
         if (players.length > slides) {
-
             sliderSettings["slidesToShow"] = slides
             sliderSettings["slidesToScroll"] = slides
-
-            if (slides === 1) {
-                sliderSettings["initialSlide"] = firstPlayer // Set first slide for mobile only
-            }
-
-            view = <SliderView className={classes.container} players={players} selectPlayer={selectPlayer} />
-
+            sliderSettings["initialSlide"] = firstPlayer
+            view = <SliderView className={classes.container} players={players} />
         } else {
-            view = <StaticView className={classes.container} players={players} selectPlayer={selectPlayer} />
+            view = <StaticView className={classes.container} players={players} />
         }
 
         return view;
@@ -180,7 +171,6 @@ export default (props: any) => {
         classes={classes}
         players={props.players}
         firstPlayer={props.firstPlayer}
-        selectPlayer={props.selectPlayer}
         searching={props.searching}
     />
 }

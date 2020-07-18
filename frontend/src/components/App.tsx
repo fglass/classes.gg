@@ -4,11 +4,11 @@ import Api from "../domain/api";
 import CssBaseline from "@material-ui/core/CssBaseline";
 import Footer from "./Footer";
 import Header from "./Header";
-import SelectionView from "./SelectionView";
-import PlayerView from "./PlayerView";
 import { blue } from "@material-ui/core/colors";
 import { createMuiTheme, makeStyles, ThemeProvider } from "@material-ui/core/styles";
 import { Player } from "../domain/player";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import Content from "./Content";
 
 interface IProps {
     classes: any
@@ -44,6 +44,7 @@ const useStyles = makeStyles((theme) => ({
     },
 }));
 
+
 class App extends React.Component<IProps, IState> {
 
     private static ANALYTICS_TRACKING_CODE = "UA-131273827-2"
@@ -78,44 +79,37 @@ class App extends React.Component<IProps, IState> {
         })
     }
 
-    selectPlayer = (username: string) => {
-        const suffix = `/${username}`
-        window.history.pushState({urlPath: suffix}, "", suffix) // Update URL
-        this.forceUpdate()
-    }
-
     render() {
-        const { classes } = this.props;
+        const { classes } = this.props
         const { players, filteredPlayers } = this.state
 
-        let content = <div className={classes.main} />
 
-        if (players.length > 0) {
-            const selectedPlayer = window.location.pathname.replace("/", "") || players[0].username
-            content = (
-                <React.Fragment>
-                    <SelectionView
-                        players={filteredPlayers}
-                        firstPlayer={players.findIndex(player => player.username === selectedPlayer)}
-                        selectPlayer={this.selectPlayer}
-                        searching={players.length !== filteredPlayers.length}
-                    />
-                    <div className={classes.main}>
-                        <PlayerView username={selectedPlayer} />
-                    </div>
-                </React.Fragment>
-            )
+        if (players.length === 0) {
+            return <div className={classes.main} />
         }
 
         return (
-            <div className={classes.root} >
-                <ThemeProvider theme={darkTheme}>
-                    <CssBaseline />
-                    <Header onSearch={this.onSearch} />
-                    {content}
-                    <Footer />
-                </ThemeProvider>
-            </div>
+            <Router>
+                <div className={classes.root} >
+                    <ThemeProvider theme={darkTheme}>
+                        <CssBaseline />
+                        <Header onSearch={this.onSearch} />
+                          <Switch>
+                            <Route path="/:player?" render={(props) =>
+                                (
+                                    <Content
+                                        className={classes.main}
+                                        players={filteredPlayers}
+                                        username={props.match.params.player || players[0].username}
+                                        searching={players.length !== filteredPlayers.length}
+                                    />
+                                )}>
+                            </Route>
+                        </Switch>
+                        <Footer />
+                    </ThemeProvider>
+                </div>
+            </Router>
         );
     }
 }

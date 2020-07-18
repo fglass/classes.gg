@@ -1,5 +1,4 @@
 import React from "react";
-import Api from "../domain/api";
 import FormControl from "@material-ui/core/FormControl";
 import Grid from "@material-ui/core/Grid";
 import InputLabel from "@material-ui/core/InputLabel";
@@ -14,12 +13,11 @@ import { makeStyles } from "@material-ui/core/styles";
 import { Player } from "../domain/player";
 
 interface IProps {
-    username: string
     classes: any
+    player: Player
 }
 
 interface IState {
-    player: Player | null
     selectedLoadout: string
 }
 
@@ -153,28 +151,25 @@ class PlayerView extends React.Component<IProps, IState> {
     constructor(props: IProps) {
         super(props);
         this.state = {
-            player: null,
             selectedLoadout: ""
         }
     }
 
     private static N_ATTACHMENTS = 5
 
-    async getPlayer() {
-        const player = await Api.getPlayer(this.props.username)
+    setDefaultLoadout() {
         this.setState({
-            player,
-            selectedLoadout: Object.keys(player.loadouts)[0]
+            selectedLoadout: Object.keys(this.props.player.loadouts)[0]
         })
     }
 
     componentDidMount() {
-        this.getPlayer().catch(err => console.log(err))
+        this.setDefaultLoadout()
     }
 
     componentDidUpdate(prevProps: Readonly<IProps>, prevState: Readonly<IState>, snapshot?: any) {
-        if (this.props.username !== prevProps.username) {
-            this.getPlayer().catch(err => console.log(err))
+        if (this.props.player !== prevProps.player) {
+            this.setDefaultLoadout()
         }
     }
 
@@ -183,7 +178,7 @@ class PlayerView extends React.Component<IProps, IState> {
     };
 
     render() {
-        const player = this.state.player
+        const player = this.props.player
 
         if (player == null) {
             return null
@@ -192,8 +187,12 @@ class PlayerView extends React.Component<IProps, IState> {
         const classes = this.props.classes
         const weapon = this.state.selectedLoadout
         const loadout = player.loadouts[this.state.selectedLoadout]
-        const lastUpdated = new Date(loadout.lastUpdated)
 
+        if (loadout == null) {
+            return null
+        }
+
+        const lastUpdated = new Date(loadout.lastUpdated)
         const keys = Object.keys(loadout.attachments)
         const attachments: Array<[string, string]> = []
 
@@ -246,5 +245,5 @@ class PlayerView extends React.Component<IProps, IState> {
 
 export default (props: any) => {
     const classes = useStyles()
-    return <PlayerView username={props.username} classes={classes} />
+    return <PlayerView classes={classes} player={props.player} />
 }
