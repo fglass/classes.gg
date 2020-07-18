@@ -6,26 +6,25 @@ from model.weapon import Weapon
 
 if __name__ == '__main__':
     db = JSONDatabaseEngine()
-    player = db.select_player("icemanisaac")
+    player = db.select_player("cloakzy")
 
-    loadout = Weapon.FENNEC.value
-    source = "https://www.twitch.tv/icemanisaac"
+    loadout = Weapon.FAL.value
+    source = "https://clips.twitch.tv/BovineAffluentReubenKappaClaus"
     last_updated = datetime.now().isoformat()
     attachments = [
-        Muzzle.ZLR_SABRE,
-        # Barrel.HDR_PRO,
+        Muzzle.MONOLITHIC_SUPPRESSOR,
+        Barrel.XRK_ZODIAC_S440,
         # Laser.TAC_LASER,
-        # Optic.VLK_3X_OPTIC,
+        Optic.CORP_COMBAT_HOLO_SIGHT,
         # Stock.FTAC_STALKER_SCOUT,
-        Underbarrel.MERC_FOREGRIP,
-        Ammunition.ROUND_DRUM_MAGS_40,
-        RearGrip.STIPPLED_GRIP_TAPE,
-        Perk.SLEIGHT_OF_HAND,
+        Underbarrel.COMMANDO_FOREGRIP,
+        Ammunition.ROUND_MAGS_45,
+        # RearGrip.STIPPLED_GRIP_TAPE,
+        # Perk.SLEIGHT_OF_HAND,
         # TriggerAction.LIGHTWEIGHT_TRIGGER
     ]
 
-    player.commands["!bruen"] = "Isaac hasn't made his own build for this gun yet! The guns he does have a build for are the: Ram-7, Grau, Galil, MP7, MP5, Vector and the HDR!"
-    player.commands["!fennec"] = "ZLR Sabre Barrel, Merc Foregrip, 40 Round Drum Mags, Stippled Grip Tape and Sleight of Hand (this is temporary until he unlocks all attachments for the Vector)"
+    player.commands["!loadouts"] = "FIND ALL OF CLOAKZY'S LOADOUTS HERE --> https://docs.google.com/spreadsheets/d/1FYQxMLATGyzFPKppIva3_eEG0J1ulwNMcUoBKtUtWEw/edit?usp=sharing (UPDATED 7/17 W/ BRUEN & FAL)"
 
     attachments = {attachment.get_type(): attachment.value for attachment in attachments}
 
