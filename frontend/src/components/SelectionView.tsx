@@ -1,5 +1,5 @@
 import React from "react";
-import Slider, {LazyLoadTypes} from "react-slick";
+import Slider, { LazyLoadTypes } from "react-slick";
 import Grid from "@material-ui/core/Grid";
 import Typography from "@material-ui/core/Typography";
 import PlayerCard from "./PlayerCard";
