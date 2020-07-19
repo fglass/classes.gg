@@ -4,9 +4,9 @@ import Grid from "@material-ui/core/Grid";
 import Typography from "@material-ui/core/Typography";
 import PlayerCard from "./PlayerCard";
 import { makeStyles } from "@material-ui/core/styles";
-import { Player } from "../domain/player";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
+import { Player } from "../model/player";
+// import "slick-carousel/slick/slick.css";
+// import "slick-carousel/slick/slick-theme.css";
 
 interface IProps {
     classes: any
@@ -130,7 +130,7 @@ class SelectionView extends React.Component<IProps> {
     resize = () => this.forceUpdate()
 
     componentDidMount() {
-        window.addEventListener("resize", this.resize) // Redraw on resize for dynamic updating
+        window.addEventListener("resize", this.resize) // Redraw on resize
     }
 
     componentWillUnmount() {
@@ -141,7 +141,7 @@ class SelectionView extends React.Component<IProps> {
         const { classes, players, firstPlayer, searching } = this.props
 
         if (searching && players.length === 0) {
-            return(
+            return (
                 <div className={classes.emptyContainer}>
                     <Typography className={classes.noMatches} align="center">
                         No Matches
@@ -150,19 +150,17 @@ class SelectionView extends React.Component<IProps> {
             )
         }
 
-        let view;
         const slides = getSlidesForWidth(window.innerWidth);
 
         if (players.length > slides) {
+            // Update dynamic config
             sliderSettings["slidesToShow"] = slides
             sliderSettings["slidesToScroll"] = slides
             sliderSettings["initialSlide"] = firstPlayer
-            view = <SliderView className={classes.container} players={players} />
+            return <SliderView className={classes.container} players={players} />
         } else {
-            view = <StaticView className={classes.container} players={players} />
+            return <StaticView className={classes.container} players={players} />
         }
-
-        return view;
     }
 }
 

@@ -10,7 +10,7 @@ import Select from "@material-ui/core/Select";
 import Tooltip from "@material-ui/core/Tooltip";
 import Typography from "@material-ui/core/Typography";
 import { makeStyles } from "@material-ui/core/styles";
-import { Player } from "../domain/player";
+import { Player } from "../model/player";
 
 interface IProps {
     classes: any

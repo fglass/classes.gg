@@ -1,8 +1,8 @@
 import React from "react";
-import Api from "../domain/api";
+import Api from "../model/api";
 import SelectionView from "./SelectionView";
 import PlayerView from "./PlayerView";
-import { Player } from "../domain/player";
+import { Player } from "../model/player";
 
 interface IProps {
     className: string
