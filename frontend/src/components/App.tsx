@@ -48,7 +48,7 @@ const useStyles = makeStyles((theme) => ({
 const HelmetHead = (props: any) => {
     const player = props.player
     let title = "Classes.gg - Warzone Loadout Repository"
-    let description = "View Call of Duty: Warzone loadouts of professional players, streamers and other content creators"
+    let description = "View Call of Duty: Warzone loadouts from professional players, streamers and other content creators"
 
     if (player) {
         title = `Classes.gg - ${player} Warzone Loadouts`
