@@ -63,6 +63,7 @@ class Barrel(Attachment):
     FORGE_TAC_IMPALER = "FORGE TAC Impaler"
     LONG_BARREL = "622mm Long Barrel"
     XRK_SUMMIT = "XRK Summit 26.8\""
+    OSW_PARA = "13.0\" OSW Para"
 
 
 class Underbarrel(Attachment):
