@@ -22,6 +22,7 @@ class Muzzle(Attachment):
     MUZZLE_BRAKE = "Muzzle Brake"
     DESPERADO_PRO_COMPENSATOR = "Desperado Pro Compensator"
     FORGE_TAC_MARAUDER = "FORGE TAC Marauder"
+    CHOKE = "Choke"
 
 
 class Barrel(Attachment):
@@ -96,6 +97,7 @@ class Optic(Attachment):
 class Ammunition(Attachment):
     ROUND_MAGS_7 = "7 Round Mags"
     ROUND_MAGS_9 = "9 Round Mags"
+    ROUND_MAGS_12 = "12 Round Mags"
     ROUND_MAGS_24 = "24 Round Mags"
     ROUND_DRUM_MAGS_25 = "25 Round Drum Mags"
     ROUND_MAGS_27 = "27 Round Mags"

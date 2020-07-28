@@ -6,20 +6,20 @@ from model.player import Player
 from model.weapon import Weapon
 
 
-USERNAME = "swagg"
-LOADOUT = Weapon.UZI.value
-SOURCE = "https://www.youtube.com/watch?v=B_BtrUp1iqw"
-COMMAND, MESSAGE = ("!uzi", "https://www.youtube.com/watch?v=B_BtrUp1iqw")
+USERNAME = "maven"
+LOADOUT = Weapon.MP5.value
+SOURCE = "https://docs.google.com/spreadsheets/d/11m240tfs_BI-bXVitV9iAVy4KzNWOT4NLObBu1jr0wE/edit?usp=sharing"
+COMMAND, MESSAGE = (None, "")
 ATTACHMENTS = [
     # Muzzle.MONOLITHIC_SUPPRESSOR,
-    Barrel.FSS_CARBINE_PRO,
-    # Laser.TAC_LASER,
-    # Optic.CORP_COMBAT_HOLO_SIGHT,
-    Stock.NO_STOCK,
-    Underbarrel.COMMANDO_FOREGRIP,
-    Ammunition.AE_ROUND_MAGS_32,
-    # RearGrip.STIPPLED_GRIP_TAPE,
-    Perk.SLEIGHT_OF_HAND,
+    Barrel.MONOLITHIC_INTEGRAL_SUPPRESSOR,
+    Laser.MW_LASER_5,
+    # Optic.VLK_3X_OPTIC,
+    Stock.FTAC_COLLAPSIBLE,
+    Underbarrel.MERC_FOREGRIP,
+    Ammunition.ROUND_MAGS_45,
+    # RearGrip.RUBBERIZED_GRIP_TAPE,
+    # Perk.SLEIGHT_OF_HAND,
     # TriggerAction.LIGHTWEIGHT_TRIGGER
 ]
 
@@ -38,7 +38,10 @@ def _add_loadout():
             "lastUpdated": datetime.now().isoformat(),
             "attachments": attachments
         }
-        player.commands[COMMAND] = MESSAGE
+
+        if COMMAND:
+            player.commands[COMMAND] = MESSAGE
+
         db.add_player(player)
         print(f"Added {player.username}'s {LOADOUT}")
 

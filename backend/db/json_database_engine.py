@@ -51,5 +51,6 @@ def _deserialise_player(data: dict) -> Player:
                 "attachments": ["N/A", "N/A", "N/A", "N/A", "N/A"]
             }}
         ),
-        data.get("commands", {})
+        data.get("commands", {}),
+        data.get("spreadsheet", {})
     )
