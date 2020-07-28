@@ -3,11 +3,16 @@ import { Helmet } from "react-helmet";
 
 export const SEO = (props: any) => {
     const { username, date } = props
+
+    if (date === undefined) { // Ignore initial loads
+        return null
+    }
+
     let title = "Classes.gg - Warzone Loadout Repository"
     let description = "View Call of Duty: Warzone loadouts from professional players, streamers and other content creators"
     let url = "https://www.classes.gg"
 
-    if (window.location.pathname !== "/") {
+    if (window.location.pathname !== "/") { // Use default values for root
         title = `Classes.gg - ${username} Warzone Loadouts`
         description = `View Call of Duty: Warzone loadouts of ${username}`
         url = `https://www.classes.gg/${username}`
@@ -29,7 +34,7 @@ export const SEO = (props: any) => {
         "softwareVersion": "1.0.0",
         "operatingSystem": "All",
         "datePublished": "${date}",
-        "dateModified": "${date}",
+        "dateModified": "${date}"
     }`
 
     return (
