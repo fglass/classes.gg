@@ -11,6 +11,7 @@ import Tooltip from "@material-ui/core/Tooltip";
 import Typography from "@material-ui/core/Typography";
 import { makeStyles } from "@material-ui/core/styles";
 import { Player } from "../model/player";
+import {SEO} from "./SEO";
 
 interface IProps {
     classes: any
@@ -208,6 +209,7 @@ class PlayerView extends React.Component<IProps, IState> {
 
         return (
             <div className={classes.container}>
+                <SEO username={player.username} date={lastUpdated} />
                 <Grid container alignItems="flex-start">
 
                     <Grid container direction="column" item xs={12} md={5}>

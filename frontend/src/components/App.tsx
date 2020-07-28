@@ -9,7 +9,7 @@ import { blue } from "@material-ui/core/colors";
 import { createMuiTheme, makeStyles, ThemeProvider } from "@material-ui/core/styles";
 import { Player } from "../model/player";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import { Helmet } from "react-helmet";
+import { SEO } from "./SEO";
 
 interface IProps {
     classes: any
@@ -45,27 +45,10 @@ const useStyles = makeStyles((theme) => ({
     },
 }));
 
-const HelmetHead = (props: any) => {
-    const player = props.player
-    let title = "Classes.gg - Warzone Loadout Repository"
-    let description = "View Call of Duty: Warzone loadouts from professional players, streamers and other content creators"
-
-    if (player) {
-        title = `Classes.gg - ${player} Warzone Loadouts`
-        description = `View Call of Duty: Warzone loadouts of ${player}`
-    }
-
-    return (
-        <Helmet>
-            <title>{title}</title>
-            <meta name="description" content={description} />
-        </Helmet>
-    )
-}
-
 class App extends React.Component<IProps, IState> {
 
     private static ANALYTICS_TRACKING_CODE = "UA-131273827-2"
+    private static CREATION_DATE = "2020-07-03T00:00:00.000000"
 
     constructor(props: IProps) {
         super(props);
@@ -116,7 +99,7 @@ class App extends React.Component<IProps, IState> {
                             <Route path="/:player?" render={(props) =>
                                 (
                                     <React.Fragment>
-                                        <HelmetHead player={props.match.params.player} />
+                                        <SEO username={props.match.params.player} lastUpdated={App.CREATION_DATE} />
                                         <Content
                                             className={classes.main}
                                             players={filteredPlayers}

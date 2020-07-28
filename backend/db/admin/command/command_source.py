@@ -17,7 +17,7 @@ class CommandSource(Enum):
         self._name = name
         self._query = query
 
-    def __new__(cls, *args, **kwargs):
+    def __new__(cls, *args, **kwargs):  # Allow reverse lookup
         obj = object.__new__(cls)
         obj._value_ = args[0]
         return obj
