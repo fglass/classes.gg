@@ -6,10 +6,10 @@ from model.player import Player
 from model.weapon import Weapon
 
 
-USERNAME = "maven"
+USERNAME = "symfuhny"
 LOADOUT = Weapon.MP5.value
-SOURCE = "https://docs.google.com/spreadsheets/d/11m240tfs_BI-bXVitV9iAVy4KzNWOT4NLObBu1jr0wE/edit?usp=sharing"
-COMMAND, MESSAGE = (None, "")
+SOURCE = "https://clips.twitch.tv/AwkwardVainBottleDxAbomb"
+COMMAND, MESSAGE = ("!mp5", "@{tousr.name} https://clips.twitch.tv/AwkwardVainBottleDxAbomb")
 ATTACHMENTS = [
     # Muzzle.MONOLITHIC_SUPPRESSOR,
     Barrel.MONOLITHIC_INTEGRAL_SUPPRESSOR,
@@ -19,7 +19,7 @@ ATTACHMENTS = [
     Underbarrel.MERC_FOREGRIP,
     Ammunition.ROUND_MAGS_45,
     # RearGrip.RUBBERIZED_GRIP_TAPE,
-    # Perk.SLEIGHT_OF_HAND,
+    # Perk.FULLY_LOADED,
     # TriggerAction.LIGHTWEIGHT_TRIGGER
 ]
 

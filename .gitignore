@@ -18,6 +18,7 @@ node_modules
 
 # misc
 database.json
+data/
 .DS_Store
 .env.local
 .env.development.local

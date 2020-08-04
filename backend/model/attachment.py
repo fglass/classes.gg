@@ -150,6 +150,7 @@ class Perk(Attachment):
     PRESENCE_OF_MIND = "Presence of Mind"
     FMJ = "FMJ"
     FOCUS = "Focus"
+    FULLY_LOADED = "Fully Loaded"
     AKIMBO = "Akimbo"
 
 
