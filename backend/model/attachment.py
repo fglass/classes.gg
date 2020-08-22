@@ -65,6 +65,8 @@ class Barrel(Attachment):
     LONG_BARREL = "622mm Long Barrel"
     XRK_SUMMIT = "XRK Summit 26.8\""
     OSW_PARA = "13.0\" OSW Para"
+    ULTRALIGHT_18 = "18.0\" Ultralight"
+    AN_FACTORY = "AN-94 Factory X-438mm"
 
 
 class Underbarrel(Attachment):

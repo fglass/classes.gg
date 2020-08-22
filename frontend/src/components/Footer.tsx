@@ -1,7 +1,7 @@
 import React from "react";
 import Typography from "@material-ui/core/Typography";
 import { makeStyles } from "@material-ui/core/styles";
-import { Box, Grid } from "@material-ui/core";
+import { Box } from "@material-ui/core";
 
 const useStyles = makeStyles(theme => ({
     footer: {
@@ -9,27 +9,16 @@ const useStyles = makeStyles(theme => ({
         padding: theme.spacing(2.1),
         backgroundColor: theme.palette.background.paper,
     },
-    affiliationLink: {
+    link: {
         color: "white",
     }
 }));
 
-const DiscordLink = () => {
-    const discordLink = "https://discord.com/invite/AdB3jey"
-    return (
-        <a
-            href={discordLink}
-            target="_blank" rel="noopener noreferrer"
-        >
-            <img src={"images/discord.svg"} alt="Discord" width={22} />
-        </a>
-    )
-}
-
-const Copyright = () => {
+const Copyright = (props: any) => {
+    const contactLink = "https://fred.glass/"
     return (
         <Typography variant="body2" color="textSecondary">
-            {new Date().getFullYear()}{" © FG"}
+            {new Date().getFullYear()}{" © "}<a href={contactLink} className={props.className}>FG</a>
         </Typography>
     )
 }
@@ -50,16 +39,11 @@ export default function Footer() {
     const classes = useStyles()
     return (
         <footer className={classes.footer}>
-            <Grid container spacing={1}>
-                <Grid item>
-                    <DiscordLink />
-                </Grid>
-                <Grid item>
-                    <Copyright />
-                </Grid>
-            </Grid>
             <Box pl={0.35}>
-                <AffiliationLink className={classes.affiliationLink} />
+                <Copyright className={classes.link} />
+            </Box>
+            <Box pl={0.35}>
+                <AffiliationLink className={classes.link} />
             </Box>
         </footer>
     )

@@ -6,20 +6,20 @@ from model.player import Player
 from model.weapon import Weapon
 
 
-USERNAME = "symfuhny"
-LOADOUT = Weapon.MP5.value
-SOURCE = "https://clips.twitch.tv/AwkwardVainBottleDxAbomb"
-COMMAND, MESSAGE = ("!mp5", "@{tousr.name} https://clips.twitch.tv/AwkwardVainBottleDxAbomb")
+USERNAME = "teepee"
+LOADOUT = Weapon.RAM_7.value
+SOURCE = "https://tinyurl.com/teep-classes"
+COMMAND, MESSAGE = (None, "")
 ATTACHMENTS = [
-    # Muzzle.MONOLITHIC_SUPPRESSOR,
-    Barrel.MONOLITHIC_INTEGRAL_SUPPRESSOR,
-    Laser.MW_LASER_5,
-    # Optic.VLK_3X_OPTIC,
-    Stock.FTAC_COLLAPSIBLE,
-    Underbarrel.MERC_FOREGRIP,
-    Ammunition.ROUND_MAGS_45,
-    # RearGrip.RUBBERIZED_GRIP_TAPE,
-    # Perk.FULLY_LOADED,
+    Muzzle.MONOLITHIC_SUPPRESSOR,
+    Barrel.FSS_RANGER,
+    # Laser.TAC_LASER,
+    Optic.VLK_3X_OPTIC,
+    # Stock.NO_STOCK,
+    Underbarrel.COMMANDO_FOREGRIP,
+    Ammunition.ROUND_MAGS_50,
+    # RearGrip.STIPPLED_GRIP_TAPE,
+    # Perk.SLEIGHT_OF_HAND,
     # TriggerAction.LIGHTWEIGHT_TRIGGER
 ]
 
@@ -33,9 +33,9 @@ def _add_loadout():
     confirmation = input("Confirm? ")
 
     if confirmation == "y":
+        player.last_updated = datetime.now().isoformat()
         player.loadouts[LOADOUT] = {
             "source": SOURCE,
-            "lastUpdated": datetime.now().isoformat(),
             "attachments": attachments
         }
 

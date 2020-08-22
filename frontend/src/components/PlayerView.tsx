@@ -9,9 +9,10 @@ import MenuItem from "@material-ui/core/MenuItem";
 import Select from "@material-ui/core/Select";
 import Tooltip from "@material-ui/core/Tooltip";
 import Typography from "@material-ui/core/Typography";
+import UpdateIcon from '@material-ui/icons/Update';
 import { makeStyles } from "@material-ui/core/styles";
 import { Player } from "../model/player";
-import {SEO} from "./SEO";
+import { SEO } from "./SEO";
 
 interface IProps {
     classes: any
@@ -85,13 +86,11 @@ const useStyles = makeStyles(theme => ({
         paddingBottom: 2,
     },
     infoContainer: {
+        opacity: "50%",
         display: "flex",
+        justifyContent: "space-between",
         margin: theme.spacing(0, 2, 0, 2),
     },
-    lastUpdatedLabel: {
-        paddingLeft: theme.spacing(1),
-        opacity: "50%",
-    }
 }));
 
 const LoadoutDropdown = (props: any) => {
@@ -136,14 +135,17 @@ const LoadoutInformation = (props: any) => {
     const { classes, source, lastUpdated } = props
     return (
         <div className={classes.infoContainer}>
+            <div style={{"display": "flex"}}>
+                <UpdateIcon />
+                <Typography style={{"paddingLeft": "4px"}}>
+                    {lastUpdated.toLocaleDateString()}
+                </Typography>
+            </div>
             <Tooltip title="Source">
                 <a href={source} target="_blank" rel="noopener noreferrer">
                     <LinkIcon />
                 </a>
             </Tooltip>
-            <Typography className={classes.lastUpdatedLabel}>
-                {`Last updated: ${lastUpdated.toLocaleDateString()}`}
-            </Typography>
         </div>
     )
 }
@@ -193,7 +195,7 @@ class PlayerView extends React.Component<IProps, IState> {
             return null
         }
 
-        const lastUpdated = new Date(loadout.lastUpdated)
+        const lastUpdated = new Date(player.lastUpdated)
         const keys = Object.keys(loadout.attachments)
         const attachments: Array<[string, string]> = []
 

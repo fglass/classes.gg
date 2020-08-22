@@ -1,6 +1,7 @@
 {
   "Scump": {
     "username": "Scump",
+    "lastUpdated": "2020-07-09T23:06:57.299264",
     "loadouts": {
       "Grau 5.56": {
         "attachments": {
@@ -10,7 +11,6 @@
           "Optic": "VLK 3.0x Optic",
           "Underbarrel": "Commando Foregrip"
         },
-        "lastUpdated": "2020-07-09T23:06:57.299264",
         "source": "https://www.twitch.tv/scump"
       }
     },

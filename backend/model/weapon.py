@@ -4,6 +4,7 @@ from enum import Enum
 class Weapon(Enum):
     # Assault rifle
     AK_47 = "AK-47"
+    AN_94 = "AN-94"
     CR_56_AMAX = "CR-56 AMAX"
     FAL = "FAL"
     FAMAS = "FR 5.56"

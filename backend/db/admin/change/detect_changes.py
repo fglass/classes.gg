@@ -45,25 +45,25 @@ def _compare_spreadsheet_hash(username: str, spreadsheet: dict):
     filename = f"db/admin/change/data/{file}"
     with open(filename, "rb") as f:
         content = f.read()
-        current_hash = hashlib.md5(content).hexdigest()
+        previous_hash = hashlib.md5(content).hexdigest()
 
-    if not current_hash:
+    if not previous_hash:
         return
 
     url = spreadsheet["url"]
     export_url = f"{url}/export?format=csv"
     response = requests.get(export_url)
-    new_hash = hashlib.md5(response.content).hexdigest()
+    current_hash = hashlib.md5(response.content).hexdigest()
 
-    if current_hash != new_hash:
+    if previous_hash != current_hash:
         logging.info(f"[{username}]: {url}")
-        _display_spreadsheet_diff(current=content, new=response.content)
+        _display_spreadsheet_diff(previous=content, current=response.content)
 
 
-def _display_spreadsheet_diff(current: bytes, new: bytes):
-    a = current.decode("utf-8").splitlines()
-    b = new.decode("utf-8").splitlines()
-    diff = difflib.unified_diff(a, b, fromfile="Current", tofile="New", lineterm="", n=0)
+def _display_spreadsheet_diff(previous: bytes, current: bytes):
+    a = previous.decode("utf-8").splitlines()
+    b = current.decode("utf-8").splitlines()
+    diff = difflib.unified_diff(a, b, fromfile="Previous", tofile="Current", lineterm="", n=0)
     delta = filter(lambda line: not any(line.startswith(prefix) for prefix in DIFF_CONTROL_PREFIXES), diff)
     [logging.info(f"\t\t{line}") for line in delta]
 

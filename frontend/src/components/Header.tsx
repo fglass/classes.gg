@@ -54,12 +54,6 @@ const useStyles = makeStyles((theme: Theme) => createStyles({
         "&:focus": {
              width: "14ch",
         },
-        [theme.breakpoints.up("md")]: {
-            width: "14ch",
-            "&:focus": {
-                 width: "20ch",
-            },
-        },
     },
 }));
 

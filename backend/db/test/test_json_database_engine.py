@@ -21,6 +21,6 @@ class TestJSONDatabaseEngine(unittest.TestCase):
     def test_add_player(self):
         db = JSONDatabaseEngine(test_mode=True)
         username = "test_player"
-        player = Player(username, avatar="", loadouts={}, commands={}, spreadsheet={})
+        player = Player(username, avatar="", last_updated="", loadouts={}, commands={}, spreadsheet={})
         db.add_player(player)
         self.assertIn(username, db._database)

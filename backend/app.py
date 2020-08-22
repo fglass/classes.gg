@@ -12,7 +12,9 @@ db = JSONDatabaseEngine()
 @api.route("/player/<username>")
 def get_player(username: str):
     player = db.select_player(username=escape(username.lower()))
-    return jsonify(username=player.username, avatar=player.avatar, loadouts=player.loadouts) if player else abort(404)
+    return jsonify(
+        username=player.username, avatar=player.avatar, lastUpdated=player.last_updated, loadouts=player.loadouts
+    ) if player else abort(404)
 
 
 @api.route("/players")
