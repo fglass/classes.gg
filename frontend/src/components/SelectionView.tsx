@@ -5,8 +5,6 @@ import Typography from "@material-ui/core/Typography";
 import PlayerCard from "./PlayerCard";
 import { makeStyles } from "@material-ui/core/styles";
 import { Player } from "../model/player";
-// import "slick-carousel/slick/slick.css";
-// import "slick-carousel/slick/slick-theme.css";
 
 interface IProps {
     classes: any

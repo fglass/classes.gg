@@ -4,8 +4,6 @@ __pycache__/
 *$py.class
 
 # dependencies
-Pipfile
-Pipfile.lock
 node_modules
 /.pnp
 .pnp.js
@@ -19,12 +17,12 @@ node_modules
 # misc
 database.json
 data/
-.DS_Store
 .env.local
 .env.development.local
 .env.test.local
 .env.production.local
 .idea
+venv
 *.psd
 
 npm-debug.log*

@@ -7,17 +7,18 @@ from model.weapon import Weapon
 
 
 USERNAME = "teepee"
-LOADOUT = Weapon.RAM_7.value
+LOADOUT = Weapon.VLK_ROGUE.value
+ORIGIN = "MW"
 SOURCE = "https://tinyurl.com/teep-classes"
 COMMAND, MESSAGE = (None, "")
 ATTACHMENTS = [
-    Muzzle.MONOLITHIC_SUPPRESSOR,
-    Barrel.FSS_RANGER,
-    # Laser.TAC_LASER,
-    Optic.VLK_3X_OPTIC,
-    # Stock.NO_STOCK,
-    Underbarrel.COMMANDO_FOREGRIP,
-    Ammunition.ROUND_MAGS_50,
+    Muzzle.FORGE_TAC_MARAUDER,
+    Barrel.WARLORD,
+    Laser.MW_LASER_5,
+    # Optic.VLK_3X_OPTIC,
+    Stock.NO_STOCK,
+    # Underbarrel.MERC_FOREGRIP,
+    Ammunition.DRAGONS_BREATH_ROUNDS_8R,
     # RearGrip.STIPPLED_GRIP_TAPE,
     # Perk.SLEIGHT_OF_HAND,
     # TriggerAction.LIGHTWEIGHT_TRIGGER
@@ -35,6 +36,7 @@ def _add_loadout():
     if confirmation == "y":
         player.last_updated = datetime.now().isoformat()
         player.loadouts[LOADOUT] = {
+            "origin": ORIGIN,
             "source": SOURCE,
             "attachments": attachments
         }

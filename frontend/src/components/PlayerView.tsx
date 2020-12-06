@@ -11,7 +11,7 @@ import Tooltip from "@material-ui/core/Tooltip";
 import Typography from "@material-ui/core/Typography";
 import UpdateIcon from '@material-ui/icons/Update';
 import { makeStyles } from "@material-ui/core/styles";
-import { Player } from "../model/player";
+import { Loadout, Player } from "../model/player";
 import { SEO } from "./SEO";
 
 interface IProps {
@@ -93,8 +93,15 @@ const useStyles = makeStyles(theme => ({
     },
 }));
 
-const LoadoutDropdown = (props: any) => {
-    const { className, weapon, onSelectWeapon, loadouts } = props
+interface LoadoutDropdownProps {
+    className: string;
+    selectedWeapon: String;
+    onSelectWeapon: (event: any) => void;
+    loadouts: { [weapon: string]: Loadout };
+}
+
+const LoadoutDropdown = (props: LoadoutDropdownProps) => {
+    const { className, selectedWeapon, onSelectWeapon, loadouts } = props
     return (
         <FormControl variant="outlined" className={className}>
             <InputLabel id="loadout-select-label">Loadout</InputLabel>
@@ -102,12 +109,17 @@ const LoadoutDropdown = (props: any) => {
                 id="loadout-select"
                 labelId="loadout-select-label"
                 label="Loadout"
-                value={weapon}
+                value={selectedWeapon}
                 onChange={onSelectWeapon}
             >
-                {Object.keys(loadouts).map((weapon) =>
-                    <MenuItem key={weapon} value={weapon}>{weapon}</MenuItem>
-                )}
+                {Object.entries(loadouts).map(([weapon, loadout]) => (
+                    <MenuItem key={weapon} value={weapon} style={{display: "block"}}>
+                        <Typography variant="inherit">{weapon}</Typography>
+                        <div style={{float: "right", paddingRight: "5px"}}>
+                            <img src={`images/${loadout.origin.toLowerCase()}.svg`} alt="" />
+                        </div>
+                    </MenuItem>
+                ))}
             </Select>
         </FormControl>
     )
@@ -229,7 +241,7 @@ class PlayerView extends React.Component<IProps, IState> {
                         <Grid item className={classes.selectGridItem}>
                             <LoadoutDropdown
                                 className={classes.formControl}
-                                weapon={weapon}
+                                selectedWeapon={weapon}
                                 onSelectWeapon={this.onSelectWeapon}
                                 loadouts={player.loadouts}
                             />

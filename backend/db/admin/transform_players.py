@@ -1,5 +1,3 @@
-from datetime import datetime
-
 from db.json_database_engine import JSONDatabaseEngine
 
 if __name__ == '__main__':
@@ -11,11 +9,6 @@ if __name__ == '__main__':
         loadouts = player.loadouts.items()
 
         for weapon, loadout in loadouts:
-            last_updated = datetime.strptime(loadout["lastUpdated"], "%Y-%m-%dT%H:%M:%S.%f")
-            dts.append(last_updated)
-            loadout.pop("lastUpdated")
+            loadout["origin"] = "MW"
 
-        now = datetime.now()
-        latest = max(dt for dt in dts if dt < now)
-        player.last_updated = latest.isoformat()
         db.add_player(player)

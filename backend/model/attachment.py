@@ -31,7 +31,7 @@ class Barrel(Attachment):
     MONOLITHIC_INTEGRAL_SUPPRESSOR = "Monolithic Integral Suppressor"
     FSS_RECON = "FSS Recon"
     ZLR_APEX = "ZLR 16\" Apex"
-    ZLR_DEADFALl = "ZLR 18\" Deadfall"
+    ZLR_DEADFALL = "ZLR 18\" Deadfall"
     TEMPUS_MARKSMAN = "Tempus Marksman"
     HDR_PRO = "26.9\" HDR Pro"
     FACTORY_BARREL_32 = "32.0\" Factory Barrel"
@@ -62,11 +62,16 @@ class Barrel(Attachment):
     XRK_HORIZON = "XRK Horizon 23.0\""
     STAINLESS_STEEL = "400mm Stainless Steel"
     FORGE_TAC_IMPALER = "FORGE TAC Impaler"
+    FORGE_TAC_SENTRY = "FORGE TAC Sentry"
     LONG_BARREL = "622mm Long Barrel"
     XRK_SUMMIT = "XRK Summit 26.8\""
     OSW_PARA = "13.0\" OSW Para"
     ULTRALIGHT_18 = "18.0\" Ultralight"
     AN_FACTORY = "AN-94 Factory X-438mm"
+    XRK_208_DRAGOON = "XRK 208 Dragoon"
+    VLK_200 = "VLK 200mm Osa"
+    SPR_26 = "SP-R 26\""
+    WARLORD = "16\" Warlord"
 
 
 class Underbarrel(Attachment):
@@ -94,6 +99,7 @@ class Optic(Attachment):
     CRONEN_MINI_REFLEX = "Cronen LP945 Mini Reflex"
     FLIP_HYBRID = "4.0x Flip Hybrid"
     PBX_HOLO_SIGHT = "PBX Holo 7 Sight"
+    SOLOZERO_SPR = "Solozero SP-R 28mm"
 
 
 class Ammunition(Attachment):
@@ -117,7 +123,11 @@ class Ammunition(Attachment):
     NATO_ROUND_MAGS = "5.56 NATO 30-Round Mags"
     NATO_ROUND_DRUMS = "5.56 NATO 60-Round Drums"
     DRAGONS_BREATH_ROUNDS = "Dragon's Breath Rounds"
+    DRAGONS_BREATH_ROUNDS_8R = "8-R Dragon's Breath"
     HOLLOW_POINT = ".45 Hollow Point 12-R Mags"
+    LAPAU_MAGS = ".338 Lapau Mag 5-R Mags"
+    SPP_MAGS = "SPP 10-R Mags"
+    NORMA_MAGS = ".300 Norma Mag 5-R Mags"
 
 
 class RearGrip(Attachment):
@@ -145,6 +155,11 @@ class Stock(Attachment):
     FORGE_TAC_CQB_COMB = "FORGE TAC CQB Comb"
     FSS_GUARDIAN = "FSS Guardian"
     STVOL_PRECISION_COMB = "STVOL Precision Comb"
+    M16_STOCK = "M-16 Stock"
+    XRK_SP_BLITZ = "XRK SP-LITE 208 Blitz"
+    XRK_SP_ULTIMATE = "XRK SP-TAC 208 Ultimate"
+    VLK_STRELOK = "VLK Strelok"
+    VLK_VINTAZH = "VLK Vintazh"
 
 
 class Perk(Attachment):
@@ -154,6 +169,7 @@ class Perk(Attachment):
     FOCUS = "Focus"
     FULLY_LOADED = "Fully Loaded"
     AKIMBO = "Akimbo"
+    FRANGIBLE_DISABLING = "Frangible Disabling"
 
 
 class Laser(Attachment):

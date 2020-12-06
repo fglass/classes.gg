@@ -14,6 +14,7 @@ class Weapon(Enum):
     M13 = "M13"
     ODEN = "Oden"
     RAM_7 = "RAM-7"
+    AS_VAL = "AS VAL"
 
     # LMG
     HOLGER = "Holger-26"
@@ -33,6 +34,7 @@ class Weapon(Enum):
     # Sniper rifle
     AX_50 = "AX-50"
     HDR = "HDR"
+    SPR_208 = "SP-R 208"
 
     # Marksman rifle
     KAR98K = "Kar98k"
@@ -41,6 +43,8 @@ class Weapon(Enum):
     # Shotgun
     MODEL_680 = "Model 680"
     ORIGIN_12_SHOTGUN = "Origin 12 Shotgun"
+    R9 = "R9-0 Shotgun"
+    VLK_ROGUE = "VLK Rogue"
 
     # Pistol
     RENETTI = "Renetti"
