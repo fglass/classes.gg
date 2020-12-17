@@ -24,6 +24,8 @@ class Muzzle(Attachment):
     FORGE_TAC_MARAUDER = "FORGE TAC Marauder"
     CHOKE = "Choke"
 
+    INFANTRY_COMPENSATOR_CW = "Infantry Compensator"
+
 
 class Barrel(Attachment):
     TEMPUS_ARCHANGEL = "Tempus 26.4\" Archangel"
@@ -73,6 +75,9 @@ class Barrel(Attachment):
     SPR_26 = "SP-R 26\""
     WARLORD = "16\" Warlord"
 
+    STRIKE_TEAM_CW = "15.9\" Strike Team"
+    EXTENDED_BARREL_CW = "5.3\" Extended Barrel"
+
 
 class Underbarrel(Attachment):
     COMMANDO_FOREGRIP = "Commando Foregrip"
@@ -82,6 +87,8 @@ class Underbarrel(Attachment):
     STIPPLED_GRIP_TAPE = "Stippled Grip Tape"
     SNATCH_GRIP = "Snatch Grip"
     XRK_TRUEGRIP_TACTICAL = "XRK Truegrip Tactical"
+
+    FIELD_AGENT_CW = "Field Agent Foregrip"
 
 
 class Optic(Attachment):
@@ -100,6 +107,9 @@ class Optic(Attachment):
     FLIP_HYBRID = "4.0x Flip Hybrid"
     PBX_HOLO_SIGHT = "PBX Holo 7 Sight"
     SOLOZERO_SPR = "Solozero SP-R 28mm"
+
+    VISIONTECH_CW = "Visiontech 2x"
+    MILLSTOP_REFLEX_CW = "Millstop Reflex"
 
 
 class Ammunition(Attachment):
@@ -129,6 +139,9 @@ class Ammunition(Attachment):
     SPP_MAGS = "SPP 10-R Mags"
     NORMA_MAGS = ".300 Norma Mag 5-R Mags"
 
+    RND_45_CW = "45 Rnd"
+    STANAG_CW = "Stanag 53 Round Drum"
+
 
 class RearGrip(Attachment):
     XRK_SPEED_GRIP = "XRK Speed Grip"
@@ -136,6 +149,8 @@ class RearGrip(Attachment):
     STIPPLED_GRIP_TAPE = "Stippled Grip Tape"
     RUBBERIZED_GRIP_TAPE = "Rubberized Grip Tape"
     CRONEN_SNIPER_ELITE = "Cronen Sniper Elite"
+
+    SASR_JUNGLE = "SASR Jungle Grip"
 
 
 class Stock(Attachment):
@@ -160,6 +175,8 @@ class Stock(Attachment):
     XRK_SP_ULTIMATE = "XRK SP-TAC 208 Ultimate"
     VLK_STRELOK = "VLK Strelok"
     VLK_VINTAZH = "VLK Vintazh"
+
+    WIRE_STOCK = "Wire Stock"
 
 
 class Perk(Attachment):

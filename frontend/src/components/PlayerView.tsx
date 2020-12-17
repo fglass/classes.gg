@@ -116,7 +116,7 @@ const LoadoutDropdown = (props: LoadoutDropdownProps) => {
                     <MenuItem key={weapon} value={weapon} style={{display: "block"}}>
                         <Typography variant="inherit">{weapon}</Typography>
                         <div style={{float: "right", paddingRight: "5px"}}>
-                            <img src={`images/${loadout.origin.toLowerCase()}.svg`} alt="" />
+                            <img src={`images/${loadout.origin.toLowerCase()}.svg`} alt="" style={{opacity: 0.5}} />
                         </div>
                     </MenuItem>
                 ))}

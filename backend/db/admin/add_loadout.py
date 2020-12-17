@@ -6,20 +6,20 @@ from model.player import Player
 from model.weapon import Weapon
 
 
-USERNAME = "teepee"
-LOADOUT = Weapon.VLK_ROGUE.value
-ORIGIN = "MW"
-SOURCE = "https://tinyurl.com/teep-classes"
+USERNAME = "cloakzy"
+LOADOUT = "MAC-10"
+ORIGIN = "CW"
+SOURCE = "https://bit.ly/31oYMFu"
 COMMAND, MESSAGE = (None, "")
 ATTACHMENTS = [
-    Muzzle.FORGE_TAC_MARAUDER,
-    Barrel.WARLORD,
-    Laser.MW_LASER_5,
-    # Optic.VLK_3X_OPTIC,
-    Stock.NO_STOCK,
-    # Underbarrel.MERC_FOREGRIP,
-    Ammunition.DRAGONS_BREATH_ROUNDS_8R,
-    # RearGrip.STIPPLED_GRIP_TAPE,
+    # Muzzle.INFANTRY_COMPENSATOR_CW,
+    Barrel.EXTENDED_BARREL_CW,
+    # Laser.MW_LASER_5,
+    Optic.MILLSTOP_REFLEX_CW,
+    Stock.WIRE_STOCK,
+    # Underbarrel.FIELD_AGENT_CW,
+    Ammunition.STANAG_CW,
+    RearGrip.SASR_JUNGLE,
     # Perk.SLEIGHT_OF_HAND,
     # TriggerAction.LIGHTWEIGHT_TRIGGER
 ]
