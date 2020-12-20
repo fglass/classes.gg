@@ -44,7 +44,7 @@ export const SEO = (props: any) => {
 
             <meta
                 name="image"
-                content="https://classes.gg/images/logo.svg"
+                content="https://classes.gg/images/logo.png"
             />
 
             <meta property="og:url" content={url} />
@@ -62,7 +62,7 @@ export const SEO = (props: any) => {
             />
             <meta
                 property="og:image"
-                content="https://classes.gg/images/logo.svg"
+                content="https://classes.gg/images/logo.png"
             />
             <meta
                 name="article:published_time"

@@ -5,6 +5,7 @@ import SearchIcon from "@material-ui/icons/Search";
 import Toolbar from "@material-ui/core/Toolbar";
 import Typography from "@material-ui/core/Typography";
 import { createStyles, fade, makeStyles, Theme } from "@material-ui/core/styles";
+import {Grid} from "@material-ui/core";
 
 interface IProps {
     onSearch: (input: string) => void
@@ -13,16 +14,16 @@ interface IProps {
 const useStyles = makeStyles((theme: Theme) => createStyles({
     logo: {
         flexGrow: 1,
+        paddingTop: theme.spacing(0.5),
     },
     home: {
-        display: "flex",
         maxWidth: 125,
     },
     title: {
         fontFamily: "Bebas Neue",
-        fontSize: "1.52rem",
-        paddingTop: theme.spacing(0.5),
-        paddingLeft: theme.spacing(1),
+        fontSize: "1.57rem",
+        paddingLeft: theme.spacing(1.5),
+        paddingBottom: theme.spacing(0.125),
     },
     search: {
         position: "relative",
@@ -61,11 +62,17 @@ const Logo = (props: any) => {
     const classes = props.classes
     return (
          <div className={classes.logo}>
-            <a className={classes.home} href="/">
-               <img src={"images/logo.svg"} alt="Logo" />
-                <Typography className={classes.title}>
-                    Classes.gg
-                </Typography>
+            <a href="/">
+                <Grid container className={classes.home} alignItems="center">
+                    <Grid item xs={2}>
+                        <img src={"images/logo.png"} alt="Logo" />
+                    </Grid>
+                    <Grid item xs={10}>
+                        <Typography className={classes.title}>
+                            Classes.gg
+                        </Typography>
+                    </Grid>
+                </Grid>
             </a>
         </div>
     )
