@@ -8,12 +8,12 @@ export const SEO = (props: any) => {
         return null
     }
 
-    let title = "Classes.gg - Warzone Loadout Repository"
+    let title = "Classes.gg"
     let description = "View Call of Duty: Warzone loadouts from professional players, streamers and other content creators"
     let url = "https://www.classes.gg"
 
     if (window.location.pathname !== "/") { // Use default values for root
-        title = `Classes.gg - ${username} Warzone Loadouts`
+        title = `${username} - Classes.gg`
         description = `View Call of Duty: Warzone loadouts of ${username}`
         url = `https://www.classes.gg/${username}`
     }
