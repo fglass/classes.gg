@@ -6,7 +6,7 @@ import { Box } from "@material-ui/core";
 const useStyles = makeStyles(theme => ({
     footer: {
         width: "100%",
-        padding: theme.spacing(2.1),
+        padding: theme.spacing(1.5),
         backgroundColor: theme.palette.background.paper,
     },
     link: {

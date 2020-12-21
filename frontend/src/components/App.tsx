@@ -39,8 +39,8 @@ const useStyles = makeStyles((theme) => ({
         justifyContent: "center",
         alignItems: "center",
         [theme.breakpoints.up("md")]: {
-            marginTop: theme.spacing(5),
-            marginBottom: theme.spacing(5),
+            marginTop: theme.spacing(3),
+            marginBottom: theme.spacing(3),
         }
     },
 }));

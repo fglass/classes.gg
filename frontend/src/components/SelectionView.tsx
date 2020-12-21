@@ -65,6 +65,10 @@ function Arrow(props: any) {
     );
 }
 
+const PROGRESSIVE_LAZY_LOADING = "progressive" as LazyLoadTypes
+
+const NO_LAZY_LOADING = null as unknown as LazyLoadTypes
+
 const sliderSettings = {
     initialSlide: 0,
     slidesToShow: 5,
@@ -72,7 +76,7 @@ const sliderSettings = {
     speed: 400,
     prevArrow: <Arrow offset={8} />,
     nextArrow: <Arrow offset={8} next />,
-    lazyLoad: "progressive" as LazyLoadTypes,
+    lazyLoad: NO_LAZY_LOADING,
     responsive: [
         {
             breakpoint: 600, // xs
@@ -148,13 +152,14 @@ class SelectionView extends React.Component<IProps> {
             )
         }
 
-        const slides = getSlidesForWidth(window.innerWidth);
+        const slides = getSlidesForWidth (window.innerWidth);
 
         if (players.length > slides) {
             // Update dynamic config
-            sliderSettings["slidesToShow"] = slides
-            sliderSettings["slidesToScroll"] = slides
-            sliderSettings["initialSlide"] = firstPlayer
+            sliderSettings.slidesToShow = slides
+            sliderSettings.slidesToScroll = slides
+            sliderSettings.initialSlide = firstPlayer
+            sliderSettings.lazyLoad = slides === 1 ? PROGRESSIVE_LAZY_LOADING : NO_LAZY_LOADING
             return <SliderView className={classes.container} players={players} />
         } else {
             return <StaticView className={classes.container} players={players} />
