@@ -114,9 +114,9 @@ const LoadoutDropdown = (props: LoadoutDropdownProps) => {
             >
                 {Object.entries(loadouts).map(([weapon, loadout]) => (
                     <MenuItem key={weapon} value={weapon} style={{display: "block"}}>
-                        <Typography variant="inherit">{weapon}</Typography>
+                        <Typography variant="inherit">{weapon.replace(" CW", "")}</Typography>
                         <div style={{float: "right", paddingRight: "5px"}}>
-                            <img src={`images/${loadout.origin.toLowerCase()}.svg`} alt="" style={{opacity: 0.5}} />
+                            <img src={`images/${loadout.game.toLowerCase()}.svg`} alt="" style={{opacity: 0.5}} />
                         </div>
                     </MenuItem>
                 ))}

@@ -6,19 +6,19 @@ from model.player import Player
 from model.weapon import Weapon
 
 
-USERNAME = "cloakzy"
-LOADOUT = "MAC-10"
-ORIGIN = "CW"
-SOURCE = "https://bit.ly/31oYMFu"
+USERNAME = "teepee"
+LOADOUT = "MAC-10 Fast"  # str(Weapon.MAC_10)
+GAME = Game.COLD_WAR
+SOURCE = "https://tinyurl.com/teepeeattachments"
 COMMAND, MESSAGE = (None, "")
 ATTACHMENTS = [
-    # Muzzle.INFANTRY_COMPENSATOR_CW,
-    Barrel.EXTENDED_BARREL_CW,
-    # Laser.MW_LASER_5,
-    Optic.MILLSTOP_REFLEX_CW,
-    Stock.WIRE_STOCK,
-    # Underbarrel.FIELD_AGENT_CW,
-    Ammunition.STANAG_CW,
+    Muzzle.AGENCY_SUPPRESSOR,
+    Barrel.TASK_FORCE_59,
+    # Laser.TIGER_TEAM_SPOTLIGHT,
+    # Optic.HAWKSMOOR,
+    # Stock.RAIDER_STOCK,
+    Underbarrel.PATROL_FOREGIP,
+    Ammunition.SALVO_53,
     RearGrip.SASR_JUNGLE,
     # Perk.SLEIGHT_OF_HAND,
     # TriggerAction.LIGHTWEIGHT_TRIGGER
@@ -28,7 +28,7 @@ ATTACHMENTS = [
 def _add_loadout():
     db = JSONDatabaseEngine()
     player = db.select_player(USERNAME)
-    attachments = {attachment.get_type(): attachment.value for attachment in ATTACHMENTS}
+    attachments = {attachment.get_type(): str(attachment) for attachment in ATTACHMENTS}
 
     _print_validation(player, attachments)
     confirmation = input("Confirm? ")
@@ -36,7 +36,7 @@ def _add_loadout():
     if confirmation == "y":
         player.last_updated = datetime.now().isoformat()
         player.loadouts[LOADOUT] = {
-            "origin": ORIGIN,
+            "game": GAME.value,
             "source": SOURCE,
             "attachments": attachments
         }
@@ -45,11 +45,11 @@ def _add_loadout():
             player.commands[COMMAND] = MESSAGE
 
         db.add_player(player)
-        print(f"Added {player.username}'s {LOADOUT}")
+        print(f"Added {player.username}'s {GAME.value} {LOADOUT}")
 
 
 def _print_validation(player: Player, attachments: dict):
-    print(f"{player.username}'s {LOADOUT}:")
+    print(f"{player.username}'s {GAME.value} {LOADOUT}:")
 
     if LOADOUT in player.loadouts:
         previous_attachments = list(player.loadouts[LOADOUT]["attachments"].values())
@@ -58,7 +58,9 @@ def _print_validation(player: Player, attachments: dict):
     else:
         [print(f"\t{attachment}") for attachment in attachments.values()]
 
-    print(f"{COMMAND}: {MESSAGE}")
+    if COMMAND:
+        print(f"{COMMAND}: {MESSAGE}")
+
     print("-" * 15)
 
 

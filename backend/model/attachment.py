@@ -1,7 +1,16 @@
 from enum import Enum
 
+from model.game import Game
+
 
 class Attachment(Enum):
+
+    def __init__(self, name, game=Game.MODERN_WARFARE):
+        self._name = name
+        self._game = game
+
+    def __str__(self):
+        return self._name
 
     def get_type(self):
         _type = self.__class__.__name__
@@ -24,7 +33,13 @@ class Muzzle(Attachment):
     FORGE_TAC_MARAUDER = "FORGE TAC Marauder"
     CHOKE = "Choke"
 
-    INFANTRY_COMPENSATOR_CW = "Infantry Compensator"
+    INFANTRY_COMPENSATOR = "Infantry Compensator", Game.COLD_WAR
+    SUPPRESSOR = "Suppressor", Game.COLD_WAR
+    AGENCY_SUPPRESSOR = "Agency Suppressor", Game.COLD_WAR
+    KGB_ELIMINATOR = "KGB Eliminator", Game.COLD_WAR
+    SPETSNAZ_COMPENSATOR = "Spetsnaz Compensator", Game.COLD_WAR
+    MUZZLE_BRAKE_556 = "Muzzle Brake 5.56", Game.COLD_WAR
+    STABILIZER = "Stabilizer .308"
 
 
 class Barrel(Attachment):
@@ -75,8 +90,22 @@ class Barrel(Attachment):
     SPR_26 = "SP-R 26\""
     WARLORD = "16\" Warlord"
 
-    STRIKE_TEAM_CW = "15.9\" Strike Team"
-    EXTENDED_BARREL_CW = "5.3\" Extended Barrel"
+    STRIKE_TEAM = "15.9\" Strike Team", Game.COLD_WAR
+    EXTENDED_BARREL_53 = "5.3\" Extended Barrel", Game.COLD_WAR
+    TASK_FORCE_59 = "5.9\" Task Force", Game.COLD_WAR
+    TASK_FORCE_205 = "20.5\" Task Force", Game.COLD_WAR
+    TASK_FORCE_208 = "20.8\" Task Force", Game.COLD_WAR
+    TASK_FORCE_218 = "21.8\" Task Force", Game.COLD_WAR
+    CAVALRY_LANCER = "12.5\" Cavalry Lancer", Game.COLD_WAR
+    RANGER_95 = "9.5\" Ranger", Game.COLD_WAR
+    RANGER_197 = "19.7\" Ranger", Game.COLD_WAR
+    RANGER_212 = "21.2\" Ranger", Game.COLD_WAR
+    VDV_REINFORCED_93 = "9.3\" VDV Reinforced", Game.COLD_WAR
+    VDV_REINFORCED_182 = "18.2\" VDV Reinforced", Game.COLD_WAR
+    TAKEDOWN = "13.7\" Takedown", Game.COLD_WAR
+    REINFORCED_HEAVY_195 = "19.5\" Reinforced Heavy", Game.COLD_WAR
+    TIGER_TEAM_265 = "26.5\" Tiger Team", Game.COLD_WAR
+    TITANIUM_163 = "16.3\" Titanium"
 
 
 class Underbarrel(Attachment):
@@ -88,7 +117,11 @@ class Underbarrel(Attachment):
     SNATCH_GRIP = "Snatch Grip"
     XRK_TRUEGRIP_TACTICAL = "XRK Truegrip Tactical"
 
-    FIELD_AGENT_CW = "Field Agent Foregrip"
+    FIELD_AGENT_FOREGRIP = "Field Agent Foregrip", Game.COLD_WAR
+    FOREGRIP = "Foregrip", Game.COLD_WAR
+    PATROL_FOREGIP = "Patrol Foregrip", Game.COLD_WAR
+    SPETSNAZ_GRIP = "Spetsnaz Grip", Game.COLD_WAR
+    BIPOD = "Bipod", Game.COLD_WAR
 
 
 class Optic(Attachment):
@@ -108,8 +141,14 @@ class Optic(Attachment):
     PBX_HOLO_SIGHT = "PBX Holo 7 Sight"
     SOLOZERO_SPR = "Solozero SP-R 28mm"
 
-    VISIONTECH_CW = "Visiontech 2x"
-    MILLSTOP_REFLEX_CW = "Millstop Reflex"
+    VISIONTECH = "Visiontech 2x", Game.COLD_WAR
+    MILLSTOP_REFLEX = "Millstop Reflex", Game.COLD_WAR
+    QUICKDOT_LED = "Quickdot LED", Game.COLD_WAR
+    KOBRA_RED_DOT = "Kobra Red Dot", Game.COLD_WAR
+    MICROFLEX_LED = "Microflex LED", Game.COLD_WAR
+    AXIAL_ARMS = "Axial Arms 3x", Game.COLD_WAR
+    SILLIX = "Sillix Holoscout", Game.COLD_WAR
+    HAWKSMOOR = "Hawksmoor", Game.COLD_WAR
 
 
 class Ammunition(Attachment):
@@ -139,8 +178,17 @@ class Ammunition(Attachment):
     SPP_MAGS = "SPP 10-R Mags"
     NORMA_MAGS = ".300 Norma Mag 5-R Mags"
 
-    RND_45_CW = "45 Rnd"
-    STANAG_CW = "Stanag 53 Round Drum"
+    RND_38 = "38 Rnd", Game.COLD_WAR
+    RND_43 = "43 Rnd", Game.COLD_WAR
+    RND_45 = "45 Rnd", Game.COLD_WAR
+    RND_120 = "120 Rnd", Game.COLD_WAR
+    STANAG_50 = "STANAG 50 Rnd Drum", Game.COLD_WAR
+    STANAG_53 = "STANAG 53 Rnd Drum", Game.COLD_WAR
+    STANAG_60 = "STANAG 60 Rnd Drum", Game.COLD_WAR
+    SALVO_50 = "Salvo 50 Rnd Fast Mag", Game.COLD_WAR
+    SALVO_53 = "Salvo 53 Rnd Fast Mag", Game.COLD_WAR
+    RND_DRUM_40 = "40 Rnd Drum", Game.COLD_WAR
+    RND_45_SPEED = "45 Rnd Speed Mag", Game.COLD_WAR
 
 
 class RearGrip(Attachment):
@@ -150,7 +198,8 @@ class RearGrip(Attachment):
     RUBBERIZED_GRIP_TAPE = "Rubberized Grip Tape"
     CRONEN_SNIPER_ELITE = "Cronen Sniper Elite"
 
-    SASR_JUNGLE = "SASR Jungle Grip"
+    SASR_JUNGLE = "SASR Jungle Grip", Game.COLD_WAR
+    AIRBORNE_ELASTIC_WRAP = "Airborne Elastic Wrap", Game.COLD_WAR
 
 
 class Stock(Attachment):
@@ -176,7 +225,9 @@ class Stock(Attachment):
     VLK_STRELOK = "VLK Strelok"
     VLK_VINTAZH = "VLK Vintazh"
 
-    WIRE_STOCK = "Wire Stock"
+    WIRE_STOCK = "Wire Stock", Game.COLD_WAR
+    RAIDER_PAD = "Raider Pad", Game.COLD_WAR
+    RAIDER_STOCK = "Raider Stock", Game.COLD_WAR
 
 
 class Perk(Attachment):
@@ -192,6 +243,9 @@ class Perk(Attachment):
 class Laser(Attachment):
     TAC_LASER = "Tac Laser"
     MW_LASER_5 = "5mW Laser"
+    MW_LASER_5_SWAT = "SWAT 5mW Laser Sight", Game.COLD_WAR
+    TIGER_TEAM_SPOTLIGHT = "Tiger Team Spotlight", Game.COLD_WAR
+    STEADY_AIM_LASER = "Steady Aim Laser"
 
 
 class TriggerAction(Attachment):

@@ -9,6 +9,6 @@ if __name__ == '__main__':
         loadouts = player.loadouts.items()
 
         for weapon, loadout in loadouts:
-            loadout["origin"] = "MW"
+            loadout["game"] = loadout.pop("origin", "MW")
 
         db.add_player(player)

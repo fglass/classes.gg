@@ -6,8 +6,10 @@ from db.admin.change.command_source import CommandSource
 from db.json_database_engine import JSONDatabaseEngine
 
 SOURCE_KEY = "source"
+SHEETS_KEY = "sheets"
 GOOGLE_SHEET_KEY = "google"
 DIFF_CONTROL_PREFIXES = {"---", "+++", "@@"}
+DATA_PATH = "db/admin/change/data"
 
 
 def main():
@@ -16,16 +18,17 @@ def main():
 
     for player in players:
 
+        username = player.username.lower()
         previous_commands = player.commands
         source_name = previous_commands.pop(SOURCE_KEY, None)
 
         if source_name:
             source = CommandSource(source_name)
             current_commands = source.query(player)
-            _compare_commands(player.username, previous=previous_commands, current=current_commands)
+            _compare_commands(username, previous=previous_commands, current=current_commands)
 
         if player.spreadsheet:
-            _compare_spreadsheet_hash(player.username, player.spreadsheet)
+            _compare_spreadsheet(username, player.spreadsheet)
 
     logging.info(f"{len(players)} players checked")
 
@@ -37,27 +40,38 @@ def _compare_commands(username: str, previous: dict, current: dict):
             logging.info(f"[{username}] [{cmd}]: {new_msg}")
 
 
-def _compare_spreadsheet_hash(username: str, spreadsheet: dict):
-    if spreadsheet[SOURCE_KEY] != GOOGLE_SHEET_KEY:
+def _compare_spreadsheet(username: str, spreadsheet_meta: dict):
+    if spreadsheet_meta[SOURCE_KEY] != GOOGLE_SHEET_KEY:
         return
 
-    file = spreadsheet["file"]
-    filename = f"db/admin/change/data/{file}"
-    with open(filename, "rb") as f:
-        content = f.read()
-        previous_hash = hashlib.md5(content).hexdigest()
+    for sheet in spreadsheet_meta[SHEETS_KEY]:
+        _compare_sheet_hash(username, spreadsheet_meta, sheet)
 
-    if not previous_hash:
-        return
 
-    url = spreadsheet["url"]
-    export_url = f"{url}/export?format=csv"
+def _compare_sheet_hash(username: str, spreadsheet_meta: dict, sheet: str):
+    filename = f"{DATA_PATH}/{username}-{sheet}.csv"
+    file_data = _try_get_file_data(filename)
+    previous_hash = hashlib.md5(file_data).hexdigest()
+
+    key = spreadsheet_meta["id"]
+    export_url = f"https://docs.google.com/spreadsheets/d/{key}/export?format=csv&gid={sheet}"
     response = requests.get(export_url)
     current_hash = hashlib.md5(response.content).hexdigest()
 
     if previous_hash != current_hash:
-        logging.info(f"[{username}]: {url}")
-        _display_spreadsheet_diff(previous=content, current=response.content)
+        logging.info(f"[{username}]: {export_url}")
+        _display_spreadsheet_diff(previous=file_data, current=response.content)
+        _save_new_data(filename, response.content)
+
+
+def _try_get_file_data(filename: str) -> bytes:
+    try:
+        with open(filename, "rb") as f:
+            data = f.read()
+    except FileNotFoundError:
+        data = bytes()
+
+    return data
 
 
 def _display_spreadsheet_diff(previous: bytes, current: bytes):
@@ -66,6 +80,11 @@ def _display_spreadsheet_diff(previous: bytes, current: bytes):
     diff = difflib.unified_diff(a, b, fromfile="Previous", tofile="Current", lineterm="", n=0)
     delta = filter(lambda line: not any(line.startswith(prefix) for prefix in DIFF_CONTROL_PREFIXES), diff)
     [logging.info(f"\t\t{line}") for line in delta]
+
+
+def _save_new_data(filename: str, new_data: bytes):
+    with open(filename + ".new", "wb") as f:
+        f.write(new_data)
 
 
 if __name__ == "__main__":

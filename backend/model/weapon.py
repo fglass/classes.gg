@@ -1,7 +1,17 @@
 from enum import Enum
 
+from model.game import Game
+
 
 class Weapon(Enum):
+
+    def __init__(self, name, game=Game.MODERN_WARFARE):
+        self._name = name
+        self._game = game
+
+    def __str__(self):
+        return self._name
+
     # Assault rifle
     AK_47 = "AK-47"
     AN_94 = "AN-94"
@@ -15,11 +25,20 @@ class Weapon(Enum):
     ODEN = "Oden"
     RAM_7 = "RAM-7"
     AS_VAL = "AS VAL"
+    XM4 = "XM4", Game.COLD_WAR
+    AK_47_CW = "AK-47 CW", Game.COLD_WAR
+    KRIG_6 = "Krig 6", Game.COLD_WAR
+    FFAR_1 = "FFAR 1", Game.COLD_WAR
+
+    # Tactical Rifles
+    M16 = "M16", Game.COLD_WAR
+    DMR = "DMR 14", Game.COLD_WAR
 
     # LMG
     HOLGER = "Holger-26"
     PKM = "PKM"
     BRUEN = "MK9 Bruen"
+    STONER_63 = "Stoner 63"
 
     # SMG
     AUG = "AUG"
@@ -30,11 +49,15 @@ class Weapon(Enum):
     PP19_BIZON = "PP19 Bizon"
     STRIKER_45 = "Striker 45"
     UZI = "Uzi"
+    MAC_10 = "MAC-10", Game.COLD_WAR
+    MP5_CW = "MP5 CW", Game.COLD_WAR
+    AK_74U = "AK-74u"
 
     # Sniper rifle
     AX_50 = "AX-50"
     HDR = "HDR"
     SPR_208 = "SP-R 208"
+    PELINGTON_703 = "Pelington 703"
 
     # Marksman rifle
     KAR98K = "Kar98k"

@@ -6,7 +6,7 @@ export interface Player {
 }
 
 export interface Loadout {
+    game: string;
     source: string;
-    origin: string;
     attachments: { [type: string]: string };
 }
