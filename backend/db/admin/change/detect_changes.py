@@ -2,6 +2,7 @@ import difflib
 import hashlib
 import logging
 import requests
+import time
 from db.admin.change.command_source import CommandSource
 from db.json_database_engine import JSONDatabaseEngine
 
@@ -10,9 +11,11 @@ SHEETS_KEY = "sheets"
 GOOGLE_SHEET_KEY = "google"
 DIFF_CONTROL_PREFIXES = {"---", "+++", "@@"}
 DATA_PATH = "db/admin/change/data"
+ALL_COMMANDS = {'ak47', 'ak74u', 'an94', 'as', 'aug', 'ax-50', 'ax50', 'bruen', 'class', 'cr56', 'crossbow', 'dmr', 'fal', 'fennec', 'ffar', 'fr', 'galil', 'grau', 'grau2', 'guns', 'hdr', 'hdr2', 'holger26', 'kar', 'kar98', 'kar98k', 'kilo', 'krig', 'loadout', 'loadout2', 'loadouts', 'm13', 'm132', 'm16', 'm19', 'm4', 'm42', 'm4a1', 'mac10', 'mk9', 'model', 'mp5', 'mp52', 'mp5snipe', 'mp7', 'mp72', 'oden', 'oden2', 'origin', 'p90', 'pelington', 'pkm', 'pp19', 'r90', 'ram', 'ram-7', 'ram7', 'renetti', 'spr', 'stoner', 'striker', 'uzi', 'vector', 'vlk', 'xm4'}
 
 
 def main():
+    start = time.time()
     db = JSONDatabaseEngine()
     players = db.select_players()
 
@@ -25,12 +28,13 @@ def main():
         if source_name:
             source = CommandSource(source_name)
             current_commands = source.query(player)
-            _compare_commands(username, previous=previous_commands, current=current_commands)
+            _compare_commands(username, previous_commands, current_commands)
+            _find_new_commands(username, previous_commands, current_commands)
 
         if player.spreadsheet:
-            _compare_spreadsheet(username, player.spreadsheet)
+            _compare_spreadsheets(username, player.spreadsheet)
 
-    logging.info(f"{len(players)} players checked")
+    logging.info(f"{len(players)} players checked in {time.time() - start:.2f}s")
 
 
 def _compare_commands(username: str, previous: dict, current: dict):
@@ -40,7 +44,18 @@ def _compare_commands(username: str, previous: dict, current: dict):
             logging.info(f"[{username}] [{cmd}]: {new_msg}")
 
 
-def _compare_spreadsheet(username: str, spreadsheet_meta: dict):
+def _find_new_commands(username: str, previous: dict, current: dict):
+    for cmd in ALL_COMMANDS:
+        _find_new_command(cmd, username, previous, current)
+        _find_new_command("!" + cmd, username, previous, current)
+
+
+def _find_new_command(cmd: str, username: str, previous: dict, current: dict):
+    if cmd not in previous and cmd in current:
+        logging.info(f"[{username}] [new]: {cmd}: {current[cmd]}")
+
+
+def _compare_spreadsheets(username: str, spreadsheet_meta: dict):
     if spreadsheet_meta[SOURCE_KEY] != GOOGLE_SHEET_KEY:
         return
 
