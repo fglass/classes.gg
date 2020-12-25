@@ -18,49 +18,37 @@ class LoadoutEditor(QWidget):
 
     def __init__(self):
         super().__init__()
-        self.setWindowTitle("Loadout Editor")
-        self.resize(600, 400)
-
         self._db = JSONDatabaseEngine()
         self._selected_player = None
 
-        layout = QFormLayout()
-        self.setLayout(layout)
+        self.setWindowTitle("Loadout Editor")
+        self.resize(600, 400)
+        self.setLayout(QFormLayout())
 
         player_field = QComboBox()
         usernames = sorted([p.username.lower() for p in self._db.select_players()])
         player_field.addItems(usernames)
         player_field.setCurrentIndex(-1)
         player_field.currentTextChanged.connect(self._on_select_player)
-        layout.addRow(QLabel("Player"), player_field)
+        self.layout().addRow(QLabel("Player"), player_field)
 
         self._loadout_field = QComboBox()
         self._loadout_field.addItems(sorted([str(w) for w in Weapon]))
         self._loadout_field.setEditable(True)
         self._loadout_field.setCurrentIndex(-1)
         self._loadout_field.currentTextChanged.connect(self._on_select_loadout)
-        layout.addRow(QLabel("Loadout"), self._loadout_field)
+        self.layout().addRow(QLabel("Loadout"), self._loadout_field)
 
         self._game_field = QComboBox()
         self._game_field.addItems([g.value for g in Game])
         self._game_field.setCurrentIndex(-1)
-        layout.addRow(QLabel("Game"), self._game_field)
+        self.layout().addRow(QLabel("Game"), self._game_field)
 
-        self._attachment_fields = {
-            "Muzzle": self._add_attachment_field(Muzzle),
-            "Barrel": self._add_attachment_field(Barrel),
-            "Laser": self._add_attachment_field(Laser),
-            "Optic": self._add_attachment_field(Optic),
-            "Stock": self._add_attachment_field(Stock),
-            "Underbarrel": self._add_attachment_field(Underbarrel),
-            "Ammunition": self._add_attachment_field(Ammunition),
-            "Rear Grip": self._add_attachment_field(RearGrip),
-            "Perk": self._add_attachment_field(Perk),
-            "Trigger Action": self._add_attachment_field(TriggerAction),
-        }
+        attachments = [Muzzle, Barrel, Laser, Optic, Stock, Underbarrel, Ammunition, RearGrip, Perk, TriggerAction]
+        self._attachment_fields = {a.get_class_name(): self._add_attachment_field(a) for a in attachments}
 
         self._source_field = QLineEdit()
-        layout.addRow(QLabel("Source"), self._source_field)
+        self.layout().addRow(QLabel("Source"), self._source_field)
 
         self._command_field = QLineEdit()
         self._message_field = QLineEdit()
@@ -72,11 +60,11 @@ class LoadoutEditor(QWidget):
 
         command_widget = QWidget()
         command_widget.setLayout(command_layout)
-        layout.addRow(QLabel("Command"), command_widget)
+        self.layout().addRow(QLabel("Command"), command_widget)
 
         submit_button = QPushButton("Submit")
         submit_button.clicked.connect(self._on_submit)
-        layout.addWidget(submit_button)
+        self.layout().addWidget(submit_button)
 
     def _add_attachment_field(self, enum: EnumMeta):
         field = QComboBox()
@@ -84,20 +72,21 @@ class LoadoutEditor(QWidget):
         sorted_values = sorted(values)
         field.addItems(sorted_values)
         field.setCurrentIndex(-1)
-        self.layout().addRow(QLabel(enum.__name__), field)
+        self.layout().addRow(QLabel(enum.get_class_name()), field)
         return field
 
-    def _on_select_player(self, username: str):  # TODO: add additional loadouts
+    def _on_select_player(self, username: str):
         self._clear_editor()
         self._selected_player = self._db.select_player(username)
+        self._on_select_loadout(loadout_key=self._loadout_field.currentText())
 
-    def _on_select_loadout(self, name: str):
+    def _on_select_loadout(self, loadout_key: str):
         self._clear_editor()
 
         if not self._selected_player:
             return
 
-        loadout = self._selected_player.loadouts.get(name)
+        loadout = self._selected_player.loadouts.get(loadout_key)
 
         if not loadout:
             return
@@ -111,18 +100,15 @@ class LoadoutEditor(QWidget):
             index = field.findText(v)
             field.setCurrentIndex(index)
 
-    def _clear_editor(self):  # TODO: clear loadout field?
-        [field.setCurrentIndex(-1) for field in self._attachment_fields.values()]
-        self._game_field.setCurrentIndex(-1)
-        self._source_field.setText("")
-        self._command_field.setText("")
-        self._message_field.setText("")
-
-    def _on_submit(self):  # TODO: validation
+    def _on_submit(self):
         username = self._selected_player.username.lower()
 
         loadout = self._loadout_field.currentText()
         attachments = {k: v.currentText() for k, v in self._attachment_fields.items() if v.currentText() != ""}
+
+        if len(attachments) > 5:
+            print(f"Error: {len(attachments)} attachments selected")
+            return
 
         game = self._game_field.currentText()
         source = self._source_field.text()
@@ -149,6 +135,13 @@ class LoadoutEditor(QWidget):
 
         self._selected_player = self._db.select_player(username)
         print(f"[{username}] Added {loadout}: {player.loadouts[loadout]}")
+
+    def _clear_editor(self):
+        [field.setCurrentIndex(-1) for field in self._attachment_fields.values()]
+        self._game_field.setCurrentIndex(-1)
+        self._source_field.setText("")
+        self._command_field.setText("")
+        self._message_field.setText("")
 
 
 if __name__ == '__main__':

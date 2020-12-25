@@ -12,8 +12,9 @@ class Attachment(Enum):
     def __str__(self):
         return self._name
 
-    def get_type(self):
-        _type = self.__class__.__name__
+    @classmethod
+    def get_class_name(cls):
+        _type = cls.__name__
         if _type == RearGrip.__name__:
             return "Rear Grip"
         if _type == TriggerAction.__name__:
