@@ -1,5 +1,6 @@
 import React from "react";
 import Api from "../model/api";
+import LandingView from "./LandingView";
 import SelectionView from "./SelectionView";
 import PlayerView from "./PlayerView";
 import { Player } from "../model/player";
@@ -49,14 +50,19 @@ export default class Content extends React.Component<IProps, IState> {
 
         return (
             <React.Fragment>
-                <SelectionView
+                <LandingView
                     players={players}
                     firstPlayer={players.findIndex(player => player.username === selectedPlayer.username)}
                     searching={searching}
                 />
-                <div className={className}>
-                     <PlayerView player={selectedPlayer} />
-                </div>
+                {/*<SelectionView*/}
+                {/*    players={players}*/}
+                {/*    firstPlayer={players.findIndex(player => player.username === selectedPlayer.username)}*/}
+                {/*    searching={searching}*/}
+                {/*/>*/}
+                {/*<div className={className}>*/}
+                {/*     <PlayerView player={selectedPlayer} />*/}
+                {/*</div>*/}
             </React.Fragment>
         )
     }

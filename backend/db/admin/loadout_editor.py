@@ -112,6 +112,11 @@ class LoadoutEditor(QWidget):
 
         game = self._game_field.currentText()
         source = self._source_field.text()
+
+        if not game or not source:
+            print(f"Error: required fields missing")
+            return
+
         command = (self._command_field.text(), self._message_field.text())
 
         self._add_loadout(username, loadout, attachments, game, source, command)

@@ -3,6 +3,7 @@ export interface Player {
     avatar: string;
     lastUpdated: string;
     loadouts: { [loadout: string]: Loadout };
+    nLoadouts: number;
 }
 
 export interface Loadout {
