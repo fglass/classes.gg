@@ -80,6 +80,7 @@ class Barrel(Attachment):
     XRK_HORIZON = "XRK Horizon 23.0\""
     STAINLESS_STEEL = "400mm Stainless Steel"
     FORGE_TAC_IMPALER = "FORGE TAC Impaler"
+    FORGE_TAC_PRECISION = "FORGE TAC Precision"
     FORGE_TAC_SENTRY = "FORGE TAC Sentry"
     LONG_BARREL = "622mm Long Barrel"
     XRK_SUMMIT = "XRK Summit 26.8\""
@@ -179,6 +180,7 @@ class Ammunition(Attachment):
     SPP_MAGS = "SPP 10-R Mags"
     NORMA_MAGS = ".300 Norma Mag 5-R Mags"
 
+    RND_30 = "30 Rnd", Game.COLD_WAR
     RND_38 = "38 Rnd", Game.COLD_WAR
     RND_43 = "43 Rnd", Game.COLD_WAR
     RND_45 = "45 Rnd", Game.COLD_WAR
@@ -245,6 +247,7 @@ class Laser(Attachment):
     TAC_LASER = "Tac Laser"
     MW_LASER_5 = "5mW Laser"
     MW_LASER_5_SWAT = "SWAT 5mW Laser Sight", Game.COLD_WAR
+    MW_LASER_5_GRU = "GRU 5mW Laser Sight", Game.COLD_WAR
     TIGER_TEAM_SPOTLIGHT = "Tiger Team Spotlight", Game.COLD_WAR
     STEADY_AIM_LASER = "Steady Aim Laser"
 

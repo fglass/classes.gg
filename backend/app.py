@@ -13,13 +13,25 @@ db = JSONDatabaseEngine()
 def get_player(username: str):
     player = db.select_player(username=escape(username.lower()))
     return jsonify(
-        username=player.username, avatar=player.avatar, lastUpdated=player.last_updated, loadouts=player.loadouts
+        username=player.username,
+        avatar=player.avatar,
+        lastUpdated=player.last_updated,
+        loadouts=player.loadouts,
+        nLoadouts=len(player.loadouts)
     ) if player else abort(404)
 
 
 @api.route("/players")
 def get_players():
-    players = [dict(username=player.username, avatar=player.avatar) for player in db.select_players()]
+    players = [
+        dict(
+            username=player.username,
+            avatar=player.avatar,
+            lastUpdated=player.last_updated,
+            nLoadouts=len(player.loadouts)
+        )
+        for player in db.select_players()
+    ]
     return jsonify(players)
 
 
