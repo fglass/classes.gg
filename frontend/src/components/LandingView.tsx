@@ -6,24 +6,34 @@ import SearchIcon from "@material-ui/icons/Search";
 import Typography from "@material-ui/core/Typography";
 import {Badge, Grid, Icon, Paper} from "@material-ui/core";
 import TimeAgo from 'timeago-react';
+import {SEO} from "./SEO";
+import { Link } from "react-router-dom";
 
 interface IProps {
     classes: any
     players: Array<Player>
-    firstPlayer: number,
     searching: boolean
 }
 
 const useStyles = makeStyles((theme: Theme) => createStyles({
     header: {
-        padding: "0 0 1% 0",
+        paddingBottom: theme.spacing(3),
         backgroundColor: theme.palette.background.paper,
+    },
+    primaryColour: {
+        color: theme.palette.primary.main,
+    },
+    center: {
+        margin: "auto",
+        width: "100%",
+        textAlign: "center",
+        paddingTop: "20px",
     },
     titleText: {
         fontFamily: "Bebas Neue",
         fontSize: "6rem",
         textAlign: "center",
-        height: "110px",
+        height: "120px",
     },
     subheading: {
         textAlign: "center",
@@ -36,7 +46,10 @@ const useStyles = makeStyles((theme: Theme) => createStyles({
         "&:hover": {
             backgroundColor: fade(theme.palette.common.white, 0.25),
         },
-        width: "25%",
+        width: "28%",
+        [theme.breakpoints.down("sm")]: {
+            width: "84%",
+        },
         margin: "auto",
         marginTop: "20px",
         border: "1px solid",
@@ -61,7 +74,10 @@ const useStyles = makeStyles((theme: Theme) => createStyles({
         transition: theme.transitions.create("width"),
     },
     grid: {
-        width: "60%",
+        width: "66%",
+        [theme.breakpoints.down("sm")]: {
+            width: "100%",
+        },
         margin: "auto",
         padding: "20px",
     },
@@ -72,6 +88,7 @@ const useStyles = makeStyles((theme: Theme) => createStyles({
         padding: theme.spacing(2),
         color: theme.palette.text.primary,
         "&:hover": {
+            backgroundColor: theme.palette.primary.dark,
             borderColor: theme.palette.primary.main
         }
     },
@@ -98,36 +115,42 @@ const useStyles = makeStyles((theme: Theme) => createStyles({
 }));
 
 class LandingView extends React.Component<IProps> {
+
+    private static CREATION_DATE = "2020-07-03T00:00:00.000000"
+
     render() {
         const classes = this.props.classes
         const players = this.props.players
         return (
             <div>
+                <SEO username="" lastUpdated={LandingView.CREATION_DATE} />
                 <div className={classes.header}>
                     <Typography className={classes.titleText}>
-                        Classes.gg
+                        Classes<span className={classes.primaryColour}>.</span>gg
                     </Typography>
                     <Typography className={classes.subheading}>
-                        Warzone Loadout Repository
+                        Call of Duty: Warzone Loadout Repository
                     </Typography>
                     <SearchField classes={classes} />
                 </div>
                 <div>
                     <Grid container className={classes.grid} spacing={3}>
                         {players.map((player: Player) => (
-                            <Grid item xs={6} lg={2} key={player.username} className={classes.rootPaper}>
+                            <Grid item xs={6} sm={4} lg={3} xl={2} key={player.username} className={classes.rootPaper}>
                                 <Badge color="primary" badgeContent={player.nLoadouts}  classes={{root: classes.rootBadge}}>
-                                    <Paper className={classes.paper} variant="outlined">
-                                        <img className={classes.avatar} src={player.avatar} alt="" />
-                                        <Typography>
-                                            {player.username}
-                                        </Typography>
-                                        <Icon className={classes.calendarIcon}>calendar_today</Icon>
-                                        <TimeAgo
-                                            className={classes.dateText}
-                                            datetime={player.lastUpdated}
-                                        />
-                                    </Paper>
+                                    <Link to={`/${player.username}`}>
+                                        <Paper className={classes.paper} variant="outlined">
+                                            <img className={classes.avatar} src={player.avatar} alt="" />
+                                            <Typography>
+                                                {player.username}
+                                            </Typography>
+                                            <Icon className={classes.calendarIcon}>calendar_today</Icon>
+                                            <TimeAgo
+                                                className={classes.dateText}
+                                                datetime={player.lastUpdated}
+                                            />
+                                        </Paper>
+                                    </Link>
                                 </Badge>
                             </Grid>
                         ))}
@@ -162,7 +185,6 @@ export default (props: any) => {
     return <LandingView
         classes={classes}
         players={props.players}
-        firstPlayer={props.firstPlayer}
         searching={props.searching}
     />
 }

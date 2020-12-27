@@ -9,7 +9,7 @@ import { blue } from "@material-ui/core/colors";
 import { createMuiTheme, makeStyles, ThemeProvider } from "@material-ui/core/styles";
 import { Player } from "../model/player";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import { SEO } from "./SEO";
+import LandingView from "./LandingView";
 
 interface IProps {
     classes: any
@@ -48,7 +48,6 @@ const useStyles = makeStyles((theme) => ({
 class App extends React.Component<IProps, IState> {
 
     private static ANALYTICS_TRACKING_CODE = "UA-131273827-2"
-    private static CREATION_DATE = "2020-07-03T00:00:00.000000"
 
     constructor(props: IProps) {
         super(props);
@@ -94,21 +93,20 @@ class App extends React.Component<IProps, IState> {
                 <div className={classes.root} >
                     <ThemeProvider theme={darkTheme}>
                         <CssBaseline />
-                        <Header onSearch={this.onSearch} />
+                        <Header />
                         <Switch>
-                            <Route path="/:player?" render={(props) =>
-                                (
-                                    <React.Fragment>
-                                        <SEO username={props.match.params.player} lastUpdated={App.CREATION_DATE} />
-                                        <Content
-                                            className={classes.main}
-                                            players={filteredPlayers}
-                                            username={props.match.params.player || players[0].username}
-                                            searching={players.length !== filteredPlayers.length}
-                                        />
-                                    </React.Fragment>
-                                )
-                            }>
+                            <Route path="/:player" render={(props) => (
+                                <Content
+                                    className={classes.main}
+                                    username={props.match.params.player || players[0].username}
+                                />
+                            )}>
+                            </Route>
+                            <Route>
+                                 <LandingView
+                                    players={filteredPlayers}
+                                    searching={players.length !== filteredPlayers.length}
+                                />
                             </Route>
                         </Switch>
                         <Footer />
