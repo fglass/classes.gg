@@ -162,7 +162,7 @@ const LoadoutInformation = (props: any) => {
     )
 }
 
-class PlayerView extends React.Component<IProps, IState> {
+class PlayerView extends React.Component<IProps, IState> { // TODO: merge with Content, call backend /loadouts/<player>?
     constructor(props: IProps) {
         super(props);
         this.state = {

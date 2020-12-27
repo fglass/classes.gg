@@ -1,22 +1,18 @@
 import React from "react";
 import Api from "../model/api";
-import LandingView from "./LandingView";
-import SelectionView from "./SelectionView";
 import PlayerView from "./PlayerView";
 import { Player } from "../model/player";
 
 interface IProps {
     className: string
-    players: Array<Player>
     username: string
-    searching: boolean
 }
 
 interface IState {
     selectedPlayer: Player | null
 }
 
-export default class Content extends React.Component<IProps, IState> {
+export default class Content extends React.Component<IProps, IState> { // TODO: merge with playter view
 
     constructor(props: IProps) {
         super(props);
@@ -41,7 +37,7 @@ export default class Content extends React.Component<IProps, IState> {
     }
 
     render() {
-        const { className, players, searching } = this.props
+        const { className } = this.props
         const selectedPlayer = this.state.selectedPlayer
 
         if (selectedPlayer === null) {
@@ -49,21 +45,9 @@ export default class Content extends React.Component<IProps, IState> {
         }
 
         return (
-            <React.Fragment>
-                <LandingView
-                    players={players}
-                    firstPlayer={players.findIndex(player => player.username === selectedPlayer.username)}
-                    searching={searching}
-                />
-                {/*<SelectionView*/}
-                {/*    players={players}*/}
-                {/*    firstPlayer={players.findIndex(player => player.username === selectedPlayer.username)}*/}
-                {/*    searching={searching}*/}
-                {/*/>*/}
-                {/*<div className={className}>*/}
-                {/*     <PlayerView player={selectedPlayer} />*/}
-                {/*</div>*/}
-            </React.Fragment>
+            <div className={className}>
+                 <PlayerView player={selectedPlayer} />
+            </div>
         )
     }
 }
