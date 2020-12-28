@@ -5,7 +5,10 @@ import { Box } from "@material-ui/core";
 
 const useStyles = makeStyles(theme => ({
     footer: {
+        position: "absolute",
+        bottom: 0,
         width: "100%",
+        height: "4rem",
         padding: theme.spacing(1.5),
         backgroundColor: theme.palette.background.paper,
     },
@@ -18,7 +21,7 @@ const Copyright = (props: any) => {
     const contactLink = "https://fred.glass/"
     return (
         <Typography variant="body2" color="textSecondary">
-            {new Date().getFullYear()}{" © "}<a href={contactLink} className={props.className}>FG</a>
+            {new Date().getFullYear()}{" © "}<a href={contactLink} className={props.className}>Fred Glass</a>
         </Typography>
     )
 }

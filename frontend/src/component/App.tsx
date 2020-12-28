@@ -2,14 +2,15 @@ import React from "react";
 import ReactGA from "react-ga";
 import Api from "../model/api";
 import CssBaseline from "@material-ui/core/CssBaseline";
-import Content from "./Content";
 import Footer from "./Footer";
 import Header from "./Header";
+import LandingView from "./landing/LandingView";
+import PlayerView from "./player/PlayerView";
 import { blue } from "@material-ui/core/colors";
 import { createMuiTheme, makeStyles, ThemeProvider } from "@material-ui/core/styles";
 import { Player } from "../model/player";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import LandingView from "./LandingView";
+import {SEO} from "./SEO";
 
 interface IProps {
     classes: any
@@ -17,7 +18,6 @@ interface IProps {
 
 interface IState {
     players: Array<Player>
-    filteredPlayers: Array<Player>
 }
 
 const darkTheme = createMuiTheme({
@@ -29,8 +29,7 @@ const darkTheme = createMuiTheme({
 
 const useStyles = makeStyles((theme) => ({
     root: {
-        display: "flex",
-        flexDirection: "column",
+        position: "relative",
         minHeight: "100vh",
     },
     main: {
@@ -48,12 +47,12 @@ const useStyles = makeStyles((theme) => ({
 class App extends React.Component<IProps, IState> {
 
     private static ANALYTICS_TRACKING_CODE = "UA-131273827-2"
+    private static CREATION_DATE = "2020-07-03T00:00:00.000000"
 
     constructor(props: IProps) {
         super(props);
         this.state = {
             players: [],
-            filteredPlayers: [],
         }
     }
 
@@ -61,7 +60,6 @@ class App extends React.Component<IProps, IState> {
         const players = await Api.getPlayers()
         this.setState({
             players,
-            filteredPlayers: players,
         })
     }
 
@@ -73,16 +71,9 @@ class App extends React.Component<IProps, IState> {
         this.getPlayers().catch(err => console.log(err))
     }
 
-    onSearch = (input: string) => {
-        this.setState({
-            filteredPlayers: this.state.players.filter(player => player.username.toLowerCase().startsWith((input)))
-        })
-    }
-
     render() {
         const { classes } = this.props
-        const { players, filteredPlayers } = this.state
-
+        const { players } = this.state
 
         if (players.length === 0) {
             return <div className={classes.main} />
@@ -95,18 +86,19 @@ class App extends React.Component<IProps, IState> {
                         <CssBaseline />
                         <Header />
                         <Switch>
-                            <Route path="/:player" render={(props) => (
-                                <Content
-                                    className={classes.main}
-                                    username={props.match.params.player || players[0].username}
-                                />
+                            <Route path="/:username" render={(props) => (
+                                <React.Fragment>
+                                    <SEO username={props.match.params.username} date={App.CREATION_DATE} />
+                                    <PlayerView
+                                        className={classes.main}
+                                        player={players.find(player => player.username === props.match.params.username)}
+                                    />
+                                </React.Fragment>
                             )}>
                             </Route>
                             <Route>
-                                 <LandingView
-                                    players={filteredPlayers}
-                                    searching={players.length !== filteredPlayers.length}
-                                />
+                                <SEO username="" date={App.CREATION_DATE} />
+                                <LandingView players={players} />
                             </Route>
                         </Switch>
                         <Footer />

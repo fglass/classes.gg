@@ -9,18 +9,6 @@ api = Blueprint("api", __name__)
 db = JSONDatabaseEngine()
 
 
-@api.route("/player/<username>")
-def get_player(username: str):
-    player = db.select_player(username=escape(username.lower()))
-    return jsonify(
-        username=player.username,
-        avatar=player.avatar,
-        lastUpdated=player.last_updated,
-        loadouts=player.loadouts,
-        nLoadouts=len(player.loadouts)
-    ) if player else abort(404)
-
-
 @api.route("/players")
 def get_players():
     players = [
@@ -33,6 +21,13 @@ def get_players():
         for player in db.select_players()
     ]
     return jsonify(players)
+
+
+@api.route("/loadouts/<username>")
+def get_player(username: str):
+    sanitised_username = escape(username.lower())
+    player = db.select_player(sanitised_username)
+    return player.loadouts if player else abort(404)
 
 
 app.register_blueprint(api, url_prefix="/api")
