@@ -167,7 +167,7 @@ class PlayerView extends React.Component<IProps, IState> {
                                 </Typography>
                                 <Typography className={classes.subText}>
                                     <Icon className={classes.icon}>apps</Icon>
-                                    {`${player.nLoadouts} Loadouts`}
+                                    {`${player.loadoutKeys.length} Loadouts`}
                                 </Typography>
                                 <Icon className={classes.icon}>calendar_today</Icon>
                                 <TimeAgo className={classes.subText} datetime={player.lastUpdated} />
