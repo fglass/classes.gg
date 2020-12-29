@@ -34,7 +34,7 @@ export const useStyles = makeStyles((theme: Theme) => createStyles({
             backgroundColor: fade(theme.palette.common.white, 0.25),
         },
         width: "81%",
-        maxWidth: "400px",
+        maxWidth: "450px",
         margin: "auto",
         marginTop: "20px",
         border: "1px solid",

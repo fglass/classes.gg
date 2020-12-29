@@ -4,49 +4,47 @@ export const useStyles = makeStyles(theme => ({
     container: {
         flexGrow: 1,
         margin: "auto",
-        maxWidth: 1100,
-        paddingTop: theme.spacing(2),
-        paddingBottom: theme.spacing(2),
+        maxWidth: 750,
+        padding: theme.spacing(2),
+        paddingBottom: "4rem",
     },
     titleGridItem: {
-        height: 50,
-        margin: "auto",
         marginBottom: theme.spacing(2),
+        paddingLeft: theme.spacing(2),
     },
     title: {
         paddingTop: theme.spacing(0.75),
         fontFamily: "Bebas Neue",
-        fontSize: "2.25rem",
+    },
+    subText: {
+        paddingBottom: "2px",
+        fontSize: "16px",
+        color: theme.palette.text.secondary,
+    },
+    icon: {
+        paddingTop: "1px",
+        marginRight: "4px",
+        fontSize: "16px",
+        color: theme.palette.text.secondary,
     },
     avatarGridItem: {
-        margin: "auto",
+        paddingBottom: theme.spacing(2),
     },
     avatar: {
-        borderRadius: "2%",
-        height: 290,
-        border: "3px solid #555",
+        borderRadius: "50%",
+        height: 125,
+        border: "2px solid #555",
         backgroundColor: theme.palette.background.paper,
-        [theme.breakpoints.down("sm")]: {
-            maxHeight: 230,
-        },
-    },
-    rightColumn: {
-        [theme.breakpoints.up("md")]: {
-            paddingLeft: theme.spacing(4),
-        }
     },
     selectGridItem: {
         height: 50,
-        margin: theme.spacing(0, 2, 2, 2),
+        marginBottom: theme.spacing(2),
         [theme.breakpoints.down("sm")]: {
             marginTop: theme.spacing(3),
         },
     },
     formControl: {
         width: "100%",
-    },
-    listGridItem: {
-        margin: theme.spacing(0, 2, 0, 2),
     },
     list: {
         padding: 0,
@@ -62,10 +60,9 @@ export const useStyles = makeStyles(theme => ({
     attachmentText: {
         paddingBottom: 2,
     },
-    infoContainer: {
+    source: {
         opacity: "50%",
         display: "flex",
         justifyContent: "space-between",
-        margin: theme.spacing(0, 2, 0, 2),
     },
 }));
