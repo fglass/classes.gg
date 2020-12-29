@@ -31,6 +31,9 @@ const useStyles = makeStyles((theme) => ({
     root: {
         position: "relative",
         minHeight: "100vh",
+        display: "flex",
+        flexDirection: "column",
+        justifyContent: "center",
     },
     main: {
         display: "flex",

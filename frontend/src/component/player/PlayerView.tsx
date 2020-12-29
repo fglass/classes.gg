@@ -8,12 +8,13 @@ import ListItem from "@material-ui/core/ListItem";
 import MenuItem from "@material-ui/core/MenuItem";
 import Select from "@material-ui/core/Select";
 import Tooltip from "@material-ui/core/Tooltip";
+import TimeAgo from "timeago-react";
 import Typography from "@material-ui/core/Typography";
-import UpdateIcon from '@material-ui/icons/Update';
-import {Loadout, LoadoutMap, Player} from "../../model/player";
-import { SEO } from "../SEO";
 import Api from "../../model/api";
-import {useStyles} from "./styles";
+import { Loadout, LoadoutMap, Player } from "../../model/player";
+import { SEO } from "../SEO";
+import { useStyles } from "./styles";
+import { Icon } from "@material-ui/core";
 
 interface IProps {
     classes: any
@@ -76,16 +77,10 @@ const AttachmentList = (props: any) => {
     )
 }
 
-const LoadoutInformation = (props: any) => {
-    const { classes, source, lastUpdated } = props
+const SourceIcon = (props: any) => {
+    const { classes, source } = props
     return (
-        <div className={classes.infoContainer}>
-            <div style={{"display": "flex"}}>
-                <UpdateIcon />
-                <Typography style={{"paddingLeft": "4px"}}>
-                    {lastUpdated.toLocaleDateString()}
-                </Typography>
-            </div>
+        <div className={classes.source}>
             <Tooltip title="Source">
                 <a href={source} target="_blank" rel="noopener noreferrer">
                     <LinkIcon />
@@ -143,7 +138,6 @@ class PlayerView extends React.Component<IProps, IState> {
             return <div className={className} />
         }
 
-        const lastUpdated = new Date(player.lastUpdated)
         const keys = Object.keys(loadout.attachments)
         const attachments: Array<[string, string]> = []
 
@@ -159,22 +153,28 @@ class PlayerView extends React.Component<IProps, IState> {
 
         return (
             <div className={className}>
-                <SEO username={player.username} date={lastUpdated.toISOString()} />
+                <SEO username={player.username} date={new Date(player.lastUpdated).toISOString()} />
                 <div className={classes.container}>
                     <Grid container alignItems="flex-start">
 
-                        <Grid container direction="column" item xs={12} md={5}>
+                        <Grid container item xs={12} md={12}>
+                             <Grid item className={classes.avatarGridItem}>
+                                <img className={classes.avatar} src={player.avatar} alt="Avatar" />
+                            </Grid>
                             <Grid item className={classes.titleGridItem}>
                                 <Typography className={classes.title} variant="h4">
                                     {player.username}
                                 </Typography>
-                            </Grid>
-                            <Grid item className={classes.avatarGridItem}>
-                                <img className={classes.avatar} src={player.avatar} alt="Avatar" />
+                                <Typography className={classes.subText}>
+                                    <Icon className={classes.icon}>apps</Icon>
+                                    {`${player.nLoadouts} Loadouts`}
+                                </Typography>
+                                <Icon className={classes.icon}>calendar_today</Icon>
+                                <TimeAgo className={classes.subText} datetime={player.lastUpdated} />
                             </Grid>
                         </Grid>
 
-                        <Grid container className={classes.rightColumn} direction="column" item xs={12} md={7}>
+                        <Grid container direction="column" item xs={12} md={12}>
                             <Grid item className={classes.selectGridItem}>
                                 <LoadoutDropdown
                                     className={classes.formControl}
@@ -183,11 +183,11 @@ class PlayerView extends React.Component<IProps, IState> {
                                     loadouts={loadouts}
                                 />
                             </Grid>
-                            <Grid item className={classes.listGridItem}>
+                            <Grid item>
                                 <AttachmentList classes={classes} attachments={attachments} />
                             </Grid>
                             <Grid item>
-                                <LoadoutInformation classes={classes} source={loadout.source} lastUpdated={lastUpdated} />
+                                <SourceIcon classes={classes} source={loadout.source} />
                             </Grid>
                          </Grid>
                     </Grid>
