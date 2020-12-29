@@ -16,7 +16,7 @@ def get_players():
             username=player.username,
             avatar=player.avatar,
             lastUpdated=player.last_updated,
-            nLoadouts=len(player.loadouts)
+            loadoutKeys=list(player.loadouts.keys())
         )
         for player in db.select_players()
     ]

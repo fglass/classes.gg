@@ -28,7 +28,10 @@ class LandingView extends React.Component<IProps, IState> {
 
     onSearch = (input: string) => {
         this.setState({
-            filteredPlayers: this.props.players.filter(player => player.username.toLowerCase().startsWith((input)))
+            filteredPlayers: this.props.players.filter(player =>
+                player.username.toLowerCase().startsWith((input)) ||
+                player.loadoutKeys.some(loadout => loadout.toLowerCase().includes(input))
+            )
         })
     }
 
@@ -81,7 +84,7 @@ const PlayerCard = (props: any) => {
     const { classes, player } = props
     return (
         <div>
-            <Badge color="primary" badgeContent={player.nLoadouts} >
+            <Badge color="primary" badgeContent={player.loadoutKeys.length} >
                 <Link to={`/${player.username}`}>
                     <Paper className={classes.card} variant="outlined">
                         <img className={classes.avatar} src={player.avatar} alt="" />

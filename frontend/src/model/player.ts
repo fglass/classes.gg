@@ -2,7 +2,7 @@ export interface Player {
     username: string;
     avatar: string;
     lastUpdated: string;
-    nLoadouts: number;
+    loadoutKeys: Array<String>;
 }
 
 export interface Loadout {
