@@ -29,16 +29,18 @@ class Weapon(Enum):
     AK_47_CW = "AK-47 CW", Game.COLD_WAR
     KRIG_6 = "Krig 6", Game.COLD_WAR
     FFAR_1 = "FFAR 1", Game.COLD_WAR
+    GROZA = "Groza", Game.COLD_WAR
 
     # Tactical Rifles
     M16 = "M16", Game.COLD_WAR
     DMR = "DMR 14", Game.COLD_WAR
+    TYPE_63 = "Type 63", Game.COLD_WAR
 
     # LMG
     HOLGER = "Holger-26"
     PKM = "PKM"
     BRUEN = "MK9 Bruen"
-    STONER_63 = "Stoner 63"
+    STONER_63 = "Stoner 63", Game.COLD_WAR
 
     # SMG
     AUG = "AUG"
@@ -51,13 +53,13 @@ class Weapon(Enum):
     UZI = "Uzi"
     MAC_10 = "MAC-10", Game.COLD_WAR
     MP5_CW = "MP5 CW", Game.COLD_WAR
-    AK_74U = "AK-74u"
+    AK_74U = "AK-74u", Game.COLD_WAR
 
     # Sniper rifle
     AX_50 = "AX-50"
     HDR = "HDR"
     SPR_208 = "SP-R 208"
-    PELINGTON_703 = "Pelington 703"
+    PELINGTON_703 = "Pelington 703", Game.COLD_WAR
 
     # Marksman rifle
     KAR98K = "Kar98k"
@@ -70,5 +72,6 @@ class Weapon(Enum):
     VLK_ROGUE = "VLK Rogue"
 
     # Pistol
-    RENETTI = "Renetti"
     M19 = "M19"
+    RENETTI = "Renetti"
+    DIAMATTI = "Diamatti", Game.COLD_WAR

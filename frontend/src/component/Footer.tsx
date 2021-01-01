@@ -19,9 +19,13 @@ const useStyles = makeStyles(theme => ({
 
 const Copyright = (props: any) => {
     const contactLink = "https://fred.glass/"
+    const copyright = `${new Date().getFullYear()}  © `
     return (
         <Typography variant="body2" color="textSecondary">
-            {new Date().getFullYear()}{" © "}<a href={contactLink} className={props.className}>Fred Glass</a>
+            {copyright}
+            <a href={contactLink} target="_blank" rel="noopener noreferrer" className={props.className}>
+                Fred Glass
+            </a>
         </Typography>
     )
 }
@@ -31,7 +35,7 @@ const AffiliationLink = (props: any) => {
     return (
         <Typography variant="body2" color="textSecondary" >
             {"Affiliated with "}
-            <a href={affiliationLink} className={props.className}>
+            <a href={affiliationLink} target="_blank" rel="noopener noreferrer" className={props.className}>
                 r/MWLoadouts
             </a>
         </Typography>

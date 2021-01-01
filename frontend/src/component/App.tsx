@@ -76,11 +76,6 @@ class App extends React.Component<IProps, IState> {
     render() {
         const { classes } = this.props
         const { players } = this.state
-
-        if (players.length === 0) {
-            return <div className={classes.main} />
-        }
-
         return (
             <Router>
                 <div className={classes.root} >

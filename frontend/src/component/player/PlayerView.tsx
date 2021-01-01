@@ -170,7 +170,7 @@ class PlayerView extends React.Component<IProps, IState> {
                                     {`${player.loadoutKeys.length} Loadouts`}
                                 </Typography>
                                 <Icon className={classes.icon}>calendar_today</Icon>
-                                <TimeAgo className={classes.subText} datetime={player.lastUpdated} />
+                                <TimeAgo className={classes.subText} datetime={player.lastUpdated} live={false} />
                             </Grid>
                         </Grid>
 
