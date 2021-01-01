@@ -12,8 +12,8 @@ export const useStyles = makeStyles((theme: Theme) => createStyles({
     heading: {
         fontFamily: "Bebas Neue",
         fontSize: "6rem",
-        textAlign: "center",
         height: "110px",
+        textAlign: "center",
         [theme.breakpoints.down("sm")]: {
             fontSize: "5rem",
             height: "100px",
@@ -33,8 +33,8 @@ export const useStyles = makeStyles((theme: Theme) => createStyles({
         "&:hover": {
             backgroundColor: fade(theme.palette.common.white, 0.25),
         },
-        width: "81%",
-        maxWidth: "450px",
+        maxWidth: "500px",
+        width: "90%",
         margin: "auto",
         marginTop: "20px",
         border: "1px solid",
@@ -60,7 +60,7 @@ export const useStyles = makeStyles((theme: Theme) => createStyles({
     },
     grid: {
         maxWidth: "1050px",
-        width: "100%",
+        width: "90%",
         margin: "0px auto",
         display: "grid",
         gap: "15px",

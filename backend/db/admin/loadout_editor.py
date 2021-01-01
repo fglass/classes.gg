@@ -1,3 +1,4 @@
+import json
 import sys
 from datetime import datetime
 from db.json_database_engine import JSONDatabaseEngine
@@ -66,12 +67,17 @@ class LoadoutEditor(QWidget):
         submit_button.clicked.connect(self._on_submit)
         self.layout().addWidget(submit_button)
 
+        self._status_text = QLabel("")
+        self.layout().addWidget(self._status_text)
+
     def _add_attachment_field(self, enum: EnumMeta):
         field = QComboBox()
+        field.addItem("")
+
         values = [str(attachment) for attachment in enum]
         sorted_values = sorted(values)
         field.addItems(sorted_values)
-        field.setCurrentIndex(-1)
+
         self.layout().addRow(QLabel(enum.get_class_name()), field)
         return field
 
@@ -89,6 +95,7 @@ class LoadoutEditor(QWidget):
         loadout = self._selected_player.loadouts.get(loadout_key)
 
         if not loadout:
+            self._source_field.setText(f"https://www.twitch.tv/{self._selected_player.username.lower()}")
             return
 
         game_index = self._game_field.findText(loadout["game"])
@@ -107,14 +114,14 @@ class LoadoutEditor(QWidget):
         attachments = {k: v.currentText() for k, v in self._attachment_fields.items() if v.currentText() != ""}
 
         if len(attachments) > 5:
-            print(f"Error: {len(attachments)} attachments selected")
+            self._log(f"Error: {len(attachments)} attachments selected")
             return
 
         game = self._game_field.currentText()
         source = self._source_field.text()
 
         if not game or not source:
-            print(f"Error: required fields missing")
+            self._log(f"Error: required fields missing")
             return
 
         command = (self._command_field.text(), self._message_field.text())
@@ -139,7 +146,10 @@ class LoadoutEditor(QWidget):
         self._db.add_player(player)
 
         self._selected_player = self._db.select_player(username)
-        print(f"[{username}] Added {loadout}: {player.loadouts[loadout]}")
+        self._log(f"Added {player.username}'s {loadout}:\n{json.dumps(player.loadouts[loadout], indent=4)}")
+
+    def _log(self, message: str):
+        self._status_text.setText(message)
 
     def _clear_editor(self):
         [field.setCurrentIndex(-1) for field in self._attachment_fields.values()]

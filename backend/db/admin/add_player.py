@@ -6,14 +6,14 @@ from model.player import Player
 
 
 NEW_PLAYER = Player(
-    username="Test",
-    avatar="https://static-cdn.jtvnw.net/jtv_user_pictures/28de8cd2-e1cd-4c7d-9ad5-31c9e5788a02-profile_image-300x300.png",
+    username="Crowder",
+    avatar="https://static-cdn.jtvnw.net/jtv_user_pictures/6d8a01d4-323c-42b7-95fe-8df59cd94c0c-profile_image-300x300.png",
     last_updated=datetime.now().isoformat(),
     loadouts={},
     commands={"source": CommandSource.NIGHTBOT.value},
     spreadsheet={
         "source": "google",
-        "id": "",
+        "id": "1S8YyLcm0qJGwrtIxb3_9RkzIo_Icf_ld979ucdKllwc",
         "sheets": ["0"],
     },
 )

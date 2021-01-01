@@ -26,17 +26,29 @@ class LandingView extends React.Component<IProps, IState> {
         }
     }
 
+    componentDidUpdate(prevProps: Readonly<IProps>, prevState: Readonly<IState>, snapshot?: any) {
+        if (this.props.players !== prevProps.players) {
+            this.setState({
+                filteredPlayers: this.props.players,
+            })
+        }
+    }
+
     onSearch = (input: string) => {
         this.setState({
-            filteredPlayers: this.props.players.filter(player =>
-                player.username.toLowerCase().startsWith((input)) ||
-                player.loadoutKeys.some(loadout => loadout.toLowerCase().includes(input))
-            )
+            filteredPlayers: this.props.players.filter(player => this.isSearchMatch(player, input))
         })
     }
 
+    isSearchMatch = (player: Player, input: string) => (
+        player.username.toLowerCase().startsWith((input)) ||
+        player.loadoutKeys.some(key => key.toLowerCase().includes(input))
+    )
+
+
     render() {
         const { classes } = this.props
+
         return (
             <div className={classes.content}>
                 <div className={classes.header}>
@@ -46,14 +58,13 @@ class LandingView extends React.Component<IProps, IState> {
                     <Typography className={classes.subheading}>
                         Call of Duty: Warzone Loadout Repository
                     </Typography>
-                    <SearchField classes={classes} onSearch={this.onSearch} />
+                    <SearchInput classes={classes} onSearch={this.onSearch} />
                 </div>
                 <div>
                     <div className={classes.grid}>
-                        {
-                            this.state.filteredPlayers.map((player: Player) =>
-                            <PlayerCard classes={classes} player={player} key={player.username} />)
-                        }
+                        {this.state.filteredPlayers.map(player =>
+                            <PlayerCard classes={classes} player={player} key={player.username} />
+                        )}
                     </div>
                 </div>
             </div>
@@ -61,7 +72,7 @@ class LandingView extends React.Component<IProps, IState> {
     }
 }
 
-const SearchField = (props: any) => {
+const SearchInput = (props: any) => {
     const classes = props.classes
     return (
         <div className={classes.search}>
@@ -90,10 +101,7 @@ const PlayerCard = (props: any) => {
                         <img className={classes.avatar} src={player.avatar} alt="" />
                         <Typography>{player.username}</Typography>
                         <Icon className={classes.calendarIcon}>calendar_today</Icon>
-                        <TimeAgo
-                            className={classes.timeAgo}
-                            datetime={player.lastUpdated}
-                        />
+                        <TimeAgo className={classes.timeAgo} datetime={player.lastUpdated} live={false} />
                     </Paper>
                 </Link>
             </Badge>
