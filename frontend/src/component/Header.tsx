@@ -9,8 +9,6 @@ const useStyles = makeStyles((theme: Theme) => createStyles({
     logo: {
         flexGrow: 1,
         paddingTop: theme.spacing(0.5),
-    },
-    home: {
         maxWidth: 125,
     },
     title: {
@@ -26,7 +24,7 @@ const Logo = (props: any) => {
     return (
          <div className={classes.logo}>
             <a href="/">
-                <Grid container className={classes.home} alignItems="center">
+                <Grid container alignItems="center">
                     <Grid item xs={2}>
                         <img src={"images/logo.png"} alt="Logo" />
                     </Grid>

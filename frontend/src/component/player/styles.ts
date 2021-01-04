@@ -8,6 +8,9 @@ export const useStyles = makeStyles(theme => ({
         padding: theme.spacing(2),
         paddingBottom: "4rem",
     },
+    topContainer: {
+        paddingBottom: theme.spacing(2),
+    },
     titleGridItem: {
         marginBottom: theme.spacing(2),
         paddingLeft: theme.spacing(2),
@@ -27,9 +30,6 @@ export const useStyles = makeStyles(theme => ({
         fontSize: "16px",
         color: theme.palette.text.secondary,
     },
-    avatarGridItem: {
-        paddingBottom: theme.spacing(2),
-    },
     avatar: {
         borderRadius: "50%",
         height: 125,
@@ -39,9 +39,6 @@ export const useStyles = makeStyles(theme => ({
     selectGridItem: {
         height: 50,
         marginBottom: theme.spacing(2),
-        [theme.breakpoints.down("sm")]: {
-            marginTop: theme.spacing(3),
-        },
     },
     formControl: {
         width: "100%",

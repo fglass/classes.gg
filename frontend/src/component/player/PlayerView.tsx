@@ -157,8 +157,8 @@ class PlayerView extends React.Component<IProps, IState> {
                 <div className={classes.container}>
                     <Grid container alignItems="flex-start">
 
-                        <Grid container item xs={12} md={12}>
-                             <Grid item className={classes.avatarGridItem}>
+                        <Grid container item className={classes.topContainer}>
+                             <Grid item>
                                 <img className={classes.avatar} src={player.avatar} alt="Avatar" />
                             </Grid>
                             <Grid item className={classes.titleGridItem}>
@@ -174,7 +174,7 @@ class PlayerView extends React.Component<IProps, IState> {
                             </Grid>
                         </Grid>
 
-                        <Grid container direction="column" item xs={12} md={12}>
+                        <Grid container direction="column" item>
                             <Grid item className={classes.selectGridItem}>
                                 <LoadoutDropdown
                                     className={classes.formControl}
