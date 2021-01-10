@@ -5,10 +5,5 @@ if __name__ == '__main__':
     players = db.select_players()
 
     for player in players:
-        dts = []
-        loadouts = player.loadouts.items()
-
-        for weapon, loadout in loadouts:
-            loadout["game"] = loadout.pop("origin", "MW")
-
+        # player.views = 0
         db.add_player(player)

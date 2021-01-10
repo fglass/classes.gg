@@ -1,6 +1,7 @@
 export interface Player {
     username: string;
     avatar: string;
+    views: number;
     lastUpdated: string;
     loadoutKeys: Array<String>;
 }

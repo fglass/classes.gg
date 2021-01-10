@@ -25,6 +25,7 @@ class Weapon(Enum):
     ODEN = "Oden"
     RAM_7 = "RAM-7"
     AS_VAL = "AS VAL"
+    SCAR = "FN Scar 17"
     XM4 = "XM4", Game.COLD_WAR
     AK_47_CW = "AK-47 CW", Game.COLD_WAR
     KRIG_6 = "Krig 6", Game.COLD_WAR
@@ -40,6 +41,7 @@ class Weapon(Enum):
     HOLGER = "Holger-26"
     PKM = "PKM"
     BRUEN = "MK9 Bruen"
+    FINN = "FiNN LMG"
     STONER_63 = "Stoner 63", Game.COLD_WAR
 
     # SMG
@@ -51,8 +53,10 @@ class Weapon(Enum):
     PP19_BIZON = "PP19 Bizon"
     STRIKER_45 = "Striker 45"
     UZI = "Uzi"
+    ISO = "ISO"
     MAC_10 = "MAC-10", Game.COLD_WAR
     MP5_CW = "MP5 CW", Game.COLD_WAR
+    AUG_CW = "AUG CW", Game.COLD_WAR
     AK_74U = "AK-74u", Game.COLD_WAR
 
     # Sniper rifle

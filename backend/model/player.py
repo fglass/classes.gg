@@ -6,6 +6,7 @@ class Player:
         self.loadouts = loadouts
         self.commands = commands
         self.spreadsheet = spreadsheet
+        self.views = 0
 
     def serialise(self) -> dict:
         return {

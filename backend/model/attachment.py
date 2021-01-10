@@ -40,10 +40,13 @@ class Muzzle(Attachment):
     AGENCY_SUPPRESSOR = "Agency Suppressor", Game.COLD_WAR
     KGB_ELIMINATOR = "KGB Eliminator", Game.COLD_WAR
     SPETSNAZ_COMPENSATOR = "Spetsnaz Compensator", Game.COLD_WAR
-    MUZZLE_BRAKE_556 = "Muzzle Brake 5.56", Game.COLD_WAR
     STABILIZER = "Stabilizer .308", Game.COLD_WAR
-    MUZZLE_BRAKE_9 = "Muzzle Brake 9", Game.COLD_WAR
+    MUZZLE_BRAKE_545 = "Muzzle Brake 5.45", Game.COLD_WAR
+    MUZZLE_BRAKE_556 = "Muzzle Brake 5.56", Game.COLD_WAR
     MUZZLE_BRAKE_762 = "Muzzle Brake 7.62", Game.COLD_WAR
+    MUZZLE_BRAKE_9 = "Muzzle Brake 9", Game.COLD_WAR
+    GRU_SILENCER = "GRU Silencer", Game.COLD_WAR
+    SOCOM_ELIMINATOR = "SOCOM Eliminator", Game.COLD_WAR
 
 
 class Barrel(Attachment):
@@ -87,9 +90,11 @@ class Barrel(Attachment):
     FORGE_TAC_IMPALER = "FORGE TAC Impaler"
     FORGE_TAC_PRECISION = "FORGE TAC Precision"
     FORGE_TAC_SENTRY = "FORGE TAC Sentry"
+    FORGE_TAC_LB = "FORGE TAC 17.2\" LB"
     LONG_BARREL = "622mm Long Barrel"
     XRK_SUMMIT = "XRK Summit 26.8\""
     OSW_PARA = "13.0\" OSW Para"
+    ULTRALIGHT_179 = "17.9\" Ultralight"
     ULTRALIGHT_18 = "18.0\" Ultralight"
     AN_FACTORY = "AN-94 Factory X-438mm"
     XRK_208_DRAGOON = "XRK 208 Dragoon"
@@ -97,15 +102,19 @@ class Barrel(Attachment):
     SPR_26 = "SP-R 26\""
     WARLORD = "16\" Warlord"
     FSS_PRO = "FSS 10.6\" Pro"
+    FSS_NIGHTSHADE = "FSS Nightshade"
     HEAVY_BARREL = "25.9\" Heavy Barrel"
+    XRK_LONGSHOT = "XRK LongShot Advantage"
 
     STRIKE_TEAM_159 = "15.9\" Strike Team", Game.COLD_WAR
     STRIKE_TEAM_183 = "18.3\" Strike Team", Game.COLD_WAR
     EXTENDED_BARREL_53 = "5.3\" Extended", Game.COLD_WAR
     TASK_FORCE_59 = "5.9\" Task Force", Game.COLD_WAR
     TASK_FORCE_72 = "7.2\" Task Force", Game.COLD_WAR
+    TASK_FORCE_95 = "9.5\" Task Force", Game.COLD_WAR
     TASK_FORCE_103 = "10.3\" Task Force", Game.COLD_WAR
     TASK_FORCE_195 = "19.5\" Task Force", Game.COLD_WAR
+    TASK_FORCE_198 = "19.8\" Task Force", Game.COLD_WAR
     TASK_FORCE_205 = "20.5\" Task Force", Game.COLD_WAR
     TASK_FORCE_208 = "20.8\" Task Force", Game.COLD_WAR
     TASK_FORCE_218 = "21.8\" Task Force", Game.COLD_WAR
@@ -119,6 +128,7 @@ class Barrel(Attachment):
     REINFORCED_HEAVY_195 = "19.5\" Reinforced Heavy", Game.COLD_WAR
     TIGER_TEAM_265 = "26.5\" Tiger Team", Game.COLD_WAR
     TITANIUM_163 = "16.3\" Titanium", Game.COLD_WAR
+    TITANIUM_164 = "16.4\" Titanium", Game.COLD_WAR
     TITANIUM_17 = "17\" Titanium", Game.COLD_WAR
     LIBERATOR_20 = "20\" Liberator", Game.COLD_WAR
     RAPID_FIRE_17 = "17\" Rapid Fire", Game.COLD_WAR
@@ -145,6 +155,7 @@ class Underbarrel(Attachment):
     BIPOD = "Bipod", Game.COLD_WAR
     SFOD_SPEEDGRIP = "SFOD Speedgrip", Game.COLD_WAR
     FRONT_GRIP = "Front Grip", Game.COLD_WAR
+    SPETSNAZ_ERGONOMIC_GRIP = "Spetsnaz Ergonomic Grip", Game.COLD_WAR
 
 
 class Optic(Attachment):
@@ -172,6 +183,7 @@ class Optic(Attachment):
     AXIAL_ARMS = "Axial Arms 3x", Game.COLD_WAR
     SILLIX = "Sillix Holoscout", Game.COLD_WAR
     HAWKSMOOR = "Hawksmoor", Game.COLD_WAR
+    VULTURE_CUSTOM = "Vulture Custom Zoom", Game.COLD_WAR
 
 
 class Ammunition(Attachment):
@@ -201,6 +213,8 @@ class Ammunition(Attachment):
     LAPAU_MAGS = ".338 Lapau Mag 5-R Mags"
     SPP_MAGS = "SPP 10-R Mags"
     NORMA_MAGS = ".300 Norma Mag 5-R Mags"
+    ROUND_DRUMS_50 = "50 Round Drums"
+    CASKET_60 = "60 Round Casket Mags"
 
     RND_30 = "30 Rnd", Game.COLD_WAR
     RND_38 = "38 Rnd", Game.COLD_WAR
@@ -216,10 +230,12 @@ class Ammunition(Attachment):
     SALVO_30 = "Salvo 30 Rnd Fast Mag", Game.COLD_WAR
     SALVO_50 = "Salvo 50 Rnd Fast Mag", Game.COLD_WAR
     SALVO_53 = "Salvo 53 Rnd Fast Mag", Game.COLD_WAR
+    SALVO_54 = "Salvo 54 Rnd Fast Mag", Game.COLD_WAR
     RND_DRUM_40 = "40 Rnd Drum", Game.COLD_WAR
     SPETSNAZ_60 = "Spetsnaz 60 Rnd", Game.COLD_WAR
     SPETSNAZ_150 = "Spetsnaz 150 Rnd", Game.COLD_WAR
     TAPED_MAGS = "Taped Mags", Game.COLD_WAR
+    VDV_50 = "VDV 50 Rnd Fast Mag", Game.COLD_WAR
 
 
 class RearGrip(Attachment):
@@ -250,6 +266,7 @@ class Stock(Attachment):
     SINGUARD_ARMS_EVADER = "Singuard Arms Evader"
     SINGUARD_ARMS_INVADER = "Singuard Arms Invader"
     SINGUARD_ARMS_ASSASSIN = "Singuard Arms Assassin"
+    SINGUARD_ARMS_MARKSMAN = "Singuard Arms Marksman"
     FORGE_TAC_CQS = "FORGE TAC CQS"
     M13_SKELETON_STOCK = "M13 Skeleton Stock"
     FTAC_XL_ELITE_COMB = "FTAC XL Elite Comb"
@@ -262,13 +279,16 @@ class Stock(Attachment):
     XRK_SP_ULTIMATE = "XRK SP-TAC 208 Ultimate"
     VLK_STRELOK = "VLK Strelok"
     VLK_VINTAZH = "VLK Vintazh"
+    ISO_COLLAPSIBLE = "ISO Collapsible"
 
     WIRE_STOCK = "Wire Stock", Game.COLD_WAR
     RAIDER_PAD = "Raider Pad", Game.COLD_WAR
     RAIDER_STOCK = "Raider Stock", Game.COLD_WAR
     KGB_SKELETAL_STOCK = "KGB Skeletal Stock", Game.COLD_WAR
     SAS_COMBAT_STOCK = "SAS Combat Stock", Game.COLD_WAR
-    TACTICAL_STOCK = "Tactical Stock"
+    TACTICAL_STOCK = "Tactical Stock", Game.COLD_WAR
+    DUAL_WIELD = "Dual Wield", Game.COLD_WAR
+    SPETSNAZ_PKM_STOCK = "Spetsnaz PKM Stock", Game.COLD_WAR
 
 
 class Perk(Attachment):

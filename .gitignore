@@ -16,6 +16,7 @@ node_modules
 
 # misc
 database.json
+view_counts.json
 data/
 .env.local
 .env.development.local

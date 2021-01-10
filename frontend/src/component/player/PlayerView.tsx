@@ -101,6 +101,13 @@ class PlayerView extends React.Component<IProps, IState> {
 
     private static N_ATTACHMENTS = 5
 
+    onLoad() {
+        if (this.props.player != null) {
+            this.getLoadoutsForPlayer().catch(err => console.log(err))
+            Api.incrementPlayerViewCount(this.props.player)
+        }
+    }
+
     async getLoadoutsForPlayer() {
         const loadouts = await Api.getLoadoutsForPlayer(this.props.player)
         this.setState({
@@ -110,12 +117,12 @@ class PlayerView extends React.Component<IProps, IState> {
     }
 
     componentDidMount() {
-        this.getLoadoutsForPlayer().catch(err => console.log(err))
+        this.onLoad()
     }
 
     componentDidUpdate(prevProps: Readonly<IProps>, prevState: Readonly<IState>, snapshot?: any) {
         if (this.props.player !== prevProps.player) {
-            this.getLoadoutsForPlayer().catch(err => console.log(err))
+            this.onLoad()
         }
     }
 
@@ -166,8 +173,8 @@ class PlayerView extends React.Component<IProps, IState> {
                                     {player.username}
                                 </Typography>
                                 <Typography className={classes.subText}>
-                                    <Icon className={classes.icon}>apps</Icon>
-                                    {`${player.loadoutKeys.length} Loadouts`}
+                                    <Icon className={classes.icon}>visibility</Icon>
+                                    {`${player.views} views`}
                                 </Typography>
                                 <Icon className={classes.icon}>calendar_today</Icon>
                                 <TimeAgo className={classes.subText} datetime={player.lastUpdated} live={false} />

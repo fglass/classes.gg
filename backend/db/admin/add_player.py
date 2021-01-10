@@ -8,6 +8,7 @@ from model.player import Player
 NEW_PLAYER = Player(
     username="Crowder",
     avatar="https://static-cdn.jtvnw.net/jtv_user_pictures/6d8a01d4-323c-42b7-95fe-8df59cd94c0c-profile_image-300x300.png",
+    views=0,
     last_updated=datetime.now().isoformat(),
     loadouts={},
     commands={"source": CommandSource.NIGHTBOT.value},

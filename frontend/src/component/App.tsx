@@ -74,8 +74,8 @@ class App extends React.Component<IProps, IState> {
     }
 
     render() {
-        const { classes } = this.props
-        const { players } = this.state
+        const classes = this.props.classes
+        const players = this.state.players
         return (
             <Router>
                 <div className={classes.root} >
