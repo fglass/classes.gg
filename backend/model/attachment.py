@@ -47,6 +47,7 @@ class Muzzle(Attachment):
     MUZZLE_BRAKE_9 = "Muzzle Brake 9", Game.COLD_WAR
     GRU_SILENCER = "GRU Silencer", Game.COLD_WAR
     SOCOM_ELIMINATOR = "SOCOM Eliminator", Game.COLD_WAR
+    GRU_SUPPRESSOR = "GRU Suppressor", Game.COLD_WAR
 
 
 class Barrel(Attachment):
@@ -113,6 +114,7 @@ class Barrel(Attachment):
     TASK_FORCE_72 = "7.2\" Task Force", Game.COLD_WAR
     TASK_FORCE_95 = "9.5\" Task Force", Game.COLD_WAR
     TASK_FORCE_103 = "10.3\" Task Force", Game.COLD_WAR
+    TASK_FORCE_135 = "13.5\" Task Force", Game.COLD_WAR
     TASK_FORCE_195 = "19.5\" Task Force", Game.COLD_WAR
     TASK_FORCE_198 = "19.8\" Task Force", Game.COLD_WAR
     TASK_FORCE_205 = "20.5\" Task Force", Game.COLD_WAR
@@ -156,6 +158,7 @@ class Underbarrel(Attachment):
     SFOD_SPEEDGRIP = "SFOD Speedgrip", Game.COLD_WAR
     FRONT_GRIP = "Front Grip", Game.COLD_WAR
     SPETSNAZ_ERGONOMIC_GRIP = "Spetsnaz Ergonomic Grip", Game.COLD_WAR
+    BRUISER_GRIP = "Bruiser Grip"
 
 
 class Optic(Attachment):
@@ -231,11 +234,14 @@ class Ammunition(Attachment):
     SALVO_50 = "Salvo 50 Rnd Fast Mag", Game.COLD_WAR
     SALVO_53 = "Salvo 53 Rnd Fast Mag", Game.COLD_WAR
     SALVO_54 = "Salvo 54 Rnd Fast Mag", Game.COLD_WAR
+    SALVO_60 = "Salvo 60 Rnd Fast Mag", Game.COLD_WAR
     RND_DRUM_40 = "40 Rnd Drum", Game.COLD_WAR
+    SPETSNAZ_DRUM_50 = "Spetsnaz 50 Rnd Drum", Game.COLD_WAR
     SPETSNAZ_60 = "Spetsnaz 60 Rnd", Game.COLD_WAR
     SPETSNAZ_150 = "Spetsnaz 150 Rnd", Game.COLD_WAR
     TAPED_MAGS = "Taped Mags", Game.COLD_WAR
     VDV_50 = "VDV 50 Rnd Fast Mag", Game.COLD_WAR
+    FAST_MAG = "Fast Mag", Game.COLD_WAR
 
 
 class RearGrip(Attachment):
@@ -289,6 +295,7 @@ class Stock(Attachment):
     TACTICAL_STOCK = "Tactical Stock", Game.COLD_WAR
     DUAL_WIELD = "Dual Wield", Game.COLD_WAR
     SPETSNAZ_PKM_STOCK = "Spetsnaz PKM Stock", Game.COLD_WAR
+    CQB_PAD = "CQB Pad", Game.COLD_WAR
 
 
 class Perk(Attachment):

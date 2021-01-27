@@ -33,10 +33,10 @@ export const useStyles = makeStyles((theme: Theme) => createStyles({
         "&:hover": {
             backgroundColor: fade(theme.palette.common.white, 0.25),
         },
-        maxWidth: "500px",
+        maxWidth: "450px",
         width: "90%",
         margin: "auto",
-        marginTop: "20px",
+        marginTop: "15px",
         border: "1px solid",
         borderColor: "rgba(255, 255, 255, 0.12)",
     },
