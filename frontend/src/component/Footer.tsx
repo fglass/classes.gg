@@ -1,7 +1,6 @@
 import React from "react";
 import Typography from "@material-ui/core/Typography";
 import { makeStyles } from "@material-ui/core/styles";
-import { Button, Grid } from "@material-ui/core";
 
 const useStyles = makeStyles(theme => ({
     footer: {
@@ -42,28 +41,12 @@ const AffiliationLink = (props: any) => {
     )
 }
 
-const SupportButton = () => {
-    const supportLink = "https://www.buymeacoffee.com/classesgg"
-    return (
-        <Button variant="outlined" size="small" href={supportLink} target="_blank" rel="noopener noreferrer">
-            <span role="img" aria-label="Coffee">☕ Support</span>
-        </Button>
-    )
-}
-
 export default function Footer() {
     const classes = useStyles()
     return (
         <footer className={classes.footer}>
-            <Grid container justify="space-between">
-                <Grid item>
-                    <Copyright className={classes.link} />
-                    <AffiliationLink className={classes.link} />
-                </Grid>
-                <Grid item>
-                   <SupportButton />
-                </Grid>
-            </Grid>
+            <Copyright className={classes.link} />
+            <AffiliationLink className={classes.link} />
         </footer>
     )
 }

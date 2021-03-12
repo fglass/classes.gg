@@ -3,7 +3,7 @@ import TimeAgo from 'timeago-react';
 import InputBase from "@material-ui/core/InputBase";
 import SearchIcon from "@material-ui/icons/Search";
 import Typography from "@material-ui/core/Typography";
-import { Badge, Icon, Paper } from "@material-ui/core";
+import {Badge, Icon, Paper} from "@material-ui/core";
 import { Link } from "react-router-dom";
 import { Player } from "../../model/player";
 import { useStyles } from "./styles";
@@ -48,7 +48,6 @@ class LandingView extends React.Component<IProps, IState> {
 
     render() {
         const { classes } = this.props
-
         return (
             <div className={classes.content}>
                 <div className={classes.header}>
@@ -66,6 +65,7 @@ class LandingView extends React.Component<IProps, IState> {
                             <PlayerCard classes={classes} player={player} key={player.username} />
                         )}
                     </div>
+                    <YouTubeEmbed classes={classes} />
                 </div>
             </div>
         )
@@ -105,6 +105,23 @@ const PlayerCard = (props: any) => {
                     </Paper>
                 </Link>
             </Badge>
+        </div>
+    )
+}
+
+const EMBED_ID = "mTQpJoWHGf0"
+
+const YouTubeEmbed = (props: any) => {
+    return (
+        <div className={props.classes.embed}>
+            <iframe
+                className={props.classes.iframe}
+                title="Embedded video"
+                src={`https://www.youtube.com/embed/${EMBED_ID}`}
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+            />
         </div>
     )
 }

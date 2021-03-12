@@ -126,12 +126,15 @@ class Barrel(Attachment):
     RANGER_212 = "21.2\" Ranger", Game.COLD_WAR
     VDV_REINFORCED_93 = "9.3\" VDV Reinforced", Game.COLD_WAR
     VDV_REINFORCED_182 = "18.2\" VDV Reinforced", Game.COLD_WAR
-    TAKEDOWN = "13.7\" Takedown", Game.COLD_WAR
+    TAKEDOWN_137 = "13.7\" Takedown", Game.COLD_WAR
+    TAKEDOWN_203 = "20.3\" Takedown", Game.COLD_WAR
+    REINFORCED_HEAVY_61 = "6.1\" Reinforced Heavy", Game.COLD_WAR
     REINFORCED_HEAVY_195 = "19.5\" Reinforced Heavy", Game.COLD_WAR
     TIGER_TEAM_265 = "26.5\" Tiger Team", Game.COLD_WAR
     TITANIUM_163 = "16.3\" Titanium", Game.COLD_WAR
     TITANIUM_164 = "16.4\" Titanium", Game.COLD_WAR
     TITANIUM_17 = "17\" Titanium", Game.COLD_WAR
+    LIBERATOR_81 = "8.1\" Liberator", Game.COLD_WAR
     LIBERATOR_20 = "20\" Liberator", Game.COLD_WAR
     RAPID_FIRE_17 = "17\" Rapid Fire", Game.COLD_WAR
     GRU_COMPOSITE = "16.2\" GRU Composite", Game.COLD_WAR
@@ -158,7 +161,8 @@ class Underbarrel(Attachment):
     SFOD_SPEEDGRIP = "SFOD Speedgrip", Game.COLD_WAR
     FRONT_GRIP = "Front Grip", Game.COLD_WAR
     SPETSNAZ_ERGONOMIC_GRIP = "Spetsnaz Ergonomic Grip", Game.COLD_WAR
-    BRUISER_GRIP = "Bruiser Grip"
+    BRUISER_GRIP = "Bruiser Grip", Game.COLD_WAR
+    INFILTRATOR_GRIP = "Infiltrator Grip", Game.COLD_WAR
 
 
 class Optic(Attachment):

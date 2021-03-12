@@ -97,4 +97,15 @@ export const useStyles = makeStyles((theme: Theme) => createStyles({
         fontSize: "14px",
         color: theme.palette.text.secondary,
     },
+    embed: {
+        maxWidth: "1050px",
+        width: "90%",
+        margin: "0px auto",
+        paddingBottom: "25px",
+    },
+    iframe: {
+        width: "100%",
+        border: "1px solid rgba(255, 255, 255, 0.12)",
+        borderRadius: "7px",
+    }
 }));

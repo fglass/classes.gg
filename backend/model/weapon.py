@@ -58,6 +58,7 @@ class Weapon(Enum):
     MP5_CW = "MP5 CW", Game.COLD_WAR
     AUG_CW = "AUG CW", Game.COLD_WAR
     AK_74U = "AK-74u", Game.COLD_WAR
+    BULLFROG = "Bullfrog", Game.COLD_WAR
 
     # Sniper rifle
     AX_50 = "AX-50"
