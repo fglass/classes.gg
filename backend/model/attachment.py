@@ -5,12 +5,21 @@ from model.game import Game
 
 class Attachment(Enum):
 
-    def __init__(self, name, game=Game.MODERN_WARFARE):
+    def __init__(self, name, game=Game.MODERN_WARFARE, aliases: list = None):
         self._name = name
         self._game = game
+        self._aliases = aliases if aliases else []
 
     def __str__(self):
         return self._name
+
+    @property
+    def game(self) -> Game:
+        return self._game
+
+    @property
+    def aliases(self) -> list:
+        return [self._name.lower()] + self._aliases
 
     @classmethod
     def get_class_name(cls):
@@ -66,7 +75,7 @@ class Barrel(Attachment):
     XRK_ZODIAC_S440 = "XRK Zodiac S440"
     XRK_EQUINOX_S440 = "XRK Equinox S440"
     FR_SNIPER = "FR 24.4\" Sniper"
-    SINGUARD_ARMS_PROWLER = "Singuard Arms 19.8\" Prowler"
+    SINGUARD_ARMS_PROWLER = "Singuard Arms 19.8\" Prowler", Game.MODERN_WARFARE, ["singuard 19.8"]
     ODEN_FACTORY_810 = "Oden Factory 810mm"
     FORGE_TAC_RETRIBUTION = "FORGE TAC Retribution"
     EXTENDED_BARREL_269 = "26.9\" Extended Barrel"
@@ -148,7 +157,6 @@ class Underbarrel(Attachment):
     STIPPLED_GRIP_TAPE = "Stippled Grip Tape"
     RUBBERIZED_GRIP_TAPE = "Rubberized Grip Tape"
     SNATCH_GRIP = "Snatch Grip"
-
     XRK_TRUEGRIP_TACTICAL = "XRK Truegrip Tactical"
 
     FIELD_AGENT_FOREGRIP = "Field Agent Foregrip", Game.COLD_WAR
@@ -166,7 +174,7 @@ class Underbarrel(Attachment):
 
 
 class Optic(Attachment):
-    VLK_3X_OPTIC = "VLK 3.0x Optic"
+    VLK_3X_OPTIC = "VLK 3.0x Optic", Game.MODERN_WARFARE, ["vlk"]
     VARIABLE_ZOOM_SCOPE = "Variable Zoom Scope"
     SNIPER_SCOPE = "Sniper Scope"
     VIPER_REFLEX_SIGHT = "Viper Reflex Sight"

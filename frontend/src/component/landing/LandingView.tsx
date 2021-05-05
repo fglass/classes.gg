@@ -112,10 +112,11 @@ const PlayerCard = (props: any) => {
 const EMBED_ID = "mTQpJoWHGf0"
 
 const YouTubeEmbed = (props: any) => {
+    const classes = props.classes
     return (
-        <div className={props.classes.embed}>
+        <div className={classes.embed}>
             <iframe
-                className={props.classes.iframe}
+                className={classes.iframe}
                 title="Embedded video"
                 src={`https://www.youtube.com/embed/${EMBED_ID}`}
                 frameBorder="0"

@@ -4,7 +4,7 @@ from datetime import datetime
 from db.json_database_engine import JSONDatabaseEngine
 from enum import EnumMeta
 from model.attachment import *
-from model.weapon import Weapon
+from model.weapon.weapon import Weapon
 from PyQt5.QtWidgets import QApplication, QWidget, QLineEdit, QComboBox, QFormLayout, QLabel, QHBoxLayout, QPushButton
 
 

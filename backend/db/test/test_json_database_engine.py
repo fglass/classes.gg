@@ -1,7 +1,7 @@
 import unittest
 from db.json_database_engine import JSONDatabaseEngine
 from model.player import Player
-from model.weapon import Weapon
+from model.weapon.weapon import Weapon
 
 
 class TestJSONDatabaseEngine(unittest.TestCase):
