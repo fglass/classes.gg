@@ -14,10 +14,6 @@ class Attachment(Enum):
         return self._name
 
     @property
-    def game(self) -> Game:
-        return self._game
-
-    @property
     def aliases(self) -> list:
         return [self._name.lower()] + self._aliases
 
