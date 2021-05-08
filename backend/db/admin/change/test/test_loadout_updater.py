@@ -1,4 +1,4 @@
-from db.admin.change.loadout_updater import _find_delimiter, _find_weapon, _find_attachments
+from db.admin.change.loadout_updater import _find_delimiter, find_weapon, _find_attachments
 from model.attachment import Muzzle, Barrel, Optic, Underbarrel, Ammunition
 from model.weapon.impl.assault_rifle import AssaultRifle
 
@@ -7,11 +7,11 @@ TEST_RESPONSE = "@[user] Kilo: Monolithic Suppressor, Singuard 19.8, VLK/Holo (b
 
 
 def test_find_weapon():
-    assert AssaultRifle.KILO_141 == _find_weapon(TEST_COMMAND)
+    assert AssaultRifle.KILO_141 == find_weapon(TEST_COMMAND)
 
 
 def test_unable_to_find_weapon():
-    assert _find_weapon("!abc") is None
+    assert find_weapon("!abc") is None
 
 
 def test_find_attachments():
@@ -22,7 +22,7 @@ def test_find_attachments():
        Underbarrel.COMMANDO_FOREGRIP,
        Ammunition.ROUND_MAGS_60
     ]
-    actual = _find_attachments(AssaultRifle.KILO_141, TEST_RESPONSE)
+    actual = _find_attachments(expected, TEST_RESPONSE)  # TODO: weapon.attachments
     assert expected == actual
 
 

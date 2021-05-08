@@ -1,0 +1,3575 @@
+{
+    "AK_47_CW": {
+        "Barrel": [
+            "ULTRALIGHT",
+            "CAVALRY_LANCER",
+            "VDV_REINFORCED",
+            "LIBERATOR",
+            "TAKEDOWN",
+            "SPETSNAZ_RPK_BARREL"
+        ],
+        "Laser": [
+            "STEADY_AIM_LASER",
+            "MOUNTED_FLASHLIGHT",
+            "KGB_TARGET_DESIGNATOR",
+            "GRU_5MW_LASER_SIGHT",
+            "TIGER_TEAM_SPOTLIGHT",
+            "EMBER_SIGHTING_POINT"
+        ],
+        "Muzzle": [
+            "MUZZLE_BRAKE",
+            "FLASHGUARD",
+            "SUPPRESSOR",
+            "SPETSNAZ_COMPENSATOR",
+            "KGB_ELIMINATOR",
+            "GRU_SUPPRESSOR"
+        ],
+        "Optic": [
+            "MILLSTOP_REFLEX",
+            "VISIONTECH_2X",
+            "KOBRA_RED_DOT",
+            "QUICKDOT_LED",
+            "AXIAL_ARMS_3X",
+            "SILLIX_HOLOSCOUT",
+            "MICROFLEX_LED",
+            "HAWKSMOOR",
+            "ROYAL_AND_CROSS_4X",
+            "SUSAT_MULTIZOOM",
+            "DIAMONDBACK_REFLEX",
+            "NOCH_SOVA_THERMAL"
+        ],
+        "RearGrip": [
+            "SPEED_TAPE",
+            "DROPSHOT_WRAP",
+            "FIELD_TAPE",
+            "SPETSNAZ_FIELD_GRIP",
+            "SERPENT_WRAP",
+            "GRU_ELASTIC_WRAP"
+        ],
+        "Stock": [
+            "TACTICAL_STOCK",
+            "WIRE_STOCK",
+            "DUSTER_STOCK",
+            "NO_STOCK",
+            "SPETSNAZ_PKM_STOCK",
+            "KGB_SKELETAL_STOCK"
+        ],
+        "Underbarrel": [
+            "FOREGRIP",
+            "INFILTRATOR_GRIP",
+            "PATROL_GRIP",
+            "BRUISER_GRIP",
+            "SPETSNAZ_GRIP",
+            "SPETSNAZ_SPEEDGRIP"
+        ]
+    },
+    "AK_74U": {
+        "Barrel": [
+            "EXTENDED",
+            "CAVALRY",
+            "REINFORCED_HEAVY",
+            "RANGER",
+            "RIFLED",
+            "TASK_FORCE"
+        ],
+        "Laser": [
+            "STEADY_AIM_LASER",
+            "MOUNTED_FLASHLIGHT",
+            "KGB_TARGET_DESIGNATOR",
+            "GRU_5MW_LASER_SIGHT",
+            "TIGER_TEAM_SPOTLIGHT",
+            "EMBER_SIGHTING_POINT"
+        ],
+        "Muzzle": [
+            "MUZZLE_BRAKE",
+            "FLASHGUARD",
+            "SOUND_SUPPRESSOR",
+            "INFANTRY_COMPENSATOR",
+            "SOCOM_ELIMINATOR",
+            "AGENCY_SUPPRESSOR"
+        ],
+        "Optic": [
+            "QUICKDOT_LED",
+            "MILLSTOP_REFLEX",
+            "KOBRA_RED_DOT",
+            "VISIONTECH_2X",
+            "MICROFLEX_LED",
+            "HAWKSMOOR",
+            "SNAPPOINT",
+            "DIAMONDBACK_REFLEX",
+            "SILLIX_HOLOSCOUT",
+            "FASTPOINT_REFLEX",
+            "AXIAL_ARMS_3X",
+            "SUSAT_MULTIZOOM"
+        ],
+        "RearGrip": [
+            "SPEED_TAPE",
+            "DROPSHOT_WRAP",
+            "FIELD_TAPE",
+            "SPETSNAZ_FIELD_GRIP",
+            "SERPENT_WRAP",
+            "GRU_ELASTIC_WRAP"
+        ],
+        "Stock": [
+            "TACTICAL_STOCK",
+            "WIRE_STOCK",
+            "DUSTER_STOCK",
+            "NO_STOCK",
+            "SPETSNAZ_PKM_STOCK",
+            "KGB_SKELETAL_STOCK"
+        ],
+        "Underbarrel": [
+            "FOREGRIP",
+            "RED_CELL_FOREGRIP",
+            "PATROL_GRIP",
+            "BRUISER_GRIP",
+            "SPETSNAZ_GRIP",
+            "SPETSNAZ_SPEEDGRIP"
+        ]
+    },
+    "AK_47": {
+        "Ammunition": [
+            "ROUND_MAGS_40",
+            "ROUND_MAGS_545X39MM_30",
+            "ROUND_DRUM_MAGS_75"
+        ],
+        "Barrel": [
+            "SPETSNAZ_ELITE",
+            "RPK_BARREL_230",
+            "COMPACT_BARREL_81",
+            "ROMANIAN_230"
+        ],
+        "Laser": [
+            "TAC_LASER",
+            "LASER_5MW",
+            "LASER_1MW"
+        ],
+        "Muzzle": [
+            "LIGHTWEIGHT_SUPPRESSOR",
+            "TACTICAL_SUPPRESSOR",
+            "MONOLITHIC_SUPPRESSOR",
+            "MUZZLE_BRAKE",
+            "COMPENSATOR"
+        ],
+        "Optic": [
+            "OPERATOR_REFLEX_SIGHT",
+            "CORP_COMBAT_HOLO_SIGHT",
+            "AIM_OP_REFLEX_SIGHT",
+            "SCOUT_COMBAT_OPTIC",
+            "APX5_HOLOGRAPHIC_SIGHT",
+            "SOLOZERO_OPTICS_MINI_REFLEX",
+            "INTEGRAL_HYBRID",
+            "VLK_30X_OPTIC",
+            "SNIPER_SCOPE",
+            "VIPER_REFLEX_SIGHT",
+            "GI_MINI_REFLEX",
+            "SOLOZERO_NVG_ENHANCED",
+            "MONOCLE_REFLEX_SIGHT",
+            "CRONEN_LP945_MINI_REFLEX",
+            "CANTED_HYBRID",
+            "CRONEN_C480_PRO_OPTIC",
+            "MERC_THERMAL_OPTIC",
+            "VARIABLE_ZOOM_SCOPE",
+            "THERMAL_HYBRID"
+        ],
+        "Perk": [
+            "SLEIGHT_OF_HAND"
+        ],
+        "RearGrip": [
+            "STIPPLED_GRIP_TAPE",
+            "RUBBERIZED_GRIP_TAPE",
+            "GRANULATED_GRIP_TAPE"
+        ],
+        "Stock": [
+            "SKELETON_STOCK",
+            "NO_STOCK",
+            "FSS_CLOSE_QUARTERS_STOCK",
+            "FIELD_LMG_STOCK",
+            "FORGE_TAC_ULTRALIGHT"
+        ],
+        "Underbarrel": [
+            "MERC_FOREGRIP",
+            "OPERATOR_FOREGRIP",
+            "RANGER_FOREGRIP",
+            "COMMANDO_FOREGRIP",
+            "TACTICAL_FOREGRIP",
+            "BIPOD",
+            "BIPOD"
+        ]
+    },
+    "AN_94": {
+        "Ammunition": [
+            "ROUND_MAGS_45",
+            "ROUND_CASKET_MAGS_60"
+        ],
+        "Barrel": [
+            "AN_94_FACTORY_330MM",
+            "AN_94_FACTORY_X_438MM",
+            "VLK_AN_94_SILA"
+        ],
+        "Laser": [
+            "LASER_5MW",
+            "LASER_1MW",
+            "TAC_LASER"
+        ],
+        "Muzzle": [
+            "AN_94_SONIC_BRAKE",
+            "TACTICAL_SUPPRESSOR",
+            "LIGHTWEIGHT_SUPPRESSOR",
+            "COMPENSATOR",
+            "MONOLITHIC_SUPPRESSOR"
+        ],
+        "Optic": [
+            "GI_MINI_REFLEX",
+            "CORP_COMBAT_HOLO_SIGHT",
+            "AIM_OP_REFLEX_SIGHT",
+            "SCOUT_COMBAT_OPTIC",
+            "APX5_HOLOGRAPHIC_SIGHT",
+            "FLIP_HYBRID_40X",
+            "SOLOZERO_OPTICS_MINI_REFLEX",
+            "VLK_30X_OPTIC",
+            "OPERATOR_REFLEX_SIGHT",
+            "SNIPER_SCOPE",
+            "SOLOZERO_NVG_ENHANCED",
+            "INTEGRAL_HYBRID",
+            "VIPER_REFLEX_SIGHT",
+            "PBX_HOLO_7_SIGHT",
+            "MERC_THERMAL_OPTIC",
+            "MONOCLE_REFLEX_SIGHT",
+            "CANTED_HYBRID",
+            "VARIABLE_ZOOM_SCOPE",
+            "CRONEN_C480_PRO_OPTIC",
+            "CRONEN_LP945_MINI_REFLEX",
+            "THERMAL_HYBRID",
+            "POS_M3_THERMAL_SCOPE"
+        ],
+        "Perk": [
+            "SLEIGHT_OF_HAND"
+        ],
+        "RearGrip": [
+            "GRANULATED_GRIP_TAPE",
+            "STIPPLED_GRIP_TAPE",
+            "RUBBERIZED_GRIP_TAPE"
+        ],
+        "Stock": [
+            "AN_94_FACTORY_HEAVY",
+            "FORGE_TAC_ULTRALIGHT",
+            "FOLDED_STOCK",
+            "FSS_CLOSE_QUARTERS_STOCK",
+            "VLK_PX_9_PERO"
+        ],
+        "Underbarrel": [
+            "COMMANDO_FOREGRIP",
+            "MERC_FOREGRIP",
+            "RANGER_FOREGRIP",
+            "TACTICAL_FOREGRIP",
+            "OPERATOR_FOREGRIP",
+            "BIPOD",
+            "BIPOD"
+        ]
+    },
+    "AS_VAL": {
+        "Ammunition": [
+            "ROUND_MAGS_30",
+            "SPP_10_R_MAGS"
+        ],
+        "Barrel": [
+            "VLK_105MM_STOVA",
+            "STOVL_SOF",
+            "VLK_200MM_OSA"
+        ],
+        "Laser": [
+            "LASER_1MW",
+            "TAC_LASER",
+            "LASER_5MW"
+        ],
+        "Optic": [
+            "OPERATOR_REFLEX_SIGHT",
+            "APX5_HOLOGRAPHIC_SIGHT",
+            "SCOUT_COMBAT_OPTIC",
+            "CRONEN_LP945_MINI_REFLEX",
+            "FLIP_HYBRID_40X",
+            "VIPER_REFLEX_SIGHT",
+            "DRAGUNOV_SCOPE",
+            "GI_MINI_REFLEX",
+            "CORP_COMBAT_HOLO_SIGHT",
+            "VLK_30X_OPTIC",
+            "SOLOZERO_OPTICS_MINI_REFLEX",
+            "AIM_OP_REFLEX_SIGHT",
+            "INTEGRAL_HYBRID",
+            "SOLOZERO_NVG_ENHANCED",
+            "MONOCLE_REFLEX_SIGHT",
+            "CRONEN_C480_PRO_OPTIC",
+            "MERC_THERMAL_OPTIC",
+            "CANTED_HYBRID",
+            "PBX_HOLO_7_SIGHT",
+            "THERMAL_HYBRID",
+            "VARIABLE_ZOOM_SCOPE"
+        ],
+        "Perk": [
+            "SLEIGHT_OF_HAND",
+            "SLEIGHT_OF_HAND",
+            "SLEIGHT_OF_HAND"
+        ],
+        "RearGrip": [
+            "GRANULATED_GRIP_TAPE",
+            "STIPPLED_GRIP_TAPE",
+            "RUBBERIZED_GRIP_TAPE"
+        ],
+        "Stock": [
+            "VLK_VINTAZH",
+            "FSS_INTL_GEN_4_GRU",
+            "STOVL_6P30_SKELET",
+            "VLK_STRELOK"
+        ],
+        "Underbarrel": [
+            "MERC_FOREGRIP",
+            "BIPOD",
+            "BIPOD",
+            "RANGER_FOREGRIP",
+            "COMMANDO_FOREGRIP",
+            "OPERATOR_FOREGRIP",
+            "CRONEN_SHARK_II"
+        ]
+    },
+    "AUG": {
+        "Ammunition": [
+            "ROUND_MAGS_32",
+            "NATO_30_ROUND_MAGS_556",
+            "NATO_60_ROUND_DRUMS_556"
+        ],
+        "Barrel": [
+            "EXTENDED_407MM",
+            "LIGHTWEIGHT_407MM",
+            "LONG_BARREL_622MM"
+        ],
+        "Laser": [
+            "TAC_LASER",
+            "LASER_1MW",
+            "LASER_5MW"
+        ],
+        "Muzzle": [
+            "LIGHTWEIGHT_SUPPRESSOR",
+            "TACTICAL_SUPPRESSOR",
+            "MONOLITHIC_SUPPRESSOR",
+            "MUZZLE_BRAKE",
+            "COMPENSATOR"
+        ],
+        "Optic": [
+            "OPERATOR_REFLEX_SIGHT",
+            "CORP_COMBAT_HOLO_SIGHT",
+            "AIM_OP_REFLEX_SIGHT",
+            "GI_MINI_REFLEX",
+            "SCOUT_COMBAT_OPTIC",
+            "APX5_HOLOGRAPHIC_SIGHT",
+            "SOLOZERO_OPTICS_MINI_REFLEX",
+            "VLK_30X_OPTIC",
+            "THERMAL_HYBRID",
+            "VIPER_REFLEX_SIGHT",
+            "PBX_HOLO_7_SIGHT",
+            "SOLOZERO_NVG_ENHANCED",
+            "CRONEN_LP945_MINI_REFLEX",
+            "FLIP_HYBRID_40X",
+            "MONOCLE_REFLEX_SIGHT",
+            "INTEGRAL_30X_OPTIC",
+            "CRONEN_C480_PRO_OPTIC",
+            "MERC_THERMAL_OPTIC",
+            "INTEGRAL_HYBRID"
+        ],
+        "Perk": [
+            "SLEIGHT_OF_HAND"
+        ],
+        "RearGrip": [
+            "STIPPLED_GRIP_TAPE",
+            "RUBBERIZED_GRIP_TAPE",
+            "GRANULATED_GRIP_TAPE"
+        ],
+        "Stock": [
+            "FORGE_TAC_CQB_COMB",
+            "FTAC_ULTRALIGHT_HOLLOW",
+            "FSS_HEAVY_STOCK_PRO"
+        ],
+        "Underbarrel": [
+            "MERC_FOREGRIP",
+            "RANGER_FOREGRIP",
+            "OPERATOR_FOREGRIP",
+            "COMMANDO_FOREGRIP",
+            "TACTICAL_FOREGRIP"
+        ]
+    },
+    "AUG_CW": {
+        "Barrel": [
+            "RAPID_FIRE",
+            "CAVALRY_LANCER",
+            "STRIKE_TEAM",
+            "TITANIUM",
+            "MATCH_GRADE",
+            "TASK_FORCE"
+        ]
+    },
+    "AX_50": {
+        "Ammunition": [
+            "ROUND_MAGS_7",
+            "ROUND_MAGS_9"
+        ],
+        "Barrel": [
+            "SINGUARD_ARMS_PRO",
+            "FACTORY_BARREL_17",
+            "FACTORY_BARREL_32"
+        ],
+        "Laser": [
+            "TAC_LASER"
+        ],
+        "Muzzle": [
+            "MONOLITHIC_SUPPRESSOR",
+            "LIGHTWEIGHT_SUPPRESSOR",
+            "MUZZLE_BRAKE",
+            "COMPENSATOR",
+            "TACTICAL_SUPPRESSOR"
+        ],
+        "Optic": [
+            "SCOUT_COMBAT_OPTIC",
+            "VLK_30X_OPTIC",
+            "THERMAL_SNIPER_SCOPE",
+            "VARIABLE_ZOOM_SCOPE",
+            "CRONEN_C480_PRO_OPTIC",
+            "MERC_THERMAL_OPTIC",
+            "THERMAL_DUAL_POWER_SCOPE"
+        ],
+        "Perk": [
+            "SLEIGHT_OF_HAND"
+        ],
+        "RearGrip": [
+            "RUBBERIZED_GRIP_TAPE",
+            "GRANULATED_GRIP_TAPE",
+            "STIPPLED_GRIP_TAPE"
+        ],
+        "Stock": [
+            "SINGUARD_ARMS_MARKSMAN",
+            "SINGUARD_ARMS_EVADER",
+            "SINGUARD_ARMS_ASSASSIN"
+        ],
+        "Underbarrel": [
+            "BIPOD",
+            "BIPOD"
+        ]
+    },
+    "BRUEN": {
+        "Ammunition": [
+            "ROUND_BELT_200",
+            "ROUND_MAGS_60"
+        ],
+        "Barrel": [
+            "XRK_HORIZON_230",
+            "XRK_SUMMIT_268",
+            "BRUEN_180_PARA"
+        ],
+        "Laser": [
+            "TAC_LASER",
+            "LASER_1MW",
+            "LASER_5MW"
+        ],
+        "Muzzle": [
+            "LIGHTWEIGHT_SUPPRESSOR",
+            "TACTICAL_SUPPRESSOR",
+            "MONOLITHIC_SUPPRESSOR",
+            "MUZZLE_BRAKE",
+            "COMPENSATOR"
+        ],
+        "Optic": [
+            "GI_MINI_REFLEX",
+            "CORP_COMBAT_HOLO_SIGHT",
+            "AIM_OP_REFLEX_SIGHT",
+            "VIPER_REFLEX_SIGHT",
+            "VLK_30X_OPTIC",
+            "APX5_HOLOGRAPHIC_SIGHT",
+            "OPERATOR_REFLEX_SIGHT",
+            "SOLOZERO_NVG_ENHANCED",
+            "INTEGRAL_HYBRID",
+            "SCOUT_COMBAT_OPTIC",
+            "SOLOZERO_OPTICS_MINI_REFLEX",
+            "SNIPER_SCOPE",
+            "FLIP_HYBRID_40X",
+            "MERC_THERMAL_OPTIC",
+            "CRONEN_LP945_MINI_REFLEX",
+            "PBX_HOLO_7_SIGHT",
+            "CANTED_HYBRID",
+            "MONOCLE_REFLEX_SIGHT",
+            "CRONEN_C480_PRO_OPTIC",
+            "THERMAL_HYBRID"
+        ],
+        "Perk": [
+            "SLEIGHT_OF_HAND",
+            "SLEIGHT_OF_HAND"
+        ],
+        "RearGrip": [
+            "STIPPLED_GRIP_TAPE",
+            "RUBBERIZED_GRIP_TAPE",
+            "GRANULATED_GRIP_TAPE"
+        ],
+        "Stock": [
+            "FSS_CLOSE_QUARTERS_STOCK",
+            "NO_STOCK",
+            "SKELETON_STOCK",
+            "FORGE_TAC_STALKER",
+            "FORGE_TAC_ULTRALIGHT"
+        ],
+        "Underbarrel": [
+            "MERC_FOREGRIP",
+            "RANGER_FOREGRIP",
+            "OPERATOR_FOREGRIP",
+            "BIPOD",
+            "BIPOD",
+            "COMMANDO_FOREGRIP",
+            "TACTICAL_FOREGRIP"
+        ]
+    },
+    "CARV": {
+        "Barrel": [
+            "RAPID_FIRE",
+            "CAVALRY_LANCER",
+            "STRIKE_TEAM",
+            "TITANIUM",
+            "MATCH_GRADE",
+            "TASK_FORCE"
+        ]
+    },
+    "CROSSBOW": {
+        "Arms": [
+            "XRK_THUNDER_200_LB",
+            "XRK_QUILL_100_LB",
+            "XRK_CARBON_ELITE"
+        ],
+        "Bolt": [
+            "FTAC_FURY_20_BOLTS",
+            "FTAC_VENOM_20_BOLTS",
+            "FTAC_BACKBURN_20_BOLTS"
+        ],
+        "Cable": [
+            "STRAND_CABLE_16",
+            "STRAND_CABLE_28"
+        ],
+        "Laser": [
+            "TAC_LASER"
+        ],
+        "Optic": [
+            "CRONEN_LP945_MINI_REFLEX",
+            "AIM_OP_REFLEX_SIGHT",
+            "CORP_COMBAT_HOLO_SIGHT",
+            "SCOUT_COMBAT_OPTIC",
+            "APX5_HOLOGRAPHIC_SIGHT",
+            "OPERATOR_REFLEX_SIGHT",
+            "XRK_MIDTRAK_40X_SCOPE",
+            "SOLOZERO_NVG_ENHANCED",
+            "VLK_30X_OPTIC",
+            "PBX_HOLO_7_SIGHT",
+            "GI_MINI_REFLEX",
+            "VIPER_REFLEX_SIGHT",
+            "CRONEN_C480_PRO_OPTIC",
+            "SOLOZERO_OPTICS_MINI_REFLEX",
+            "MONOCLE_REFLEX_SIGHT",
+            "MERC_THERMAL_OPTIC",
+            "XRK_RANGEMASTER_VZ"
+        ],
+        "Perk": [
+            "SLEIGHT_OF_HAND"
+        ],
+        "Stock": [
+            "FORGE_TAC_APEX",
+            "FORGE_TAC_DART_CB",
+            "FORGE_TAC_SPEEDTRAK"
+        ],
+        "Underbarrel": [
+            "FTAC_SPEED_GRIP",
+            "XRK_PRECISION_COMB",
+            "XRK_TALON"
+        ]
+    },
+    "CR_56_AMAX": {
+        "Ammunition": [
+            "ROUND_MAGS_45",
+            "M67_10_R_MAGS"
+        ],
+        "Barrel": [
+            "FSS_83_INTRUDER",
+            "XRK_ZODIAC_S440",
+            "FSS_118_SQUALL"
+        ],
+        "Laser": [
+            "TAC_LASER",
+            "LASER_5MW",
+            "LASER_1MW"
+        ],
+        "Muzzle": [
+            "MUZZLE_BRAKE",
+            "TACTICAL_SUPPRESSOR",
+            "LIGHTWEIGHT_SUPPRESSOR",
+            "COMPENSATOR",
+            "MONOLITHIC_SUPPRESSOR"
+        ],
+        "Optic": [
+            "GI_MINI_REFLEX",
+            "CORP_COMBAT_HOLO_SIGHT",
+            "AIM_OP_REFLEX_SIGHT",
+            "SCOUT_COMBAT_OPTIC",
+            "APX5_HOLOGRAPHIC_SIGHT",
+            "FLIP_HYBRID_40X",
+            "SOLOZERO_OPTICS_MINI_REFLEX",
+            "VLK_30X_OPTIC",
+            "OPERATOR_REFLEX_SIGHT",
+            "SNIPER_SCOPE",
+            "SOLOZERO_NVG_ENHANCED",
+            "INTEGRAL_HYBRID",
+            "VIPER_REFLEX_SIGHT",
+            "PBX_HOLO_7_SIGHT",
+            "MONOCLE_REFLEX_SIGHT",
+            "CANTED_HYBRID",
+            "VARIABLE_ZOOM_SCOPE",
+            "CRONEN_C480_PRO_OPTIC",
+            "CRONEN_LP945_MINI_REFLEX",
+            "MERC_THERMAL_OPTIC",
+            "THERMAL_HYBRID"
+        ],
+        "Perk": [
+            "SLEIGHT_OF_HAND",
+            "SLEIGHT_OF_HAND"
+        ],
+        "RearGrip": [
+            "XRK_CR_56_STIPPLED_WRAP",
+            "RUBBERIZED_GRIP_TAPE",
+            "GRANULATED_GRIP_TAPE"
+        ],
+        "Stock": [
+            "FSS_CLOSE_QUARTERS_STOCK",
+            "NO_STOCK",
+            "CR_56_EXO",
+            "FTAC_HUNTER",
+            "FTAC_SPARTAN",
+            "XRK_GATEKEEPER"
+        ],
+        "Underbarrel": [
+            "MERC_FOREGRIP",
+            "RANGER_FOREGRIP",
+            "OPERATOR_FOREGRIP",
+            "COMMANDO_FOREGRIP",
+            "TACTICAL_FOREGRIP",
+            "BIPOD",
+            "BIPOD"
+        ]
+    },
+    "DMR": {
+        "Barrel": [
+            "RAPID_FIRE",
+            "CAVALRY",
+            "STRIKE_TEAM",
+            "TITANIUM",
+            "MATCH_GRADE",
+            "TASK_FORCE"
+        ]
+    },
+    "DRAGUNOV": {
+        "Ammunition": [
+            "ROUND_MAGS_15",
+            "ROUND_MAGS_20"
+        ],
+        "Barrel": [
+            "COMPACT_BARREL_510MM",
+            "EXTENDED_BARREL_660MM"
+        ],
+        "Laser": [
+            "TAC_LASER"
+        ],
+        "Muzzle": [
+            "MONOLITHIC_SUPPRESSOR",
+            "MUZZLE_BRAKE",
+            "TACTICAL_SUPPRESSOR",
+            "COMPENSATOR",
+            "LIGHTWEIGHT_SUPPRESSOR"
+        ],
+        "Optic": [
+            "SCOUT_COMBAT_OPTIC",
+            "THERMAL_SNIPER_SCOPE",
+            "VLK_30X_OPTIC",
+            "VARIABLE_ZOOM_SCOPE",
+            "THERMAL_DUAL_POWER_SCOPE",
+            "CRONEN_C480_PRO_OPTIC",
+            "MERC_THERMAL_OPTIC"
+        ],
+        "Perk": [
+            "SLEIGHT_OF_HAND"
+        ],
+        "Stock": [
+            "FTAC_HUNTER_SCOUT",
+            "SKELETON_STOCK",
+            "VLK_LIGHTWEIGHT_STOCK",
+            "FTAC_STALKER_SCOUT"
+        ],
+        "Underbarrel": [
+            "BIPOD",
+            "BIPOD"
+        ]
+    },
+    "EBR": {
+        "Ammunition": [
+            "ROUND_MAGS_15",
+            "ROUND_MAGS_20"
+        ],
+        "Barrel": [
+            "FORGE_TAC_PRECISION_200",
+            "FORGE_TAC_ELITE",
+            "FORGE_TAC_PRECISION_220"
+        ],
+        "Laser": [
+            "TAC_LASER"
+        ],
+        "Muzzle": [
+            "TACTICAL_SUPPRESSOR",
+            "MUZZLE_BRAKE",
+            "COMPENSATOR",
+            "LIGHTWEIGHT_SUPPRESSOR",
+            "MONOLITHIC_SUPPRESSOR"
+        ],
+        "Optic": [
+            "OPERATOR_REFLEX_SIGHT",
+            "CORP_COMBAT_HOLO_SIGHT",
+            "AIM_OP_REFLEX_SIGHT",
+            "SCOUT_COMBAT_OPTIC",
+            "APX5_HOLOGRAPHIC_SIGHT",
+            "INTEGRAL_HYBRID",
+            "GI_MINI_REFLEX",
+            "VLK_30X_OPTIC",
+            "PBX_HOLO_7_SIGHT",
+            "SOLOZERO_NVG_ENHANCED",
+            "SNIPER_SCOPE",
+            "FLIP_HYBRID_40X",
+            "VIPER_REFLEX_SIGHT",
+            "CANTED_HYBRID",
+            "MONOCLE_REFLEX_SIGHT",
+            "VARIABLE_ZOOM_SCOPE",
+            "CRONEN_C480_PRO_OPTIC",
+            "MERC_THERMAL_OPTIC",
+            "THERMAL_HYBRID"
+        ],
+        "Perk": [
+            "SLEIGHT_OF_HAND"
+        ],
+        "Stock": [
+            "FTAC_PRECISION_COMB",
+            "FSS_RAIDER_CHASSIS_PRO",
+            "FTAC_LIGHTWEIGHT_STOCK",
+            "FSS_RAIDER_CHASSIS_ELITE"
+        ],
+        "Underbarrel": [
+            "COMMANDO_FOREGRIP",
+            "TACTICAL_FOREGRIP",
+            "BIPOD",
+            "BIPOD",
+            "MERC_FOREGRIP",
+            "RANGER_FOREGRIP",
+            "OPERATOR_FOREGRIP"
+        ]
+    },
+    "FAL": {
+        "Ammunition": [
+            "ROUND_MAGS_24",
+            "ROUND_MAGS_30"
+        ],
+        "Barrel": [
+            "ULTRALIGHT_180",
+            "XRK_MARKSMAN",
+            "OSW_PARA_130"
+        ],
+        "Laser": [
+            "TAC_LASER",
+            "LASER_5MW",
+            "LASER_1MW"
+        ],
+        "Muzzle": [
+            "LIGHTWEIGHT_SUPPRESSOR",
+            "TACTICAL_SUPPRESSOR",
+            "MONOLITHIC_SUPPRESSOR",
+            "MUZZLE_BRAKE",
+            "COMPENSATOR"
+        ],
+        "Optic": [
+            "GI_MINI_REFLEX",
+            "CORP_COMBAT_HOLO_SIGHT",
+            "AIM_OP_REFLEX_SIGHT",
+            "SCOUT_COMBAT_OPTIC",
+            "APX5_HOLOGRAPHIC_SIGHT",
+            "FLIP_HYBRID_40X",
+            "SOLOZERO_OPTICS_MINI_REFLEX",
+            "VLK_30X_OPTIC",
+            "OPERATOR_REFLEX_SIGHT",
+            "SNIPER_SCOPE",
+            "SOLOZERO_NVG_ENHANCED",
+            "INTEGRAL_HYBRID",
+            "VIPER_REFLEX_SIGHT",
+            "PBX_HOLO_7_SIGHT",
+            "MONOCLE_REFLEX_SIGHT",
+            "CANTED_HYBRID",
+            "VARIABLE_ZOOM_SCOPE",
+            "CRONEN_C480_PRO_OPTIC",
+            "CRONEN_LP945_MINI_REFLEX",
+            "MERC_THERMAL_OPTIC",
+            "THERMAL_HYBRID"
+        ],
+        "Perk": [
+            "SLEIGHT_OF_HAND"
+        ],
+        "RearGrip": [
+            "STIPPLED_GRIP_TAPE",
+            "RUBBERIZED_GRIP_TAPE",
+            "GRANULATED_GRIP_TAPE"
+        ],
+        "Stock": [
+            "NO_STOCK",
+            "FSS_CLOSE_QUARTERS_STOCK",
+            "FACTORY_18_ALUMINUM_STOCK",
+            "FORGE_TAC_STALKER"
+        ],
+        "Underbarrel": [
+            "MERC_FOREGRIP",
+            "RANGER_FOREGRIP",
+            "OPERATOR_FOREGRIP",
+            "BIPOD",
+            "BIPOD",
+            "COMMANDO_FOREGRIP",
+            "TACTICAL_FOREGRIP"
+        ]
+    },
+    "FARA": {
+        "Barrel": [
+            "ULTRALIGHT",
+            "CAVALRY_LANCER",
+            "CONTOUR",
+            "LIBERATOR",
+            "TAKEDOWN",
+            "SPETSNAZ_RPK"
+        ],
+        "Laser": [
+            "STEADY_AIM_LASER",
+            "MOUNTED_FLASHLIGHT",
+            "KGB_TARGET_DESIGNATOR",
+            "GRU_5MW_LASER_SIGHT",
+            "TIGER_TEAM_SPOTLIGHT",
+            "EMBER_SIGHTING_POINT"
+        ],
+        "Muzzle": [
+            "MUZZLE_BRAKE",
+            "FLASHGUARD",
+            "SUPPRESSOR",
+            "INFANTRY_COMPENSATOR",
+            "SOCOM_ELIMINATOR",
+            "AGENCY_SUPPRESSOR"
+        ],
+        "Optic": [
+            "MILLSTOP_REFLEX",
+            "VISIONTECH_2X",
+            "KOBRA_RED_DOT",
+            "QUICKDOT_LED",
+            "AXIAL_ARMS_3X",
+            "SILLIX_HOLOSCOUT",
+            "MICROFLEX_LED",
+            "HAWKSMOOR",
+            "ROYAL_AND_CROSS_4X",
+            "SUSAT_MULTIZOOM",
+            "DIAMONDBACK_REFLEX",
+            "NOCH_SOVA_THERMAL"
+        ],
+        "RearGrip": [
+            "SPEED_TAPE",
+            "DROPSHOT_WRAP",
+            "SERPENT_WRAP",
+            "FIELD_TAPE",
+            "SPETSNAZ_FIELD_GRIP",
+            "GRU_ELASTIC_WRAP"
+        ],
+        "Stock": [
+            "TACTICAL_STOCK",
+            "WIRE_STOCK",
+            "DUSTER_STOCK",
+            "NO_STOCK",
+            "RAIDER_STOCK",
+            "KGB_SKELETAL_STOCK"
+        ],
+        "Underbarrel": [
+            "FOREGRIP",
+            "INFILTRATOR_GRIP",
+            "BRUISER_GRIP",
+            "SPETSNAZ_GRIP",
+            "PATROL_GRIP",
+            "SPETSNAZ_SPEEDGRIP"
+        ]
+    },
+    "FENNEC": {
+        "Ammunition": [
+            "ROUND_DRUM_MAGS_40",
+            "HOLLOW_POINT_12_R_MAGS_45"
+        ],
+        "Barrel": [
+            "ZLR_16_APEX",
+            "ZLR_18_DEADFALL"
+        ],
+        "Laser": [
+            "TAC_LASER",
+            "LASER_1MW",
+            "LASER_5MW"
+        ],
+        "Muzzle": [
+            "MUZZLE_BRAKE",
+            "TACTICAL_SUPPRESSOR",
+            "MONOLITHIC_SUPPRESSOR",
+            "ZLR_SABRE",
+            "COMPENSATOR"
+        ],
+        "Optic": [
+            "CRONEN_LP945_MINI_REFLEX",
+            "OPERATOR_REFLEX_SIGHT",
+            "CORP_COMBAT_HOLO_SIGHT",
+            "VIPER_REFLEX_SIGHT",
+            "SOLOZERO_OPTICS_MINI_REFLEX",
+            "SCOUT_COMBAT_OPTIC",
+            "APX5_HOLOGRAPHIC_SIGHT",
+            "INTEGRAL_HYBRID",
+            "GI_MINI_REFLEX",
+            "MONOCLE_REFLEX_SIGHT",
+            "VLK_30X_OPTIC",
+            "SOLOZERO_NVG_ENHANCED",
+            "CANTED_HYBRID",
+            "AIM_OP_REFLEX_SIGHT",
+            "PBX_HOLO_7_SIGHT",
+            "MERC_THERMAL_OPTIC",
+            "THERMAL_HYBRID",
+            "CRONEN_C480_PRO_OPTIC"
+        ],
+        "Perk": [
+            "SLEIGHT_OF_HAND",
+            "SLEIGHT_OF_HAND"
+        ],
+        "RearGrip": [
+            "STIPPLED_GRIP_TAPE",
+            "RUBBERIZED_GRIP_TAPE",
+            "GRANULATED_GRIP_TAPE"
+        ],
+        "Stock": [
+            "FORGE_TAC_CQS",
+            "NO_STOCK",
+            "FTAC_C6_CARBINE_PRO",
+            "ZLR_BLADE"
+        ],
+        "Underbarrel": [
+            "MERC_FOREGRIP",
+            "OPERATOR_FOREGRIP",
+            "RANGER_FOREGRIP",
+            "COMMANDO_FOREGRIP",
+            "TACTICAL_FOREGRIP"
+        ]
+    },
+    "FFAR_1": {
+        "Ammunition": [
+            "RND_38",
+            "JUNGLE_STYLE_MAG",
+            "RND_SPEED_MAG_38",
+            "STANAG_50_RND",
+            "SAS_MAG_CLAMP",
+            "SALVO_50_RND_FAST_MAG"
+        ],
+        "Barrel": [
+            "ULTRALIGHT_179",
+            "CAVALRY_LANCER_187",
+            "REINFORCED_HEAVY_195",
+            "RANGER_212",
+            "TAKEDOWN_203",
+            "TASK_FORCE_195"
+        ],
+        "Laser": [
+            "STEADY_AIM_LASER",
+            "MOUNTED_FLASHLIGHT",
+            "SOF_TARGET_DESIGNATOR",
+            "SWAT_5MW_LASER_SIGHT",
+            "TIGER_TEAM_SPOTLIGHT",
+            "EMBER_SIGHTING_POINT"
+        ],
+        "Muzzle": [
+            "MUZZLE_BRAKE",
+            "FLASHGUARD",
+            "SUPPRESSOR",
+            "INFANTRY_COMPENSATOR",
+            "SOCOM_ELIMINATOR",
+            "AGENCY_SUPPRESSOR"
+        ],
+        "Optic": [
+            "MILLSTOP_REFLEX",
+            "VISIONTECH_2X",
+            "KOBRA_RED_DOT",
+            "QUICKDOT_LED",
+            "AXIAL_ARMS_3X",
+            "SILLIX_HOLOSCOUT",
+            "MICROFLEX_LED",
+            "HAWKSMOOR",
+            "ROYAL_AND_CROSS_4X",
+            "SUSAT_MULTIZOOM",
+            "DIAMONDBACK_REFLEX",
+            "ANPVS_4_THERMAL"
+        ],
+        "RearGrip": [
+            "SPEED_TAPE",
+            "DROPSHOT_WRAP",
+            "FIELD_TAPE",
+            "SASR_JUNGLE_GRIP",
+            "SERPENT_WRAP",
+            "AIRBORNE_ELASTIC_WRAP"
+        ],
+        "Stock": [
+            "TACTICAL_STOCK",
+            "MARATHON_STOCK",
+            "DUSTER_PAD",
+            "CQB_PAD",
+            "SAS_COMBAT_STOCK",
+            "RAIDER_STOCK"
+        ],
+        "Underbarrel": [
+            "FOREGRIP",
+            "INFILTRATOR_GRIP",
+            "PATROL_GRIP",
+            "BRUISER_GRIP",
+            "FIELD_AGENT_GRIP",
+            "SFOD_SPEEDGRIP"
+        ]
+    },
+    "FINN": {
+        "Ammunition": [
+            "NATO_100_ROUND_BELTS_556",
+            "CT_75_ROUND_BELTS_556",
+            "CT_100_ROUND_BELTS_556"
+        ],
+        "Barrel": [
+            "XRK_PRO_TWIST",
+            "XRK_LONGSHOT_ADVANTAGE",
+            "FTAC_VC_8_HARRIER",
+            "FACTORY_ADVERSE",
+            "XRK_PRO_TWIST_ADVERSE",
+            "XRK_LONGSHOT_ADVERSE",
+            "FTAC_VC_8_HARRIER_ADVERSE"
+        ],
+        "Laser": [
+            "TAC_LASER"
+        ],
+        "Muzzle": [
+            "MUZZLE_BRAKE",
+            "LIGHTWEIGHT_SUPPRESSOR",
+            "TACTICAL_SUPPRESSOR",
+            "COMPENSATOR",
+            "MONOLITHIC_SUPPRESSOR"
+        ],
+        "Optic": [
+            "CRONEN_LP945_MINI_REFLEX",
+            "CORP_COMBAT_HOLO_SIGHT",
+            "AIM_OP_REFLEX_SIGHT",
+            "VIPER_REFLEX_SIGHT",
+            "VLK_30X_OPTIC",
+            "APX5_HOLOGRAPHIC_SIGHT",
+            "OPERATOR_REFLEX_SIGHT",
+            "SOLOZERO_NVG_ENHANCED",
+            "INTEGRAL_HYBRID",
+            "SCOUT_COMBAT_OPTIC",
+            "SOLOZERO_OPTICS_MINI_REFLEX",
+            "SNIPER_SCOPE",
+            "FLIP_HYBRID_40X",
+            "MERC_THERMAL_OPTIC",
+            "GI_MINI_REFLEX",
+            "PBX_HOLO_7_SIGHT",
+            "CANTED_HYBRID",
+            "MONOCLE_REFLEX_SIGHT",
+            "CRONEN_C480_PRO_OPTIC",
+            "THERMAL_HYBRID"
+        ],
+        "Perk": [
+            "SLEIGHT_OF_HAND"
+        ],
+        "Stock": [
+            "XRK_CITADEL",
+            "XRK_M309_FORWARD_ASSAULT",
+            "NO_STOCK",
+            "XRK_CHAINSAW"
+        ],
+        "Underbarrel": [
+            "COMMANDO_FOREGRIP",
+            "MERC_FOREGRIP",
+            "TACTICAL_FOREGRIP",
+            "RANGER_FOREGRIP",
+            "OPERATOR_FOREGRIP",
+            "BIPOD",
+            "BIPOD"
+        ]
+    },
+    "BULLFROG": {
+        "Ammunition": [
+            "RND_65",
+            "FAST_MAG",
+            "RND_SPEED_MAG_65",
+            "STANAG_85_RND",
+            "VANDAL_SPEED_LOADER",
+            "VDV_85_RND_FAST_MAG"
+        ],
+        "Barrel": [
+            "EXTENDED_71",
+            "CAVALRY_LANCER_7",
+            "VDV_REINFORCED_67",
+            "LIBERATOR_81",
+            "RIFLED_76",
+            "TASK_FORCE_74"
+        ],
+        "Laser": [
+            "STEADY_AIM_LASER",
+            "MOUNTED_FLASHLIGHT",
+            "KGB_TARGET_DESIGNATOR",
+            "GRU_5MW_LASER_SIGHT",
+            "TIGER_TEAM_SPOTLIGHT",
+            "EMBER_SIGHTING_POINT"
+        ],
+        "Muzzle": [
+            "MUZZLE_BRAKE",
+            "FLASHGUARD",
+            "SOUND_SUPPRESSOR",
+            "SPETSNAZ_COMPENSATOR",
+            "KGB_ELIMINATOR",
+            "GRU_SUPPRESSOR"
+        ],
+        "Optic": [
+            "QUICKDOT_LED",
+            "MILLSTOP_REFLEX",
+            "KOBRA_RED_DOT",
+            "VISIONTECH_2X",
+            "MICROFLEX_LED",
+            "HAWKSMOOR",
+            "SNAPPOINT",
+            "DIAMONDBACK_REFLEX",
+            "SILLIX_HOLOSCOUT",
+            "FASTPOINT_REFLEX",
+            "AXIAL_ARMS_3X",
+            "SUSAT_MULTIZOOM"
+        ],
+        "RearGrip": [
+            "SPEED_TAPE",
+            "DROPSHOT_WRAP",
+            "FIELD_TAPE",
+            "SPETSNAZ_FIELD_GRIP",
+            "SERPENT_WRAP",
+            "GRU_ELASTIC_WRAP"
+        ],
+        "Stock": [
+            "TACTICAL_STOCK",
+            "WIRE_STOCK",
+            "DUSTER_STOCK",
+            "NO_STOCK",
+            "SPETSNAZ_PKM_STOCK",
+            "KGB_SKELETAL_STOCK"
+        ],
+        "Underbarrel": [
+            "FOREGRIP",
+            "RED_CELL_FOREGRIP",
+            "PATROL_GRIP",
+            "BRUISER_GRIP",
+            "SPETSNAZ_GRIP",
+            "SPETSNAZ_SPEEDGRIP"
+        ]
+    },
+    "FR": {
+        "Ammunition": [
+            "ROUND_MAG_50",
+            "ROUND_MAG_60"
+        ],
+        "Barrel": [
+            "FR_159_COMMANDO",
+            "FR_244_SNIPER",
+            "FORGE_TAC_ULTRALIGHT"
+        ],
+        "Laser": [
+            "TAC_LASER",
+            "LASER_1MW",
+            "LASER_5MW"
+        ],
+        "Muzzle": [
+            "LIGHTWEIGHT_SUPPRESSOR",
+            "TACTICAL_SUPPRESSOR",
+            "MONOLITHIC_SUPPRESSOR",
+            "MUZZLE_BRAKE",
+            "COMPENSATOR"
+        ],
+        "Optic": [
+            "OPERATOR_REFLEX_SIGHT",
+            "CORP_COMBAT_HOLO_SIGHT",
+            "AIM_OP_REFLEX_SIGHT",
+            "SCOUT_COMBAT_OPTIC",
+            "APX5_HOLOGRAPHIC_SIGHT",
+            "INTEGRAL_HYBRID",
+            "SOLOZERO_OPTICS_MINI_REFLEX",
+            "VLK_30X_OPTIC",
+            "FLIP_HYBRID_40X",
+            "VIPER_REFLEX_SIGHT",
+            "PBX_HOLO_7_SIGHT",
+            "SOLOZERO_NVG_ENHANCED",
+            "SNIPER_SCOPE",
+            "CRONEN_LP945_MINI_REFLEX",
+            "MONOCLE_REFLEX_SIGHT",
+            "CRONEN_C480_PRO_OPTIC",
+            "GI_MINI_REFLEX",
+            "VARIABLE_ZOOM_SCOPE",
+            "THERMAL_HYBRID",
+            "MERC_THERMAL_OPTIC",
+            "CANTED_HYBRID"
+        ],
+        "Perk": [
+            "SLEIGHT_OF_HAND"
+        ],
+        "RearGrip": [
+            "STIPPLED_GRIP_TAPE",
+            "RUBBERIZED_GRIP_TAPE",
+            "GRANULATED_GRIP_TAPE"
+        ],
+        "Stock": [
+            "FSS_TAC_WRAP",
+            "FR_ULTRALIGHT_HOLLOW",
+            "FORGE_TAC_BALLAST_PACK"
+        ],
+        "Underbarrel": [
+            "MERC_FOREGRIP",
+            "OPERATOR_FOREGRIP",
+            "RANGER_FOREGRIP",
+            "BIPOD",
+            "BIPOD",
+            "COMMANDO_FOREGRIP",
+            "TACTICAL_FOREGRIP"
+        ]
+    },
+    "GRAU": {
+        "Ammunition": [
+            "ROUND_MAGS_50",
+            "ROUND_MAGS_60"
+        ],
+        "Barrel": [
+            "ZLR_DRIFTER_A08",
+            "TEMPUS_264_ARCHANGEL",
+            "XRK_CZEN_MK2",
+            "FFS_208_NEXUS",
+            "FSS_118_SQUALL"
+        ],
+        "Laser": [
+            "TAC_LASER",
+            "LASER_1MW",
+            "LASER_5MW"
+        ],
+        "Muzzle": [
+            "LIGHTWEIGHT_SUPPRESSOR",
+            "TACTICAL_SUPPRESSOR",
+            "MONOLITHIC_SUPPRESSOR",
+            "MUZZLE_BRAKE",
+            "COMPENSATOR"
+        ],
+        "Optic": [
+            "CRONEN_LP945_MINI_REFLEX",
+            "CORP_COMBAT_HOLO_SIGHT",
+            "OPERATOR_REFLEX_SIGHT",
+            "SCOUT_COMBAT_OPTIC",
+            "FLIP_HYBRID_40X",
+            "AIM_OP_REFLEX_SIGHT",
+            "APX5_HOLOGRAPHIC_SIGHT",
+            "INTEGRAL_HYBRID",
+            "SOLOZERO_NVG_ENHANCED",
+            "VLK_30X_OPTIC",
+            "SNIPER_SCOPE",
+            "VIPER_REFLEX_SIGHT",
+            "GI_MINI_REFLEX",
+            "PBX_HOLO_7_SIGHT",
+            "CRONEN_C480_PRO_OPTIC",
+            "MONOCLE_REFLEX_SIGHT",
+            "VARIABLE_ZOOM_SCOPE",
+            "CANTED_HYBRID",
+            "MERC_THERMAL_OPTIC",
+            "THERMAL_HYBRID"
+        ],
+        "Perk": [
+            "SLEIGHT_OF_HAND"
+        ],
+        "RearGrip": [
+            "XRK_VOID_II",
+            "CRONEN_SNIPER_ELITE",
+            "FTAC_RUBBER"
+        ],
+        "Stock": [
+            "NO_STOCK",
+            "FSS_BLACKJACK",
+            "XRK_STRIKELITE_III"
+        ],
+        "Underbarrel": [
+            "MERC_FOREGRIP",
+            "RANGER_FOREGRIP",
+            "OPERATOR_FOREGRIP",
+            "COMMANDO_FOREGRIP",
+            "CRONEN_SHARK_II"
+        ]
+    },
+    "GROZA": {
+        "Ammunition": [
+            "RND_DRUM_45",
+            "TAPED_MAGS",
+            "RND_SPEED_MAG_45",
+            "SPETSNAS_60_RND_DRUM",
+            "GRU_MAG_CLAMP",
+            "VDV_60_RND_FAST_MAG"
+        ],
+        "Barrel": [
+            "ULTRALIGHT",
+            "CAVALRY_LANCER",
+            "VDV_REINFORCED",
+            "GRU_COMPOSITE",
+            "CONTOUR_M2",
+            "CMV_MIL_SPEC"
+        ],
+        "Laser": [
+            "STEADY_AIM_LASER",
+            "MOUNTED_FLASHLIGHT",
+            "SOF_TARGET_DESIGNATOR",
+            "SWAT_5MW_LASER_SIGHT",
+            "TIGER_TEAM_SPOTLIGHT",
+            "EMBER_SIGHTING_POINT"
+        ],
+        "Muzzle": [
+            "MUZZLE_BRAKE",
+            "FLASHGUARD",
+            "SUPPRESSOR",
+            "INFANTRY_COMPENSATOR",
+            "SOCOM_ELIMINATOR",
+            "AGENCY_SUPPRESSOR"
+        ],
+        "Optic": [
+            "MILLSTOP_REFLEX",
+            "VISIONTECH_2X",
+            "KOBRA_RED_DOT",
+            "QUICKDOT_LED",
+            "AXIAL_ARMS_3X",
+            "SILLIX_HOLOSCOUT",
+            "MICROFLEX_LED",
+            "HAWKSMOOR",
+            "ROYAL_AND_CROSS_4X",
+            "SUSAT_MULTIZOOM",
+            "DIAMONDBACK_REFLEX",
+            "NOCH_SOVA_THERMAL"
+        ],
+        "RearGrip": [
+            "SPEED_TAPE",
+            "DROPSHOT_WRAP",
+            "FIELD_TAPE",
+            "SASR_JUNGLE_GRIP",
+            "SERPENT_WRAP",
+            "AIRBORNE_ELASTIC_WRAP"
+        ],
+        "Stock": [
+            "TACTICAL_STOCK",
+            "MARATHON_STOCK",
+            "DUSTER_PAD",
+            "CQB_PAD",
+            "SAS_COMBAT_STOCK",
+            "RAIDER_STOCK"
+        ],
+        "Underbarrel": [
+            "FOREGRIP",
+            "INFILTRATOR_GRIP",
+            "PATROL_GRIP",
+            "BRUISER_GRIP",
+            "SPETSNAZ_SPEEDGRIP",
+            "SPETSNAZ_GRIP"
+        ]
+    },
+    "HDR": {
+        "Ammunition": [
+            "ROUND_MAGS_7",
+            "ROUND_MAGS_9"
+        ],
+        "Barrel": [
+            "HDR_PRO_269",
+            "BULL_BARREL_26",
+            "BULL_BARREL_172"
+        ],
+        "Laser": [
+            "TAC_LASER"
+        ],
+        "Muzzle": [
+            "MONOLITHIC_SUPPRESSOR",
+            "TACTICAL_SUPPRESSOR",
+            "MUZZLE_BRAKE",
+            "LIGHTWEIGHT_SUPPRESSOR",
+            "COMPENSATOR"
+        ],
+        "Optic": [
+            "SCOUT_COMBAT_OPTIC",
+            "THERMAL_SNIPER_SCOPE",
+            "VLK_30X_OPTIC",
+            "VARIABLE_ZOOM_SCOPE",
+            "CRONEN_C480_PRO_OPTIC",
+            "MERC_THERMAL_OPTIC",
+            "THERMAL_DUAL_POWER_SCOPE"
+        ],
+        "Perk": [
+            "SLEIGHT_OF_HAND"
+        ],
+        "Stock": [
+            "FTAC_STALKER_SCOUT",
+            "FTAC_HUNTER_SCOUT",
+            "FSS_NOMAD_STOCK",
+            "FTAC_CHAMPION"
+        ],
+        "Underbarrel": [
+            "BIPOD",
+            "BIPOD"
+        ]
+    },
+    "HOLGER": {
+        "Ammunition": [
+            "ROUND_MAGS_30"
+        ],
+        "Barrel": [
+            "XRK_ULTRALIGHT",
+            "FTAC_898_SPITFIRE"
+        ],
+        "Laser": [
+            "TAC_LASER",
+            "LASER_1MW",
+            "LASER_5MW"
+        ],
+        "Muzzle": [
+            "LIGHTWEIGHT_SUPPRESSOR",
+            "TACTICAL_SUPPRESSOR",
+            "MONOLITHIC_SUPPRESSOR",
+            "MUZZLE_BRAKE",
+            "COMPENSATOR"
+        ],
+        "Optic": [
+            "CRONEN_LP945_MINI_REFLEX",
+            "CORP_COMBAT_HOLO_SIGHT",
+            "AIM_OP_REFLEX_SIGHT",
+            "VIPER_REFLEX_SIGHT",
+            "VLK_30X_OPTIC",
+            "APX5_HOLOGRAPHIC_SIGHT",
+            "OPERATOR_REFLEX_SIGHT",
+            "SOLOZERO_NVG_ENHANCED",
+            "INTEGRAL_HYBRID",
+            "SCOUT_COMBAT_OPTIC",
+            "SOLOZERO_OPTICS_MINI_REFLEX",
+            "FSS_INTEGRAL_REFLEX",
+            "SNIPER_SCOPE",
+            "FLIP_HYBRID_40X",
+            "MERC_THERMAL_OPTIC",
+            "GI_MINI_REFLEX",
+            "PBX_HOLO_7_SIGHT",
+            "CANTED_HYBRID",
+            "MONOCLE_REFLEX_SIGHT",
+            "CRONEN_C480_PRO_OPTIC",
+            "THERMAL_HYBRID",
+            "SOLOZERO_K498_40X_INTEGRAL"
+        ],
+        "Perk": [
+            "SLEIGHT_OF_HAND",
+            "SLEIGHT_OF_HAND"
+        ],
+        "RearGrip": [
+            "STIPPLED_GRIP_TAPE",
+            "RUBBERIZED_GRIP_TAPE",
+            "GRANULATED_GRIP_TAPE"
+        ],
+        "Stock": [
+            "NO_STOCK",
+            "XRK_AXIS",
+            "FSS_RANGER",
+            "FSS_INFANTRY"
+        ],
+        "Underbarrel": [
+            "MERC_FOREGRIP",
+            "RANGER_FOREGRIP",
+            "OPERATOR_FOREGRIP",
+            "COMMANDO_FOREGRIP",
+            "TACTICAL_FOREGRIP"
+        ]
+    },
+    "ISO": {
+        "Ammunition": [
+            "ROUND_MAGS_30",
+            "ROUND_DRUMS_50"
+        ],
+        "Barrel": [
+            "FTAC_225_DOMINATOR",
+            "FSS_REVOLUTION",
+            "ISO_140MM_CQB",
+            "FSS_NIGHTSHADE"
+        ],
+        "Laser": [
+            "LASER_1MW",
+            "LASER_5MW",
+            "TAC_LASER"
+        ],
+        "Muzzle": [
+            "TACTICAL_SUPPRESSOR",
+            "MUZZLE_BRAKE",
+            "LIGHTWEIGHT_SUPPRESSOR",
+            "COMPENSATOR",
+            "MONOLITHIC_SUPPRESSOR"
+        ],
+        "Optic": [
+            "AIM_OP_REFLEX_SIGHT",
+            "CORP_COMBAT_HOLO_SIGHT",
+            "OPERATOR_REFLEX_SIGHT",
+            "CRONEN_LP945_MINI_REFLEX",
+            "VLK_30X_OPTIC",
+            "APX5_HOLOGRAPHIC",
+            "GI_MINI_REFLEX",
+            "SCOUT_COMBAT_OPTIC",
+            "MONOCLE_REFLEX_SIGHT",
+            "SOLOZERO_NVG_ENHANCED",
+            "VIPER_REFLEX_SIGHT",
+            "PBX_HOLO_7_SIGHT",
+            "FLIP_HYBRID_40X",
+            "SOLOZERO_OPTICS_MINI_REFLEX",
+            "MERC_THERMAL_OPTIC",
+            "CRONEN_C480_PRO_OPTIC",
+            "THERMAL_HYBRID"
+        ],
+        "Perk": [
+            "SLEIGHT_OF_HAND"
+        ],
+        "RearGrip": [
+            "FSS_VICE_ISO_GRIP",
+            "FTAC_ELITE_ISO_GRIP",
+            "ISO_TAC_FORM"
+        ],
+        "Stock": [
+            "FORGE_TAC_ULTRALIGHT",
+            "FORGE_TAC_STALKER",
+            "FTAC_VAGRANT",
+            "ISO_COLLAPSIBLE"
+        ],
+        "Underbarrel": [
+            "COMMANDO_FOREGRIP",
+            "MERC_FOREGRIP",
+            "TACTICAL_FOREGRIP",
+            "RANGER_FOREGRIP",
+            "OPERATOR_FOREGRIP"
+        ]
+    },
+    "KAR98K": {
+        "Barrel": [
+            "SINGUARD_CUSTOM_251",
+            "SINGUARD_CUSTOM_212",
+            "SINGUARD_CUSTOM_276"
+        ],
+        "Laser": [
+            "TAC_LASER"
+        ],
+        "Muzzle": [
+            "MUZZLE_BRAKE",
+            "TACTICAL_SUPPRESSOR",
+            "MONOLITHIC_SUPPRESSOR",
+            "COMPENSATOR",
+            "LIGHTWEIGHT_SUPPRESSOR"
+        ],
+        "Optic": [
+            "CRONEN_LP945_MINI_REFLEX",
+            "AIM_OP_REFLEX_SIGHT",
+            "CORP_COMBAT_HOLO_SIGHT",
+            "SCOUT_COMBAT_OPTIC",
+            "APX5_HOLOGRAPHIC_SIGHT",
+            "OPERATOR_REFLEX_SIGHT",
+            "FLIP_HYBRID_40X",
+            "INTEGRAL_HYBRID",
+            "SOLOZERO_NVG_ENHANCED",
+            "VLK_30X_OPTIC",
+            "PBX_HOLO_7_SIGHT",
+            "GI_MINI_REFLEX",
+            "VIPER_REFLEX_SIGHT",
+            "CRONEN_C480_PRO_OPTIC",
+            "SOLOZERO_OPTICS_MINI_REFLEX",
+            "MONOCLE_REFLEX_SIGHT",
+            "MERC_THERMAL_OPTIC",
+            "THERMAL_HYBRID",
+            "SNIPER_SCOPE",
+            "VARIABLE_ZOOM_SCOPE"
+        ],
+        "Perk": [
+            "SLEIGHT_OF_HAND",
+            "FOCUS"
+        ],
+        "RearGrip": [
+            "STIPPLED_GRIP_TAPE",
+            "GRANULATED_GRIP_TAPE",
+            "RUBBERIZED_GRIP_TAPE"
+        ],
+        "Stock": [
+            "STVOL_PRECISION_COMB",
+            "HOLLOW_STOCK_MOD",
+            "FTAC_SPORT_COMB"
+        ],
+        "Underbarrel": [
+            "BIPOD"
+        ]
+    },
+    "KILO_141": {
+        "Ammunition": [
+            "ROUND_MAGS_50",
+            "ROUND_MAGS_60",
+            "ROUND_DRUMS_100"
+        ],
+        "Barrel": [
+            "SINGUARD_ARMS_166_SOCOM",
+            "SINGUARD_ARMS_198_PROWLER",
+            "SINGUARD_ARMS_WHISPER"
+        ],
+        "Laser": [
+            "TAC_LASER",
+            "LASER_1MW",
+            "LASER_5MW"
+        ],
+        "Muzzle": [
+            "LIGHTWEIGHT_SUPPRESSOR",
+            "TACTICAL_SUPPRESSOR",
+            "MONOLITHIC_SUPPRESSOR",
+            "MUZZLE_BRAKE",
+            "COMPENSATOR"
+        ],
+        "Optic": [
+            "OPERATOR_REFLEX_SIGHT",
+            "CORP_COMBAT_HOLO_SIGHT",
+            "AIM_OP_REFLEX_SIGHT",
+            "GI_MINI_REFLEX",
+            "SCOUT_COMBAT_OPTIC",
+            "APX5_HOLOGRAPHIC_SIGHT",
+            "CRONEN_LP945_MINI_REFLEX",
+            "FLIP_HYBRID_40X",
+            "VLK_30X_OPTIC",
+            "INTEGRAL_HYBRID",
+            "VIPER_REFLEX_SIGHT",
+            "CRONEN_C480_PRO_OPTIC",
+            "SOLOZERO_NVG_ENHANCED",
+            "MONOCLE_REFLEX_SIGHT",
+            "SNIPER_SCOPE",
+            "MERC_THERMAL_OPTIC",
+            "PBX_HOLO_7_SIGHT",
+            "THERMAL_HYBRID",
+            "SOLOZERO_OPTICS_MINI_REFLEX",
+            "CANTED_HYBRID",
+            "VARIABLE_ZOOM_SCOPE"
+        ],
+        "Perk": [
+            "SLEIGHT_OF_HAND"
+        ],
+        "RearGrip": [
+            "STIPPLED_GRIP_TAPE",
+            "RUBBERIZED_GRIP_TAPE",
+            "GRANULATED_GRIP_TAPE"
+        ],
+        "Stock": [
+            "NO_STOCK",
+            "FSS_CLOSE_QUARTERS_STOCK",
+            "FORGE_TAC_ULTRALIGHT",
+            "SINGUARD_ARMS_SNIPER_PRO"
+        ],
+        "Underbarrel": [
+            "MERC_FOREGRIP",
+            "OPERATOR_FOREGRIP",
+            "RANGER_FOREGRIP",
+            "BIPOD",
+            "BIPOD",
+            "COMMANDO_FOREGRIP",
+            "TACTICAL_FOREGRIP"
+        ]
+    },
+    "KRIG_6": {
+        "Barrel": [
+            "ULTRALIGHT",
+            "CAVALRY_LANCER",
+            "CONTOUR",
+            "RANGER",
+            "TAKEDOWN",
+            "CMV_MIL_SPEC"
+        ],
+        "Laser": [
+            "STEADY_AIM_LASER",
+            "MOUNTED_FLASHLIGHT",
+            "SOF_TARGET_DESIGNATOR",
+            "SWAT_5MW_LASER_SIGHT",
+            "TIGER_TEAM_SPOTLIGHT",
+            "EMBER_SIGHTING_POINT"
+        ],
+        "Muzzle": [
+            "MUZZLE_BRAKE",
+            "FLASHGUARD",
+            "SUPPRESSOR",
+            "INFANTRY_COMPENSATOR",
+            "SOCOM_ELIMINATOR",
+            "AGENCY_SUPPRESSOR"
+        ],
+        "Optic": [
+            "MILLSTOP_REFLEX",
+            "VISIONTECH_2X",
+            "KOBRA_RED_DOT",
+            "QUICKDOT_LED",
+            "AXIAL_ARMS_3X",
+            "SILLIX_HOLOSCOUT",
+            "MICROFLEX_LED",
+            "HAWKSMOOR",
+            "ROYAL_AND_CROSS_4X",
+            "SUSAT_MULTIZOOM",
+            "DIAMONDBACK_REFLEX",
+            "NOCH_SOVA_THERMAL"
+        ],
+        "RearGrip": [
+            "SPEED_TAPE",
+            "DROPSHOT_WRAP",
+            "FIELD_TAPE",
+            "SASR_JUNGLE_GRIP",
+            "SERPENT_WRAP",
+            "AIRBORNE_ELASTIC_WRAP"
+        ],
+        "Stock": [
+            "TACTICAL_STOCK",
+            "WIRE_STOCK",
+            "DUSTER_STOCK",
+            "NO_STOCK",
+            "SAS_COMBAT_STOCK",
+            "RAIDER_STOCK"
+        ],
+        "Underbarrel": [
+            "FOREGRIP",
+            "INFILTRATOR_GRIP",
+            "PATROL_GRIP",
+            "BRUISER_GRIP",
+            "FIELD_AGENT_GRIP",
+            "SFOD_SPEEDGRIP"
+        ]
+    },
+    "KSP_45": {
+        "Barrel": [
+            "EXTENDED",
+            "CAVALRY",
+            "REINFORCED_HEAVY",
+            "RANGER",
+            "RIFLED",
+            "TASK_FORCE"
+        ],
+        "Laser": [
+            "STEADY_AIM_LASER",
+            "MOUNTED_FLASHLIGHT",
+            "KGB_TARGET_DESIGNATOR",
+            "GRU_5MW_LASER_SIGHT",
+            "TIGER_TEAM_SPOTLIGHT",
+            "EMBER_SIGHTING_POINT"
+        ],
+        "Muzzle": [
+            "MUZZLE_BRAKE",
+            "FLASHGUARD",
+            "SOUND_SUPPRESSOR",
+            "INFANTRY_COMPENSATOR",
+            "SOCOM_ELIMINATOR",
+            "AGENCY_SUPPRESSOR"
+        ],
+        "Optic": [
+            "QUICKDOT_LED",
+            "MILLSTOP_REFLEX",
+            "KOBRA_RED_DOT",
+            "VISIONTECH_2X",
+            "MICROFLEX_LED",
+            "HAWKSMOOR",
+            "SNAPPOINT",
+            "DIAMONDBACK_REFLEX",
+            "SILLIX_HOLOSCOUT",
+            "FASTPOINT_REFLEX",
+            "AXIAL_ARMS_3X",
+            "SUSAT_MULTIZOOM"
+        ],
+        "RearGrip": [
+            "SPEED_TAPE",
+            "DROPSHOT_WRAP",
+            "FIELD_TAPE",
+            "SASR_JUNGLE_GRIP",
+            "SERPENT_WRAP",
+            "AIRBORNE_ELASTIC_WRAP"
+        ],
+        "Stock": [
+            "TACTICAL_STOCK",
+            "COLLAPSED_STOCK",
+            "DUSTER_STOCK",
+            "NO_STOCK",
+            "SAS_COMBAT_STOCK",
+            "RAIDER_STOCK"
+        ],
+        "Underbarrel": [
+            "FOREGRIP",
+            "RED_CELL_FOREGRIP",
+            "PATROL_GRIP",
+            "STRIKER_GRIP",
+            "FIELD_AGENT_GRIP",
+            "SFOD_SPEEDGRIP"
+        ]
+    },
+    "LC10": {
+        "Barrel": [
+            "EXTENDED",
+            "CAVALRY",
+            "REINFORCED_HEAVY",
+            "RANGER",
+            "RIFLED",
+            "TASK_FORCE"
+        ],
+        "Laser": [
+            "STEADY_AIM_LASER",
+            "MOUNTED_FLASHLIGHT",
+            "SOF_TARGET_DESIGNATOR",
+            "SWAT_5MW_LASER_SIGHT",
+            "TIGER_TEAM_SPOTLIGHT",
+            "EMBER_SIGHTING_POINT"
+        ],
+        "Muzzle": [
+            "MUZZLE_BRAKE",
+            "FLASHGUARD",
+            "SOUND_SUPPRESSOR",
+            "INFANTRY_COMPENSATOR",
+            "SOCOM_ELIMINATOR",
+            "AGENCY_SUPPRESSOR"
+        ],
+        "Optic": [
+            "QUICKDOT_LED",
+            "MILLSTOP_REFLEX",
+            "KOBRA_RED_DOT",
+            "VISIONTECH_2X",
+            "MICROFLEX_LED",
+            "HAWKSMOOR",
+            "SNAPPOINT",
+            "DIAMONDBACK_REFLEX",
+            "SILLIX_HOLOSCOUT",
+            "FASTPOINT_REFLEX",
+            "AXIAL_ARMS_3X",
+            "SUSAT_MULTIZOOM"
+        ],
+        "RearGrip": [
+            "SPEED_TAPE",
+            "DROPSHOT_WRAP",
+            "FIELD_TAPE",
+            "SASR_JUNGLE_GRIP",
+            "SERPENT_WRAP",
+            "AIRBORNE_ELASTIC_WRAP"
+        ],
+        "Stock": [
+            "TACTICAL_STOCK",
+            "WIRE_STOCK",
+            "DUSTER_STOCK",
+            "NO_STOCK",
+            "SAS_COMBAT_STOCK",
+            "RAIDER_STOCK"
+        ],
+        "Underbarrel": [
+            "FOREGRIP",
+            "RED_CELL_FOREGRIP",
+            "BRUISER_GRIP",
+            "FIELD_AGENT_GRIP",
+            "PATROL_GRIP",
+            "SFOD_SPEEDGRIP"
+        ]
+    },
+    "M13": {
+        "Ammunition": [
+            "ROUND_MAGS_50",
+            "ROUND_MAGS_60",
+            "BLACKOUT_30_ROUND_MAGS_300"
+        ],
+        "Barrel": [
+            "TEMPUS_MINI",
+            "TEMPUS_CYCLONE",
+            "TEMPUS_MARKSMAN"
+        ],
+        "Laser": [
+            "TAC_LASER",
+            "LASER_1MW",
+            "LASER_5MW"
+        ],
+        "Muzzle": [
+            "LIGHTWEIGHT_SUPPRESSOR",
+            "TACTICAL_SUPPRESSOR",
+            "MONOLITHIC_SUPPRESSOR",
+            "MUZZLE_BRAKE",
+            "COMPENSATOR"
+        ],
+        "Optic": [
+            "SOLOZERO_OPTICS_MINI_REFLEX",
+            "AIM_OP_REFLEX_SIGHT",
+            "CORP_COMBAT_HOLO_SIGHT",
+            "SCOUT_COMBAT_OPTIC",
+            "OPERATOR_REFLEX_SIGHT",
+            "FLIP_HYBRID_40X",
+            "APX5_HOLOGRAPHIC_SIGHT",
+            "INTEGRAL_HYBRID",
+            "GI_MINI_REFLEX",
+            "VLK_30X_OPTIC",
+            "CRONEN_LP945_MINI_REFLEX",
+            "VIPER_REFLEX_SIGHT",
+            "SNIPER_SCOPE",
+            "SOLOZERO_NVG_ENHANCED",
+            "MONOCLE_REFLEX_SIGHT",
+            "CRONEN_C480_PRO_OPTIC",
+            "MERC_THERMAL_OPTIC",
+            "CANTED_HYBRID",
+            "PBX_HOLO_7_SIGHT",
+            "THERMAL_HYBRID",
+            "VARIABLE_ZOOM_SCOPE"
+        ],
+        "Perk": [
+            "SLEIGHT_OF_HAND"
+        ],
+        "RearGrip": [
+            "STIPPLED_GRIP_TAPE",
+            "RUBBERIZED_GRIP_TAPE",
+            "GRANULATED_GRIP_TAPE"
+        ],
+        "Stock": [
+            "NO_STOCK",
+            "FSS_CLOSE_QUARTERS_STOCK",
+            "M13_SKELETON_STOCK",
+            "FORGE_TAC_STALKER"
+        ],
+        "Underbarrel": [
+            "MERC_FOREGRIP",
+            "RANGER_FOREGRIP",
+            "OPERATOR_FOREGRIP",
+            "BIPOD",
+            "BIPOD",
+            "COMMANDO_FOREGRIP",
+            "TACTICAL_FOREGRIP"
+        ]
+    },
+    "M16": {
+        "Barrel": [
+            "RAPID_FIRE",
+            "CAVALRY_LANCER",
+            "STRIKE_TEAM",
+            "TITANIUM",
+            "MATCH_GRADE",
+            "TASK_FORCE",
+            "MATCH_GRADE",
+            "TASK_FORCE"
+        ]
+    },
+    "M4A1": {
+        "Ammunition": [
+            "ROUND_MAGS_50",
+            "ROUND_MAGS_60",
+            "PARA_32_ROUND_MAGS_9MM",
+            "SOCOM_10_ROUND_MAGS_458"
+        ],
+        "Barrel": [
+            "FSS_115_COMMANDO",
+            "STOCK_M16_GRENADIER",
+            "FSS_145_TAC_LITE",
+            "CORVUS_CUSTOM_MARKSMAN",
+            "FSS_124_PREDATOR"
+        ],
+        "Laser": [
+            "TAC_LASER",
+            "LASER_1MW",
+            "LASER_5MW"
+        ],
+        "Muzzle": [
+            "LIGHTWEIGHT_SUPPRESSOR",
+            "TACTICAL_SUPPRESSOR",
+            "MONOLITHIC_SUPPRESSOR",
+            "MUZZLE_BRAKE",
+            "COMPENSATOR"
+        ],
+        "Optic": [
+            "CRONEN_LP945_MINI_REFLEX",
+            "CORP_COMBAT_HOLO_SIGHT",
+            "OPERATOR_REFLEX_SIGHT",
+            "SCOUT_COMBAT_OPTIC",
+            "FLIP_HYBRID_40X",
+            "AIM_OP_REFLEX_SIGHT",
+            "APX5_HOLOGRAPHIC_SIGHT",
+            "INTEGRAL_HYBRID",
+            "SOLOZERO_NVG_ENHANCED",
+            "VLK_30X_OPTIC",
+            "SNIPER_SCOPE",
+            "VIPER_REFLEX_SIGHT",
+            "GI_MINI_REFLEX",
+            "PBX_HOLO_7_SIGHT",
+            "CRONEN_C480_PRO_OPTIC",
+            "MONOCLE_REFLEX_SIGHT",
+            "VARIABLE_ZOOM_SCOPE",
+            "CANTED_HYBRID",
+            "MERC_THERMAL_OPTIC",
+            "THERMAL_HYBRID"
+        ],
+        "Perk": [
+            "SLEIGHT_OF_HAND"
+        ],
+        "RearGrip": [
+            "STIPPLED_GRIP_TAPE",
+            "RUBBERIZED_GRIP_TAPE",
+            "GRANULATED_GRIP_TAPE"
+        ],
+        "Stock": [
+            "NO_STOCK",
+            "FORGE_TAC_CQS",
+            "M_16_STOCK",
+            "SINGUARD_ARMS_INVADER"
+        ],
+        "Underbarrel": [
+            "MERC_FOREGRIP",
+            "RANGER_FOREGRIP",
+            "OPERATOR_FOREGRIP",
+            "BIPOD",
+            "BIPOD",
+            "COMMANDO_FOREGRIP",
+            "TACTICAL_FOREGRIP"
+        ]
+    },
+    "M60": {
+        "Barrel": [
+            "CUT_DOWN",
+            "CAVALRY_LANCER",
+            "DIVISION",
+            "SOR_CUT_DOWN",
+            "MATCH_GRADE",
+            "TASK_FORCE"
+        ],
+        "Laser": [
+            "STEADY_AIM_LASER",
+            "MOUNTED_FLASHLIGHT",
+            "SOF_TARGET_DESIGNATOR",
+            "SWAT_5MW_LASER_SIGHT",
+            "TIGER_TEAM_SPOTLIGHT",
+            "EMBER_SIGHTING_POINT"
+        ],
+        "Muzzle": [
+            "MUZZLE_BRAKE",
+            "FLASHGUARD",
+            "SUPPRESSOR",
+            "INFANTRY_COMPENSATOR",
+            "SOCOM_ELIMINATOR",
+            "AGENCY_SUPPRESSOR"
+        ],
+        "Optic": [
+            "MILLSTOP_REFLEX",
+            "VISIONTECH_2X",
+            "KOBRA_RED_DOT",
+            "QUICKDOT_LED",
+            "AXIAL_ARMS_3X",
+            "SILLIX_HOLOSCOUT",
+            "MICROFLEX_LED",
+            "HAWKSMOOR",
+            "ROYAL_AND_CROSS_4X",
+            "SUSAT_MULTIZOOM",
+            "DIAMONDBACK_REFLEX",
+            "NOCH_SOVA_THERMAL"
+        ],
+        "RearGrip": [
+            "SPEED_TAPE",
+            "DROPSHOT_WRAP",
+            "FIELD_TAPE",
+            "SASR_JUNGLE_GRIP",
+            "SERPENT_WRAP",
+            "AIRBORNE_ELASTIC_WRAP"
+        ],
+        "Stock": [
+            "TACTICAL_STOCK",
+            "WIRE_STOCK",
+            "DUSTER_PAD",
+            "NO_STOCK",
+            "SAS_COMBAT_STOCK",
+            "RAIDER_PAD"
+        ],
+        "Underbarrel": [
+            "FOREGRIP",
+            "INFILTRATOR_GRIP",
+            "PATROL_GRIP",
+            "BRUISER_GRIP",
+            "SPETSNAZ_SPEEDGRIP",
+            "SPETSNAZ_GRIP"
+        ]
+    },
+    "M91": {
+        "Ammunition": [
+            "ROUND_BELT_120",
+            "ROUND_BELT_150"
+        ],
+        "Barrel": [
+            "M91_SPECIAL_FORCES",
+            "M91_INFANTRY",
+            "M91_HEAVY"
+        ],
+        "Laser": [
+            "TAC_LASER",
+            "LASER_1MW",
+            "LASER_5MW"
+        ],
+        "Muzzle": [
+            "LIGHTWEIGHT_SUPPRESSOR",
+            "TACTICAL_SUPPRESSOR",
+            "MONOLITHIC_SUPPRESSOR",
+            "MUZZLE_BRAKE",
+            "COMPENSATOR"
+        ],
+        "Optic": [
+            "CRONEN_LP945_MINI_REFLEX",
+            "CORP_COMBAT_HOLO_SIGHT",
+            "AIM_OP_REFLEX_SIGHT",
+            "VIPER_REFLEX_SIGHT",
+            "VLK_30X_OPTIC",
+            "APX5_HOLOGRAPHIC_SIGHT",
+            "OPERATOR_REFLEX_SIGHT",
+            "SOLOZERO_NVG_ENHANCED",
+            "INTEGRAL_HYBRID",
+            "SCOUT_COMBAT_OPTIC",
+            "SOLOZERO_OPTICS_MINI_REFLEX",
+            "SNIPER_SCOPE",
+            "FLIP_HYBRID_40X",
+            "MERC_THERMAL_OPTIC",
+            "GI_MINI_REFLEX",
+            "PBX_HOLO_7_SIGHT",
+            "CANTED_HYBRID",
+            "MONOCLE_REFLEX_SIGHT",
+            "CRONEN_C480_PRO_OPTIC",
+            "THERMAL_HYBRID"
+        ],
+        "Perk": [
+            "SLEIGHT_OF_HAND"
+        ],
+        "RearGrip": [
+            "STIPPLED_GRIP_TAPE",
+            "RUBBERIZED_GRIP_TAPE",
+            "GRANULATED_GRIP_TAPE"
+        ],
+        "Stock": [
+            "NO_STOCK",
+            "XRK_STRIKER",
+            "FORGE_TAC_STALKER",
+            "FORGE_TAC_ULTRALIGHT"
+        ],
+        "Underbarrel": [
+            "MERC_FOREGRIP",
+            "RANGER_FOREGRIP",
+            "OPERATOR_FOREGRIP",
+            "BIPOD",
+            "BIPOD",
+            "COMMANDO_FOREGRIP",
+            "TACTICAL_FOREGRIP"
+        ]
+    },
+    "MAC_10": {
+        "Ammunition": [
+            "RND_DRUM_43",
+            "FAST_MAG",
+            "RND_SPEED_MAG_43",
+            "STANAG_53_RND_DRUM",
+            "VANDAL_SPEED_LOADER",
+            "SALVO_53_RND_FAST_MAG"
+        ],
+        "Barrel": [
+            "EXTENDED_53",
+            "CAVALRY_65",
+            "REINFORCED_HEAVY_61",
+            "RANGER_53",
+            "RIFLED_65",
+            "TASK_FORCE_59"
+        ],
+        "Laser": [
+            "STEADY_AIM_LASER",
+            "MOUNTED_FLASHLIGHT",
+            "KGB_TARGET_DESIGNATOR",
+            "GRU_5MW_LASER_SIGHT",
+            "TIGER_TEAM_SPOTLIGHT",
+            "EMBER_SIGHTING_POINT"
+        ],
+        "Muzzle": [
+            "MUZZLE_BRAKE",
+            "FLASHGUARD",
+            "SOUND_SUPPRESSOR",
+            "INFANTRY_COMPENSATOR",
+            "SOCOM_ELIMINATOR",
+            "AGENCY_SUPPRESSOR"
+        ],
+        "Optic": [
+            "QUICKDOT_LED",
+            "MILLSTOP_REFLEX",
+            "KOBRA_RED_DOT",
+            "VISIONTECH_2X",
+            "MICROFLEX_LED",
+            "HAWKSMOOR",
+            "SNAPPOINT",
+            "DIAMONDBACK_REFLEX",
+            "SILLIX_HOLOSCOUT",
+            "FASTPOINT_REFLEX",
+            "AXIAL_ARMS_3X",
+            "SUSAT_MULTIZOOM"
+        ],
+        "RearGrip": [
+            "SPEED_TAPE",
+            "DROPSHOT_WRAP",
+            "FIELD_TAPE",
+            "SASR_JUNGLE_GRIP",
+            "SERPENT_WRAP",
+            "AIRBORNE_ELASTIC_WRAP"
+        ],
+        "Stock": [
+            "TACTICAL_STOCK",
+            "WIRE_STOCK",
+            "DUSTER_STOCK",
+            "NO_STOCK",
+            "SAS_COMBAT_STOCK",
+            "RAIDER_STOCK"
+        ],
+        "Underbarrel": [
+            "FOREGRIP",
+            "RED_CELL_FOREGRIP",
+            "PATROL_GRIP",
+            "STRIKER_GRIP",
+            "FIELD_AGENT_GRIP",
+            "SFOD_SPEEDGRIP"
+        ]
+    },
+    "MG34": {
+        "Ammunition": [
+            "ROUND_BELT_75",
+            "ROUND_BELT_100"
+        ],
+        "Barrel": [
+            "FSS_BRUTE",
+            "FSS_STUBBY",
+            "FSS_ELITE"
+        ],
+        "Laser": [
+            "TAC_LASER",
+            "LASER_1MW",
+            "LASER_5MW"
+        ],
+        "Muzzle": [
+            "LIGHTWEIGHT_SUPPRESSOR",
+            "TACTICAL_SUPPRESSOR",
+            "MONOLITHIC_SUPPRESSOR",
+            "MUZZLE_BRAKE",
+            "COMPENSATOR"
+        ],
+        "Optic": [
+            "OPERATOR_REFLEX_SIGHT",
+            "CORP_COMBAT_HOLO_SIGHT",
+            "AIM_OP_REFLEX_SIGHT",
+            "GI_MINI_REFLEX",
+            "SCOUT_COMBAT_OPTIC",
+            "APX5_HOLOGRAPHIC_SIGHT",
+            "CRONEN_LP945_MINI_REFLEX",
+            "INTEGRAL_HYBRID",
+            "SOLOZERO_NVG_ENHANCED",
+            "VLK_30X_OPTIC",
+            "VIPER_REFLEX_SIGHT",
+            "MERC_THERMAL_OPTIC",
+            "THERMAL_HYBRID",
+            "CRONEN_C480_PRO_OPTIC",
+            "MONOCLE_REFLEX_SIGHT",
+            "CANTED_HYBRID",
+            "PBX_HOLO_7_SIGHT",
+            "SOLOZERO_OPTICS_MINI_REFLEX",
+            "SNIPER_SCOPE"
+        ],
+        "Perk": [
+            "SLEIGHT_OF_HAND"
+        ],
+        "RearGrip": [
+            "STIPPLED_GRIP_TAPE",
+            "RUBBERIZED_GRIP_TAPE",
+            "GRANULATED_GRIP_TAPE"
+        ],
+        "Stock": [
+            "NO_STOCK",
+            "FSS_CLOSE_QUARTERS_STOCK",
+            "FORGE_TAC_STALKER",
+            "FORGE_TAC_ULTRALIGHT"
+        ],
+        "Underbarrel": [
+            "MERC_FOREGRIP",
+            "OPERATOR_FOREGRIP",
+            "RANGER_FOREGRIP",
+            "BIPOD",
+            "BIPOD",
+            "COMMANDO_FOREGRIP",
+            "TACTICAL_FOREGRIP"
+        ]
+    },
+    "MILANO_821": {
+        "Barrel": [
+            "EXTENDED",
+            "CAVALRY",
+            "REINFORCED_HEAVY",
+            "RANGER",
+            "RIFLED",
+            "TASK_FORCE"
+        ],
+        "Laser": [
+            "STEADY_AIM_LASER",
+            "MOUNTED_FLASHLIGHT",
+            "KGB_TARGET_DESIGNATOR",
+            "GRU_5MW_LASER_SIGHT",
+            "TIGER_TEAM_SPOTLIGHT",
+            "EMBER_SIGHTING_POINT"
+        ],
+        "Muzzle": [
+            "MUZZLE_BRAKE",
+            "FLASHGUARD",
+            "SOUND_SUPPRESSOR",
+            "INFANTRY_COMPENSATOR",
+            "SOCOM_ELIMINATOR",
+            "AGENCY_SUPPRESSOR"
+        ],
+        "Optic": [
+            "QUICKDOT_LED",
+            "MILLSTOP_REFLEX",
+            "KOBRA_RED_DOT",
+            "VISIONTECH_2X",
+            "MICROFLEX_LED",
+            "HAWKSMOOR",
+            "SNAPPOINT",
+            "DIAMONDBACK_REFLEX",
+            "SILLIX_HOLOSCOUT",
+            "FASTPOINT_REFLEX",
+            "AXIAL_ARMS_3X",
+            "SUSAT_MULTIZOOM"
+        ],
+        "RearGrip": [
+            "SPEED_TAPE",
+            "DROPSHOT_WRAP",
+            "FIELD_TAPE",
+            "SASR_JUNGLE_GRIP",
+            "SERPENT_WRAP",
+            "AIRBORNE_ELASTIC_WRAP"
+        ],
+        "Stock": [
+            "TACTICAL_STOCK",
+            "COLLAPSED_STOCK",
+            "DUSTER_STOCK",
+            "MARATHON_STOCK",
+            "SAS_COMBAT_STOCK",
+            "RAIDER_STOCK"
+        ],
+        "Underbarrel": [
+            "FOREGRIP",
+            "RED_CELL_FOREGRIP",
+            "PATROL_GRIP",
+            "BRUISER_GRIP",
+            "FIELD_AGENT_GRIP",
+            "SFOD_SPEEDGRIP"
+        ]
+    },
+    "MK2_CARBINE": {
+        "Barrel": [
+            "FSS_180_FACTORY",
+            "FSS_200_FACTORY",
+            "FSS_240_FACTORY"
+        ],
+        "Laser": [
+            "TAC_LASER"
+        ],
+        "Muzzle": [
+            "TACTICAL_SUPPRESSOR",
+            "MUZZLE_BRAKE",
+            "COMPENSATOR",
+            "LIGHTWEIGHT_SUPPRESSOR",
+            "MONOLITHIC_SUPPRESSOR"
+        ],
+        "Optic": [
+            "CRONEN_LP945_MINI_REFLEX",
+            "CORP_COMBAT_HOLO_SIGHT",
+            "VIPER_REFLEX_SIGHT",
+            "PBX_HOLO_7_SIGHT",
+            "CRONEN_C480_PRO_OPTIC",
+            "SOLOZERO_OPTICS_MINI_REFLEX",
+            "OPERATOR_REFLEX_SIGHT",
+            "VLK_30X_OPTIC",
+            "SOLOZERO_NVG_ENHANCED",
+            "SNIPER_SCOPE",
+            "FLIP_HYBRID_40X",
+            "GI_MINI_REFLEX",
+            "AIM_OP_REFLEX_SIGHT",
+            "APX5_HOLOGRAPHIC_SIGHT",
+            "MONOCLE_REFLEX_SIGHT",
+            "THERMAL_HYBRID",
+            "SCOUT_COMBAT_OPTIC",
+            "MERC_THERMAL_OPTIC",
+            "INTEGRAL_HYBRID",
+            "VARIABLE_ZOOM_SCOPE"
+        ],
+        "Perk": [
+            "SLEIGHT_OF_HAND"
+        ],
+        "RearGrip": [
+            "RUBBERIZED_GRIP_TAPE",
+            "STIPPLED_GRIP_TAPE",
+            "GRANULATED_GRIP_TAPE"
+        ],
+        "Stock": [
+            "CARTRIDGE_SLEEVE",
+            "FSS_MK2_SPORT_COMB",
+            "FSS_MK2_PRECISION_COMB",
+            "MK2_ULTRALIGHT_HOLLOW"
+        ]
+    },
+    "MP5": {
+        "Ammunition": [
+            "ROUND_MAGS_45",
+            "AUTO_30_ROUND_MAGS_10MM"
+        ],
+        "Barrel": [
+            "FSS_LIGHT",
+            "MONOLITHIC_INTEGRAL_SUPPRESSOR",
+            "FSS_MINI",
+            "SUBSONIC_INTEGRAL_SUPPRESSOR"
+        ],
+        "Laser": [
+            "TAC_LASER",
+            "LASER_1MW",
+            "LASER_5MW"
+        ],
+        "Muzzle": [
+            "LIGHTWEIGHT_SUPPRESSOR",
+            "TACTICAL_SUPPRESSOR",
+            "MONOLITHIC_SUPPRESSOR",
+            "MUZZLE_BRAKE",
+            "COMPENSATOR"
+        ],
+        "Optic": [
+            "OPERATOR_REFLEX_SIGHT",
+            "APX5_HOLOGRAPHIC_SIGHT",
+            "AIM_OP_REFLEX_SIGHT",
+            "SOLOZERO_OPTICS_MINI_REFLEX",
+            "CORP_COMBAT_HOLO_SIGHT",
+            "SOLOZERO_NVG_ENHANCED",
+            "SCOUT_COMBAT_OPTIC",
+            "GI_MINI_REFLEX",
+            "VLK_30X_OPTIC",
+            "MERC_THERMAL_OPTIC",
+            "CANTED_HYBRID",
+            "CRONEN_LP945_MINI_REFLEX",
+            "PBX_HOLO_7_SIGHT",
+            "VIPER_REFLEX_SIGHT",
+            "CRONEN_C480_PRO_OPTIC",
+            "THERMAL_HYBRID",
+            "INTEGRAL_HYBRID",
+            "MONOCLE_REFLEX_SIGHT"
+        ],
+        "Perk": [
+            "SLEIGHT_OF_HAND"
+        ],
+        "RearGrip": [
+            "STIPPLED_GRIP_TAPE",
+            "RUBBERIZED_GRIP_TAPE",
+            "GRANULATED_GRIP_TAPE"
+        ],
+        "Stock": [
+            "FSS_CLOSE_QUARTERS_STOCK",
+            "FTAC_COLLAPSIBLE",
+            "FORGE_TAC_ULTRALIGHT",
+            "CLASSIC_STRAIGHT_LINE_STOCK"
+        ],
+        "Underbarrel": [
+            "MERC_FOREGRIP",
+            "RANGER_FOREGRIP",
+            "OPERATOR_FOREGRIP",
+            "COMMANDO_FOREGRIP",
+            "TACTICAL_FOREGRIP"
+        ]
+    },
+    "MP7": {
+        "Ammunition": [
+            "ROUND_MAGS_50",
+            "ROUND_MAGS_60"
+        ],
+        "Barrel": [
+            "FSS_STRIKE",
+            "FSS_RECON",
+            "FSS_SWAT"
+        ],
+        "Laser": [
+            "TAC_LASER",
+            "LASER_1MW",
+            "LASER_5MW"
+        ],
+        "Muzzle": [
+            "LIGHTWEIGHT_SUPPRESSOR",
+            "TACTICAL_SUPPRESSOR",
+            "MONOLITHIC_SUPPRESSOR",
+            "MUZZLE_BRAKE",
+            "COMPENSATOR"
+        ],
+        "Optic": [
+            "AIM_OP_REFLEX_SIGHT",
+            "CORP_COMBAT_HOLO_SIGHT",
+            "OPERATOR_REFLEX_SIGHT",
+            "CRONEN_LP945_MINI_REFLEX",
+            "VLK_30X_OPTIC",
+            "APX5_HOLOGRAPHIC_SIGHT",
+            "GI_MINI_REFLEX",
+            "SCOUT_COMBAT_OPTIC",
+            "MONOCLE_REFLEX_SIGHT",
+            "SOLOZERO_NVG_ENHANCED",
+            "VIPER_REFLEX_SIGHT",
+            "PBX_HOLO_7_SIGHT",
+            "FLIP_HYBRID_40X",
+            "SOLOZERO_OPTICS_MINI_REFLEX",
+            "MERC_THERMAL_OPTIC",
+            "CRONEN_C480_PRO_OPTIC",
+            "THERMAL_HYBRID"
+        ],
+        "Perk": [
+            "SLEIGHT_OF_HAND"
+        ],
+        "RearGrip": [
+            "STIPPLED_GRIP_TAPE",
+            "RUBBERIZED_GRIP_TAPE",
+            "GRANULATED_GRIP_TAPE"
+        ],
+        "Stock": [
+            "FSS_CLOSE_QUARTERS_STOCK",
+            "NO_STOCK",
+            "FORGE_TAC_ULTRALIGHT",
+            "FORGE_TAC_STALKER"
+        ],
+        "Underbarrel": [
+            "MERC_FOREGRIP",
+            "RANGER_FOREGRIP",
+            "OPERATOR_FOREGRIP",
+            "COMMANDO_FOREGRIP",
+            "TACTICAL_FOREGRIP"
+        ]
+    },
+    "ODEN": {
+        "Ammunition": [
+            "ROUND_MAGS_25",
+            "ROUND_MAGS_30"
+        ],
+        "Barrel": [
+            "ODEN_FACTORY_810MM",
+            "ODEN_FACTORY_730MM",
+            "ODEN_FACTORY_420MM"
+        ],
+        "Laser": [
+            "TAC_LASER",
+            "LASER_1MW",
+            "LASER_5MW"
+        ],
+        "Muzzle": [
+            "LIGHTWEIGHT_SUPPRESSOR",
+            "TACTICAL_SUPPRESSOR",
+            "MONOLITHIC_SUPPRESSOR",
+            "COLOSSUS_SUPPRESSOR",
+            "COMPENSATOR",
+            "MUZZLE_BRAKE"
+        ],
+        "Optic": [
+            "OPERATOR_REFLEX_SIGHT",
+            "CORP_COMBAT_HOLO_SIGHT",
+            "SOLOZERO_OPTICS_MINI_REFLEX",
+            "AIM_OP_REFLEX_SIGHT",
+            "APX5_HOLOGRAPHIC_SIGHT",
+            "VLK_30X_OPTIC",
+            "VIPER_REFLEX_SIGHT",
+            "SNIPER_SCOPE",
+            "SOLOZERO_NVG_ENHANCED",
+            "PBX_HOLO_7_SIGHT",
+            "MONOCLE_REFLEX_SIGHT",
+            "GI_MINI_REFLEX",
+            "INTEGRAL_HYBRID",
+            "SCOUT_COMBAT_OPTIC",
+            "MERC_THERMAL_OPTIC",
+            "THERMAL_HYBRID",
+            "CRONEN_C480_PRO_OPTIC",
+            "CANTED_HYBRID",
+            "VARIABLE_ZOOM_SCOPE",
+            "CRONEN_LP945_MINI_REFLEX"
+        ],
+        "Perk": [
+            "SLEIGHT_OF_HAND"
+        ],
+        "RearGrip": [
+            "STIPPLED_GRIP_TAPE",
+            "RUBBERIZED_GRIP_TAPE",
+            "GRANULATED_GRIP_TAPE"
+        ],
+        "Stock": [
+            "FTAC_XL_ELITE_COMB",
+            "FORGE_TAC_BALLAST_PACK",
+            "ODEN_ULTRALIGHT_HOLLOW"
+        ],
+        "Underbarrel": [
+            "MERC_FOREGRIP",
+            "RANGER_FOREGRIP",
+            "OPERATOR_FOREGRIP",
+            "COMMANDO_FOREGRIP",
+            "TACTICAL_FOREGRIP",
+            "BIPOD",
+            "BIPOD"
+        ]
+    },
+    "P90": {
+        "Barrel": [
+            "FSS_106_PRO",
+            "FORGE_TAC_RETRIBUTION"
+        ],
+        "Laser": [
+            "TAC_LASER",
+            "LASER_1MW",
+            "LASER_5MW"
+        ],
+        "Muzzle": [
+            "LIGHTWEIGHT_SUPPRESSOR",
+            "TACTICAL_SUPPRESSOR",
+            "MONOLITHIC_SUPPRESSOR",
+            "MUZZLE_BRAKE",
+            "COMPENSATOR"
+        ],
+        "Optic": [
+            "SOLOZERO_OPTICS_MINI_REFLEX",
+            "OPERATOR_REFLEX_SIGHT",
+            "CORP_COMBAT_HOLO_SIGHT",
+            "VIPER_REFLEX_SIGHT",
+            "GI_MINI_REFLEX",
+            "SCOUT_COMBAT_OPTIC",
+            "APX5_HOLOGRAPHIC_SIGHT",
+            "CRONEN_LP945_MINI_REFLEX",
+            "FSS_RING_SIGHT",
+            "VLK_30X_OPTIC",
+            "SOLOZERO_NVG_ENHANCED",
+            "INTEGRAL_HYBRID",
+            "MONOCLE_REFLEX_SIGHT",
+            "PBX_HOLO_7_SIGHT",
+            "CRONEN_C480_PRO_OPTIC",
+            "CANTED_HYBRID",
+            "AIM_OP_REFLEX_SIGHT",
+            "THERMAL_HYBRID",
+            "MERC_THERMAL_OPTIC"
+        ],
+        "Perk": [
+            "SLEIGHT_OF_HAND"
+        ],
+        "RearGrip": [
+            "STIPPLED_GRIP_TAPE",
+            "RUBBERIZED_GRIP_TAPE",
+            "GRANULATED_GRIP_TAPE"
+        ],
+        "Stock": [
+            "FORGE_TAC_CQB_COMB",
+            "FLY_STRAP",
+            "FSS_HEAVY_STOCK_PRO"
+        ],
+        "Underbarrel": [
+            "STIPPLED_GRIP_TAPE_1",
+            "RUBBERIZED_GRIP_TAPE_1",
+            "GRANULATED_GRIP_TAPE_1"
+        ]
+    },
+    "PKM": {
+        "Ammunition": [
+            "ROUND_BELT_150",
+            "ROUND_BELT_200"
+        ],
+        "Barrel": [
+            "COMPACT_BARREL_182",
+            "EXTENDED_BARREL_269",
+            "HEAVY_BARREL_259"
+        ],
+        "Laser": [
+            "TAC_LASER",
+            "LASER_1MW",
+            "LASER_5MW"
+        ],
+        "Muzzle": [
+            "LIGHTWEIGHT_SUPPRESSOR",
+            "TACTICAL_SUPPRESSOR",
+            "MONOLITHIC_SUPPRESSOR",
+            "MUZZLE_BRAKE",
+            "COMPENSATOR"
+        ],
+        "Optic": [
+            "OPERATOR_REFLEX_SIGHT",
+            "CORP_COMBAT_HOLO_SIGHT",
+            "AIM_OP_REFLEX_SIGHT",
+            "VLK_30X_OPTIC",
+            "SOLOZERO_OPTICS_MINI_REFLEX",
+            "PBX_HOLO_7_SIGHT",
+            "CRONEN_LP945_MINI_REFLEX",
+            "INTEGRAL_HYBRID",
+            "SOLOZERO_NVG_ENHANCED",
+            "SCOUT_COMBAT_OPTIC",
+            "MONOCLE_REFLEX_SIGHT",
+            "SNIPER_SCOPE",
+            "APX5_HOLOGRAPHIC_SIGHT",
+            "GI_MINI_REFLEX",
+            "CRONEN_C480_PRO_OPTIC",
+            "MERC_THERMAL_OPTIC",
+            "CANTED_HYBRID",
+            "VIPER_REFLEX_SIGHT",
+            "THERMAL_HYBRID"
+        ],
+        "Perk": [
+            "SLEIGHT_OF_HAND"
+        ],
+        "RearGrip": [
+            "STIPPLED_GRIP_TAPE",
+            "RUBBERIZED_GRIP_TAPE",
+            "GRANULATED_GRIP_TAPE"
+        ],
+        "Stock": [
+            "FSS_CLOSE_QUARTERS_STOCK",
+            "NO_STOCK",
+            "FORGE_TAC_STALKER",
+            "FORGE_TAC_ULTRALIGHT"
+        ],
+        "Underbarrel": [
+            "MERC_FOREGRIP",
+            "SNATCH_GRIP",
+            "OPERATOR_FOREGRIP",
+            "BIPOD",
+            "BIPOD",
+            "COMMANDO_FOREGRIP",
+            "TACTICAL_FOREGRIP"
+        ]
+    },
+    "PP19_BIZON": {
+        "Ammunition": [
+            "ROUND_HELICAL_MAGS_84"
+        ],
+        "Barrel": [
+            "STEEL_87",
+            "POLYGONAL_87",
+            "ALUMINUM_87"
+        ],
+        "Laser": [
+            "TAC_LASER",
+            "LASER_1MW",
+            "LASER_5MW"
+        ],
+        "Muzzle": [
+            "LIGHTWEIGHT_SUPPRESSOR",
+            "TACTICAL_SUPPRESSOR",
+            "MONOLITHIC_SUPPRESSOR",
+            "MUZZLE_BRAKE",
+            "COMPENSATOR"
+        ],
+        "Optic": [
+            "MONOCLE_REFLEX_SIGHT",
+            "CORP_COMBAT_HOLO_SIGHT",
+            "AIM_OP_REFLEX_SIGHT",
+            "CRONEN_C480_PRO_OPTIC",
+            "GI_MINI_REFLEX",
+            "APX5_HOLOGRAPHIC_SIGHT",
+            "OPERATOR_REFLEX_SIGHT",
+            "SOLOZERO_NVG_ENHANCED",
+            "SOLOZERO_OPTICS_MINI_REFLEX",
+            "MERC_THERMAL_OPTIC",
+            "PBX_HOLO_7_SIGHT",
+            "THERMAL_HYBRID",
+            "VIPER_REFLEX_SIGHT",
+            "CRONEN_LP945_MINI_REFLEX",
+            "SCOUT_COMBAT_OPTIC",
+            "INTEGRAL_HYBRID",
+            "CANTED_HYBRID",
+            "VLK_30X_OPTIC"
+        ],
+        "Perk": [
+            "SLEIGHT_OF_HAND"
+        ],
+        "RearGrip": [
+            "STIPPLED_GRIP_TAPE",
+            "RUBBERIZED_GRIP_TAPE",
+            "GRANULATED_GRIP_TAPE"
+        ],
+        "Stock": [
+            "NO_STOCK",
+            "CORVUS_SKELETON_STOCK",
+            "FSS_CLOSE_QUARTERS_STOCK",
+            "FACTORY_ALUMINUM_STOCK"
+        ]
+    },
+    "QBZ": {
+        "Barrel": [
+            "ULTRALIGHT",
+            "CAVALRY_LANCER",
+            "REINFORCED_HEAVY",
+            "RANGER",
+            "TAKEDOWN",
+            "TASK_FORCE"
+        ],
+        "Laser": [
+            "STEADY_AIM_LASER",
+            "MOUNTED_FLASHLIGHT",
+            "SOF_TARGET_DESIGNATOR",
+            "SWAT_5MW_LASER_SIGHT",
+            "TIGER_TEAM_SPOTLIGHT",
+            "EMBER_SIGHTING_POINT"
+        ],
+        "Muzzle": [
+            "MUZZLE_BRAKE",
+            "FLASHGUARD",
+            "SUPPRESSOR",
+            "INFANTRY_COMPENSATOR",
+            "SOCOM_ELIMINATOR",
+            "AGENCY_SUPPRESSOR"
+        ],
+        "Optic": [
+            "MILLSTOP_REFLEX",
+            "VISIONTECH_2X",
+            "KOBRA_RED_DOT",
+            "QUICKDOT_LED",
+            "AXIAL_ARMS_3X",
+            "SILLIX_HOLOSCOUT",
+            "MICROFLEX_LED",
+            "HAWKSMOOR",
+            "ROYAL_AND_CROSS_4X",
+            "SUSAT_MULTIZOOM",
+            "DIAMONDBACK_REFLEX",
+            "NOCH_SOVA_THERMAL"
+        ],
+        "RearGrip": [
+            "SPEED_TAPE",
+            "DROPSHOT_WRAP",
+            "FIELD_TAPE",
+            "SASR_JUNGLE_GRIP",
+            "SERPENT_GRIP",
+            "AIRBORNE_ELASTIC_GRIP"
+        ],
+        "Stock": [
+            "TACTICAL_STOCK",
+            "MARATHON_STOCK",
+            "DUSTER_PAD",
+            "CQB_PAD",
+            "SAS_COMBAT_STOCK",
+            "RAIDER_STOCK"
+        ],
+        "Underbarrel": [
+            "FOREGRIP",
+            "INFILTRATOR_GRIP",
+            "PATROL_GRIP",
+            "BRUISER_GRIP",
+            "FIELD_AGENT_GRIP",
+            "SFOD_SPEEDGRIP"
+        ]
+    },
+    "RAM_7": {
+        "Ammunition": [
+            "ROUND_MAGS_50"
+        ],
+        "Barrel": [
+            "FTAC_135_COMPACT",
+            "FORGE_TAC_ECLIPSE",
+            "FSS_RANGER"
+        ],
+        "Laser": [
+            "TAC_LASER",
+            "LASER_1MW",
+            "LASER_5MW"
+        ],
+        "Muzzle": [
+            "LIGHTWEIGHT_SUPPRESSOR",
+            "TACTICAL_SUPPRESSOR",
+            "MONOLITHIC_SUPPRESSOR",
+            "MUZZLE_BRAKE",
+            "COMPENSATOR"
+        ],
+        "Optic": [
+            "CRONEN_LP945_MINI_REFLEX",
+            "CORP_COMBAT_HOLO_SIGHT",
+            "OPERATOR_REFLEX_SIGHT",
+            "SCOUT_COMBAT_OPTIC",
+            "FLIP_HYBRID_40X",
+            "AIM_OP_REFLEX_SIGHT",
+            "APX5_HOLOGRAPHIC_SIGHT",
+            "INTEGRAL_HYBRID",
+            "SOLOZERO_NVG_ENHANCED",
+            "VLK_30X_OPTIC",
+            "SNIPER_SCOPE",
+            "VIPER_REFLEX_SIGHT",
+            "GI_MINI_REFLEX",
+            "PBX_HOLO_7_SIGHT",
+            "CRONEN_2X2_ELITE",
+            "MONOCLE_REFLEX_SIGHT",
+            "VARIABLE_ZOOM_SCOPE",
+            "CANTED_HYBRID",
+            "MERC_THERMAL_OPTIC",
+            "THERMAL_HYBRID"
+        ],
+        "Perk": [
+            "SLEIGHT_OF_HAND"
+        ],
+        "RearGrip": [
+            "STIPPLED_GRIP_TAPE",
+            "RUBBERIZED_GRIP_TAPE",
+            "GRANULATED_GRIP_TAPE"
+        ],
+        "Stock": [
+            "XRK_CLOSE_QUARTERS_STOCK",
+            "FTAC_EQUILIBRIUM",
+            "XRK_ULTRALIGHT_HOLLOW"
+        ],
+        "Underbarrel": [
+            "MERC_FOREGRIP",
+            "RANGER_FOREGRIP",
+            "OPERATOR_FOREGRIP",
+            "COMMANDO_FOREGRIP",
+            "TACTICAL_FOREGRIP"
+        ]
+    },
+    "RPD": {
+        "Barrel": [
+            "CUT_DOWN",
+            "SPETSNAZ_RPK_BARREL",
+            "DIVISION",
+            "GRU_CUT_DOWN",
+            "MATCH_GRADE",
+            "TASK_FORCE"
+        ],
+        "Laser": [
+            "STEADY_AIM_LASER",
+            "MOUNTED_FLASHLIGHT",
+            "KGB_TARGET_DESIGNATOR",
+            "GRU_5MW_LASER_SIGHT",
+            "TIGER_TEAM_SPOTLIGHT",
+            "EMBER_SIGHTING_POINT"
+        ],
+        "Muzzle": [
+            "MUZZLE_BRAKE",
+            "FLASHGUARD",
+            "SUPPRESSOR",
+            "INFANTRY_COMPENSATOR",
+            "SOCOM_ELIMINATOR",
+            "AGENCY_SUPPRESSOR"
+        ],
+        "Optic": [
+            "MILLSTOP_REFLEX",
+            "VISIONTECH_2X",
+            "KOBRA_RED_DOT",
+            "QUICKDOT_LED",
+            "AXIAL_ARMS_3X",
+            "SILLIX_HOLOSCOUT",
+            "MICROFLEX_LED",
+            "HAWKSMOOR",
+            "ROYAL_AND_CROSS_4X",
+            "SUSAT_MULTIZOOM",
+            "DIAMONDBACK_REFLEX",
+            "NOCH_SOVA_THERMAL"
+        ],
+        "RearGrip": [
+            "SPEED_TAPE",
+            "DROPSHOT_WRAP",
+            "FIELD_TAPE",
+            "SPETSNAZ_FIELD_GRIP",
+            "SERPENT_WRAP",
+            "AIRBORNE_ELASTIC_WRAP"
+        ],
+        "Stock": [
+            "TACTICAL_STOCK",
+            "WIRE_STOCK",
+            "DUSTER_STOCK",
+            "NO_STOCK",
+            "SPETSNAZ_PKM_STOCK",
+            "RAIDER_STOCK"
+        ],
+        "Underbarrel": [
+            "FOREGRIP",
+            "INFILTRATOR_GRIP",
+            "PATROL_GRIP",
+            "BRUISER_GRIP",
+            "SPETSNAZ_GRIP",
+            "SPETSNAZ_SPEEDGRIP"
+        ]
+    },
+    "RYTEC_AMR": {
+        "Ammunition": [
+            "EXPLOSIVE_5_R_MAGS_25X59MM",
+            "THERMITE_5_R_MAGS_25X59MM"
+        ],
+        "Barrel": [
+            "FTAC_SEVEN_STRAIGHT",
+            "FTAC_448MM_DICTATOR",
+            "XRK_HARBINGER"
+        ],
+        "Laser": [
+            "TAC_LASER"
+        ],
+        "Muzzle": [
+            "XRK_TANK_BRAKE",
+            "RYTEC_AMR_SUPPRESSOR"
+        ],
+        "Optic": [
+            "SCOUT_COMBAT_OPTIC",
+            "VLK_30X_OPTIC",
+            "THERMAL_SNIPER_SCOPE",
+            "CRONEN_C480_PRO_OPTIC",
+            "VARIABLE_ZOOM_SCOPE",
+            "MERC_THERMAL_OPTIC",
+            "THERMAL_DUAL_POWER_SCOPE"
+        ],
+        "Perk": [
+            "SLEIGHT_OF_HAND"
+        ],
+        "RearGrip": [
+            "RUBBERIZED_GRIP_TAPE",
+            "GRANULATED_GRIP_TAPE",
+            "STIPPLED_GRIP_TAPE"
+        ],
+        "Stock": [
+            "XRK_MASTADON",
+            "FTAC_TREKKER",
+            "STOVL_TAC_WRAP"
+        ],
+        "Underbarrel": [
+            "BIPOD",
+            "BIPOD"
+        ]
+    },
+    "SA87": {
+        "Ammunition": [
+            "ROUND_MAGS_50",
+            "ROUND_MAGS_60"
+        ],
+        "Barrel": [
+            "SA87_182_FACTORY",
+            "SA87_254_FACTORY",
+            "SA87_124_FACTORY"
+        ],
+        "Laser": [
+            "TAC_LASER",
+            "LASER_1MW",
+            "LASER_5MW"
+        ],
+        "Muzzle": [
+            "LIGHTWEIGHT_SUPPRESSOR",
+            "TACTICAL_SUPPRESSOR",
+            "MONOLITHIC_SUPPRESSOR",
+            "MUZZLE_BRAKE",
+            "COMPENSATOR"
+        ],
+        "Optic": [
+            "GI_MINI_REFLEX",
+            "CORP_COMBAT_HOLO_SIGHT",
+            "OPERATOR_REFLEX_SIGHT",
+            "VIPER_REFLEX_SIGHT",
+            "SCOUT_COMBAT_OPTIC",
+            "APX5_HOLOGRAPHIC_SIGHT",
+            "SOLOZERO_OPTICS_MINI_REFLEX",
+            "SOLOZERO_NVG_ENHANCED",
+            "INTEGRAL_HYBRID",
+            "VLK_30X_OPTIC",
+            "AIM_OP_REFLEX_SIGHT",
+            "CRONEN_LP945_MINI_REFLEX",
+            "SNIPER_SCOPE",
+            "MERC_THERMAL_OPTIC",
+            "PBX_HOLO_7_SIGHT",
+            "CRONEN_C480_PRO_OPTIC",
+            "THERMAL_HYBRID",
+            "MONOCLE_REFLEX_SIGHT",
+            "CANTED_HYBRID"
+        ],
+        "Perk": [
+            "SLEIGHT_OF_HAND"
+        ],
+        "RearGrip": [
+            "STIPPLED_GRIP_TAPE",
+            "RUBBERIZED_GRIP_TAPE",
+            "GRANULATED_GRIP_TAPE"
+        ],
+        "Stock": [
+            "FORGE_TAC_CQB_COMB",
+            "XRK_SA87_HEAVY_STOCK_PRO",
+            "SA87_ULTRALIGHT_HOLLOW"
+        ],
+        "Underbarrel": [
+            "MERC_FOREGRIP",
+            "OPERATOR_FOREGRIP",
+            "RANGER_FOREGRIP",
+            "BIPOD",
+            "BIPOD",
+            "COMMANDO_FOREGRIP",
+            "TACTICAL_FOREGRIP"
+        ]
+    },
+    "SCAR": {
+        "Ammunition": [
+            "ROUND_MAGS_25",
+            "ROUND_MAGS_30"
+        ],
+        "Barrel": [
+            "FORGE_TAC_172_LB",
+            "FORGE_TAC_200_LB",
+            "FORGE_TAC_CQC_PRO"
+        ],
+        "Laser": [
+            "TAC_LASER",
+            "LASER_5MW",
+            "LASER_1MW"
+        ],
+        "Muzzle": [
+            "LIGHTWEIGHT_SUPPRESSOR",
+            "TACTICAL_SUPPRESSOR",
+            "MONOLITHIC_SUPPRESSOR",
+            "MUZZLE_BRAKE",
+            "COMPENSATOR"
+        ],
+        "Optic": [
+            "OPERATOR_REFLEX_SIGHT",
+            "CORP_COMBAT_HOLO_SIGHT",
+            "GI_MINI_REFLEX",
+            "FLIP_HYBRID_40X",
+            "APX5_HOLOGRAPHIC_SIGHT",
+            "SCOUT_COMBAT_OPTIC",
+            "AIM_OP_REFLEX_SIGHT",
+            "VLK_30X_OPTIC",
+            "THERMAL_HYBRID",
+            "SOLOZERO_OPTICS_MINI_REFLEX",
+            "SNIPER_SCOPE",
+            "VIPER_REFLEX_SIGHT",
+            "PBX_HOLO_7_SIGHT",
+            "CRONEN_C480_PRO_OPTIC",
+            "SOLOZERO_NVG_ENHANCED",
+            "MONOCLE_REFLEX_SIGHT",
+            "CRONEN_LP945_MINI_REFLEX",
+            "MERC_THERMAL_OPTIC",
+            "INTEGRAL_HYBRID",
+            "VARIABLE_ZOOM_SCOPE",
+            "CANTED_HYBRID"
+        ],
+        "Perk": [
+            "SLEIGHT_OF_HAND"
+        ],
+        "RearGrip": [
+            "STIPPLED_GRIP_TAPE",
+            "RUBBERIZED_GRIP_TAPE",
+            "GRANULATED_GRIP_TAPE"
+        ],
+        "Stock": [
+            "FTAC_COLLAPSIBLE_STOCK",
+            "FSS_CLOSE_QUARTERS_STOCK",
+            "FTAC_HUNTER",
+            "XRK_OBELISK_PRO"
+        ],
+        "Underbarrel": [
+            "MERC_FOREGRIP",
+            "BIPOD_FOREGRIP",
+            "BIPOD_FOREGRIP",
+            "BIPOD_FOREGRIP",
+            "OPERATOR_FOREGRIP",
+            "COMMANDO_FOREGRIP",
+            "TACTICAL_FOREGRIP"
+        ]
+    },
+    "SKS": {
+        "Ammunition": [
+            "ROUND_MAGS_30",
+            "ROUND_MAGS_10"
+        ],
+        "Barrel": [
+            "FTAC_LANDMARK",
+            "FSS_PARA_16",
+            "FSS_M59_66_22"
+        ],
+        "Laser": [
+            "TAC_LASER"
+        ],
+        "Muzzle": [
+            "TACTICAL_SUPPRESSOR",
+            "MUZZLE_BRAKE",
+            "COMPENSATOR",
+            "LIGHTWEIGHT_SUPPRESSOR",
+            "MONOLITHIC_SUPPRESSOR"
+        ],
+        "Optic": [
+            "OPERATOR_REFLEX_SIGHT",
+            "CORP_COMBAT_HOLO_SIGHT",
+            "AIM_OP_REFLEX_SIGHT",
+            "SCOUT_COMBAT_OPTIC",
+            "APX5_HOLOGRAPHIC_SIGHT",
+            "INTEGRAL_HYBRID",
+            "GI_MINI_REFLEX",
+            "VLK_30X_OPTIC",
+            "PBX_HOLO_7_SIGHT",
+            "SOLOZERO_NVG_ENHANCED",
+            "PU_SCOPE",
+            "FLIP_HYBRID_40X",
+            "VIPER_REFLEX_SIGHT",
+            "CANTED_HYBRID",
+            "MONOCLE_REFLEX_SIGHT",
+            "VARIABLE_ZOOM_SCOPE",
+            "CRONEN_C480_PRO_OPTIC",
+            "MERC_THERMAL_OPTIC",
+            "THERMAL_HYBRID"
+        ],
+        "Perk": [
+            "SLEIGHT_OF_HAND",
+            "SLEIGHT_OF_HAND"
+        ],
+        "Stock": [
+            "SKS_RIFLE_STOCK",
+            "FTAC_HUNTER_SCOUT",
+            "SAWED_OFF_STOCK"
+        ],
+        "Underbarrel": [
+            "COMMANDO_FOREGRIP",
+            "TACTICAL_FOREGRIP",
+            "BIPOD",
+            "BIPOD",
+            "MERC_FOREGRIP",
+            "RANGER_FOREGRIP",
+            "OPERATOR_FOREGRIP"
+        ]
+    },
+    "SPR_208": {
+        "Ammunition": [
+            "ROUND_MAG_10",
+            "NORMA_MAG_300",
+            "LAPUA_MAG_338"
+        ],
+        "Barrel": [
+            "ZLR_VERATWIST_96",
+            "ZLR_ASP",
+            "SP_R_26",
+            "XRK_208_DRAGOON"
+        ],
+        "BoltAssembly": [
+            "SLOAN_KR_800_DEADEYE",
+            "SLOAN_KR_600_FEATHER"
+        ],
+        "Laser": [
+            "TAC_LASER"
+        ],
+        "Muzzle": [
+            "TACTICAL_SUPPRESSOR",
+            "MUZZLE_BRAKE",
+            "COMPENSATOR",
+            "LIGHTWEIGHT_SUPPRESSOR",
+            "MONOLITHIC_SUPPRESSOR"
+        ],
+        "Optic": [
+            "OPERATOR_REFLEX_SIGHT",
+            "CORP_COMBAT_HOLO_SIGHT",
+            "AIM_OP_REFLEX_SIGHT",
+            "SCOUT_COMBAT_OPTIC",
+            "APX5_HOLOGRAPHIC_SIGHT",
+            "GI_MINI_REFLEX",
+            "VLK_30X_OPTIC",
+            "PBX_HOLO_7_SIGHT",
+            "SOLOZERO_NVG_ENHANCED",
+            "SOLOZERO_SP_R_28MM",
+            "INTEGRAL_HYBRID",
+            "VIPER_REFLEX_SIGHT",
+            "MONOCLE_REFLEX_SIGHT",
+            "VARIABLE_ZOOM_SCOPE",
+            "CRONEN_C480_PRO_OPTIC",
+            "MERC_THERMAL_OPTIC"
+        ],
+        "Perk": [
+            "SLEIGHT_OF_HAND"
+        ],
+        "Stock": [
+            "XRK_SP_TAC_208_ULTIMATE",
+            "FSS_VIRTUOSO_PRO",
+            "XRK_SP_LITE_208_BLITZ",
+            "ZLR_SP_R_OVERSEER"
+        ],
+        "Underbarrel": [
+            "COMMANDO_FOREGRIP",
+            "TACTICAL_FOREGRIP",
+            "BIPOD",
+            "BIPOD",
+            "MERC_FOREGRIP",
+            "RANGER_FOREGRIP",
+            "OPERATOR_FOREGRIP"
+        ]
+    },
+    "STONER_63": {
+        "Barrel": [
+            "CUT_DOWN",
+            "CAVALRY_LANCER",
+            "DIVISION",
+            "SOR_CUT_DOWN",
+            "MATCH_GRADE",
+            "TASK_FORCE"
+        ],
+        "Laser": [
+            "STEADY_AIM_LASER",
+            "MOUNTED_FLASHLIGHT",
+            "SOF_TARGET_DESIGNATOR",
+            "SWAT_5MW_LASER_SIGHT",
+            "TIGER_TEAM_SPOTLIGHT",
+            "EMBER_SIGHTING_POINT"
+        ],
+        "Muzzle": [
+            "MUZZLE_BRAKE",
+            "FLASHGUARD",
+            "SUPPRESSOR",
+            "INFANTRY_COMPENSATOR",
+            "SOCOM_ELIMINATOR",
+            "AGENCY_SUPPRESSOR"
+        ],
+        "Optic": [
+            "MILLSTOP_REFLEX",
+            "VISIONTECH_2X",
+            "KOBRA_RED_DOT",
+            "QUICKDOT_LED",
+            "AXIAL_ARMS_3X",
+            "SILLIX_HOLOSCOUT",
+            "MICROFLEX_LED",
+            "HAWKSMOOR",
+            "ROYAL_AND_CROSS_4X",
+            "SUSAT_MULTIZOOM",
+            "DIAMONDBACK_REFLEX",
+            "NOCH_SOVA_THERMAL"
+        ],
+        "RearGrip": [
+            "SPEED_TAPE",
+            "DROPSHOT_WRAP",
+            "FIELD_TAPE",
+            "SASR_JUNGLE_GRIP",
+            "SERPENT_WRAP",
+            "AIRBORNE_ELASTIC_WRAP"
+        ],
+        "Stock": [
+            "TACTICAL_STOCK",
+            "WIRE_STOCK",
+            "DUSTER_PAD",
+            "NO_STOCK",
+            "SAS_COMBAT_STOCK",
+            "RAIDER_PAD"
+        ],
+        "Underbarrel": [
+            "FOREGRIP",
+            "INFILTRATOR_GRIP",
+            "PATROL_GRIP",
+            "BRUISER_GRIP",
+            "FIELD_AGENT_GRIP",
+            "SFOD_SPEEDGRIP"
+        ]
+    },
+    "STRIKER_45": {
+        "Ammunition": [
+            "ROUND_MAGS_45",
+            "HOLLOW_POINT_12_R_MAGS_45"
+        ],
+        "Barrel": [
+            "POLY_BARREL_300MM",
+            "STAINLESS_STEEL_400MM",
+            "STAINLESS_STEEL_150MM"
+        ],
+        "Laser": [
+            "TAC_LASER",
+            "LASER_1MW",
+            "LASER_5MW"
+        ],
+        "Muzzle": [
+            "LIGHTWEIGHT_SUPPRESSOR",
+            "TACTICAL_SUPPRESSOR",
+            "MONOLITHIC_SUPPRESSOR",
+            "MUZZLE_BRAKE",
+            "COMPENSATOR"
+        ],
+        "Optic": [
+            "AIM_OP_REFLEX_SIGHT",
+            "CORP_COMBAT_HOLO_SIGHT",
+            "OPERATOR_REFLEX_SIGHT",
+            "CRONEN_LP945_MINI_REFLEX",
+            "VLK_30X_OPTIC",
+            "APX5_HOLOGRAPHIC_SIGHT",
+            "GI_MINI_REFLEX",
+            "SCOUT_COMBAT_OPTIC",
+            "MONOCLE_REFLEX_SIGHT",
+            "FLIP_HYBRID_40X",
+            "SOLOZERO_NVG_ENHANCED",
+            "VIPER_REFLEX_SIGHT",
+            "PBX_HOLO_7_SIGHT",
+            "INTEGRAL_HYBRID",
+            "SOLOZERO_OPTICS_MINI_REFLEX",
+            "MERC_THERMAL_OPTIC",
+            "CANTED_HYBRID",
+            "CRONEN_C480_PRO_OPTIC",
+            "THERMAL_HYBRID"
+        ],
+        "Perk": [
+            "SLEIGHT_OF_HAND",
+            "SLEIGHT_OF_HAND"
+        ],
+        "RearGrip": [
+            "FTAC_G_5_EXO",
+            "RUBBERIZED_GRIP_TAPE",
+            "GRANULATED_GRIP_TAPE"
+        ],
+        "Stock": [
+            "XRK_GEN_III_SURVIVALIST_SERIES",
+            "FSS_GUARDIAN",
+            "FTAC_PRECISION_FIXED_STOCK"
+        ],
+        "Underbarrel": [
+            "MERC_FOREGRIP",
+            "RANGER_FOREGRIP",
+            "OPERATOR_FOREGRIP",
+            "COMMANDO_FOREGRIP",
+            "TACTICAL_FOREGRIP"
+        ]
+    },
+    "SYKOV": {
+        "Barrel": [
+            "SOROKIN_140MM_AUTO"
+        ],
+        "Perk": [
+            "AKIMBO"
+        ]
+    },
+    "TYPE_63": {
+        "Barrel": [
+            "RAPID_FIRE",
+            "CAVALRY_LANCER",
+            "STRIKE_TEAM",
+            "TITANIUM",
+            "MATCH_GRADE",
+            "TASK_FORCE"
+        ]
+    },
+    "UZI": {
+        "Ammunition": [
+            "ROUND_MAGS_40",
+            "ROUND_MAGS_50",
+            "AE_32_ROUND_MAGS_41"
+        ],
+        "Barrel": [
+            "FIRST_RESPONDER_131",
+            "FACTORY_MINI_85",
+            "FACTORY_CARBINE_165",
+            "FSS_CARBINE_PRO"
+        ],
+        "Laser": [
+            "TAC_LASER",
+            "LASER_1MW",
+            "LASER_5MW"
+        ],
+        "Muzzle": [
+            "LIGHTWEIGHT_SUPPRESSOR",
+            "TACTICAL_SUPPRESSOR",
+            "MONOLITHIC_SUPPRESSOR",
+            "MUZZLE_BRAKE",
+            "COMPENSATOR"
+        ],
+        "Optic": [
+            "CRONEN_LP945_MINI_REFLEX",
+            "OPERATOR_REFLEX_SIGHT",
+            "CORP_COMBAT_HOLO_SIGHT",
+            "VIPER_REFLEX_SIGHT",
+            "SOLOZERO_OPTICS_MINI_REFLEX",
+            "SCOUT_COMBAT_OPTIC",
+            "APX5_HOLOGRAPHIC_SIGHT",
+            "INTEGRAL_HYBRID",
+            "GI_MINI_REFLEX",
+            "MONOCLE_REFLEX_SIGHT",
+            "VLK_30X_OPTIC",
+            "SOLOZERO_NVG_ENHANCED",
+            "CANTED_HYBRID",
+            "AIM_OP_REFLEX_SIGHT",
+            "PBX_HOLO_7_SIGHT",
+            "THERMAL_HYBRID",
+            "CRONEN_C480_PRO_OPTIC",
+            "MERC_THERMAL_OPTIC"
+        ],
+        "Perk": [
+            "SLEIGHT_OF_HAND"
+        ],
+        "RearGrip": [
+            "STIPPLED_GRIP_TAPE",
+            "RUBBERIZED_GRIP_TAPE",
+            "GRANULATED_GRIP_TAPE"
+        ],
+        "Stock": [
+            "NO_STOCK",
+            "FSS_CLOSE_QUARTERS_STOCK",
+            "STANDARD_ISSUE_WOOD_STOCK",
+            "FORGE_TAC_ULTRALIGHT"
+        ],
+        "Underbarrel": [
+            "MERC_FOREGRIP",
+            "OPERATOR_FOREGRIP",
+            "RANGER_FOREGRIP",
+            "COMMANDO_FOREGRIP",
+            "TACTICAL_FOREGRIP"
+        ]
+    },
+    "XM4": {
+        "Ammunition": [
+            "RND_45",
+            "JUNGLE_STYLE_MAG",
+            "RND_SPEED_MAG_45",
+            "STANAG_60_RND",
+            "SAS_MAG_CLAMP",
+            "SALVO_60_RND_FAST_MAG"
+        ],
+        "Barrel": [
+            "RANGER",
+            "CAVALRY_LANCER",
+            "REINFORCED_HEAVY",
+            "EXTENDED",
+            "TAKEDOWN",
+            "TASK_FORCE"
+        ],
+        "Laser": [
+            "STEADY_AIM_LASER",
+            "MOUNTED_FLASHLIGHT",
+            "SOF_TARGET_DESIGNATOR",
+            "SWAT_5MW_LASER_SIGHT",
+            "TIGER_TEAM_SPOTLIGHT",
+            "EMBER_SIGHTING_POINT"
+        ],
+        "Muzzle": [
+            "MUZZLE_BRAKE",
+            "FLASHGUARD",
+            "SUPPRESSOR",
+            "INFANTRY_COMPENSATOR",
+            "SOCOM_ELIMINATOR",
+            "AGENCY_SUPPRESSOR"
+        ],
+        "Optic": [
+            "MILLSTOP_REFLEX",
+            "VISIONTECH_2X",
+            "KOBRA_RED_DOT",
+            "QUICKDOT_LED",
+            "AXIAL_ARMS_3X",
+            "SILLIX_HOLOSCOUT",
+            "MICROFLEX_LED",
+            "HAWKSMOOR",
+            "ROYAL_AND_CROSS_4X",
+            "SUSAT_MULTIZOOM",
+            "DIAMONDBACK_REFLEX",
+            "ANPVS_4_THERMAL"
+        ],
+        "RearGrip": [
+            "SPEED_TAPE",
+            "DROPSHOT_WRAP",
+            "FIELD_TAPE",
+            "SASR_JUNGLE_GRIP",
+            "SERPENT_WRAP",
+            "AIRBORNE_ELASTIC_WRAP"
+        ],
+        "Stock": [
+            "TACTICAL_STOCK",
+            "MARATHON_STOCK",
+            "DUSTER_PAD",
+            "CQB_PAD",
+            "SAS_COMBAT_STOCK",
+            "RAIDER_STOCK"
+        ],
+        "Underbarrel": [
+            "FOREGRIP",
+            "INFILTRATOR_GRIP",
+            "PATROL_GRIP",
+            "BRUISER_GRIP",
+            "FIELD_AGENT_GRIP",
+            "SFOD_SPEEDGRIP"
+        ]
+    }
+}

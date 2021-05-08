@@ -1,0 +1,3653 @@
+{
+    "AK-47": {
+        "Ammunition": [
+            "40 Round Mags",
+            "5.45x39mm 30-Round Mags",
+            "75 Round Drum Mags"
+        ],
+        "Barrel": [
+            "Spetsnaz Elite",
+            "23.0 RPK Barrel",
+            "8.1 Compact Barrel",
+            "23.0 Romanian"
+        ],
+        "Laser": [
+            "Tac Laser",
+            "5mW Laser",
+            "1mW Laser"
+        ],
+        "Muzzle": [
+            "Lightweight Suppressor",
+            "Tactical Suppressor",
+            "Monolithic Suppressor",
+            "Muzzle Brake",
+            "Compensator"
+        ],
+        "Optic": [
+            "Operator Reflex Sight (1x)",
+            "Corp Combat Holo Sight (1.3x)",
+            "Aim-Op Reflex Sight (1x)",
+            "Scout Combat Optic (2.1x)",
+            "APX5 Holographic Sight (1.3x)",
+            "Solozero Optics Mini Reflex (1x)",
+            "Integral Hybrid (2.1x + 1x)",
+            "VLK 3.0x Optic (2x)",
+            "Sniper Scope",
+            "Viper Reflex Sight (1x)",
+            "G.I. Mini Reflex (1x)",
+            "Solozero NVG Enhanced (2.1x Thermal)",
+            "Monocle Reflex Sight (1x)",
+            "Cronen LP945 Mini Reflex (1x)",
+            "Canted Hybrid (2.1x + 1x)",
+            "Cronen C480 Pro Optic (2.3x)",
+            "Merc Thermal Optic (2.1x Thermal)",
+            "Variable Zoom Scope",
+            "Thermal Hybrid (2.1x Thermal + 1x)"
+        ],
+        "Perk": [
+            "Sleight of Hand"
+        ],
+        "Rear Grip": [
+            "Stippled Grip Tape",
+            "Rubberized Grip Tape",
+            "Granulated Grip Tape"
+        ],
+        "Stock": [
+            "Skeleton Stock",
+            "No Stock",
+            "FSS Close Quarters Stock",
+            "Field LMG Stock",
+            "FORGE TAC Ultralight"
+        ],
+        "Underbarrel": [
+            "Merc Foregrip",
+            "Operator Foregrip",
+            "Ranger Foregrip",
+            "Commando Foregrip",
+            "Tactical Foregrip",
+            "Bipod (Crouched)",
+            "Bipod (Prone)"
+        ]
+    },
+    "AK-47 (CW)": {
+        "Barrel": [
+            "Ultralight",
+            "Cavalry Lancer",
+            "VDV Reinforced",
+            "Liberator",
+            "Takedown",
+            "Spetsnaz RPK Barrel"
+        ],
+        "Laser": [
+            "Steady Aim Laser",
+            "Mounted Flashlight",
+            "KGB Target Designator",
+            "GRU 5mW Laser Sight",
+            "Tiger Team Spotlight",
+            "Ember Sighting Point"
+        ],
+        "Muzzle": [
+            "Muzzle Brake",
+            "Flashguard",
+            "Suppressor",
+            "Spetsnaz Compensator",
+            "KGB Eliminator",
+            "GRU Suppressor"
+        ],
+        "Optic": [
+            "Millstop Reflex (1x)",
+            "Visiontech 2x (1.75x)",
+            "Kobra Red Dot (1.25x)",
+            "Quickdot LED (0.92x)",
+            "Axial Arms 3x (2.7x)",
+            "Sillix Holoscout (1.25x)",
+            "Microflex LED (0.92x)",
+            "Hawksmoor (1x)",
+            "Royal & Cross 4x (3.5x)",
+            "SUSAT Multizoom (1.7x + 3.5x)",
+            "Diamondback Reflex (1x)",
+            "Noch Sova Thermal (2.1x)"
+        ],
+        "Rear Grip": [
+            "Speed Tape",
+            "Dropshot Wrap",
+            "Field Tape",
+            "Spetsnaz Field Grip",
+            "Serpent Wrap",
+            "GRU Elastic Wrap"
+        ],
+        "Stock": [
+            "Tactical Stock",
+            "Wire Stock",
+            "Duster Stock",
+            "No Stock",
+            "Spetsnaz PKM Stock",
+            "KGB Skeletal Stock"
+        ],
+        "Underbarrel": [
+            "Foregrip",
+            "Infiltrator Grip",
+            "Patrol Grip",
+            "Bruiser Grip",
+            "Spetsnaz Grip",
+            "Spetsnaz Speedgrip"
+        ]
+    },
+    "AK-74u": {
+        "Barrel": [
+            "Extended",
+            "Cavalry",
+            "Reinforced Heavy",
+            "Ranger",
+            "Rifled",
+            "Task Force"
+        ],
+        "Laser": [
+            "Steady Aim Laser",
+            "Mounted Flashlight",
+            "KGB Target Designator",
+            "GRU 5mW Laser Sight",
+            "Tiger Team Spotlight",
+            "Ember Sighting Point"
+        ],
+        "Muzzle": [
+            "Muzzle Brake",
+            "Flashguard",
+            "Sound Suppressor",
+            "Infantry Compensator",
+            "SOCOM Eliminator",
+            "Agency Suppressor"
+        ],
+        "Optic": [
+            "Quickdot LED (0.92x)",
+            "Millstop Reflex (1x)",
+            "Kobra Red Dot (1.25x)",
+            "Visiontech 2x (1.75x)",
+            "Microflex LED (0.92x)",
+            "Hawksmoor (1x)",
+            "SnapPoint (1.15x)",
+            "Diamondback Reflex (1x)",
+            "Sillix Holoscout (1.25x)",
+            "Fastpoint Reflex (1x)",
+            "Axial Arms 3x (2.7x)",
+            "SUSAT Multizoom (1.7x + 3.5x)"
+        ],
+        "Rear Grip": [
+            "Speed Tape",
+            "Dropshot Wrap",
+            "Field Tape",
+            "Spetsnaz Field Grip",
+            "Serpent Wrap",
+            "GRU Elastic Wrap"
+        ],
+        "Stock": [
+            "Tactical Stock",
+            "Wire Stock",
+            "Duster Stock",
+            "No Stock",
+            "Spetsnaz PKM Stock",
+            "KGB Skeletal Stock"
+        ],
+        "Underbarrel": [
+            "Foregrip",
+            "Red Cell Foregrip",
+            "Patrol Grip",
+            "Bruiser Grip",
+            "Spetsnaz Grip",
+            "Spetsnaz Speedgrip"
+        ]
+    },
+    "AN-94": {
+        "Ammunition": [
+            "45 Round Mags",
+            "60 Round Casket Mags"
+        ],
+        "Barrel": [
+            "AN-94 Factory 330mm",
+            "AN-94 Factory X-438mm",
+            "VLK AN-94 Sila"
+        ],
+        "Laser": [
+            "5mW Laser",
+            "1mW Laser",
+            "Tac Laser"
+        ],
+        "Muzzle": [
+            "AN-94 Sonic Brake",
+            "Tactical Suppressor",
+            "Lightweight Suppressor",
+            "Compensator",
+            "Monolithic Suppressor"
+        ],
+        "Optic": [
+            "G.I. Mini Reflex (1x)",
+            "Corp Combat Holo Sight (1.3x)",
+            "Aim-Op Reflex Sight (1x)",
+            "Scout Combat Optic (2.1x)",
+            "APX5 Holographic Sight (1.3x)",
+            "4.0x Flip Hybrid (2.6x)",
+            "Solozero Optics Mini Reflex",
+            "VLK 3.0x Optic (2x)",
+            "Operator Reflex Sight (1x)",
+            "Sniper Scope",
+            "Solozero NVG Enhanced (2.1x Thermal)",
+            "Integral Hybrid (2.1x + 1x)",
+            "Viper Reflex Sight (1x)",
+            "PBX Holo 7 Sight (1.3x)",
+            "Merc Thermal Optic (2.1x Thermal)",
+            "Monocle Reflex Sight (1x)",
+            "Canted Hybrid (2.1x + 1x)",
+            "Variable Zoom Scope",
+            "Cronen C480 Pro Optic (2.3x)",
+            "Cronen LP945 Mini Reflex (1x)",
+            "Thermal Hybrid (2.1x Thermal + 1x)",
+            "POS-M3 Thermal Scope (2.3x)"
+        ],
+        "Perk": [
+            "Sleight of Hand"
+        ],
+        "Rear Grip": [
+            "Granulated Grip Tape",
+            "Stippled Grip Tape",
+            "Rubberized Grip Tape"
+        ],
+        "Stock": [
+            "AN-94 Factory Heavy",
+            "FORGE TAC Ultralight",
+            "Folded Stock",
+            "FSS Close Quarters Stock",
+            "VLK PX-9 Pero"
+        ],
+        "Underbarrel": [
+            "Commando Foregrip",
+            "Merc Foregrip",
+            "Ranger Foregrip",
+            "Tactical Foregrip",
+            "Operator Foregrip",
+            "Bipod (Crouched)",
+            "Bipod (Prone)"
+        ]
+    },
+    "AN-94 (No HB)": {},
+    "AS VAL": {
+        "Ammunition": [
+            "30 Round Mags",
+            "SPP 10-R Mags"
+        ],
+        "Barrel": [
+            "VLK 105mm Stova",
+            "Stovl SOF",
+            "VLK 200mm Osa"
+        ],
+        "Laser": [
+            "1mW Laser",
+            "Tac Laser",
+            "5mW Laser"
+        ],
+        "Optic": [
+            "Operator Reflex Sight (1x)",
+            "APX5 Holographic Sight (1.3x)",
+            "Scout Combat Optic (2.1x)",
+            "Cronen LP945 Mini Reflex (1x)",
+            "4.0x Flip Hybrid (2.6x)",
+            "Viper Reflex Sight (1x)",
+            "Dragunov Scope (5.5x)",
+            "G.I. Mini Reflex (1x)",
+            "Corp Combat Holo Sight (1.3x)",
+            "VLK 3.0x Optic (2x)",
+            "Solozero Optics Mini Reflex (1x)",
+            "Aim-Op Reflex Sight (1x)",
+            "Integral Hybrid (2.1x + 1x)",
+            "Solozero NVG Enhanced (2.1x Thermal)",
+            "Monocle Reflex Sight (1x)",
+            "Cronen C480 Pro Optic (2.3x)",
+            "Merc Thermal Optic (2.1x Thermal)",
+            "Canted Hybrid (2.1x + 1x)",
+            "PBX Holo 7 Sight (1.3x)",
+            "Thermal Hybrid (2.1x Thermal + 1x)",
+            "Variable Zoom Scope (3x + 6x)"
+        ],
+        "Perk": [
+            "Sleight of Hand",
+            "Sleight of Hand (w/ 30 Rnd Mag)",
+            "Sleight of Hand (w/ 10 Rnd Mag)"
+        ],
+        "Rear Grip": [
+            "Granulated Grip Tape",
+            "Stippled Grip Tape",
+            "Rubberized Grip Tape"
+        ],
+        "Stock": [
+            "VLK Vintazh",
+            "FSS Intl. Gen 4 GRU",
+            "Stovl 6P30 Skelet",
+            "VLK Strelok"
+        ],
+        "Underbarrel": [
+            "Merc Foregrip",
+            "Bipod (Crouched)",
+            "Bipod (Prone)",
+            "Ranger Foregrip",
+            "Commando Foregrip",
+            "Operator Foregrip",
+            "Cronen Shark II"
+        ]
+    },
+    "AUG": {
+        "Ammunition": [
+            "32 Round Mags",
+            "5.56 NATO 30-Round Mags",
+            "5.56 NATO 60-Round Drums"
+        ],
+        "Barrel": [
+            "407mm Extended",
+            "407mm Lightweight",
+            "622mm Long Barrel"
+        ],
+        "Laser": [
+            "Tac Laser",
+            "1mW Laser",
+            "5mW Laser"
+        ],
+        "Muzzle": [
+            "Lightweight Suppressor",
+            "Tactical Suppressor",
+            "Monolithic Suppressor",
+            "Muzzle Brake",
+            "Compensator"
+        ],
+        "Optic": [
+            "Operator Reflex Sight (1x)",
+            "Corp Combat Holo Sight (1.3x)",
+            "Aim-Op Reflex Sight (1x)",
+            "G.I. Mini Reflex (1x)",
+            "Scout Combat Optic (2.1x)",
+            "APX5 Holographic Sight (1.3x)",
+            "Solozero Optics Mini Reflex (1x)",
+            "VLK 3.0x Optic (2x)",
+            "Thermal Hybrid (2.1x Thermal + 1x)",
+            "Viper Reflex Sight (1x)",
+            "PBX Holo 7 Sight (1.3x)",
+            "Solozero NVG Enhanced (2.1x Thermal)",
+            "Cronen LP945 Mini Reflex (1x)",
+            "4.0x Flip Hybrid (2.6x)",
+            "Monocle Reflex Sight (1x)",
+            "Integral 3.0x Optic",
+            "Cronen C480 Pro Optic (2.3x)",
+            "Merc Thermal Optic (2.1x Thermal)",
+            "Integral Hybrid (2.1x + 1x)"
+        ],
+        "Perk": [
+            "Sleight of Hand"
+        ],
+        "Rear Grip": [
+            "Stippled Grip Tape",
+            "Rubberized Grip Tape",
+            "Granulated Grip Tape"
+        ],
+        "Stock": [
+            "FORGE TAC CQB Comb",
+            "FTAC Ultralight Hollow",
+            "FSS Heavy Stock Pro"
+        ],
+        "Underbarrel": [
+            "Merc Foregrip",
+            "Ranger Foregrip",
+            "Operator Foregrip",
+            "Commando Foregrip",
+            "Tactical Foregrip"
+        ]
+    },
+    "AUG (CW)": {
+        "Barrel": [
+            "Rapid Fire",
+            "Cavalry Lancer",
+            "Strike Team",
+            "Titanium",
+            "Match Grade",
+            "Task Force"
+        ]
+    },
+    "AX-50": {
+        "Ammunition": [
+            "7 Round Mags",
+            "9 Round Mags"
+        ],
+        "Barrel": [
+            "Singuard Arms Pro",
+            "17 Factory Barrel",
+            "32 Factory Barrel"
+        ],
+        "Laser": [
+            "Tac Laser"
+        ],
+        "Muzzle": [
+            "Monolithic Suppressor",
+            "Lightweight Suppressor",
+            "Muzzle Brake",
+            "Compensator",
+            "Tactical Suppressor"
+        ],
+        "Optic": [
+            "Scout Combat Optic (2.1x)",
+            "VLK 3.0x Optic (2x)",
+            "Thermal Sniper Scope",
+            "Variable Zoom Scope",
+            "Cronen C480 Pro Optic (2.3x)",
+            "Merc Thermal Optic (2.1x Thermal)",
+            "Thermal Dual Power Scope"
+        ],
+        "Perk": [
+            "Sleight of Hand"
+        ],
+        "Rear Grip": [
+            "Rubberized Grip Tape",
+            "Granulated Grip Tape",
+            "Stippled Grip Tape"
+        ],
+        "Stock": [
+            "Singuard Arms Marksman",
+            "Singuard Arms Evader",
+            "Singuard Arms Assassin"
+        ],
+        "Underbarrel": [
+            "Bipod (Crouched)",
+            "Bipod (Prone)"
+        ]
+    },
+    "MK9 Bruen": {
+        "Ammunition": [
+            "200 Round Belt",
+            "60 Round Mags"
+        ],
+        "Barrel": [
+            "XRK Horizon 23.0",
+            "XRK Summit 26.8",
+            "Bruen 18.0 Para"
+        ],
+        "Laser": [
+            "Tac Laser",
+            "1mW Laser",
+            "5mW Laser"
+        ],
+        "Muzzle": [
+            "Lightweight Suppressor",
+            "Tactical Suppressor",
+            "Monolithic Suppressor",
+            "Muzzle Brake",
+            "Compensator"
+        ],
+        "Optic": [
+            "G.I. Mini Reflex (1x)",
+            "Corp Combat Holo Sight (1.3x)",
+            "Aim-Op Reflex Sight (1x)",
+            "Viper Reflex Sight (1x)",
+            "VLK 3.0x Optic (2x)",
+            "APX5 Holographic Sight (1.3x)",
+            "Operator Reflex Sight (1x)",
+            "Solozero NVG Enhanced (2.1x Thermal)",
+            "Integral Hybrid (2.1x + 1x)",
+            "Scout Combat Optic (2.1x)",
+            "Solozero Optics Mini Reflex (1x)",
+            "Sniper Scope",
+            "4.0x Flip Hybrid (2.6x)",
+            "Merc Thermal Optic (2.1x Thermal)",
+            "Cronen LP945 Mini Reflex (1x)",
+            "PBX Holo 7 Sight (1.3x)",
+            "Canted Hybrid (2.1x + 1x)",
+            "Monocle Reflex Sight (1x)",
+            "Cronen C480 Pro Optic (2.3x)",
+            "Thermal Hybrid (2.1x Thermal + 1x)"
+        ],
+        "Perk": [
+            "Sleight of Hand",
+            "Sleight of Hand (w/ 60 Rnd Mag)"
+        ],
+        "Rear Grip": [
+            "Stippled Grip Tape",
+            "Rubberized Grip Tape",
+            "Granulated Grip Tape"
+        ],
+        "Stock": [
+            "FSS Close Quarters Stock",
+            "No Stock",
+            "Skeleton Stock",
+            "FORGE TAC Stalker",
+            "FORGE TAC Ultralight"
+        ],
+        "Underbarrel": [
+            "Merc Foregrip",
+            "Ranger Foregrip",
+            "Operator Foregrip",
+            "Bipod (Crouched)",
+            "Bipod (Prone)",
+            "Commando Foregrip",
+            "Tactical Foregrip"
+        ]
+    },
+    "Bullfrog": {
+        "Ammunition": [
+            "65 Rnd",
+            "Fast Mag",
+            "65 Rnd Speed Mag",
+            "Stanag 85 Rnd",
+            "Vandal Speed Loader",
+            "VDV 85 Rnd Fast Mag"
+        ],
+        "Barrel": [
+            "7.1 Extended",
+            "7 Cavalry Lancer",
+            "6.7 VDV Reinforced",
+            "8.1 Liberator",
+            "7.6 Rifled",
+            "7.4 Task Force"
+        ],
+        "Laser": [
+            "Steady Aim Laser",
+            "Mounted Flashlight",
+            "KGB Target Designator",
+            "GRU 5mW Laser Sight",
+            "Tiger Team Spotlight",
+            "Ember Sighting Point"
+        ],
+        "Muzzle": [
+            "Muzzle Brake",
+            "Flashguard",
+            "Sound Suppressor",
+            "Spetsnaz Compensator",
+            "KGB Eliminator",
+            "GRU Suppressor"
+        ],
+        "Optic": [
+            "Quickdot LED (0.92x)",
+            "Millstop Reflex (1x)",
+            "Kobra Red Dot (1.25x)",
+            "Visiontech 2x (1.75x)",
+            "Microflex LED (0.92x)",
+            "Hawksmoor (1x)",
+            "SnapPoint (1.15x)",
+            "Diamondback Reflex (1x)",
+            "Sillix Holoscout (1.25x)",
+            "Fastpoint Reflex (1x)",
+            "Axial Arms 3x (2.7x)",
+            "SUSAT Multizoom (1.7x + 3.5x)"
+        ],
+        "Rear Grip": [
+            "Speed Tape",
+            "Dropshot Wrap",
+            "Field Tape",
+            "Spetsnaz Field Grip",
+            "Serpent Wrap",
+            "GRU Elastic Wrap"
+        ],
+        "Stock": [
+            "Tactical Stock",
+            "Wire Stock",
+            "Duster Stock",
+            "No Stock",
+            "Spetsnaz PKM Stock",
+            "KGB Skeletal Stock"
+        ],
+        "Underbarrel": [
+            "Foregrip",
+            "Red Cell Foregrip",
+            "Patrol Grip",
+            "Bruiser Grip",
+            "Spetsnaz Grip",
+            "Spetsnaz Speedgrip"
+        ]
+    },
+    "CARV": {
+        "Barrel": [
+            "Rapid Fire",
+            "Cavalry Lancer",
+            "Strike Team",
+            "Titanium",
+            "Match Grade",
+            "Task Force"
+        ]
+    },
+    "CR-56 AMAX": {
+        "Ammunition": [
+            "45 Round Mags",
+            "M67 10-R Mags"
+        ],
+        "Barrel": [
+            "FSS 8.3 Intruder",
+            "XRK Zodiac S440",
+            "FSS 11.8 Squall"
+        ],
+        "Laser": [
+            "Tac Laser",
+            "5mW Laser",
+            "1mW Laser"
+        ],
+        "Muzzle": [
+            "Muzzle Brake",
+            "Tactical Suppressor",
+            "Lightweight Suppressor",
+            "Compensator",
+            "Monolithic Suppressor"
+        ],
+        "Optic": [
+            "G.I. Mini Reflex (1x)",
+            "Corp Combat Holo Sight (1.3x)",
+            "Aim-Op Reflex Sight (1x)",
+            "Scout Combat Optic (2.1x)",
+            "APX5 Holographic Sight (1.3x)",
+            "4.0x Flip Hybrid (2.6x)",
+            "Solozero Optics Mini Reflex (1x)",
+            "VLK 3.0x Optic (2x)",
+            "Operator Reflex Sight (1x)",
+            "Sniper Scope",
+            "Solozero NVG Enhanced (2.1x Thermal)",
+            "Integral Hybrid (2.1x + 1x)",
+            "Viper Reflex Sight (1x)",
+            "PBX Holo 7 Sight (1.3x)",
+            "Monocle Reflex Sight (1x)",
+            "Canted Hybrid (2.1x + 1x)",
+            "Variable Zoom Scope",
+            "Cronen C480 Pro Optic (2.3x)",
+            "Cronen LP945 Mini Reflex (1x)",
+            "Merc Thermal Optic (2.1x Thermal)",
+            "Thermal Hybrid (2.1x Thermal + 1x)"
+        ],
+        "Perk": [
+            "Sleight of Hand",
+            "Sleight of Hand (w/ 10 Rnd Mag)"
+        ],
+        "Rear Grip": [
+            "XRK CR-56 Stippled Wrap",
+            "Rubberized Grip Tape",
+            "Granulated Grip Tape"
+        ],
+        "Stock": [
+            "FSS Close Quarters Stock",
+            "No Stock",
+            "CR-56 EXO",
+            "FTAC Hunter",
+            "FTAC Spartan",
+            "XRK Gatekeeper"
+        ],
+        "Underbarrel": [
+            "Merc Foregrip",
+            "Ranger Foregrip",
+            "Operator Foregrip",
+            "Commando Foregrip",
+            "Tactical Foregrip",
+            "Bipod (Crouched)",
+            "Bipod (Prone)"
+        ]
+    },
+    "CR-56 AMAX (Pre May 7th nerf)": {},
+    "CX-9": {},
+    "Crossbow": {
+        "Arms": [
+            "XRK Thunder 200 Lb",
+            "XRK Quill 100 Lb",
+            "XRK Carbon Elite"
+        ],
+        "Bolt": [
+            "FTAC Fury 20 Bolts",
+            "FTAC Venom 20 Bolts",
+            "FTAC Backburn 20 Bolts"
+        ],
+        "Cable": [
+            "16 Strand Cable",
+            "28 Strand Cable"
+        ],
+        "Laser": [
+            "Tac Laser"
+        ],
+        "Optic": [
+            "Cronen LP945 Mini Reflex (1x)",
+            "Aim-Op Reflex Sight (1x)",
+            "Corp Combat Holo Sight (1.3x)",
+            "Scout Combat Optic (2.1x)",
+            "APX5 Holographic Sight (1.3x)",
+            "Operator Reflex Sight (1x)",
+            "XRK MidTrak 4.0x Scope",
+            "Solozero NVG Enhanced (2.1x Thermal)",
+            "VLK 3.0x Optic (2x)",
+            "PBX Holo 7 Sight (1.3x)",
+            "G.I. Mini Reflex (1x)",
+            "Viper Reflex Sight (1x)",
+            "Cronen C480 Pro Optic (2.3x)",
+            "Solozero Optics Mini Reflex (1x)",
+            "Monocle Reflex Sight (1x)",
+            "Merc Thermal Optic (2.1x Thermal)",
+            "XRK Rangemaster VZ"
+        ],
+        "Perk": [
+            "Sleight of Hand"
+        ],
+        "Stock": [
+            "FORGE TAC Apex",
+            "FORGE TAC Dart CB",
+            "FORGE TAC SpeedTrak"
+        ],
+        "Underbarrel": [
+            "FTAC Speed Grip",
+            "XRK Precision Comb",
+            "XRK Talon"
+        ]
+    },
+    "DMR 14": {
+        "Barrel": [
+            "Rapid Fire",
+            "Cavalry",
+            "Strike Team",
+            "Titanium",
+            "Match Grade",
+            "Task Force"
+        ]
+    },
+    "Dragunov": {
+        "Ammunition": [
+            "15 Round Mags",
+            "20 Round Mags"
+        ],
+        "Barrel": [
+            "510mm Compact Barrel",
+            "660mm Extended Barrel"
+        ],
+        "Laser": [
+            "Tac Laser"
+        ],
+        "Muzzle": [
+            "Monolithic Suppressor",
+            "Muzzle Brake",
+            "Tactical Suppressor",
+            "Compensator",
+            "Lightweight Suppressor"
+        ],
+        "Optic": [
+            "Scout Combat Optic (2.1x)",
+            "Thermal Sniper Scope",
+            "VLK 3.0x Optic (2x)",
+            "Variable Zoom Scope",
+            "Thermal Dual Power Scope",
+            "Cronen C480 Pro Optic (2.3x)",
+            "Merc Thermal Optic (2.1x Thermal)"
+        ],
+        "Perk": [
+            "Sleight of Hand"
+        ],
+        "Stock": [
+            "FTAC Hunter-Scout",
+            "Skeleton Stock",
+            "VLK Lightweight Stock",
+            "FTAC Stalker-Scout"
+        ],
+        "Underbarrel": [
+            "Bipod (Crouched)",
+            "Bipod (Prone)"
+        ]
+    },
+    "EBR": {
+        "Ammunition": [
+            "15 Round Mags",
+            "20 Round Mags"
+        ],
+        "Barrel": [
+            "FORGE TAC Precision 20.0",
+            "FORGE TAC Elite",
+            "FORGE TAC Precision 22.0"
+        ],
+        "Laser": [
+            "Tac Laser"
+        ],
+        "Muzzle": [
+            "Tactical Suppressor",
+            "Muzzle Brake",
+            "Compensator",
+            "Lightweight Suppressor",
+            "Monolithic Suppressor"
+        ],
+        "Optic": [
+            "Operator Reflex Sight (1x)",
+            "Corp Combat Holo Sight (1.3x)",
+            "Aim-Op Reflex Sight (1x)",
+            "Scout Combat Optic (2.1x)",
+            "APX5 Holographic Sight (1.3x)",
+            "Integral Hybrid (2.1x + 1x)",
+            "G.I. Mini Reflex (1x)",
+            "VLK 3.0x Optic (2x)",
+            "PBX Holo 7 Sight (1.3x)",
+            "Solozero NVG Enhanced (2.1x Thermal)",
+            "Sniper Scope",
+            "4.0x Flip Hybrid",
+            "Viper Reflex Sight (1x)",
+            "Canted Hybrid (2.1x + 1x)",
+            "Monocle Reflex Sight (1x)",
+            "Variable Zoom Scope",
+            "Cronen C480 Pro Optic (2.3x)",
+            "Merc Thermal Optic (2.1x Thermal)",
+            "Thermal Hybrid (2.1x Thermal + 1x)"
+        ],
+        "Perk": [
+            "Sleight of Hand"
+        ],
+        "Stock": [
+            "FTAC Precision Comb",
+            "FSS Raider Chassis Pro",
+            "FTAC Lightweight Stock",
+            "FSS Raider Chassis Elite"
+        ],
+        "Underbarrel": [
+            "Commando Foregrip",
+            "Tactical Foregrip",
+            "Bipod (Crouched)",
+            "Bipod (Prone)",
+            "Merc Foregrip",
+            "Ranger Foregrip",
+            "Operator Foregrip"
+        ]
+    },
+    "FAL": {
+        "Ammunition": [
+            "24 Round Mags",
+            "30 Round Mags"
+        ],
+        "Barrel": [
+            "18.0 Ultralight",
+            "XRK Marksman",
+            "13.0 OSW Para"
+        ],
+        "Laser": [
+            "Tac Laser",
+            "5mW Laser",
+            "1mW Laser"
+        ],
+        "Muzzle": [
+            "Lightweight Suppressor",
+            "Tactical Suppressor",
+            "Monolithic Suppressor",
+            "Muzzle Brake",
+            "Compensator"
+        ],
+        "Optic": [
+            "G.I. Mini Reflex (1x)",
+            "Corp Combat Holo Sight (1.3x)",
+            "Aim-Op Reflex Sight (1x)",
+            "Scout Combat Optic (2.1x)",
+            "APX5 Holographic Sight (1.3x)",
+            "4.0x Flip Hybrid (2.6x)",
+            "Solozero Optics Mini Reflex (1x)",
+            "VLK 3.0x Optic (2x)",
+            "Operator Reflex Sight (1x)",
+            "Sniper Scope",
+            "Solozero NVG Enhanced (2.1x Thermal)",
+            "Integral Hybrid (2.1x + 1x)",
+            "Viper Reflex Sight (1x)",
+            "PBX Holo 7 Sight (1.3x)",
+            "Monocle Reflex Sight (1x)",
+            "Canted Hybrid (2.1x + 1x)",
+            "Variable Zoom Scope",
+            "Cronen C480 Pro Optic (2.3x)",
+            "Cronen LP945 Mini Reflex (1x)",
+            "Merc Thermal Optic (2.1x Thermal)",
+            "Thermal Hybrid (2.1x Thermal + 1x)"
+        ],
+        "Perk": [
+            "Sleight of Hand"
+        ],
+        "Rear Grip": [
+            "Stippled Grip Tape",
+            "Rubberized Grip Tape",
+            "Granulated Grip Tape"
+        ],
+        "Stock": [
+            "No Stock",
+            "FSS Close Quarters Stock",
+            "Factory 18 Aluminum Stock",
+            "FORGE TAC Stalker"
+        ],
+        "Underbarrel": [
+            "Merc Foregrip",
+            "Ranger Foregrip",
+            "Operator Foregrip",
+            "Bipod (Crouched)",
+            "Bipod (Prone)",
+            "Commando Foregrip",
+            "Tactical Foregrip"
+        ]
+    },
+    "FARA": {
+        "Barrel": [
+            "Ultralight",
+            "Cavalry Lancer",
+            "Contour",
+            "Liberator",
+            "Takedown",
+            "Spetsnaz RPK"
+        ],
+        "Laser": [
+            "Steady Aim Laser",
+            "Mounted Flashlight",
+            "KGB Target Designator",
+            "GRU 5mW Laser Sight",
+            "Tiger Team Spotlight",
+            "Ember Sighting Point"
+        ],
+        "Muzzle": [
+            "Muzzle Brake",
+            "Flashguard",
+            "Suppressor",
+            "Infantry Compensator",
+            "SOCOM Eliminator",
+            "Agency Suppressor"
+        ],
+        "Optic": [
+            "Millstop Reflex (1x)",
+            "Visiontech 2x (1.75x)",
+            "Kobra Red Dot (1.25x)",
+            "Quickdot LED (0.92x)",
+            "Axial Arms 3x (2.7x)",
+            "Sillix Holoscout (1.25x)",
+            "Microflex LED (0.92x)",
+            "Hawksmoor (1x)",
+            "Royal & Cross 4x (3.5x)",
+            "SUSAT Multizoom (1.7x + 3.5x)",
+            "Diamondback Reflex (1x)",
+            "Noch Sova Thermal (2.1x)"
+        ],
+        "Rear Grip": [
+            "Speed Tape",
+            "Dropshot Wrap",
+            "Serpent Wrap",
+            "Field Tape",
+            "Spetsnaz Field Grip",
+            "GRU Elastic Wrap"
+        ],
+        "Stock": [
+            "Tactical Stock",
+            "Wire Stock",
+            "Duster Stock",
+            "No Stock",
+            "Raider Stock",
+            "KGB Skeletal Stock"
+        ],
+        "Underbarrel": [
+            "Foregrip",
+            "Infiltrator Grip",
+            "Bruiser Grip",
+            "Spetsnaz Grip",
+            "Patrol Grip",
+            "Spetsnaz Speedgrip"
+        ]
+    },
+    "FARA (Pre May 7th nerf)": {},
+    "FFAR 1": {
+        "Ammunition": [
+            "38 Rnd",
+            "Jungle-Style Mag",
+            "38 Rnd Speed Mag",
+            "STANAG 50 Rnd",
+            "SAS Mag Clamp",
+            "Salvo 50 Rnd Fast Mag"
+        ],
+        "Barrel": [
+            "17.9 Ultralight",
+            "18.7 Cavalry Lancer",
+            "19.5 Reinforced Heavy",
+            "21.2 Ranger",
+            "20.3 Takedown",
+            "19.5 Task Force"
+        ],
+        "Laser": [
+            "Steady Aim Laser",
+            "Mounted Flashlight",
+            "SOF Target Designator",
+            "SWAT 5mW Laser Sight",
+            "Tiger Team Spotlight",
+            "Ember Sighting Point"
+        ],
+        "Muzzle": [
+            "Muzzle Brake",
+            "Flashguard",
+            "Suppressor",
+            "Infantry Compensator",
+            "SOCOM Eliminator",
+            "Agency Suppressor"
+        ],
+        "Optic": [
+            "Millstop Reflex (1x)",
+            "Visiontech 2x (1.75x)",
+            "Kobra Red Dot (1.25x)",
+            "Quickdot LED (0.92x)",
+            "Axial Arms 3x (2.7x)",
+            "Sillix Holoscout (1.25x)",
+            "Microflex LED (0.92x)",
+            "Hawksmoor (1x)",
+            "Royal & Cross 4x (3.5x)",
+            "SUSAT Multizoom (1.7x + 3.5x)",
+            "Diamondback Reflex (1x)",
+            "ANPVS-4 Thermal (2.1x)"
+        ],
+        "Rear Grip": [
+            "Speed Tape",
+            "Dropshot Wrap",
+            "Field Tape",
+            "SASR Jungle Grip",
+            "Serpent Wrap",
+            "Airborne Elastic Wrap"
+        ],
+        "Stock": [
+            "Tactical Stock",
+            "Marathon Stock",
+            "Duster Pad",
+            "CQB Pad",
+            "SAS Combat Stock",
+            "Raider Stock"
+        ],
+        "Underbarrel": [
+            "Foregrip",
+            "Infiltrator Grip",
+            "Patrol Grip",
+            "Bruiser Grip",
+            "Field Agent Grip",
+            "SFOD Speedgrip"
+        ]
+    },
+    "FN Scar 17": {
+        "Ammunition": [
+            "25 Round Mags",
+            "30 Round Mags"
+        ],
+        "Barrel": [
+            "Forge Tac 17.2 LB",
+            "Forge Tac 20.0 LB",
+            "Forge Tac CQC Pro"
+        ],
+        "Laser": [
+            "Tac Laser",
+            "5mW Laser",
+            "1mW Laser"
+        ],
+        "Muzzle": [
+            "Lightweight Suppressor",
+            "Tactical Suppressor",
+            "Monolithic Suppressor",
+            "Muzzle Brake",
+            "Compensator"
+        ],
+        "Optic": [
+            "Operator Reflex Sight (1x)",
+            "Corp Combat Holo Sight (1.3x)",
+            "G.I. Mini Reflex (1x)",
+            "4.0x Flip Hybrid (2.6x)",
+            "APX5 Holographic Sight (1.3x)",
+            "Scout Combat Optic (2.1x)",
+            "Aim-Op Reflex Sight (1x)",
+            "VLK 3.0x Optic (2x)",
+            "Thermal Hybrid (2.1x Thermal + 1x)",
+            "Solozero Optics Mini Reflex (1x)",
+            "Sniper Scope",
+            "Viper Reflex Sight (1x)",
+            "PBX Holo 7 Sight (1.3x)",
+            "Cronen C480 Pro Optic (2.3x)",
+            "Solozero NVG Enhanced (2.1x Thermal)",
+            "Monocle Reflex Sight (1x)",
+            "Cronen LP945 Mini Reflex (1x)",
+            "Merc Thermal Optic (2.1x Thermal)",
+            "Integral Hybrid (2.1x + 1x)",
+            "Variable Zoom Scope",
+            "Canted Hybrid (2.1x + 1x)"
+        ],
+        "Perk": [
+            "Sleight of Hand"
+        ],
+        "Rear Grip": [
+            "Stippled Grip Tape",
+            "Rubberized Grip Tape",
+            "Granulated Grip Tape"
+        ],
+        "Stock": [
+            "FTAC Collapsible Stock",
+            "FSS Close Quarters Stock",
+            "FTAC Hunter",
+            "XRK Obelisk Pro"
+        ],
+        "Underbarrel": [
+            "Merc Foregrip",
+            "Bipod Foregrip",
+            "Bipod Foregrip (Crouched)",
+            "Bipod Foregrip (Prone)",
+            "Operator Foregrip",
+            "Commando Foregrip",
+            "Tactical Foregrip"
+        ]
+    },
+    "FR 5.56": {
+        "Ammunition": [
+            "50 Round Mag",
+            "60 Round Mag"
+        ],
+        "Barrel": [
+            "FR 15.9 Commando",
+            "FR 24.4 Sniper",
+            "FORGE TAC Ultralight"
+        ],
+        "Laser": [
+            "Tac Laser",
+            "1mW Laser",
+            "5mW Laser"
+        ],
+        "Muzzle": [
+            "Lightweight Suppressor",
+            "Tactical Suppressor",
+            "Monolithic Suppressor",
+            "Muzzle Brake",
+            "Compensator"
+        ],
+        "Optic": [
+            "Operator Reflex Sight (1x)",
+            "Corp Combat Holo Sight (1.3x)",
+            "Aim-Op Reflex Sight (1x)",
+            "Scout Combat Optic (2.1x)",
+            "APX5 Holographic Sight (1.3x)",
+            "Integral Hybrid (2.1x + 1x)",
+            "Solozero Optics Mini Reflex (1x)",
+            "VLK 3.0x Optic (2x)",
+            "4.0x Flip Hybrid (2.6x)",
+            "Viper Reflex Sight (1x)",
+            "PBX Holo 7 Sight (1.3x)",
+            "Solozero NVG Enhanced (2.1x Thermal)",
+            "Sniper Scope",
+            "Cronen LP945 Mini Reflex (1x)",
+            "Monocle Reflex Sight (1x)",
+            "Cronen C480 Pro Optic (2.3x)",
+            "G.I. Mini Reflex (1x)",
+            "Variable Zoom Scope",
+            "Thermal Hybrid (2.1x Thermal + 1x)",
+            "Merc Thermal Optic (2.1x Thermal)",
+            "Canted Hybrid (2.1x + 1x)"
+        ],
+        "Perk": [
+            "Sleight of Hand"
+        ],
+        "Rear Grip": [
+            "Stippled Grip Tape",
+            "Rubberized Grip Tape",
+            "Granulated Grip Tape"
+        ],
+        "Stock": [
+            "FSS Tac-Wrap",
+            "FR Ultralight Hollow",
+            "FORGE TAC Ballast Pack"
+        ],
+        "Underbarrel": [
+            "Merc Foregrip",
+            "Operator Foregrip",
+            "Ranger Foregrip",
+            "Bipod (Crouched)",
+            "Bipod (Prone)",
+            "Commando Foregrip",
+            "Tactical Foregrip"
+        ]
+    },
+    "Fennec": {
+        "Ammunition": [
+            "40 Round Drum Mags",
+            ".45 Hollow Point 12-R Mags"
+        ],
+        "Barrel": [
+            "ZLR 16 Apex",
+            "ZLR 18 Deadfall"
+        ],
+        "Laser": [
+            "Tac Laser",
+            "1mW Laser",
+            "5mW Laser"
+        ],
+        "Muzzle": [
+            "Muzzle Brake",
+            "Tactical Suppressor",
+            "Monolithic Suppressor",
+            "ZLR Sabre",
+            "Compensator"
+        ],
+        "Optic": [
+            "Cronen LP945 Mini Reflex (1x)",
+            "Operator Reflex Sight (1x)",
+            "Corp Combat Holo Sight (1.3x)",
+            "Viper Reflex Sight (1x)",
+            "Solozero Optics Mini Reflex (1x)",
+            "Scout Combat Optic (2.1x)",
+            "APX5 Holographic Sight (1.3x)",
+            "Integral Hybrid (2.1x + 1x)",
+            "G.I. Mini Reflex (1x)",
+            "Monocle Reflex Sight (1x)",
+            "VLK 3.0x Optic (2x)",
+            "Solozero NVG Enhanced (2.1x Thermal)",
+            "Canted Hybrid (2.1x + 1x)",
+            "Aim-Op Reflex Sight (1x)",
+            "PBX Holo 7 Sight (1.3x)",
+            "Merc Thermal Optic (2.1x Thermal)",
+            "Thermal Hybrid (2.1x Thermal + 1x)",
+            "Cronen C480 Pro Optic (2.3x)"
+        ],
+        "Perk": [
+            "Sleight of Hand",
+            "Sleight of Hand (w/ 12 Rnd Mag)"
+        ],
+        "Rear Grip": [
+            "Stippled Grip Tape",
+            "Rubberized Grip Tape",
+            "Granulated Grip Tape"
+        ],
+        "Stock": [
+            "FORGE TAC CQS",
+            "No Stock",
+            "FTAC C6 Carbine PRO",
+            "ZLR Blade"
+        ],
+        "Underbarrel": [
+            "Merc Foregrip",
+            "Operator Foregrip",
+            "Ranger Foregrip",
+            "Commando Foregrip",
+            "Tactical Foregrip"
+        ]
+    },
+    "FiNN LMG": {
+        "Ammunition": [
+            "5.56 NATO 100-Round Belts",
+            "5.56 CT 75-Round Belts",
+            "5.56 CT 100-Round Belts"
+        ],
+        "Barrel": [
+            "XRK Pro Twist",
+            "XRK LongShot Advantage",
+            "FTAC VC-8 Harrier",
+            "Factory Adverse",
+            "XRK Pro Twist Adverse",
+            "XRK LongShot Adverse",
+            "FTAC VC-8 Harrier Adverse"
+        ],
+        "Laser": [
+            "Tac Laser"
+        ],
+        "Muzzle": [
+            "Muzzle Brake",
+            "Lightweight Suppressor",
+            "Tactical Suppressor",
+            "Compensator",
+            "Monolithic Suppressor"
+        ],
+        "Optic": [
+            "Cronen LP945 Mini Reflex (1x)",
+            "Corp Combat Holo Sight (1.3x)",
+            "Aim-Op Reflex Sight (1x)",
+            "Viper Reflex Sight (1x)",
+            "VLK 3.0x Optic (3.0x)",
+            "APX5 Holographic Sight (1.3x)",
+            "Operator Reflex Sight (1x)",
+            "Solozero NVG Enhanced (2.1x)",
+            "Integral Hybrid (2.1x)",
+            "Scout Combat Optic (2.1x)",
+            "Solozero Optics Mini Reflex (1x)",
+            "Sniper Scope (4.4x)",
+            "4.0x Flip Hybrid (4.0x)",
+            "Merc Thermal Optic (2.1x)",
+            "G.I. Mini Reflex (1x)",
+            "PBX Holo 7 Sight (1.3x)",
+            "Canted Hybrid (2.1x)",
+            "Monocle Reflex Sight (1x)",
+            "Cronen C480 Pro Optic (2.3x)",
+            "Thermal Hybrid (2.1x)"
+        ],
+        "Perk": [
+            "Sleight of Hand"
+        ],
+        "Stock": [
+            "XRK Citadel",
+            "XRK M309 Forward Assault",
+            "No Stock",
+            "XRK ChainSAW"
+        ],
+        "Underbarrel": [
+            "Commando Foregrip",
+            "Merc Foregrip",
+            "Tactical Foregrip",
+            "Ranger Foregrip",
+            "Operator Foregrip",
+            "Bipod (Crouched)",
+            "Bipod (Prone)"
+        ]
+    },
+    "Grau 5.56": {
+        "Ammunition": [
+            "50 Round Mags",
+            "60 Round Mags"
+        ],
+        "Barrel": [
+            "ZLR Drifter A08",
+            "Tempus 26.4 Archangel",
+            "XRK CZEN mk2",
+            "FFS 20.8 Nexus",
+            "FSS 11.8 Squall"
+        ],
+        "Laser": [
+            "Tac Laser",
+            "1mW Laser",
+            "5mW Laser"
+        ],
+        "Muzzle": [
+            "Lightweight Suppressor",
+            "Tactical Suppressor",
+            "Monolithic Suppressor",
+            "Muzzle Brake",
+            "Compensator"
+        ],
+        "Optic": [
+            "Cronen LP945 Mini Reflex (1x)",
+            "Corp Combat Holo Sight (1.3x)",
+            "Operator Reflex Sight (1x)",
+            "Scout Combat Optic (2.1x)",
+            "4.0x Flip Hybrid (2.6x)",
+            "Aim-Op Reflex Sight (1x)",
+            "APX5 Holographic Sight (1.3x)",
+            "Integral Hybrid (2.1x + 1x)",
+            "Solozero NVG Enhanced (2.1x Thermal)",
+            "VLK 3.0x Optic (2x)",
+            "Sniper Scope",
+            "Viper Reflex Sight (1x)",
+            "G.I. Mini Reflex (1x)",
+            "PBX Holo 7 Sight (1.3x)",
+            "Cronen C480 Pro Optic (2.3x)",
+            "Monocle Reflex Sight (1x)",
+            "Variable Zoom Scope",
+            "Canted Hybrid (2.1x + 1x)",
+            "Merc Thermal Optic (2.1x Thermal)",
+            "Thermal Hybrid (2.1x Thermal + 1x)"
+        ],
+        "Perk": [
+            "Sleight of Hand"
+        ],
+        "Rear Grip": [
+            "XRK Void II",
+            "Cronen Sniper Elite",
+            "FTAC Rubber"
+        ],
+        "Stock": [
+            "No Stock",
+            "FSS Blackjack",
+            "XRK StrikeLite III"
+        ],
+        "Underbarrel": [
+            "Merc Foregrip",
+            "Ranger Foregrip",
+            "Operator Foregrip",
+            "Commando Foregrip",
+            "Cronen Shark II"
+        ]
+    },
+    "Groza": {
+        "Ammunition": [
+            "45 Rnd Drum",
+            "Taped Mags",
+            "45 Rnd Speed Mag",
+            "Spetsnas 60 Rnd Drum",
+            "GRU Mag Clamp",
+            "VDV 60 Rnd Fast Mag"
+        ],
+        "Barrel": [
+            "Ultralight",
+            "Cavalry Lancer",
+            "VDV Reinforced",
+            "GRU Composite",
+            "Contour M2",
+            "CMV Mil-Spec"
+        ],
+        "Laser": [
+            "Steady Aim Laser",
+            "Mounted Flashlight",
+            "SOF Target Designator",
+            "SWAT 5mW Laser Sight",
+            "Tiger Team Spotlight",
+            "Ember Sighting Point"
+        ],
+        "Muzzle": [
+            "Muzzle Brake",
+            "Flashguard",
+            "Suppressor",
+            "Infantry Compensator",
+            "SOCOM Eliminator",
+            "Agency Suppressor"
+        ],
+        "Optic": [
+            "Millstop Reflex (1x)",
+            "Visiontech 2x (1.75x)",
+            "Kobra Red Dot (1.25x)",
+            "Quickdot LED (0.92x)",
+            "Axial Arms 3x (2.7x)",
+            "Sillix Holoscout (1.25x)",
+            "Microflex LED (0.92x)",
+            "Hawksmoor (1x)",
+            "Royal & Cross 4x (3.5x)",
+            "SUSAT Multizoom (1.7x + 3.5x)",
+            "Diamondback Reflex (1x)",
+            "Noch Sova Thermal (2.1x)"
+        ],
+        "Rear Grip": [
+            "Speed Tape",
+            "Dropshot Wrap",
+            "Field Tape",
+            "SASR Jungle Grip",
+            "Serpent Wrap",
+            "Airborne Elastic Wrap"
+        ],
+        "Stock": [
+            "Tactical Stock",
+            "Marathon Stock",
+            "Duster Pad",
+            "CQB Pad",
+            "SAS Combat Stock",
+            "Raider Stock"
+        ],
+        "Underbarrel": [
+            "Foregrip",
+            "Infiltrator Grip",
+            "Patrol Grip",
+            "Bruiser Grip",
+            "Spetsnaz Speedgrip",
+            "Spetsnaz Grip"
+        ]
+    },
+    "HDR": {
+        "Ammunition": [
+            "7 Round Mags",
+            "9 Round Mags"
+        ],
+        "Barrel": [
+            "26.9 HDR Pro",
+            "26 Bull Barrel",
+            "17.2 Bull Barrel"
+        ],
+        "Laser": [
+            "Tac Laser"
+        ],
+        "Muzzle": [
+            "Monolithic Suppressor",
+            "Tactical Suppressor",
+            "Muzzle Brake",
+            "Lightweight Suppressor",
+            "Compensator"
+        ],
+        "Optic": [
+            "Scout Combat Optic (2.1x)",
+            "Thermal Sniper Scope",
+            "VLK 3.0x Optic (2x)",
+            "Variable Zoom Scope",
+            "Cronen C480 Pro Optic (2.3x)",
+            "Merc Thermal Optic (2.1x Thermal)",
+            "Thermal Dual Power Scope"
+        ],
+        "Perk": [
+            "Sleight of Hand"
+        ],
+        "Stock": [
+            "FTAC Stalker-Scout",
+            "FTAC Hunter-Scout",
+            "FSS Nomad Stock",
+            "FTAC Champion"
+        ],
+        "Underbarrel": [
+            "Bipod (Crouched)",
+            "Bipod (Prone)"
+        ]
+    },
+    "Holger-26": {
+        "Ammunition": [
+            "30 Round Mags"
+        ],
+        "Barrel": [
+            "XRK Ultralight",
+            "FTAC 8.98 Spitfire"
+        ],
+        "Laser": [
+            "Tac Laser",
+            "1mW Laser",
+            "5mW Laser"
+        ],
+        "Muzzle": [
+            "Lightweight Suppressor",
+            "Tactical Suppressor",
+            "Monolithic Suppressor",
+            "Muzzle Brake",
+            "Compensator"
+        ],
+        "Optic": [
+            "Cronen LP945 Mini Reflex (1x)",
+            "Corp Combat Holo Sight (1.3x)",
+            "Aim-Op Reflex Sight (1x)",
+            "Viper Reflex Sight (1x)",
+            "VLK 3.0x Optic (2x)",
+            "APX5 Holographic Sight (1.3x)",
+            "Operator Reflex Sight (1x)",
+            "Solozero NVG Enhanced (2.1x Thermal)",
+            "Integral Hybrid (2.1x + 1x)",
+            "Scout Combat Optic (2.1x)",
+            "Solozero Optics Mini Reflex (1x)",
+            "FSS Integral Reflex",
+            "Sniper Scope",
+            "4.0x Flip Hybrid (2.6x)",
+            "Merc Thermal Optic (2.1x Thermal)",
+            "G.I. Mini Reflex (1x)",
+            "PBX Holo 7 Sight (1.3x)",
+            "Canted Hybrid (2.1x + 1x)",
+            "Monocle Reflex Sight (1x)",
+            "Cronen C480 Pro Optic (2.3x)",
+            "Thermal Hybrid (2.1x Thermal + 1x)",
+            "Solozero K498 4.0x Integral"
+        ],
+        "Perk": [
+            "Sleight of Hand",
+            "Sleight of Hand (w/ 30 Rnd Mag)"
+        ],
+        "Rear Grip": [
+            "Stippled Grip Tape",
+            "Rubberized Grip Tape",
+            "Granulated Grip Tape"
+        ],
+        "Stock": [
+            "No Stock",
+            "XRK Axis",
+            "FSS Ranger",
+            "FSS Infantry"
+        ],
+        "Underbarrel": [
+            "Merc Foregrip",
+            "Ranger Foregrip",
+            "Operator Foregrip",
+            "Commando Foregrip",
+            "Tactical Foregrip"
+        ]
+    },
+    "ISO": {
+        "Ammunition": [
+            "30 Round Mags",
+            "50 Round Drums"
+        ],
+        "Barrel": [
+            "FTAC 225 Dominator",
+            "FSS Revolution",
+            "ISO 140mm CQB",
+            "FSS Nightshade"
+        ],
+        "Laser": [
+            "1mW Laser",
+            "5mW Laser",
+            "Tac Laser"
+        ],
+        "Muzzle": [
+            "Tactical Suppressor",
+            "Muzzle Brake",
+            "Lightweight Suppressor",
+            "Compensator",
+            "Monolithic Suppressor"
+        ],
+        "Optic": [
+            "Aim-Op Reflex Sight",
+            "Corp Combat Holo Sight",
+            "Operator Reflex Sight",
+            "Cronen LP945 Mini Reflex",
+            "VLK 3.0x Optic",
+            "APX5 Holographic",
+            "G.I. Mini Reflex",
+            "Scout Combat Optic",
+            "Monocle Reflex Sight",
+            "Solozero NVG Enhanced",
+            "Viper Reflex Sight",
+            "PBX Holo 7 Sight",
+            "4.0x Flip Hybrid",
+            "Solozero Optics Mini Reflex",
+            "Merc Thermal Optic",
+            "Cronen C480 Pro Optic",
+            "Thermal Hybrid"
+        ],
+        "Perk": [
+            "Sleight of Hand"
+        ],
+        "Rear Grip": [
+            "FSS Vice ISO Grip",
+            "FTAC Elite ISO Grip",
+            "ISO Tac-Form"
+        ],
+        "Stock": [
+            "FORGE TAC Ultralight",
+            "FORGE TAC Stalker",
+            "FTAC Vagrant",
+            "ISO Collapsible"
+        ],
+        "Underbarrel": [
+            "Commando Foregrip",
+            "Merc Foregrip",
+            "Tactical Foregrip",
+            "Ranger Foregrip",
+            "Operator Foregrip"
+        ]
+    },
+    "KSP 45": {
+        "Barrel": [
+            "Extended",
+            "Cavalry",
+            "Reinforced Heavy",
+            "Ranger",
+            "Rifled",
+            "Task Force"
+        ],
+        "Laser": [
+            "Steady Aim Laser",
+            "Mounted Flashlight",
+            "KGB Target Designator",
+            "GRU 5mW Laser Sight",
+            "Tiger Team Spotlight",
+            "Ember Sighting Point"
+        ],
+        "Muzzle": [
+            "Muzzle Brake",
+            "Flashguard",
+            "Sound Suppressor",
+            "Infantry Compensator",
+            "SOCOM Eliminator",
+            "Agency Suppressor"
+        ],
+        "Optic": [
+            "Quickdot LED (0.92x)",
+            "Millstop Reflex (1x)",
+            "Kobra Red Dot (1.25x)",
+            "Visiontech 2x (1.75x)",
+            "Microflex LED (0.92x)",
+            "Hawksmoor (1x)",
+            "SnapPoint (1.15x)",
+            "Diamondback Reflex (1x)",
+            "Sillix Holoscout (1.25x)",
+            "Fastpoint Reflex (1x)",
+            "Axial Arms 3x (2.7x)",
+            "SUSAT Multizoom (1.7x + 3.5x)"
+        ],
+        "Rear Grip": [
+            "Speed Tape",
+            "Dropshot Wrap",
+            "Field Tape",
+            "SASR Jungle Grip",
+            "Serpent Wrap",
+            "Airborne Elastic Wrap"
+        ],
+        "Stock": [
+            "Tactical Stock",
+            "Collapsed Stock",
+            "Duster Stock",
+            "No Stock",
+            "SAS Combat Stock",
+            "Raider Stock"
+        ],
+        "Underbarrel": [
+            "Foregrip",
+            "Red Cell Foregrip",
+            "Patrol Grip",
+            "Striker Grip",
+            "Field Agent Grip",
+            "SFOD Speedgrip"
+        ]
+    },
+    "Kar98k": {
+        "Barrel": [
+            "Singuard Custom 25.1",
+            "Singuard Custom 21.2",
+            "Singuard Custom 27.6"
+        ],
+        "Laser": [
+            "Tac Laser"
+        ],
+        "Muzzle": [
+            "Muzzle Brake",
+            "Tactical Suppressor",
+            "Monolithic Suppressor",
+            "Compensator",
+            "Lightweight Suppressor"
+        ],
+        "Optic": [
+            "Cronen LP945 Mini Reflex (1x)",
+            "Aim-Op Reflex Sight (1x)",
+            "Corp Combat Holo Sight (1.3x)",
+            "Scout Combat Optic (2.1x)",
+            "APX5 Holographic Sight (1.3x)",
+            "Operator Reflex Sight (1x)",
+            "4.0x Flip Hybrid",
+            "Integral Hybrid (2.1x + 1x)",
+            "Solozero NVG Enhanced (2.1x Thermal)",
+            "VLK 3.0x Optic (2x)",
+            "PBX Holo 7 Sight (1.3x)",
+            "G.I. Mini Reflex (1x)",
+            "Viper Reflex Sight (1x)",
+            "Cronen C480 Pro Optic (2.3x)",
+            "Solozero Optics Mini Reflex (1x)",
+            "Monocle Reflex Sight (1x)",
+            "Merc Thermal Optic (2.1x Thermal)",
+            "Thermal Hybrid (2.1x Thermal + 1x)",
+            "Sniper Scope",
+            "Variable Zoom Scope"
+        ],
+        "Perk": [
+            "Sleight of Hand",
+            "Sleight of Hand (w/ Sniper Optic)"
+        ],
+        "Rear Grip": [
+            "Stippled Grip Tape",
+            "Granulated Grip Tape",
+            "Rubberized Grip Tape"
+        ],
+        "Stock": [
+            "STVOL Precision Comb",
+            "Hollow Stock Mod",
+            "FTAC Sport Comb"
+        ],
+        "Underbarrel": [
+            "Bipod"
+        ]
+    },
+    "Kilo 141": {
+        "Ammunition": [
+            "50 Round Mags",
+            "60 Round Mags",
+            "100 Round Drums"
+        ],
+        "Barrel": [
+            "Singuard Arms 16.6 SOCOM",
+            "Singuard Arms 19.8 Prowler",
+            "Singuard Arms Whisper"
+        ],
+        "Laser": [
+            "Tac Laser",
+            "1mW Laser",
+            "5mW Laser"
+        ],
+        "Muzzle": [
+            "Lightweight Suppressor",
+            "Tactical Suppressor",
+            "Monolithic Suppressor",
+            "Muzzle Brake",
+            "Compensator"
+        ],
+        "Optic": [
+            "Operator Reflex Sight (1x)",
+            "Corp Combat Holo Sight (1.3x)",
+            "Aim-Op Reflex Sight (1x)",
+            "G.I. Mini Reflex (1x)",
+            "Scout Combat Optic (2.1x)",
+            "APX5 Holographic Sight (1.3x)",
+            "Cronen LP945 Mini Reflex (1x)",
+            "4.0x Flip Hybrid (2.6x)",
+            "VLK 3.0x Optic (2x)",
+            "Integral Hybrid (2.1x + 1x)",
+            "Viper Reflex Sight (1x)",
+            "Cronen C480 Pro Optic (2.3x)",
+            "Solozero NVG Enhanced (2.1x Thermal)",
+            "Monocle Reflex Sight (1x)",
+            "Sniper Scope",
+            "Merc Thermal Optic (2.1x Thermal)",
+            "PBX Holo 7 Sight (1.3x)",
+            "Thermal Hybrid (2.1x Thermal + 1x)",
+            "Solozero Optics Mini Reflex (1x)",
+            "Canted Hybrid (2.1x + 1x)",
+            "Variable Zoom Scope"
+        ],
+        "Perk": [
+            "Sleight of Hand"
+        ],
+        "Rear Grip": [
+            "Stippled Grip Tape",
+            "Rubberized Grip Tape",
+            "Granulated Grip Tape"
+        ],
+        "Stock": [
+            "No Stock",
+            "FSS Close Quarters Stock",
+            "FORGE TAC Ultralight",
+            "Singuard Arms Sniper Pro"
+        ],
+        "Underbarrel": [
+            "Merc Foregrip",
+            "Operator Foregrip",
+            "Ranger Foregrip",
+            "Bipod (Crouched)",
+            "Bipod (Prone)",
+            "Commando Foregrip",
+            "Tactical Foregrip"
+        ]
+    },
+    "Krig 6": {
+        "Barrel": [
+            "Ultralight",
+            "Cavalry Lancer",
+            "Contour",
+            "Ranger",
+            "Takedown",
+            "CMV Mil-Spec"
+        ],
+        "Laser": [
+            "Steady Aim Laser",
+            "Mounted Flashlight",
+            "SOF Target Designator",
+            "SWAT 5mW Laser Sight",
+            "Tiger Team Spotlight",
+            "Ember Sighting Point"
+        ],
+        "Muzzle": [
+            "Muzzle Brake",
+            "Flashguard",
+            "Suppressor",
+            "Infantry Compensator",
+            "SOCOM Eliminator",
+            "Agency Suppressor"
+        ],
+        "Optic": [
+            "Millstop Reflex (1x)",
+            "Visiontech 2x (1.75x)",
+            "Kobra Red Dot (1.25x)",
+            "Quickdot LED (0.92x)",
+            "Axial Arms 3x (2.7x)",
+            "Sillix Holoscout (1.25x)",
+            "Microflex LED (0.92x)",
+            "Hawksmoor (1x)",
+            "Royal & Cross 4x (3.5x)",
+            "SUSAT Multizoom (1.7x + 3.5x)",
+            "Diamondback Reflex (1x)",
+            "Noch Sova Thermal (2.1x)"
+        ],
+        "Rear Grip": [
+            "Speed Tape",
+            "Dropshot Wrap",
+            "Field Tape",
+            "SASR Jungle Grip",
+            "Serpent Wrap",
+            "Airborne Elastic Wrap"
+        ],
+        "Stock": [
+            "Tactical Stock",
+            "Wire Stock",
+            "Duster Stock",
+            "No Stock",
+            "SAS Combat Stock",
+            "Raider Stock"
+        ],
+        "Underbarrel": [
+            "Foregrip",
+            "Infiltrator Grip",
+            "Patrol Grip",
+            "Bruiser Grip",
+            "Field Agent Grip",
+            "SFOD Speedgrip"
+        ]
+    },
+    "LC10": {
+        "Barrel": [
+            "Extended",
+            "Cavalry",
+            "Reinforced Heavy",
+            "Ranger",
+            "Rifled",
+            "Task Force"
+        ],
+        "Laser": [
+            "Steady Aim Laser",
+            "Mounted Flashlight",
+            "SOF Target Designator",
+            "SWAT 5mW Laser Sight",
+            "Tiger Team Spotlight",
+            "Ember Sighting Point"
+        ],
+        "Muzzle": [
+            "Muzzle Brake",
+            "Flashguard",
+            "Sound Suppressor",
+            "Infantry Compensator",
+            "SOCOM Eliminator",
+            "Agency Suppressor"
+        ],
+        "Optic": [
+            "Quickdot LED (0.92x)",
+            "Millstop Reflex (1x)",
+            "Kobra Red Dot (1.25x)",
+            "Visiontech 2x (1.75x)",
+            "Microflex LED (0.92x)",
+            "Hawksmoor (1x)",
+            "SnapPoint (1.15x)",
+            "Diamondback Reflex (1x)",
+            "Sillix Holoscout (1.25x)",
+            "Fastpoint Reflex (1x)",
+            "Axial Arms 3x (2.7x)",
+            "SUSAT Multizoom (1.7x + 3.5x)"
+        ],
+        "Rear Grip": [
+            "Speed Tape",
+            "Dropshot Wrap",
+            "Field Tape",
+            "SASR Jungle Grip",
+            "Serpent Wrap",
+            "Airborne Elastic Wrap"
+        ],
+        "Stock": [
+            "Tactical Stock",
+            "Wire Stock",
+            "Duster Stock",
+            "No Stock",
+            "SAS Combat Stock",
+            "Raider Stock"
+        ],
+        "Underbarrel": [
+            "Foregrip",
+            "Red Cell Foregrip",
+            "Bruiser Grip",
+            "Field Agent Grip",
+            "Patrol Grip",
+            "SFOD Speedgrip"
+        ]
+    },
+    "M13": {
+        "Ammunition": [
+            "50 Round Mags",
+            "60 Round Mags",
+            ".300 Blackout 30-Round Mags"
+        ],
+        "Barrel": [
+            "Tempus Mini",
+            "Tempus Cyclone",
+            "Tempus Marksman"
+        ],
+        "Laser": [
+            "Tac Laser",
+            "1mW Laser",
+            "5mW Laser"
+        ],
+        "Muzzle": [
+            "Lightweight Suppressor",
+            "Tactical Suppressor",
+            "Monolithic Suppressor",
+            "Muzzle Brake",
+            "Compensator"
+        ],
+        "Optic": [
+            "Solozero Optics Mini Reflex (1x)",
+            "Aim-Op Reflex Sight (1x)",
+            "Corp Combat Holo Sight (1.3x)",
+            "Scout Combat Optic (2.1x)",
+            "Operator Reflex Sight (1x)",
+            "4.0x Flip Hybrid (2.6x)",
+            "APX5 Holographic Sight (1.3x)",
+            "Integral Hybrid (2.1x + 1x)",
+            "G.I. Mini Reflex (1x)",
+            "VLK 3.0x Optic (2x)",
+            "Cronen LP945 Mini Reflex (1x)",
+            "Viper Reflex Sight (1x)",
+            "Sniper Scope",
+            "Solozero NVG Enhanced (2.1x Thermal)",
+            "Monocle Reflex Sight (1x)",
+            "Cronen C480 Pro Optic (2.3x)",
+            "Merc Thermal Optic (2.1x Thermal)",
+            "Canted Hybrid (2.1x + 1x)",
+            "PBX Holo 7 Sight (1.3x)",
+            "Thermal Hybrid (2.1x Thermal + 1x)",
+            "Variable Zoom Scope"
+        ],
+        "Perk": [
+            "Sleight of Hand"
+        ],
+        "Rear Grip": [
+            "Stippled Grip Tape",
+            "Rubberized Grip Tape",
+            "Granulated Grip Tape"
+        ],
+        "Stock": [
+            "No Stock",
+            "FSS Close Quarters Stock",
+            "M13 Skeleton Stock",
+            "FORGE TAC Stalker"
+        ],
+        "Underbarrel": [
+            "Merc Foregrip",
+            "Ranger Foregrip",
+            "Operator Foregrip",
+            "Bipod (Crouched)",
+            "Bipod (Prone)",
+            "Commando Foregrip",
+            "Tactical Foregrip"
+        ]
+    },
+    "M16": {
+        "Barrel": [
+            "Rapid Fire",
+            "Cavalry Lancer",
+            "Strike Team",
+            "Titanium",
+            "Match Grade",
+            "Task Force",
+            "Match Grade",
+            "Task Force"
+        ]
+    },
+    "M4A1": {
+        "Ammunition": [
+            "50 Round Mags",
+            "60 Round Mags",
+            "9mm Para 32-Round Mags",
+            ".458 SOCOM 10-Round Mags"
+        ],
+        "Barrel": [
+            "FSS 11.5 Commando",
+            "Stock M16 Grenadier",
+            "FSS 14.5 Tac Lite",
+            "Corvus Custom Marksman",
+            "FSS 12.4 Predator"
+        ],
+        "Laser": [
+            "Tac Laser",
+            "1mW Laser",
+            "5mW Laser"
+        ],
+        "Muzzle": [
+            "Lightweight Suppressor",
+            "Tactical Suppressor",
+            "Monolithic Suppressor",
+            "Muzzle Brake",
+            "Compensator"
+        ],
+        "Optic": [
+            "Cronen LP945 Mini Reflex (1x)",
+            "Corp Combat Holo Sight (1.3x)",
+            "Operator Reflex Sight (1x)",
+            "Scout Combat Optic (2.1x)",
+            "4.0x Flip Hybrid (2.6x)",
+            "Aim-Op Reflex Sight (1x)",
+            "APX5 Holographic Sight (1.3x)",
+            "Integral Hybrid (2.1x + 1x)",
+            "Solozero NVG Enhanced (2.1x Thermal)",
+            "VLK 3.0x Optic (2x)",
+            "Sniper Scope",
+            "Viper Reflex Sight (1x)",
+            "G.I. Mini Reflex (1x)",
+            "PBX Holo 7 Sight (1.3x)",
+            "Cronen C480 Pro Optic (2.3x)",
+            "Monocle Reflex Sight (1x)",
+            "Variable Zoom Scope",
+            "Canted Hybrid (2.1x + 1x)",
+            "Merc Thermal Optic (2.1x Thermal)",
+            "Thermal Hybrid (2.1x Thermal + 1x)"
+        ],
+        "Perk": [
+            "Sleight of Hand"
+        ],
+        "Rear Grip": [
+            "Stippled Grip Tape",
+            "Rubberized Grip Tape",
+            "Granulated Grip Tape"
+        ],
+        "Stock": [
+            "No Stock",
+            "FORGE TAC CQS",
+            "M-16 Stock",
+            "Singuard Arms Invader"
+        ],
+        "Underbarrel": [
+            "Merc Foregrip",
+            "Ranger Foregrip",
+            "Operator Foregrip",
+            "Bipod (Crouched)",
+            "Bipod (Prone)",
+            "Commando Foregrip",
+            "Tactical Foregrip"
+        ]
+    },
+    "M60": {
+        "Barrel": [
+            "Cut Down",
+            "Cavalry Lancer",
+            "Division",
+            "SOR Cut Down",
+            "Match Grade",
+            "Task Force"
+        ],
+        "Laser": [
+            "Steady Aim Laser",
+            "Mounted Flashlight",
+            "SOF Target Designator",
+            "SWAT 5mW Laser Sight",
+            "Tiger Team Spotlight",
+            "Ember Sighting Point"
+        ],
+        "Muzzle": [
+            "Muzzle Brake",
+            "Flashguard",
+            "Suppressor",
+            "Infantry Compensator",
+            "SOCOM Eliminator",
+            "Agency Suppressor"
+        ],
+        "Optic": [
+            "Millstop Reflex (1x)",
+            "Visiontech 2x (1.75x)",
+            "Kobra Red Dot (1.25x)",
+            "Quickdot LED (0.92x)",
+            "Axial Arms 3x (2.7x)",
+            "Sillix Holoscout (1.25x)",
+            "Microflex LED (0.92x)",
+            "Hawksmoor (1x)",
+            "Royal & Cross 4x (3.5x)",
+            "SUSAT Multizoom (1.7x + 3.5x)",
+            "Diamondback Reflex (1x)",
+            "Noch Sova Thermal (2.1x)"
+        ],
+        "Rear Grip": [
+            "Speed Tape",
+            "Dropshot Wrap",
+            "Field Tape",
+            "SASR Jungle Grip",
+            "Serpent Wrap",
+            "Airborne Elastic Wrap"
+        ],
+        "Stock": [
+            "Tactical Stock",
+            "Wire Stock",
+            "Duster Pad",
+            "No Stock",
+            "SAS Combat Stock",
+            "Raider Pad"
+        ],
+        "Underbarrel": [
+            "Foregrip",
+            "Infiltrator Grip",
+            "Patrol Grip",
+            "Bruiser Grip",
+            "Spetsnaz Speedgrip",
+            "Spetsnaz Grip"
+        ]
+    },
+    "M91": {
+        "Ammunition": [
+            "120 Round Belt",
+            "150 Round Belt"
+        ],
+        "Barrel": [
+            "M91 Special Forces",
+            "M91 Infantry",
+            "M91 Heavy"
+        ],
+        "Laser": [
+            "Tac Laser",
+            "1mW Laser",
+            "5mW Laser"
+        ],
+        "Muzzle": [
+            "Lightweight Suppressor",
+            "Tactical Suppressor",
+            "Monolithic Suppressor",
+            "Muzzle Brake",
+            "Compensator"
+        ],
+        "Optic": [
+            "Cronen LP945 Mini Reflex (1x)",
+            "Corp Combat Holo Sight (1.3x)",
+            "Aim-Op Reflex Sight (1x)",
+            "Viper Reflex Sight (1x)",
+            "VLK 3.0x Optic (2x)",
+            "APX5 Holographic Sight (1.3x)",
+            "Operator Reflex Sight (1x)",
+            "Solozero NVG Enhanced (2.1x Thermal)",
+            "Integral Hybrid (2.1x + 1x)",
+            "Scout Combat Optic (2.1x)",
+            "Solozero Optics Mini Reflex (1x)",
+            "Sniper Scope",
+            "4.0x Flip Hybrid (2.6x)",
+            "Merc Thermal Optic (2.1x Thermal)",
+            "G.I. Mini Reflex (1x)",
+            "PBX Holo 7 Sight (1.3x)",
+            "Canted Hybrid (2.1x + 1x)",
+            "Monocle Reflex Sight (1x)",
+            "Cronen C480 Pro Optic (2.3x)",
+            "Thermal Hybrid (2.1x Thermal + 1x)"
+        ],
+        "Perk": [
+            "Sleight of Hand"
+        ],
+        "Rear Grip": [
+            "Stippled Grip Tape",
+            "Rubberized Grip Tape",
+            "Granulated Grip Tape"
+        ],
+        "Stock": [
+            "No Stock",
+            "XRK Striker",
+            "FORGE TAC Stalker",
+            "FORGE TAC Ultralight"
+        ],
+        "Underbarrel": [
+            "Merc Foregrip",
+            "Ranger Foregrip",
+            "Operator Foregrip",
+            "Bipod (Crouched)",
+            "Bipod (Prone)",
+            "Commando Foregrip",
+            "Tactical Foregrip"
+        ]
+    },
+    "MAC-10": {
+        "Ammunition": [
+            "43 Rnd Drum",
+            "Fast Mag",
+            "43 Rnd Speed Mag",
+            "STANAG 53 Rnd Drum",
+            "Vandal Speed Loader",
+            "Salvo 53 Rnd Fast Mag"
+        ],
+        "Barrel": [
+            "5.3 Extended",
+            "6.5 Cavalry",
+            "6.1 Reinforced Heavy",
+            "5.3 Ranger",
+            "6.5 Rifled",
+            "5.9 Task Force"
+        ],
+        "Laser": [
+            "Steady Aim Laser",
+            "Mounted Flashlight",
+            "KGB Target Designator",
+            "GRU 5mW Laser Sight",
+            "Tiger Team Spotlight",
+            "Ember Sighting Point"
+        ],
+        "Muzzle": [
+            "Muzzle Brake",
+            "Flashguard",
+            "Sound Suppressor",
+            "Infantry Compensator",
+            "SOCOM Eliminator",
+            "Agency Suppressor"
+        ],
+        "Optic": [
+            "Quickdot LED (0.92x)",
+            "Millstop Reflex (1x)",
+            "Kobra Red Dot (1.25x)",
+            "Visiontech 2x (1.75x)",
+            "Microflex LED (0.92x)",
+            "Hawksmoor (1x)",
+            "SnapPoint (1.15x)",
+            "Diamondback Reflex (1x)",
+            "Sillix Holoscout (1.25x)",
+            "Fastpoint Reflex (1x)",
+            "Axial Arms 3x (2.7x)",
+            "SUSAT Multizoom (1.7x + 3.5x)"
+        ],
+        "Rear Grip": [
+            "Speed Tape",
+            "Dropshot Wrap",
+            "Field Tape",
+            "SASR Jungle Grip",
+            "Serpent Wrap",
+            "Airborne Elastic Wrap"
+        ],
+        "Stock": [
+            "Tactical Stock",
+            "Wire Stock",
+            "Duster Stock",
+            "No Stock",
+            "SAS Combat Stock",
+            "Raider Stock"
+        ],
+        "Underbarrel": [
+            "Foregrip",
+            "Red Cell Foregrip",
+            "Patrol Grip",
+            "Striker Grip",
+            "Field Agent Grip",
+            "SFOD Speedgrip"
+        ]
+    },
+    "MG34": {
+        "Ammunition": [
+            "75 Round Belt",
+            "100 Round Belt"
+        ],
+        "Barrel": [
+            "FSS Brute",
+            "FSS Stubby",
+            "FSS Elite"
+        ],
+        "Laser": [
+            "Tac Laser",
+            "1mW Laser",
+            "5mW Laser"
+        ],
+        "Muzzle": [
+            "Lightweight Suppressor",
+            "Tactical Suppressor",
+            "Monolithic Suppressor",
+            "Muzzle Brake",
+            "Compensator"
+        ],
+        "Optic": [
+            "Operator Reflex Sight (1x)",
+            "Corp Combat Holo Sight (1.3x)",
+            "Aim-Op Reflex Sight (1x)",
+            "G.I. Mini Reflex (1x)",
+            "Scout Combat Optic (2.1x)",
+            "APX5 Holographic Sight (1.3x)",
+            "Cronen LP945 Mini Reflex (1x)",
+            "Integral Hybrid (2.1x + 1x)",
+            "Solozero NVG Enhanced (2.1x Thermal)",
+            "VLK 3.0x Optic (2x)",
+            "Viper Reflex Sight (1x)",
+            "Merc Thermal Optic (2.1x Thermal)",
+            "Thermal Hybrid (2.1x Thermal + 1x)",
+            "Cronen C480 Pro Optic (2.3x)",
+            "Monocle Reflex Sight (1x)",
+            "Canted Hybrid (2.1x + 1x)",
+            "PBX Holo 7 Sight (1.3x)",
+            "Solozero Optics Mini Reflex (1x)",
+            "Sniper Scope"
+        ],
+        "Perk": [
+            "Sleight of Hand"
+        ],
+        "Rear Grip": [
+            "Stippled Grip Tape",
+            "Rubberized Grip Tape",
+            "Granulated Grip Tape"
+        ],
+        "Stock": [
+            "No Stock",
+            "FSS Close Quarters Stock",
+            "FORGE TAC Stalker",
+            "FORGE TAC Ultralight"
+        ],
+        "Underbarrel": [
+            "Merc Foregrip",
+            "Operator Foregrip",
+            "Ranger Foregrip",
+            "Bipod (Crouched)",
+            "Bipod (Prone)",
+            "Commando Foregrip",
+            "Tactical Foregrip"
+        ]
+    },
+    "MP5 (CW)": {
+        "Ammunition": [
+            "40 Rnd Drum",
+            "Fast Mag",
+            "40 Rnd Speed Mag",
+            "STANAG 50 Rnd Drum",
+            "Vandal Speed Loader",
+            "Salvo 50 Rnd Fast Mag"
+        ],
+        "Barrel": [
+            "9.5 Extended",
+            "10.1 Cavalry",
+            "9.5 Reinforced Heavy",
+            "9.5 Ranger",
+            "9.1 Rifled",
+            "9.5 Task Force"
+        ],
+        "Laser": [
+            "Steady Aim Laser",
+            "Mounted Flashlight",
+            "KGB Target Designator",
+            "GRU 5mW Laser Sight",
+            "Tiger Team Spotlight",
+            "Ember Sighting Point"
+        ],
+        "Muzzle": [
+            "Muzzle Brake",
+            "Flashguard",
+            "Sound Suppressor",
+            "Infantry Compensator",
+            "SOCOM Eliminator",
+            "Agency Suppressor"
+        ],
+        "Optic": [
+            "Quickdot LED (0.92x)",
+            "Millstop Reflex (1x)",
+            "Kobra Red Dot (1.25x)",
+            "Visiontech 2x (1.75x)",
+            "Microflex LED (0.92x)",
+            "Hawksmoor (1x)",
+            "SnapPoint (1.15x)",
+            "Diamondback Reflex (1x)",
+            "Sillix Holoscout (1.25x)",
+            "Fastpoint Reflex (1x)",
+            "Axial Arms 3x (2.7x)",
+            "SUSAT Multizoom (1.7x + 3.5x)"
+        ],
+        "Rear Grip": [
+            "Speed Tape",
+            "Dropshot Wrap",
+            "Field Tape",
+            "SASR Jungle Grip",
+            "Serpent Wrap",
+            "Airborne Elastic Wrap"
+        ],
+        "Stock": [
+            "Tactical Stock",
+            "Collapsed Stock",
+            "Duster Stock",
+            "No Stock",
+            "SAS Combat Stock",
+            "Raider Stock"
+        ],
+        "Underbarrel": [
+            "Foregrip",
+            "Red Cell Foregrip",
+            "Patrol Grip",
+            "Striker Grip",
+            "Field Agent Grip",
+            "SFOD Speedgrip"
+        ]
+    },
+    "MP5": {
+        "Ammunition": [
+            "45 Round Mags",
+            "10mm Auto 30-Round Mags"
+        ],
+        "Barrel": [
+            "FSS Light",
+            "Monolithic Integral Suppressor",
+            "FSS Mini",
+            "Subsonic Integral Suppressor"
+        ],
+        "Laser": [
+            "Tac Laser",
+            "1mW Laser",
+            "5mW Laser"
+        ],
+        "Muzzle": [
+            "Lightweight Suppressor",
+            "Tactical Suppressor",
+            "Monolithic Suppressor",
+            "Muzzle Brake",
+            "Compensator"
+        ],
+        "Optic": [
+            "Operator Reflex Sight (1x)",
+            "APX5 Holographic Sight (1.3x)",
+            "Aim-Op Reflex Sight (1x)",
+            "Solozero Optics Mini Reflex (1x)",
+            "Corp Combat Holo Sight (1.3x)",
+            "Solozero NVG Enhanced (2.1x Thermal)",
+            "Scout Combat Optic (2.1x)",
+            "G.I. Mini Reflex (1x)",
+            "VLK 3.0x Optic (2x)",
+            "Merc Thermal Optic (2.1x Thermal)",
+            "Canted Hybrid (2.1x + 1x)",
+            "Cronen LP945 Mini Reflex (1x)",
+            "PBX Holo 7 Sight (1.3x)",
+            "Viper Reflex Sight (1x)",
+            "Cronen C480 Pro Optic (2.3x)",
+            "Thermal Hybrid (2.1x Thermal + 1x)",
+            "Integral Hybrid (2.1x + 1x)",
+            "Monocle Reflex Sight (1x)"
+        ],
+        "Perk": [
+            "Sleight of Hand"
+        ],
+        "Rear Grip": [
+            "Stippled Grip Tape",
+            "Rubberized Grip Tape",
+            "Granulated Grip Tape"
+        ],
+        "Stock": [
+            "FSS Close Quarters Stock",
+            "FTAC Collapsible",
+            "FORGE TAC Ultralight",
+            "Classic Straight-line Stock"
+        ],
+        "Underbarrel": [
+            "Merc Foregrip",
+            "Ranger Foregrip",
+            "Operator Foregrip",
+            "Commando Foregrip",
+            "Tactical Foregrip"
+        ]
+    },
+    "MP7": {
+        "Ammunition": [
+            "50 Round Mags",
+            "60 Round Mags"
+        ],
+        "Barrel": [
+            "FSS Strike",
+            "FSS Recon",
+            "FSS Swat"
+        ],
+        "Laser": [
+            "Tac Laser",
+            "1mW Laser",
+            "5mW Laser"
+        ],
+        "Muzzle": [
+            "Lightweight Suppressor",
+            "Tactical Suppressor",
+            "Monolithic Suppressor",
+            "Muzzle Brake",
+            "Compensator"
+        ],
+        "Optic": [
+            "Aim-Op Reflex Sight (1x)",
+            "Corp Combat Holo Sight (1.3x)",
+            "Operator Reflex Sight (1x)",
+            "Cronen LP945 Mini Reflex (1x)",
+            "VLK 3.0x Optic (2x)",
+            "APX5 Holographic Sight (1.3x)",
+            "G.I. Mini Reflex (1x)",
+            "Scout Combat Optic (2.1x)",
+            "Monocle Reflex Sight (1x)",
+            "Solozero NVG Enhanced (2.1x Thermal)",
+            "Viper Reflex Sight (1x)",
+            "PBX Holo 7 Sight (1.3x)",
+            "4.0x Flip Hybrid (2.6x)",
+            "Solozero Optics Mini Reflex (1x)",
+            "Merc Thermal Optic (2.1x Thermal)",
+            "Cronen C480 Pro Optic (2.3x)",
+            "Thermal Hybrid (2.1x Thermal + 1x)"
+        ],
+        "Perk": [
+            "Sleight of Hand"
+        ],
+        "Rear Grip": [
+            "Stippled Grip Tape",
+            "Rubberized Grip Tape",
+            "Granulated Grip Tape"
+        ],
+        "Stock": [
+            "FSS Close Quarters Stock",
+            "No Stock",
+            "FORGE TAC Ultralight",
+            "FORGE TAC Stalker"
+        ],
+        "Underbarrel": [
+            "Merc Foregrip",
+            "Ranger Foregrip",
+            "Operator Foregrip",
+            "Commando Foregrip",
+            "Tactical Foregrip"
+        ]
+    },
+    "Milano 821": {
+        "Barrel": [
+            "Extended",
+            "Cavalry",
+            "Reinforced Heavy",
+            "Ranger",
+            "Rifled",
+            "Task Force"
+        ],
+        "Laser": [
+            "Steady Aim Laser",
+            "Mounted Flashlight",
+            "KGB Target Designator",
+            "GRU 5mW Laser Sight",
+            "Tiger Team Spotlight",
+            "Ember Sighting Point"
+        ],
+        "Muzzle": [
+            "Muzzle Brake",
+            "Flashguard",
+            "Sound Suppressor",
+            "Infantry Compensator",
+            "SOCOM Eliminator",
+            "Agency Suppressor"
+        ],
+        "Optic": [
+            "Quickdot LED (0.92x)",
+            "Millstop Reflex (1x)",
+            "Kobra Red Dot (1.25x)",
+            "Visiontech 2x (1.75x)",
+            "Microflex LED (0.92x)",
+            "Hawksmoor (1x)",
+            "SnapPoint (1.15x)",
+            "Diamondback Reflex (1x)",
+            "Sillix Holoscout (1.25x)",
+            "Fastpoint Reflex (1x)",
+            "Axial Arms 3x (2.7x)",
+            "SUSAT Multizoom (1.7x + 3.5x)"
+        ],
+        "Rear Grip": [
+            "Speed Tape",
+            "Dropshot Wrap",
+            "Field Tape",
+            "SASR Jungle Grip",
+            "Serpent Wrap",
+            "Airborne Elastic Wrap"
+        ],
+        "Stock": [
+            "Tactical Stock",
+            "Collapsed Stock",
+            "Duster Stock",
+            "Marathon Stock",
+            "SAS Combat Stock",
+            "Raider Stock"
+        ],
+        "Underbarrel": [
+            "Foregrip",
+            "Red Cell Foregrip",
+            "Patrol Grip",
+            "Bruiser Grip",
+            "Field Agent Grip",
+            "SFOD Speedgrip"
+        ]
+    },
+    "Mk2 Carbine": {
+        "Barrel": [
+            "FSS 18.0 Factory",
+            "FSS 20.0 Factory",
+            "FSS 24.0 Factory"
+        ],
+        "Laser": [
+            "Tac Laser"
+        ],
+        "Muzzle": [
+            "Tactical Suppressor",
+            "Muzzle Brake",
+            "Compensator",
+            "Lightweight Suppressor",
+            "Monolithic Suppressor"
+        ],
+        "Optic": [
+            "Cronen LP945 Mini Reflex (1x)",
+            "Corp Combat Holo Sight (1.3x)",
+            "Viper Reflex Sight (1x)",
+            "PBX Holo 7 Sight (1.3x)",
+            "Cronen C480 Pro Optic (2.3x)",
+            "Solozero Optics Mini Reflex (1x)",
+            "Operator Reflex Sight (1x)",
+            "VLK 3.0x Optic (2x)",
+            "Solozero NVG Enhanced (2.1x Thermal)",
+            "Sniper Scope",
+            "4.0x Flip Hybrid",
+            "G.I. Mini Reflex (1x)",
+            "Aim-Op Reflex Sight (1x)",
+            "APX5 Holographic Sight (1.3x)",
+            "Monocle Reflex Sight (1x)",
+            "Thermal Hybrid (2.1x Thermal + 1x)",
+            "Scout Combat Optic (2.1x)",
+            "Merc Thermal Optic (2.1x Thermal)",
+            "Integral Hybrid (2.1x + 1x)",
+            "Variable Zoom Scope"
+        ],
+        "Perk": [
+            "Sleight of Hand"
+        ],
+        "Rear Grip": [
+            "Rubberized Grip Tape",
+            "Stippled Grip Tape",
+            "Granulated Grip Tape"
+        ],
+        "Stock": [
+            "Cartridge Sleeve",
+            "FSS MK2 Sport Comb",
+            "FSS MK2 Precision Comb",
+            "MK2 Ultralight Hollow"
+        ]
+    },
+    "Oden": {
+        "Ammunition": [
+            "25 Round Mags",
+            "30 Round Mags"
+        ],
+        "Barrel": [
+            "Oden Factory 810mm",
+            "Oden Factory 730mm",
+            "Oden Factory 420mm"
+        ],
+        "Laser": [
+            "Tac Laser",
+            "1mW Laser",
+            "5mW Laser"
+        ],
+        "Muzzle": [
+            "Lightweight Suppressor",
+            "Tactical Suppressor",
+            "Monolithic Suppressor",
+            "Colossus Suppressor",
+            "Compensator",
+            "Muzzle Brake"
+        ],
+        "Optic": [
+            "Operator Reflex Sight (1x)",
+            "Corp Combat Holo Sight (1.3x)",
+            "Solozero Optics Mini Reflex (1x)",
+            "Aim-Op Reflex Sight (1x)",
+            "APX5 Holographic Sight (1.3x)",
+            "VLK 3.0x Optic (2x)",
+            "Viper Reflex Sight (1x)",
+            "Sniper Scope",
+            "Solozero NVG Enhanced (2.1x Thermal)",
+            "PBX Holo 7 Sight (1.3x)",
+            "Monocle Reflex Sight (1x)",
+            "G.I. Mini Reflex (1x)",
+            "Integral Hybrid (2.1x + 1x)",
+            "Scout Combat Optic (2.1x)",
+            "Merc Thermal Optic (2.1x Thermal)",
+            "Thermal Hybrid (2.1x Thermal + 1x)",
+            "Cronen C480 Pro Optic (2.3x)",
+            "Canted Hybrid (2.1x + 1x)",
+            "Variable Zoom Scope",
+            "Cronen LP945 Mini Reflex (1x)"
+        ],
+        "Perk": [
+            "Sleight of Hand"
+        ],
+        "Rear Grip": [
+            "Stippled Grip Tape",
+            "Rubberized Grip Tape",
+            "Granulated Grip Tape"
+        ],
+        "Stock": [
+            "FTAC XL Elite Comb",
+            "FORGE TAC Ballast Pack",
+            "Oden Ultralight Hollow"
+        ],
+        "Underbarrel": [
+            "Merc Foregrip",
+            "Ranger Foregrip",
+            "Operator Foregrip",
+            "Commando Foregrip",
+            "Tactical Foregrip",
+            "Bipod (Crouched)",
+            "Bipod (Prone)"
+        ]
+    },
+    "P90": {
+        "Barrel": [
+            "FSS 10.6 Pro",
+            "Forge Tac Retribution"
+        ],
+        "Laser": [
+            "Tac Laser",
+            "1mW Laser",
+            "5mW Laser"
+        ],
+        "Muzzle": [
+            "Lightweight Suppressor",
+            "Tactical Suppressor",
+            "Monolithic Suppressor",
+            "Muzzle Brake",
+            "Compensator"
+        ],
+        "Optic": [
+            "Solozero Optics Mini Reflex (1x)",
+            "Operator Reflex Sight (1x)",
+            "Corp Combat Holo Sight (1.3x)",
+            "Viper Reflex Sight (1x)",
+            "G.I. Mini Reflex (1x)",
+            "Scout Combat Optic (2.1x)",
+            "APX5 Holographic Sight (1.3x)",
+            "Cronen LP945 Mini Reflex (1x)",
+            "FSS Ring Sight",
+            "VLK 3.0x Optic (2x)",
+            "Solozero NVG Enhanced (2.1x Thermal)",
+            "Integral Hybrid (2.1x + 1x)",
+            "Monocle Reflex Sight (1x)",
+            "PBX Holo 7 Sight (1.3x)",
+            "Cronen C480 Pro Optic (2.3x)",
+            "Canted Hybrid (2.1x + 1x)",
+            "Aim-Op Reflex Sight (1x)",
+            "Thermal Hybrid (2.1x Thermal + 1x)",
+            "Merc Thermal Optic (2.1x Thermal)"
+        ],
+        "Perk": [
+            "Sleight of Hand"
+        ],
+        "Rear Grip": [
+            "Stippled Grip Tape",
+            "Rubberized Grip Tape",
+            "Granulated Grip Tape"
+        ],
+        "Stock": [
+            "FORGE TAC CQB Comb",
+            "Fly Strap",
+            "FSS Heavy Stock Pro"
+        ],
+        "Underbarrel": [
+            "Stippled Grip Tape 1",
+            "Rubberized Grip Tape 1",
+            "Granulated Grip Tape 1"
+        ]
+    },
+    "PKM": {
+        "Ammunition": [
+            "150 Round Belt",
+            "200 Round Belt"
+        ],
+        "Barrel": [
+            "18.2 Compact Barrel",
+            "26.9 Extended Barrel",
+            "25.9 Heavy Barrel"
+        ],
+        "Laser": [
+            "Tac Laser",
+            "1mW Laser",
+            "5mW Laser"
+        ],
+        "Muzzle": [
+            "Lightweight Suppressor",
+            "Tactical Suppressor",
+            "Monolithic Suppressor",
+            "Muzzle Brake",
+            "Compensator"
+        ],
+        "Optic": [
+            "Operator Reflex Sight (1x)",
+            "Corp Combat Holo Sight (1.3x)",
+            "Aim-Op Reflex Sight (1x)",
+            "VLK 3.0x Optic (2x)",
+            "Solozero Optics Mini Reflex (1x)",
+            "PBX Holo 7 Sight (1.3x)",
+            "Cronen LP945 Mini Reflex (1x)",
+            "Integral Hybrid (2.1x + 1x)",
+            "Solozero NVG Enhanced (2.1x Thermal)",
+            "Scout Combat Optic (2.1x)",
+            "Monocle Reflex Sight (1x)",
+            "Sniper Scope",
+            "APX5 Holographic Sight (1.3x)",
+            "G.I. Mini Reflex (1x)",
+            "Cronen C480 Pro Optic (2.3x)",
+            "Merc Thermal Optic (2.1x Thermal)",
+            "Canted Hybrid (2.1x + 1x)",
+            "Viper Reflex Sight (1x)",
+            "Thermal Hybrid (2.1x Thermal + 1x)"
+        ],
+        "Perk": [
+            "Sleight of Hand"
+        ],
+        "Rear Grip": [
+            "Stippled Grip Tape",
+            "Rubberized Grip Tape",
+            "Granulated Grip Tape"
+        ],
+        "Stock": [
+            "FSS Close Quarters Stock",
+            "No Stock",
+            "FORGE TAC Stalker",
+            "FORGE TAC Ultralight"
+        ],
+        "Underbarrel": [
+            "Merc Foregrip",
+            "Snatch Grip",
+            "Operator Foregrip",
+            "Bipod (Crouched)",
+            "Bipod (Prone)",
+            "Commando Foregrip",
+            "Tactical Foregrip"
+        ]
+    },
+    "PP19 Bizon": {
+        "Ammunition": [
+            "84 Round Helical Mags"
+        ],
+        "Barrel": [
+            "8.7 Steel",
+            "8.7 Polygonal",
+            "8.7 Aluminum"
+        ],
+        "Laser": [
+            "Tac Laser",
+            "1mW Laser",
+            "5mW Laser"
+        ],
+        "Muzzle": [
+            "Lightweight Suppressor",
+            "Tactical Suppressor",
+            "Monolithic Suppressor",
+            "Muzzle Brake",
+            "Compensator"
+        ],
+        "Optic": [
+            "Monocle Reflex Sight (1x)",
+            "Corp Combat Holo Sight (1.3x)",
+            "Aim-Op Reflex Sight (1x)",
+            "Cronen C480 Pro Optic (2.3x)",
+            "G.I. Mini Reflex (1x)",
+            "APX5 Holographic Sight (1.3x)",
+            "Operator Reflex Sight (1x)",
+            "Solozero NVG Enhanced (2.1x Thermal)",
+            "Solozero Optics Mini Reflex (1x)",
+            "Merc Thermal Optic (2.1x Thermal)",
+            "PBX Holo 7 Sight (1.3x)",
+            "Thermal Hybrid (2.1x Thermal + 1x)",
+            "Viper Reflex Sight (1x)",
+            "Cronen LP945 Mini Reflex (1x)",
+            "Scout Combat Optic (2.1x)",
+            "Integral Hybrid (2.1x + 1x)",
+            "Canted Hybrid (2.1x + 1x)",
+            "VLK 3.0x Optic (2x)"
+        ],
+        "Perk": [
+            "Sleight of Hand"
+        ],
+        "Rear Grip": [
+            "Stippled Grip Tape",
+            "Rubberized Grip Tape",
+            "Granulated Grip Tape"
+        ],
+        "Stock": [
+            "No Stock",
+            "Corvus Skeleton Stock",
+            "FSS Close Quarters Stock",
+            "Factory Aluminum Stock"
+        ]
+    },
+    "PPSh": {},
+    "QBZ": {
+        "Barrel": [
+            "Ultralight",
+            "Cavalry Lancer",
+            "Reinforced Heavy",
+            "Ranger",
+            "Takedown",
+            "Task Force"
+        ],
+        "Laser": [
+            "Steady Aim Laser",
+            "Mounted Flashlight",
+            "SOF Target Designator",
+            "SWAT 5mW Laser Sight",
+            "Tiger Team Spotlight",
+            "Ember Sighting Point"
+        ],
+        "Muzzle": [
+            "Muzzle Brake",
+            "Flashguard",
+            "Suppressor",
+            "Infantry Compensator",
+            "SOCOM Eliminator",
+            "Agency Suppressor"
+        ],
+        "Optic": [
+            "Millstop Reflex (1x)",
+            "Visiontech 2x (1.75x)",
+            "Kobra Red Dot (1.25x)",
+            "Quickdot LED (0.92x)",
+            "Axial Arms 3x (2.7x)",
+            "Sillix Holoscout (1.25x)",
+            "Microflex LED (0.92x)",
+            "Hawksmoor (1x)",
+            "Royal & Cross 4x (3.5x)",
+            "SUSAT Multizoom (1.7x + 3.5x)",
+            "Diamondback Reflex (1x)",
+            "Noch Sova Thermal (2.1x)"
+        ],
+        "Rear Grip": [
+            "Speed Tape",
+            "Dropshot Wrap",
+            "Field Tape",
+            "SASR Jungle Grip",
+            "Serpent Grip",
+            "Airborne Elastic Grip"
+        ],
+        "Stock": [
+            "Tactical Stock",
+            "Marathon Stock",
+            "Duster Pad",
+            "CQB Pad",
+            "SAS Combat Stock",
+            "Raider Stock"
+        ],
+        "Underbarrel": [
+            "Foregrip",
+            "Infiltrator Grip",
+            "Patrol Grip",
+            "Bruiser Grip",
+            "Field Agent Grip",
+            "SFOD Speedgrip"
+        ]
+    },
+    "RAAL MG": {},
+    "RAM-7": {
+        "Ammunition": [
+            "50 Round Mags"
+        ],
+        "Barrel": [
+            "FTAC 13.5 Compact",
+            "Forge Tac Eclipse",
+            "FSS Ranger"
+        ],
+        "Laser": [
+            "Tac Laser",
+            "1mW Laser",
+            "5mW Laser"
+        ],
+        "Muzzle": [
+            "Lightweight Suppressor",
+            "Tactical Suppressor",
+            "Monolithic Suppressor",
+            "Muzzle Brake",
+            "Compensator"
+        ],
+        "Optic": [
+            "Cronen LP945 Mini Reflex (1x)",
+            "Corp Combat Holo Sight (1.3x)",
+            "Operator Reflex Sight (1x)",
+            "Scout Combat Optic (2.1x)",
+            "4.0x Flip Hybrid (2.6x)",
+            "Aim-Op Reflex Sight (1x)",
+            "APX5 Holographic Sight (1.3x)",
+            "Integral Hybrid (2.1x + 1x)",
+            "Solozero NVG Enhanced (2.1x Thermal)",
+            "VLK 3.0x Optic (2x)",
+            "Sniper Scope",
+            "Viper Reflex Sight (1x)",
+            "G.I. Mini Reflex (1x)",
+            "PBX Holo 7 Sight (1.3x)",
+            "Cronen 2x2 Elite",
+            "Monocle Reflex Sight (1x)",
+            "Variable Zoom Scope",
+            "Canted Hybrid (2.1x + 1x)",
+            "Merc Thermal Optic (2.1x Thermal)",
+            "Thermal Hybrid (2.1x Thermal + 1x)"
+        ],
+        "Perk": [
+            "Sleight of Hand"
+        ],
+        "Rear Grip": [
+            "Stippled Grip Tape",
+            "Rubberized Grip Tape",
+            "Granulated Grip Tape"
+        ],
+        "Stock": [
+            "XRK Close Quarters Stock",
+            "FTAC Equilibrium",
+            "XRK Ultralight Hollow"
+        ],
+        "Underbarrel": [
+            "Merc Foregrip",
+            "Ranger Foregrip",
+            "Operator Foregrip",
+            "Commando Foregrip",
+            "Tactical Foregrip"
+        ]
+    },
+    "RPD": {
+        "Barrel": [
+            "Cut Down",
+            "Spetsnaz RPK Barrel",
+            "Division",
+            "GRU Cut Down",
+            "Match Grade",
+            "Task Force"
+        ],
+        "Laser": [
+            "Steady Aim Laser",
+            "Mounted Flashlight",
+            "KGB Target Designator",
+            "GRU 5mW Laser Sight",
+            "Tiger Team Spotlight",
+            "Ember Sighting Point"
+        ],
+        "Muzzle": [
+            "Muzzle Brake",
+            "Flashguard",
+            "Suppressor",
+            "Infantry Compensator",
+            "SOCOM Eliminator",
+            "Agency Suppressor"
+        ],
+        "Optic": [
+            "Millstop Reflex (1x)",
+            "Visiontech 2x (1.75x)",
+            "Kobra Red Dot (1.25x)",
+            "Quickdot LED (0.92x)",
+            "Axial Arms 3x (2.7x)",
+            "Sillix Holoscout (1.25x)",
+            "Microflex LED (0.92x)",
+            "Hawksmoor (1x)",
+            "Royal & Cross 4x (3.5x)",
+            "SUSAT Multizoom (1.7x + 3.5x)",
+            "Diamondback Reflex (1x)",
+            "Noch Sova Thermal (2.1x)"
+        ],
+        "Rear Grip": [
+            "Speed Tape",
+            "Dropshot Wrap",
+            "Field Tape",
+            "Spetsnaz Field Grip",
+            "Serpent Wrap",
+            "Airborne Elastic Wrap"
+        ],
+        "Stock": [
+            "Tactical Stock",
+            "Wire Stock",
+            "Duster Stock",
+            "No Stock",
+            "Spetsnaz PKM Stock",
+            "Raider Stock"
+        ],
+        "Underbarrel": [
+            "Foregrip",
+            "Infiltrator Grip",
+            "Patrol Grip",
+            "Bruiser Grip",
+            "Spetsnaz Grip",
+            "Spetsnaz Speedgrip"
+        ]
+    },
+    "Rytec AMR": {
+        "Ammunition": [
+            "25x59mm Explosive 5-R Mags",
+            "25x59mm Thermite 5-R Mags"
+        ],
+        "Barrel": [
+            "FTAC Seven Straight",
+            "FTAC 448mm Dictator",
+            "XRK Harbinger"
+        ],
+        "Laser": [
+            "Tac Laser"
+        ],
+        "Muzzle": [
+            "XRK Tank Brake",
+            "Rytec AMR Suppressor"
+        ],
+        "Optic": [
+            "Scout Combat Optic (2.1x)",
+            "VLK 3.0x Optic (2x)",
+            "Thermal Sniper Scope",
+            "Cronen C480 Pro Optic (2.3x)",
+            "Variable Zoom Scope",
+            "Merc Thermal Optic (2.1x Thermal)",
+            "Thermal Dual Power Scope"
+        ],
+        "Perk": [
+            "Sleight of Hand"
+        ],
+        "Rear Grip": [
+            "Rubberized Grip Tape",
+            "Granulated Grip Tape",
+            "Stippled Grip Tape"
+        ],
+        "Stock": [
+            "XRK Mastadon",
+            "FTAC Trekker",
+            "STOVL Tac-Wrap"
+        ],
+        "Underbarrel": [
+            "Bipod (Crouched)",
+            "Bipod (Prone)"
+        ]
+    },
+    "SA87": {
+        "Ammunition": [
+            "50 Round Mags",
+            "60 Round Mags"
+        ],
+        "Barrel": [
+            "SA87 18.2 Factory",
+            "SA87 25.4 Factory",
+            "SA87 12.4 Factory"
+        ],
+        "Laser": [
+            "Tac Laser",
+            "1mW Laser",
+            "5mW Laser"
+        ],
+        "Muzzle": [
+            "Lightweight Suppressor",
+            "Tactical Suppressor",
+            "Monolithic Suppressor",
+            "Muzzle Brake",
+            "Compensator"
+        ],
+        "Optic": [
+            "G.I. Mini Reflex (1x)",
+            "Corp Combat Holo Sight (1.3x)",
+            "Operator Reflex Sight (1x)",
+            "Viper Reflex Sight (1x)",
+            "Scout Combat Optic (2.1x)",
+            "APX5 Holographic Sight (1.3x)",
+            "Solozero Optics Mini Reflex (1x)",
+            "Solozero NVG Enhanced (2.1x Thermal)",
+            "Integral Hybrid (2.1x + 1x)",
+            "VLK 3.0x Optic (2x)",
+            "Aim-Op Reflex Sight (1x)",
+            "Cronen LP945 Mini Reflex (1x)",
+            "Sniper Scope",
+            "Merc Thermal Optic (2.1x Thermal)",
+            "PBX Holo 7 Sight (1.3x)",
+            "Cronen C480 Pro Optic (2.3x)",
+            "Thermal Hybrid (2.1x Thermal + 1x)",
+            "Monocle Reflex Sight (1x)",
+            "Canted Hybrid (2.1x + 1x)"
+        ],
+        "Perk": [
+            "Sleight of Hand"
+        ],
+        "Rear Grip": [
+            "Stippled Grip Tape",
+            "Rubberized Grip Tape",
+            "Granulated Grip Tape"
+        ],
+        "Stock": [
+            "FORGE TAC CQB Comb",
+            "XRK SA87 Heavy Stock Pro",
+            "SA87 Ultralight Hollow"
+        ],
+        "Underbarrel": [
+            "Merc Foregrip",
+            "Operator Foregrip",
+            "Ranger Foregrip",
+            "Bipod (Crouched)",
+            "Bipod (Prone)",
+            "Commando Foregrip",
+            "Tactical Foregrip"
+        ]
+    },
+    "SKS": {
+        "Ammunition": [
+            "30 Round Mags",
+            "10 Round Mags"
+        ],
+        "Barrel": [
+            "FTAC Landmark",
+            "16 FSS Para",
+            "22 FSS M59/66"
+        ],
+        "Laser": [
+            "Tac Laser"
+        ],
+        "Muzzle": [
+            "Tactical Suppressor",
+            "Muzzle Brake",
+            "Compensator",
+            "Lightweight Suppressor",
+            "Monolithic Suppressor"
+        ],
+        "Optic": [
+            "Operator Reflex Sight (1x)",
+            "Corp Combat Holo Sight (1.3x)",
+            "Aim-Op Reflex Sight (1x)",
+            "Scout Combat Optic (2.1x)",
+            "APX5 Holographic Sight (1.3x)",
+            "Integral Hybrid (2.1x + 1x)",
+            "G.I. Mini Reflex (1x)",
+            "VLK 3.0x Optic (2x)",
+            "PBX Holo 7 Sight (1.3x)",
+            "Solozero NVG Enhanced (2.1x Thermal)",
+            "PU Scope",
+            "4.0x Flip Hybrid",
+            "Viper Reflex Sight (1x)",
+            "Canted Hybrid (2.1x + 1x)",
+            "Monocle Reflex Sight (1x)",
+            "Variable Zoom Scope",
+            "Cronen C480 Pro Optic (2.3x)",
+            "Merc Thermal Optic (2.1x Thermal)",
+            "Thermal Hybrid (2.1x Thermal + 1x)"
+        ],
+        "Perk": [
+            "Sleight of Hand",
+            "Sleight of Hand (w/ 10 Rnd Mag)"
+        ],
+        "Stock": [
+            "SKS Rifle Stock",
+            "FTAC Hunter-Scout",
+            "Sawed-off Stock"
+        ],
+        "Underbarrel": [
+            "Commando Foregrip",
+            "Tactical Foregrip",
+            "Bipod (Crouched)",
+            "Bipod (Prone)",
+            "Merc Foregrip",
+            "Ranger Foregrip",
+            "Operator Foregrip"
+        ]
+    },
+    "SP-R 208": {
+        "Ammunition": [
+            "10 Round Mag",
+            ".300 Norma Mag",
+            ".338 Lapua Mag"
+        ],
+        "Barrel": [
+            "ZLR VeraTwist 9.6",
+            "ZLR Asp",
+            "SP-R 26",
+            "XRK 208 Dragoon"
+        ],
+        "Bolt Assembly": [
+            "Sloan KR-800 DeadEye",
+            "Sloan KR-600 Feather"
+        ],
+        "Laser": [
+            "Tac Laser"
+        ],
+        "Muzzle": [
+            "Tactical Suppressor",
+            "Muzzle Brake",
+            "Compensator",
+            "Lightweight Suppressor",
+            "Monolithic Suppressor"
+        ],
+        "Optic": [
+            "Operator Reflex Sight (1x)",
+            "Corp Combat Holo Sight (1.3x)",
+            "Aim-Op Reflex Sight (1x)",
+            "Scout Combat Optic (2.1x)",
+            "APX5 Holographic Sight (1.3x)",
+            "G.I. Mini Reflex (1x)",
+            "VLK 3.0x Optic (2x)",
+            "PBX Holo 7 Sight (1.3x)",
+            "Solozero NVG Enhanced (2.1x Thermal)",
+            "Solozero SP-R 28mm",
+            "Integral Hybrid (2.1x + 1x)",
+            "Viper Reflex Sight (1x)",
+            "Monocle Reflex Sight (1x)",
+            "Variable Zoom Scope (2.3x + 8.0x)",
+            "Cronen C480 Pro Optic (2.3x)",
+            "Merc Thermal Optic (2.1x Thermal)"
+        ],
+        "Perk": [
+            "Sleight of Hand"
+        ],
+        "Stock": [
+            "XRK SP-TAC 208 Ultimate",
+            "FSS Virtuoso Pro",
+            "XRK SP-LITE 208 Blitz",
+            "ZLR SP-R Overseer"
+        ],
+        "Underbarrel": [
+            "Commando Foregrip",
+            "Tactical Foregrip",
+            "Bipod (Crouched)",
+            "Bipod (Prone)",
+            "Merc Foregrip",
+            "Ranger Foregrip",
+            "Operator Foregrip"
+        ]
+    },
+    "Stoner 63": {
+        "Barrel": [
+            "Cut Down",
+            "Cavalry Lancer",
+            "Division",
+            "SOR Cut Down",
+            "Match Grade",
+            "Task Force"
+        ],
+        "Laser": [
+            "Steady Aim Laser",
+            "Mounted Flashlight",
+            "SOF Target Designator",
+            "SWAT 5mW Laser Sight",
+            "Tiger Team Spotlight",
+            "Ember Sighting Point"
+        ],
+        "Muzzle": [
+            "Muzzle Brake",
+            "Flashguard",
+            "Suppressor",
+            "Infantry Compensator",
+            "SOCOM Eliminator",
+            "Agency Suppressor"
+        ],
+        "Optic": [
+            "Millstop Reflex (1x)",
+            "Visiontech 2x (1.75x)",
+            "Kobra Red Dot (1.25x)",
+            "Quickdot LED (0.92x)",
+            "Axial Arms 3x (2.7x)",
+            "Sillix Holoscout (1.25x)",
+            "Microflex LED (0.92x)",
+            "Hawksmoor (1x)",
+            "Royal & Cross 4x (3.5x)",
+            "SUSAT Multizoom (1.7x + 3.5x)",
+            "Diamondback Reflex (1x)",
+            "Noch Sova Thermal (2.1x)"
+        ],
+        "Rear Grip": [
+            "Speed Tape",
+            "Dropshot Wrap",
+            "Field Tape",
+            "SASR Jungle Grip",
+            "Serpent Wrap",
+            "Airborne Elastic Wrap"
+        ],
+        "Stock": [
+            "Tactical Stock",
+            "Wire Stock",
+            "Duster Pad",
+            "No Stock",
+            "SAS Combat Stock",
+            "Raider Pad"
+        ],
+        "Underbarrel": [
+            "Foregrip",
+            "Infiltrator Grip",
+            "Patrol Grip",
+            "Bruiser Grip",
+            "Field Agent Grip",
+            "SFOD Speedgrip"
+        ]
+    },
+    "Striker-45": {
+        "Ammunition": [
+            "45 Round Mags",
+            ".45 Hollow Point 12-R Mags"
+        ],
+        "Barrel": [
+            "300mm Poly Barrel",
+            "400mm Stainless Steel",
+            "150mm Stainless Steel"
+        ],
+        "Laser": [
+            "Tac Laser",
+            "1mW Laser",
+            "5mW Laser"
+        ],
+        "Muzzle": [
+            "Lightweight Suppressor",
+            "Tactical Suppressor",
+            "Monolithic Suppressor",
+            "Muzzle Brake",
+            "Compensator"
+        ],
+        "Optic": [
+            "Aim-Op Reflex Sight (1x)",
+            "Corp Combat Holo Sight (1.3x)",
+            "Operator Reflex Sight (1x)",
+            "Cronen LP945 Mini Reflex (1x)",
+            "VLK 3.0x Optic (2x)",
+            "APX5 Holographic Sight (1.3x)",
+            "G.I. Mini Reflex (1x)",
+            "Scout Combat Optic (2.1x)",
+            "Monocle Reflex Sight (1x)",
+            "4.0x Flip Hybrid (2.6x)",
+            "Solozero NVG Enhanced (2.1x Thermal)",
+            "Viper Reflex Sight (1x)",
+            "PBX Holo 7 Sight (1.3x)",
+            "Integral Hybrid (2.1x + 1x)",
+            "Solozero Optics Mini Reflex (1x)",
+            "Merc Thermal Optic (2.1x Thermal)",
+            "Canted Hybrid (2.1x + 1x)",
+            "Cronen C480 Pro Optic (2.3x)",
+            "Thermal Hybrid (2.1x Thermal + 1x)"
+        ],
+        "Perk": [
+            "Sleight of Hand",
+            "Sleight of Hand (w/ 12 Rnd Mag)"
+        ],
+        "Rear Grip": [
+            "FTAC G-5 EXO",
+            "Rubberized Grip Tape",
+            "Granulated Grip Tape"
+        ],
+        "Stock": [
+            "XRK Gen III Survivalist Series",
+            "FSS Guardian",
+            "FTAC Precision Fixed Stock"
+        ],
+        "Underbarrel": [
+            "Merc Foregrip",
+            "Ranger Foregrip",
+            "Operator Foregrip",
+            "Commando Foregrip",
+            "Tactical Foregrip"
+        ]
+    },
+    "Sykov": {
+        "Barrel": [
+            "Sorokin 140mm Auto"
+        ],
+        "Perk": [
+            "Akimbo"
+        ]
+    },
+    "Type 63": {
+        "Barrel": [
+            "Rapid Fire",
+            "Cavalry Lancer",
+            "Strike Team",
+            "Titanium",
+            "Match Grade",
+            "Task Force"
+        ]
+    },
+    "Uzi": {
+        "Ammunition": [
+            "40 Round Mags",
+            "50 Round Mags",
+            ".41 AE 32-Round Mags"
+        ],
+        "Barrel": [
+            "13.1 First Responder",
+            "8.5 Factory Mini",
+            "16.5 Factory Carbine",
+            "FSS Carbine Pro"
+        ],
+        "Laser": [
+            "Tac Laser",
+            "1mW Laser",
+            "5mW Laser"
+        ],
+        "Muzzle": [
+            "Lightweight Suppressor",
+            "Tactical Suppressor",
+            "Monolithic Suppressor",
+            "Muzzle Brake",
+            "Compensator"
+        ],
+        "Optic": [
+            "Cronen LP945 Mini Reflex (1x)",
+            "Operator Reflex Sight (1x)",
+            "Corp Combat Holo Sight (1.3x)",
+            "Viper Reflex Sight (1x)",
+            "Solozero Optics Mini Reflex (1x)",
+            "Scout Combat Optic (2.1x)",
+            "APX5 Holographic Sight (1.3x)",
+            "Integral Hybrid (2.1x + 1x)",
+            "G.I. Mini Reflex (1x)",
+            "Monocle Reflex Sight (1x)",
+            "VLK 3.0x Optic (2x)",
+            "Solozero NVG Enhanced (2.1x Thermal)",
+            "Canted Hybrid (2.1x + 1x)",
+            "Aim-Op Reflex Sight (1x)",
+            "PBX Holo 7 Sight (1.3x)",
+            "Thermal Hybrid (2.1x Thermal + 1x)",
+            "Cronen C480 Pro Optic (2.3x)",
+            "Merc Thermal Optic (2.1x Thermal)"
+        ],
+        "Perk": [
+            "Sleight of Hand"
+        ],
+        "Rear Grip": [
+            "Stippled Grip Tape",
+            "Rubberized Grip Tape",
+            "Granulated Grip Tape"
+        ],
+        "Stock": [
+            "No Stock",
+            "FSS Close Quarters Stock",
+            "Standard-Issue Wood Stock",
+            "FORGE TAC Ultralight"
+        ],
+        "Underbarrel": [
+            "Merc Foregrip",
+            "Operator Foregrip",
+            "Ranger Foregrip",
+            "Commando Foregrip",
+            "Tactical Foregrip"
+        ]
+    },
+    "XM4": {
+        "Ammunition": [
+            "45 Rnd",
+            "Jungle-Style Mag",
+            "45 Rnd Speed Mag",
+            "STANAG 60 Rnd",
+            "SAS Mag Clamp",
+            "Salvo 60 Rnd Fast Mag"
+        ],
+        "Barrel": [
+            "Ranger",
+            "Cavalry Lancer",
+            "Reinforced Heavy",
+            "Extended",
+            "Takedown",
+            "Task Force"
+        ],
+        "Laser": [
+            "Steady Aim Laser",
+            "Mounted Flashlight",
+            "SOF Target Designator",
+            "SWAT 5mW Laser Sight",
+            "Tiger Team Spotlight",
+            "Ember Sighting Point"
+        ],
+        "Muzzle": [
+            "Muzzle Brake",
+            "Flashguard",
+            "Suppressor",
+            "Infantry Compensator",
+            "SOCOM Eliminator",
+            "Agency Suppressor"
+        ],
+        "Optic": [
+            "Millstop Reflex (1x)",
+            "Visiontech 2x (1.75x)",
+            "Kobra Red Dot (1.25x)",
+            "Quickdot LED (0.92x)",
+            "Axial Arms 3x (2.7x)",
+            "Sillix Holoscout (1.25x)",
+            "Microflex LED (0.92x)",
+            "Hawksmoor (1x)",
+            "Royal & Cross 4x (3.5x)",
+            "SUSAT Multizoom (1.7x + 3.5x)",
+            "Diamondback Reflex (1x)",
+            "ANPVS-4 Thermal (2.1x)"
+        ],
+        "Rear Grip": [
+            "Speed Tape",
+            "Dropshot Wrap",
+            "Field Tape",
+            "SASR Jungle Grip",
+            "Serpent Wrap",
+            "Airborne Elastic Wrap"
+        ],
+        "Stock": [
+            "Tactical Stock",
+            "Marathon Stock",
+            "Duster Pad",
+            "CQB Pad",
+            "SAS Combat Stock",
+            "Raider Stock"
+        ],
+        "Underbarrel": [
+            "Foregrip",
+            "Infiltrator Grip",
+            "Patrol Grip",
+            "Bruiser Grip",
+            "Field Agent Grip",
+            "SFOD Speedgrip"
+        ]
+    }
+}

@@ -72,6 +72,8 @@ class Barrel(Attachment):
     XRK_EQUINOX_S440 = "XRK Equinox S440"
     FR_SNIPER = "FR 24.4\" Sniper"
     SINGUARD_ARMS_PROWLER = "Singuard Arms 19.8\" Prowler", Game.MODERN_WARFARE, ["singuard 19.8"]
+    SINGUARD_ARMS_SOCOM = "Singuard Arms 16.6\" SOCOM"
+    SINGUARD_ARMS_WHISPER = "Singuard Arms Whisper"
     ODEN_FACTORY_810 = "Oden Factory 810mm"
     FORGE_TAC_RETRIBUTION = "FORGE TAC Retribution"
     EXTENDED_BARREL_269 = "26.9\" Extended Barrel"
@@ -174,16 +176,25 @@ class Optic(Attachment):
     VARIABLE_ZOOM_SCOPE = "Variable Zoom Scope"
     SNIPER_SCOPE = "Sniper Scope"
     VIPER_REFLEX_SIGHT = "Viper Reflex Sight"
+    OPERATOR_REFLEX_SIGHT = "Operator Reflex Sight"
+    AIM_OP_REFLEX_SIGHT = "Aim-Op Reflex Sight"
+    MONOCLE_REFLEX_SIGHT = "Monocle Reflex Sight"
     APX5_HOLOGRAPHIC_SIGHT = "APX5 Holographic Sight"
     GI_MINI_REFLEX = "G.I. Mini Reflex"
     CORP_COMBAT_HOLO_SIGHT = "Corp Combat Holo Sight"
     THERMAL_DUAL_POWER_SCOPE = "Thermal Dual Power Scope"
+    MERC_THERMAL_OPTIC = "Merc Thermal Optic"
+    THERMAL_HYBRID = "Thermal Hybrid"
     SCOUT_COMBAT_OPTIC = "Scout Combat Optic"
     THERMAL_SNIPER_SCOPE = "Thermal Sniper Scope"
     CANTED_HYBRID = "Canted Hybrid"
+    INTEGRAL_HYBRID = "Integral Hybrid"
     CRONEN_MINI_REFLEX = "Cronen LP945 Mini Reflex"
+    CRONEN_PRO = "Cronen C480 Pro Optic"
     FLIP_HYBRID = "4.0x Flip Hybrid"
     PBX_HOLO_SIGHT = "PBX Holo 7 Sight"
+    SOLOZERO_ENHANCED = "Solozero NVG Enhanced"
+    SOLOZERO_OPTICS_MINI_REFLEX = "Solozero Optics Mini Reflex"
     SOLOZERO_SPR = "Solozero SP-R 28mm"
 
     VISIONTECH = "Visiontech 2x", Game.COLD_WAR
@@ -225,6 +236,7 @@ class Ammunition(Attachment):
     SPP_MAGS = "SPP 10-R Mags"
     NORMA_MAGS = ".300 Norma Mag 5-R Mags"
     ROUND_DRUMS_50 = "50 Round Drums"
+    ROUND_DRUMS_100 = "100 Round Drums"
     CASKET_60 = "60 Round Casket Mags"
 
     RND_30 = "30 Rnd", Game.COLD_WAR
@@ -281,11 +293,13 @@ class Stock(Attachment):
     SINGUARD_ARMS_INVADER = "Singuard Arms Invader"
     SINGUARD_ARMS_ASSASSIN = "Singuard Arms Assassin"
     SINGUARD_ARMS_MARKSMAN = "Singuard Arms Marksman"
+    SINGUARD_ARMS_SNIPER_PRO = "Singuard Arms Sniper Pro"
     FORGE_TAC_CQS = "FORGE TAC CQS"
     M13_SKELETON_STOCK = "M13 Skeleton Stock"
     FTAC_XL_ELITE_COMB = "FTAC XL Elite Comb"
     SKELETON_STOCK = "Skeleton Stock"
     FORGE_TAC_CQB_COMB = "FORGE TAC CQB Comb"
+    FORGE_TAC_ULTRALIGHT = "FORGE TAC Ultralight"
     FSS_GUARDIAN = "FSS Guardian"
     STVOL_PRECISION_COMB = "STVOL Precision Comb"
     M16_STOCK = "M-16 Stock"
@@ -319,6 +333,7 @@ class Perk(Attachment):
 
 class Laser(Attachment):
     TAC_LASER = "Tac Laser"
+    MW_LASER_1 = "1mW Laser"
     MW_LASER_5 = "5mW Laser"
     MW_LASER_5_SWAT = "SWAT 5mW Laser Sight", Game.COLD_WAR
     MW_LASER_5_GRU = "GRU 5mW Laser Sight", Game.COLD_WAR
