@@ -3,6 +3,7 @@ from enum import Enum
 from model.game import Game
 
 
+@DeprecationWarning
 class Attachment(Enum):
 
     def __init__(self, name, game=Game.MODERN_WARFARE, aliases: list = None):

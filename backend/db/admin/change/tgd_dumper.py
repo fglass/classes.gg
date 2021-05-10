@@ -2,8 +2,7 @@ import json
 import re
 import requests
 from db.admin.change.loadout_updater import find_weapon
-from model.weapon.new_attachment import *
-from model.weapon.weapon import get_attachment_category
+from model.weapon.weapon_data_loader import get_attachment_category
 
 WEAPON_TYPES = ["AR", "LMG", "SMG", "MR", "SR"]
 WEAPONS_URL = "https://www.truegamedata.com/SQL_calls/grab_guns.php"

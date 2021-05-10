@@ -1,15 +1,9 @@
-import json
 from enum import Enum
-from typing import Type
-
 from model.game import Game
-from model.weapon.new_attachment import *
-
-WEAPON_DATA = {}
+from model.weapon.weapon_data_loader import WEAPON_DATA
 
 
 class Weapon(Enum):
-
     def __init__(self, name: str, game: Game, aliases: list = None):
         self._name = name
         self._game = game
@@ -24,52 +18,83 @@ class Weapon(Enum):
 
     @property
     def attachments(self) -> list:
-        if len(WEAPON_DATA) == 0:
-            _load_weapon_data()
         return WEAPON_DATA[self.name] if self.name in WEAPON_DATA else []
 
 
-def _load_weapon_data():
-    global WEAPON_DATA  # TODO: refactor into separate file
+class AssaultRifle(Weapon):
+    AK_47 = "AK-47", Game.MODERN_WARFARE, ["ak"]
+    AN_94 = "AN-94", Game.MODERN_WARFARE, ["an"]
+    CR_56_AMAX = "CR-56 AMAX", Game.MODERN_WARFARE, ["amax", "cr56", "galil"]
+    FAL = "FAL", Game.MODERN_WARFARE
+    FR = "FR 5.56", Game.MODERN_WARFARE, ["famas", "fr"]
+    GRAU = "Grau 5.56", Game.MODERN_WARFARE, ["grau"]
+    KILO_141 = "Kilo 141", Game.MODERN_WARFARE, ["kilo"]
+    M4A1 = "M4A1", Game.MODERN_WARFARE, ["m4"]
+    M13 = "M13", Game.MODERN_WARFARE
+    ODEN = "Oden", Game.MODERN_WARFARE
+    RAM_7 = "RAM-7", Game.MODERN_WARFARE, ["ram"]
+    AS_VAL = "AS VAL", Game.MODERN_WARFARE, ["val"]
+    SCAR = "FN Scar 17", Game.MODERN_WARFARE, ["scar"]
 
-    with open("model/weapon/weapon-data.json", "r+") as f:
-        dump = json.load(f)
-
-        for weapon, groups in dump.items():
-            WEAPON_DATA[weapon] = []
-
-            for attachment_group, attachments in groups.items():
-                category = get_attachment_category(attachment_group)
-
-                for attachment_name in attachments:
-                    attachment = category[attachment_name]
-                    WEAPON_DATA[weapon].append(attachment)
+    XM4 = "XM4", Game.COLD_WAR
+    AK_47_CW = "AK-47", Game.COLD_WAR, ["ak"]
+    KRIG_6 = "Krig 6", Game.COLD_WAR, ["krig"]
+    FFAR_1 = "FFAR 1", Game.COLD_WAR, ["ffar"]
+    GROZA = "Groza", Game.COLD_WAR
 
 
-def get_attachment_category(slot: str) -> Type[NewAttachment]:
-    if slot == "Muzzle":
-        return Muzzle
-    if slot == "Barrel":
-        return Barrel
-    if slot == "Underbarrel":
-        return Underbarrel
-    if slot == "Optic":
-        return Optic
-    if slot == "Ammunition":
-        return Ammunition
-    if slot == "Rear Grip" or slot == "RearGrip":
-        return RearGrip
-    if slot == "Stock":
-        return Stock
-    if slot == "Perk":
-        return Perk
-    if slot == "Laser":
-        return Laser
-    if slot == "Arms":
-        return Arms
-    if slot == "Bolt":
-        return Bolt
-    if slot == "Cable":
-        return Cable
-    if slot == "Bolt Assembly" or slot == "BoltAssembly":
-        return BoltAssembly
+class SubmachineGun(Weapon):
+    AUG = "AUG", Game.MODERN_WARFARE
+    FENNEC = "Fennec", Game.MODERN_WARFARE, ["vector"]
+    MP5 = "MP5", Game.MODERN_WARFARE
+    MP7 = "MP7", Game.MODERN_WARFARE
+    P90 = "P90", Game.MODERN_WARFARE
+    PP19_BIZON = "PP19 Bizon", Game.MODERN_WARFARE, ["bizon", "pp19"]
+    STRIKER_45 = "Striker 45", Game.MODERN_WARFARE, ["striker"]
+    UZI = "Uzi", Game.MODERN_WARFARE
+    ISO = "ISO", Game.MODERN_WARFARE
+
+    MAC_10 = "MAC-10", Game.COLD_WAR, ["mac"]
+    MP5_CW = "MP5", Game.COLD_WAR
+    AUG_CW = "AUG", Game.COLD_WAR
+    AK_74U = "AK-74u", Game.COLD_WAR, ["74", "74u"]
+    BULLFROG = "Bullfrog", Game.COLD_WAR
+
+
+class LightMachineGun(Weapon):
+    HOLGER = "Holger-26", Game.MODERN_WARFARE, ["holder"]
+    PKM = "PKM", Game.MODERN_WARFARE
+    BRUEN = "MK9 Bruen", Game.MODERN_WARFARE, ["bruen"]
+    FINN = "FiNN LMG", Game.MODERN_WARFARE, ["finn"]
+    STONER_63 = "Stoner 63", Game.COLD_WAR, ["stoner"]
+
+
+class SniperRifle(Weapon):
+    AX_50 = "AX-50", Game.MODERN_WARFARE, ["ax"]
+    HDR = "HDR", Game.MODERN_WARFARE
+    SPR_208 = "SP-R 208", Game.MODERN_WARFARE, ["spr"]
+    PELINGTON_703 = "Pelington 703", Game.COLD_WAR, ["pelington"]
+
+
+class MarksmanRifle(Weapon):
+    KAR98K = "Kar98k", Game.MODERN_WARFARE, ["kar"]
+    CROSSBOW = "Crossbow", Game.MODERN_WARFARE
+
+
+class TacticalRifle(Weapon):
+    M16 = "M16", Game.COLD_WAR
+    DMR = "DMR 14", Game.COLD_WAR, ["dmr"]
+    TYPE_63 = "Type 63", Game.COLD_WAR, ["type"]
+
+
+class Shotgun(Weapon):
+    MODEL_680 = "Model 680", Game.MODERN_WARFARE, ["model"]
+    ORIGIN_12_SHOTGUN = "Origin 12 Shotgun", Game.MODERN_WARFARE, ["origin"]
+    R9 = "R9-0 Shotgun", Game.MODERN_WARFARE, ["r9"]
+    VLK_ROGUE = "VLK Rogue", Game.MODERN_WARFARE, ["vlk"]
+
+
+class Pistol(Weapon):
+    M19 = "M19", Game.MODERN_WARFARE
+    RENETTI = "Renetti", Game.MODERN_WARFARE
+    DIAMATTI = "Diamatti", Game.COLD_WAR

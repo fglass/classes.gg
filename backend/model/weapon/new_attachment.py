@@ -208,7 +208,7 @@ class Barrel(NewAttachment):
     SA87_182_FACTORY = "SA87 18.2 Factory"
     SA87_254_FACTORY = "SA87 25.4 Factory"
     SINGUARD_ARMS_166_SOCOM = "Singuard Arms 16.6 SOCOM"
-    SINGUARD_ARMS_198_PROWLER = "Singuard Arms 19.8 Prowler"
+    SINGUARD_ARMS_198_PROWLER = "Singuard Arms 19.8 Prowler", ["singuard 19.8"]
     SINGUARD_ARMS_PRO = "Singuard Arms Pro"
     SINGUARD_ARMS_WHISPER = "Singuard Arms Whisper"
     SINGUARD_CUSTOM_212 = "Singuard Custom 21.2"
@@ -350,7 +350,7 @@ class Optic(NewAttachment):
     VARIABLE_ZOOM_SCOPE = "Variable Zoom Scope"
     VIPER_REFLEX_SIGHT = "Viper Reflex Sight"
     VISIONTECH_2X = "Visiontech 2x"
-    VLK_30X_OPTIC = "VLK 3.0x Optic"
+    VLK_30X_OPTIC = "VLK 3.0x Optic", ["vlk"]
     XRK_MIDTRAK_40X_SCOPE = "XRK MidTrak 4.0x Scope"
     XRK_RANGEMASTER_VZ = "XRK Rangemaster VZ"
 

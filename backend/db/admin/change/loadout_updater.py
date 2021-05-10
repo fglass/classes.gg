@@ -1,33 +1,26 @@
 import logging
 from typing import Optional, Tuple
 from fuzzywuzzy import fuzz
-
 from db.admin.change.command_source import CommandSource
 from db.admin.change.detect_changes import SOURCE_KEY, ALL_COMMANDS
 from db.json_database_engine import JSONDatabaseEngine
-from model.weapon.impl.assault_rifle import AssaultRifle
-from model.weapon.impl.light_machine_gun import LightMachineGun
-from model.weapon.impl.marksman_rifle import MarksmanRifle
-from model.weapon.impl.pistol import Pistol
-from model.weapon.impl.shotgun import Shotgun
-from model.weapon.impl.sniper_rifle import SniperRifle
-from model.weapon.impl.submachine_gun import SubmachineGun
-from model.weapon.impl.tactical_rifle import TacticalRifle
 from model.weapon.new_attachment import *
-from model.weapon.weapon import Weapon
-
-TEST_COMMAND = "!kilo"
-TEST_RESPONSE = "@[user] Kilo: Monolithic Suppressor, Singuard 19.8, VLK/Holo (blue dot), Commando Foregrip, 60 Round Mags"
+from model.weapon.weapon import Weapon, AssaultRifle, LightMachineGun, MarksmanRifle, Pistol, Shotgun, SniperRifle, \
+    SubmachineGun, TacticalRifle
 
 DELIMITERS = [",", "-", "|"]
 MIN_ATTACHMENTS = 4
 MAX_ATTACHMENTS = 5
+RATIO_THRESHOLD = 50
 
 ALL_WEAPONS = list(AssaultRifle) + list(LightMachineGun) + list(MarksmanRifle) + list(Pistol) + list(Shotgun) + \
               list(SniperRifle) + list(SubmachineGun) + list(TacticalRifle)
 
+WEAPON_COMMANDS = set(ALL_COMMANDS)  # TODO: use weapon aliases
+[WEAPON_COMMANDS.remove(c) for c in {"class", "guns", "loadout", "loadout2", "loadouts"}]
 
-def update():
+
+def update_loadouts():
     db = JSONDatabaseEngine()
     players = db.select_players()
 
@@ -44,12 +37,9 @@ def update():
         source = CommandSource(source_name)
         current_commands = source.query(player)
 
-        for command in ALL_COMMANDS:
+        for command in WEAPON_COMMANDS:
 
-            response = current_commands.get(command)
-
-            if response is None:
-                response = current_commands.get("!" + command)
+            response = current_commands[command] if command in current_commands else current_commands.get("!" + command)
 
             if response is None:
                 continue
@@ -61,13 +51,14 @@ def update():
             else:
                 failure_count += 1
 
-    print(f"Loadouts updated: {success_count} success, {failure_count} failure")
+    logging.info(f"Loadouts updated: {success_count} ✔ {failure_count} ❌")
 
 
-def update_command(command: str, response: str) -> bool:  # TODO: retry if cold war counterpart
-    weapon = find_weapon(command)
+def update_command(command: str, response: str) -> bool:
+    weapon = find_weapon(command)  # TODO: retry if cold war counterpart
 
     if weapon is None:
+        print(f"\tWeapon not found: {command}")
         return False
 
     if len(weapon.attachments) == 0:
@@ -79,8 +70,8 @@ def update_command(command: str, response: str) -> bool:  # TODO: retry if cold 
     if len(attachments) < MIN_ATTACHMENTS:
         return False
 
-    print(f"\t{command}: {response}")
-    print(f"\t\t-> {[f'{str(a)} {r}%' for a, r in attachments.items()]}")
+    # print(f"\t{command}: {response}")
+    # print(f"\t\t-> {[f'{str(a)} {r}%' for a, r in attachments.items()]}")
     return True
 
 
@@ -111,6 +102,10 @@ def _find_attachments(valid_attachments: list, response: str) -> dict:
     return attachments
 
 
+def _find_delimiter(response: str) -> str:
+    return max(DELIMITERS, key=lambda delimiter: response.count(delimiter))
+
+
 def _find_attachment(part: str, valid_attachments: list) -> Tuple[Optional[NewAttachment], int]:
     if part == "":
         return None, 0
@@ -127,18 +122,19 @@ def _find_attachment(part: str, valid_attachments: list) -> Tuple[Optional[NewAt
         for alias in attachment.aliases:
             ratio = fuzz.partial_ratio(part, alias)
 
-            if ratio > max_ratio:
+            if ratio >= max_ratio:
                 matched_attachment = attachment
                 max_ratio = ratio
+
+    if max_ratio < RATIO_THRESHOLD:
+        return None, 0
+
+    if max_ratio < 100:
+        print("\t" + part, "->", str(matched_attachment), max_ratio)  # TODO: fix these
 
     return matched_attachment, max_ratio
 
 
-def _find_delimiter(response: str) -> str:
-    return max(DELIMITERS, key=lambda delimiter: response.count(delimiter))
-
-
 if __name__ == "__main__":
     logging.basicConfig(format='%(asctime)s %(message)s', datefmt='%m/%d/%Y %I:%M:%S %p', level=logging.INFO)
-    # update_command(TEST_COMMAND, TEST_RESPONSE)
-    update()
+    update_loadouts()
