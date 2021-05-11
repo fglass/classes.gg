@@ -1,9 +1,10 @@
 import logging
-from typing import Optional, Tuple
+from typing import Optional, Tuple, Dict, List
 from fuzzywuzzy import fuzz
 from db.admin.change.command_source import CommandSource
 from db.admin.change.detect_changes import SOURCE_KEY, ALL_COMMANDS
 from db.json_database_engine import JSONDatabaseEngine
+from model.player import Player
 from model.weapon.new_attachment import *
 from model.weapon.weapon import Weapon, AssaultRifle, LightMachineGun, MarksmanRifle, Pistol, Shotgun, SniperRifle, \
     SubmachineGun, TacticalRifle
@@ -19,6 +20,15 @@ ALL_WEAPONS = list(AssaultRifle) + list(LightMachineGun) + list(MarksmanRifle) +
 WEAPON_COMMANDS = set(ALL_COMMANDS)  # TODO: use weapon aliases
 [WEAPON_COMMANDS.remove(c) for c in {"class", "guns", "loadout", "loadout2", "loadouts"}]
 
+DUAL_GAME_WEAPONS: Dict[Weapon, Weapon] = {
+    AssaultRifle.AK_47: AssaultRifle.AK_47_CW,
+    AssaultRifle.AK_47_CW: AssaultRifle.AK_47,
+    SubmachineGun.MP5: SubmachineGun.MP5_CW,
+    SubmachineGun.MP5_CW: SubmachineGun.MP5,
+    SubmachineGun.AUG: TacticalRifle.AUG_CW,
+    TacticalRifle.AUG_CW: SubmachineGun.AUG
+}
+
 
 def update_loadouts():
     db = JSONDatabaseEngine()
@@ -27,52 +37,74 @@ def update_loadouts():
     success_count, failure_count = 0, 0
 
     for player in players:
-        previous_commands = player.commands
-        source_name = previous_commands.pop(SOURCE_KEY, None)
-
-        if not source_name:
-            continue
-
-        print(player.username)
-        source = CommandSource(source_name)
-        current_commands = source.query(player)
-
-        for command in WEAPON_COMMANDS:
-
-            response = current_commands[command] if command in current_commands else current_commands.get("!" + command)
-
-            if response is None:
-                continue
-
-            updated = update_command(command, response)
-
-            if updated:
-                success_count += 1
-            else:
-                failure_count += 1
+        s, f = _update_player(player)
+        success_count += s
+        failure_count += f
 
     logging.info(f"Loadouts updated: {success_count} ✔ {failure_count} ❌")
 
 
-def update_command(command: str, response: str) -> bool:
-    weapon = find_weapon(command)  # TODO: retry if cold war counterpart
+def _update_player(player: Player):
+    success_count, failure_count = 0, 0
+    previous_commands = player.commands
+    source_name = previous_commands.pop(SOURCE_KEY, None)
+
+    if not source_name:
+        return success_count, failure_count
+
+    print(player.username)
+    source = CommandSource(source_name)
+    current_commands = source.query(player)
+
+    for command in WEAPON_COMMANDS:
+
+        response = current_commands[command] if command in current_commands else current_commands.get("!" + command)
+
+        if response is None:
+            continue
+
+        updated = _update_command(command, response)
+
+        if updated:
+            success_count += 1
+        else:
+            failure_count += 1
+
+    return success_count, failure_count
+
+
+def _update_command(command: str, response: str) -> bool:
+    loadout = _find_loadout(command, response)
+
+    if loadout is None:
+        return False
+
+    weapon, attachments = loadout
+
+    print(f"\t{command}: {response}")
+    print(f"\t\t-> {str(weapon)} ({weapon.game.value}): {[f'{str(a)} {r}%' for a, r in attachments.items()]}")
+    return True
+
+
+def _find_loadout(command: str, response: str) -> Optional[Tuple[Weapon, dict]]:
+    weapon = find_weapon(command)
 
     if weapon is None:
         print(f"\tWeapon not found: {command}")
-        return False
+        return
 
     if len(weapon.attachments) == 0:
         print(f"\t{weapon} data missing")
-        return False
 
     attachments = _find_attachments(weapon.attachments, response)
 
-    if len(attachments) < MIN_ATTACHMENTS:
-        return False
+    if weapon in DUAL_GAME_WEAPONS:
+        weapon, attachments = _compare_weapon_counterpart(weapon, attachments, response)
 
-    # print(f"\t{command}: {response}")
-    # print(f"\t\t-> {[f'{str(a)} {r}%' for a, r in attachments.items()]}")
-    return True
+    if len(attachments) < MIN_ATTACHMENTS:
+        return
+
+    return weapon, attachments
 
 
 def find_weapon(command: str) -> Optional[Weapon]:
@@ -129,10 +161,24 @@ def _find_attachment(part: str, valid_attachments: list) -> Tuple[Optional[NewAt
     if max_ratio < RATIO_THRESHOLD:
         return None, 0
 
-    if max_ratio < 100:
-        print("\t" + part, "->", str(matched_attachment), max_ratio)  # TODO: fix these
+    # if max_ratio < 100:
+    #     print("\t" + part, "->", str(matched_attachment), max_ratio)  # TODO: fix these
 
     return matched_attachment, max_ratio
+
+
+def _compare_weapon_counterpart(weapon: Weapon, attachments: dict, response: str):
+    weapon_counterpart = DUAL_GAME_WEAPONS[weapon]
+    other_attachments = _find_attachments(weapon_counterpart.attachments, response)
+
+    if len(other_attachments) >= len(attachments):
+        first_total = sum(attachments.values())
+        second_total = sum(other_attachments.values())
+
+        if second_total > first_total:
+            return weapon_counterpart, other_attachments
+
+    return weapon, attachments
 
 
 if __name__ == "__main__":

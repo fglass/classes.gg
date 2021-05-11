@@ -398,6 +398,9 @@
         ]
     },
     "AUG_CW": {
+        "Ammunition": [
+            "RND_45"
+        ],
         "Barrel": [
             "RAPID_FIRE",
             "CAVALRY_LANCER",
@@ -405,6 +408,15 @@
             "TITANIUM",
             "MATCH_GRADE",
             "TASK_FORCE"
+        ],
+        "Muzzle": [
+            "AGENCY_SUPPRESSOR"
+        ],
+        "Optic": [
+            "AXIAL_ARMS_3X"
+        ],
+        "Underbarrel": [
+            "FIELD_AGENT_GRIP"
         ]
     },
     "AX_50": {
