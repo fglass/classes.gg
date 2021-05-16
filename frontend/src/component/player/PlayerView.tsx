@@ -1,20 +1,21 @@
 import React from "react";
+import ExpansionPanel from "@material-ui/core/ExpansionPanel";
+import ExpansionPanelSummary from "@material-ui/core/ExpansionPanelSummary";
 import FormControl from "@material-ui/core/FormControl";
 import Grid from "@material-ui/core/Grid";
+import Icon from "@material-ui/core/Icon";
 import InputLabel from "@material-ui/core/InputLabel";
-import LinkIcon from "@material-ui/icons/Link";
 import List from "@material-ui/core/List";
 import ListItem from "@material-ui/core/ListItem";
 import MenuItem from "@material-ui/core/MenuItem";
 import Select from "@material-ui/core/Select";
-import Tooltip from "@material-ui/core/Tooltip";
 import TimeAgo from "timeago-react";
 import Typography from "@material-ui/core/Typography";
+import ArrowDropDownIcon from '@material-ui/icons/ArrowDropDown';
 import Api from "../../model/api";
 import { Loadout, LoadoutMap, Player } from "../../model/player";
 import { SEO } from "../SEO";
 import { useStyles } from "./styles";
-import { Icon } from "@material-ui/core";
 
 interface IProps {
     classes: any
@@ -77,16 +78,40 @@ const AttachmentList = (props: any) => {
     )
 }
 
-const SourceIcon = (props: any) => {
-    const { classes, source } = props
+const SourcePanel = (props: any) => {
+    const { classes, loadout } = props
     return (
-        <div className={classes.source}>
-            <Tooltip title="Source">
-                <a href={source} target="_blank" rel="noopener noreferrer">
-                    <LinkIcon />
-                </a>
-            </Tooltip>
-        </div>
+         <ExpansionPanel className={classes.sourcePanel}>
+            <ExpansionPanelSummary
+              expandIcon={<ArrowDropDownIcon />}
+              aria-controls="source-content"
+              id="source-header"
+            >
+                <Typography>Source</Typography>
+            </ExpansionPanelSummary>
+            <ExpansionPanelSummary>
+                <Grid container>
+                    <Grid item>
+                        <Typography className={classes.sourceText} variant="caption">
+                            {loadout.source}
+                        </Typography>
+                    </Grid>
+                    <Grid item>
+                        <Typography className={classes.sourceText} variant="caption">
+                            Updated {new Date(loadout.lastUpdated).toISOString()} from{' '}
+                                <a
+                                    href={loadout.sourceUrl}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className={classes.link}
+                                >
+                                    Twitch
+                                </a>
+                        </Typography>
+                    </Grid>
+                </Grid>
+            </ExpansionPanelSummary>
+        </ExpansionPanel>
     )
 }
 
@@ -154,7 +179,7 @@ class PlayerView extends React.Component<IProps, IState> {
                 const key = keys[i];
                 attachments.push([key, loadout.attachments[key]])
             } else{
-                attachments.push(["", ""]) // Empty slot
+                attachments.push(["", "Empty"])
             }
         }
 
@@ -194,9 +219,9 @@ class PlayerView extends React.Component<IProps, IState> {
                                 <AttachmentList classes={classes} attachments={attachments} />
                             </Grid>
                             <Grid item>
-                                <SourceIcon classes={classes} source={loadout.source} />
+                                <SourcePanel classes={classes} loadout={loadout} />
                             </Grid>
-                         </Grid>
+                        </Grid>
                     </Grid>
                 </div>
             </div>

@@ -6,4 +6,8 @@ if __name__ == '__main__':
 
     for player in players:
         # player.views = 0
-        db.add_player(player)
+        # db.add_player(player)
+        player.loadouts = {}
+        db.add_player(player, commit=False)
+
+    db.commit()

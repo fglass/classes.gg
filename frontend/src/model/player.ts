@@ -7,9 +7,11 @@ export interface Player {
 }
 
 export interface Loadout {
-    game: string;
-    source: string;
     attachments: { [type: string]: string };
+    game: string;
+    lastUpdated: string;
+    source: string;
+    sourceUrl: string;
 }
 
 export type LoadoutMap = { [loadout: string]: Loadout }

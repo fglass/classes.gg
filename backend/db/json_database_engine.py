@@ -4,6 +4,7 @@ from model.player import Player
 from typing import Optional, ValuesView
 
 DATABASE_FILE = "db/database.json"
+NEW_DATABASE_FILE = "db/new-database.json"
 TEST_DATABASE_FILE = "db/test/test_database.json"
 VIEW_COUNTS_FILE = "db/view_counts.json"
 
@@ -12,7 +13,7 @@ class JSONDatabaseEngine(DatabaseEngine):
 
     def __init__(self, test_mode=False):
         self._database = {}
-        self._file = TEST_DATABASE_FILE if test_mode else DATABASE_FILE
+        self._file = TEST_DATABASE_FILE if test_mode else NEW_DATABASE_FILE
         self._test_mode = test_mode
 
         with open(self._file, "r+") as f:
@@ -36,17 +37,18 @@ class JSONDatabaseEngine(DatabaseEngine):
     def select_players(self) -> ValuesView[Player]:
         return self._player_view.values()
 
-    def add_player(self, player: Player):
+    def add_player(self, player: Player, commit: bool = True):
         username = player.username.lower()
         self._database[username] = player.serialise()
         self._player_view[username] = player
-        self._commit()
+        if commit:
+            self.commit()
 
-    def _commit(self):
+    def commit(self):
         if self._test_mode:
             return
 
-        with open(self._file, "r+") as file:
+        with open(NEW_DATABASE_FILE, "r+") as file:
             file.seek(0)
             json.dump(self._database, file, indent=2, sort_keys=True)
             file.truncate()

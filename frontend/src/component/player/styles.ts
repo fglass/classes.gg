@@ -57,9 +57,24 @@ export const useStyles = makeStyles(theme => ({
     attachmentText: {
         paddingBottom: 2,
     },
-    source: {
+    sourcePanel: {
+        opacity: 0.5,
+        boxShadow: "none",
+        marginBottom: theme.spacing(1.25),
+    },
+    sourceText: {
+        color: theme.palette.text.secondary,
+    },
+    sourceIcon: {
         opacity: "50%",
         display: "flex",
         justifyContent: "space-between",
+    },
+    link: {
+        color: theme.palette.primary.main,
+        textDecoration: "none",
+        "&:hover": {
+            textDecoration: "underline",
+        }
     },
 }));

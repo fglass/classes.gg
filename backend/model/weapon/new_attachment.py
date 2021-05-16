@@ -55,19 +55,19 @@ class Ammunition(NewAttachment):
     ROUND_DRUM_MAGS_40 = "40 Round Drum Mags"
     ROUND_DRUM_MAGS_75 = "75 Round Drum Mags"
     ROUND_HELICAL_MAGS_84 = "84 Round Helical Mags"
-    ROUND_MAGS_10 = "10 Round Mags"
-    ROUND_MAGS_15 = "15 Round Mags"
-    ROUND_MAGS_20 = "20 Round Mags"
-    ROUND_MAGS_24 = "24 Round Mags"
-    ROUND_MAGS_25 = "25 Round Mags"
-    ROUND_MAGS_30 = "30 Round Mags"
-    ROUND_MAGS_32 = "32 Round Mags"
-    ROUND_MAGS_40 = "40 Round Mags"
-    ROUND_MAGS_45 = "45 Round Mags"
-    ROUND_MAGS_50 = "50 Round Mags"
-    ROUND_MAGS_60 = "60 Round Mags"
-    ROUND_MAGS_7 = "7 Round Mags"
-    ROUND_MAGS_9 = "9 Round Mags"
+    ROUND_MAGS_10 = "10 Round Mags", ["10 rnd", "10 rd"]
+    ROUND_MAGS_15 = "15 Round Mags", ["15 rnd", "15 rd"]
+    ROUND_MAGS_20 = "20 Round Mags", ["20 rnd", "20 rd"]
+    ROUND_MAGS_24 = "24 Round Mags", ["24 rnd", "24 rd"]
+    ROUND_MAGS_25 = "25 Round Mags", ["25 rnd", "25 rd"]
+    ROUND_MAGS_30 = "30 Round Mags", ["30 rnd", "30 rd", "30 mag", "30 mags"]
+    ROUND_MAGS_32 = "32 Round Mags", ["32 rnd", "32 rd"]
+    ROUND_MAGS_40 = "40 Round Mags", ["40 rnd", "40 rd"]
+    ROUND_MAGS_45 = "45 Round Mags", ["45 rnd", "45 rd", "45 rounds"]
+    ROUND_MAGS_50 = "50 Round Mags", ["50 rnd", "50 rd", "50 mag", "50 mags"]
+    ROUND_MAGS_60 = "60 Round Mags", ["60 rnd", "60 rd", "60 mag", "60 mags"]
+    ROUND_MAGS_7 = "7 Round Mags", ["7 rnd", "7 rd"]
+    ROUND_MAGS_9 = "9 Round Mags", ["9 rnd", "9 rd"]
     ROUND_MAG_10 = "10 Round Mag"
     ROUND_MAG_50 = "50 Round Mag"
     ROUND_MAG_60 = "60 Round Mag"
@@ -80,8 +80,8 @@ class Ammunition(NewAttachment):
     SPETSNAS_60_RND_DRUM = "Spetsnas 60 Rnd Drum"
     SPP_10_R_MAGS = "SPP 10-R Mags"
     STANAG_50_RND = "STANAG 50 Rnd"
-    STANAG_50_RND_DRUM = "STANAG 50 Rnd Drum"
-    STANAG_53_RND_DRUM = "STANAG 53 Rnd Drum"
+    STANAG_50_RND_DRUM = "STANAG 50 Rnd Drum", ["50 drum mag"]
+    STANAG_53_RND_DRUM = "STANAG 53 Rnd Drum", ["53 drum mag"]
     STANAG_60_RND = "STANAG 60 Rnd"
     STANAG_85_RND = "Stanag 85 Rnd"
     TAPED_MAGS = "Taped Mags"
@@ -94,7 +94,7 @@ class Ammunition(NewAttachment):
 class Barrel(NewAttachment):
     ALUMINUM_87 = "8.7 Aluminum"
     AN_94_FACTORY_330MM = "AN-94 Factory 330mm"
-    AN_94_FACTORY_X_438MM = "AN-94 Factory X-438mm"
+    AN_94_FACTORY_X_438MM = "AN-94 Factory X-438mm", ["438 barrel"]
     BRUEN_180_PARA = "Bruen 18.0 Para"
     BULL_BARREL_172 = "17.2 Bull Barrel"
     BULL_BARREL_26 = "26 Bull Barrel"
@@ -172,7 +172,7 @@ class Barrel(NewAttachment):
     GRU_COMPOSITE = "GRU Composite"
     GRU_CUT_DOWN = "GRU Cut Down"
     HDR_PRO_269 = "26.9 HDR Pro"
-    HEAVY_BARREL_259 = "25.9 Heavy Barrel"
+    HEAVY_BARREL_259 = "25.9 Heavy Barrel", ["25.9 barrel"]
     ISO_140MM_CQB = "ISO 140mm CQB"
     LIBERATOR = "Liberator"
     LIBERATOR_81 = "8.1 Liberator"
@@ -185,7 +185,7 @@ class Barrel(NewAttachment):
     MONOLITHIC_INTEGRAL_SUPPRESSOR = "Monolithic Integral Suppressor"
     ODEN_FACTORY_420MM = "Oden Factory 420mm"
     ODEN_FACTORY_730MM = "Oden Factory 730mm"
-    ODEN_FACTORY_810MM = "Oden Factory 810mm"
+    ODEN_FACTORY_810MM = "Oden Factory 810mm", ["810mm"]
     OSW_PARA_130 = "13.0 OSW Para"
     POLYGONAL_87 = "8.7 Polygonal"
     POLY_BARREL_300MM = "300mm Poly Barrel"
@@ -208,12 +208,12 @@ class Barrel(NewAttachment):
     SA87_182_FACTORY = "SA87 18.2 Factory"
     SA87_254_FACTORY = "SA87 25.4 Factory"
     SINGUARD_ARMS_166_SOCOM = "Singuard Arms 16.6 SOCOM"
-    SINGUARD_ARMS_198_PROWLER = "Singuard Arms 19.8 Prowler", ["singuard 19.8"]
+    SINGUARD_ARMS_198_PROWLER = "Singuard Arms 19.8 Prowler", ["singuard 19.8", "prowler"]
     SINGUARD_ARMS_PRO = "Singuard Arms Pro"
     SINGUARD_ARMS_WHISPER = "Singuard Arms Whisper"
     SINGUARD_CUSTOM_212 = "Singuard Custom 21.2"
     SINGUARD_CUSTOM_251 = "Singuard Custom 25.1"
-    SINGUARD_CUSTOM_276 = "Singuard Custom 27.6"
+    SINGUARD_CUSTOM_276 = "Singuard Custom 27.6", ["singuard 27.6"]
     SOROKIN_140MM_AUTO = "Sorokin 140mm Auto"
     SOR_CUT_DOWN = "SOR Cut Down"
     SPETSNAZ_ELITE = "Spetsnaz Elite"
@@ -223,18 +223,18 @@ class Barrel(NewAttachment):
     STAINLESS_STEEL_150MM = "150mm Stainless Steel"
     STAINLESS_STEEL_400MM = "400mm Stainless Steel"
     STEEL_87 = "8.7 Steel"
-    STOCK_M16_GRENADIER = "Stock M16 Grenadier"
+    STOCK_M16_GRENADIER = "Stock M16 Grenadier", ["m16 grenadier"]
     STOVL_SOF = "Stovl SOF"
     STRIKE_TEAM = "Strike Team"
     SUBSONIC_INTEGRAL_SUPPRESSOR = "Subsonic Integral Suppressor"
     TAKEDOWN = "Takedown"
     TAKEDOWN_203 = "20.3 Takedown"
     TASK_FORCE = "Task Force"
-    TASK_FORCE_195 = "19.5 Task Force"
-    TASK_FORCE_59 = "5.9 Task Force"
-    TASK_FORCE_74 = "7.4 Task Force"
-    TASK_FORCE_95 = "9.5 Task Force"
-    TEMPUS_264_ARCHANGEL = "Tempus 26.4 Archangel"
+    TASK_FORCE_195 = "19.5 Task Force", ["task force"]
+    TASK_FORCE_59 = "5.9 Task Force", ["task force"]
+    TASK_FORCE_74 = "7.4 Task Force", ["task force"]
+    TASK_FORCE_95 = "9.5 Task Force", ["task force"]
+    TEMPUS_264_ARCHANGEL = "Tempus 26.4 Archangel", ["archangel"]
     TEMPUS_CYCLONE = "Tempus Cyclone"
     TEMPUS_MARKSMAN = "Tempus Marksman"
     TEMPUS_MINI = "Tempus Mini"
@@ -256,7 +256,7 @@ class Barrel(NewAttachment):
     XRK_MARKSMAN = "XRK Marksman"
     XRK_PRO_TWIST = "XRK Pro Twist"
     XRK_PRO_TWIST_ADVERSE = "XRK Pro Twist Adverse"
-    XRK_SUMMIT_268 = "XRK Summit 26.8"
+    XRK_SUMMIT_268 = "XRK Summit 26.8", ["summit"]
     XRK_ULTRALIGHT = "XRK Ultralight"
     XRK_ZODIAC_S440 = "XRK Zodiac S440"
     ZLR_16_APEX = "ZLR 16 Apex"
@@ -281,7 +281,7 @@ class Laser(NewAttachment):
 
 
 class Muzzle(NewAttachment):
-    AGENCY_SUPPRESSOR = "Agency Suppressor"
+    AGENCY_SUPPRESSOR = "Agency Suppressor", ["agency silencer"]
     AN_94_SONIC_BRAKE = "AN-94 Sonic Brake"
     COLOSSUS_SUPPRESSOR = "Colossus Suppressor"
     COMPENSATOR = "Compensator"
@@ -290,7 +290,7 @@ class Muzzle(NewAttachment):
     INFANTRY_COMPENSATOR = "Infantry Compensator"
     KGB_ELIMINATOR = "KGB Eliminator"
     LIGHTWEIGHT_SUPPRESSOR = "Lightweight Suppressor"
-    MONOLITHIC_SUPPRESSOR = "Monolithic Suppressor"
+    MONOLITHIC_SUPPRESSOR = "Monolithic Suppressor", ["mono", "monolithic"]
     MUZZLE_BRAKE = "Muzzle Brake"
     RYTEC_AMR_SUPPRESSOR = "Rytec AMR Suppressor"
     SOCOM_ELIMINATOR = "SOCOM Eliminator"
@@ -305,11 +305,11 @@ class Muzzle(NewAttachment):
 class Optic(NewAttachment):
     AIM_OP_REFLEX_SIGHT = "Aim-Op Reflex Sight"
     ANPVS_4_THERMAL = "ANPVS-4 Thermal"
-    APX5_HOLOGRAPHIC = "APX5 Holographic"
-    APX5_HOLOGRAPHIC_SIGHT = "APX5 Holographic Sight"
+    APX5_HOLOGRAPHIC = "APX5 Holographic", ["apx5 holo"]
+    APX5_HOLOGRAPHIC_SIGHT = "APX5 Holographic Sight", ["apx5 holo"]
     AXIAL_ARMS_3X = "Axial Arms 3x"
     CANTED_HYBRID = "Canted Hybrid"
-    CORP_COMBAT_HOLO_SIGHT = "Corp Combat Holo Sight"
+    CORP_COMBAT_HOLO_SIGHT = "Corp Combat Holo Sight", ["corp combat"]
     CRONEN_2X2_ELITE = "Cronen 2x2 Elite"
     CRONEN_C480_PRO_OPTIC = "Cronen C480 Pro Optic"
     CRONEN_LP945_MINI_REFLEX = "Cronen LP945 Mini Reflex"
@@ -380,7 +380,7 @@ class RearGrip(NewAttachment):
     SERPENT_WRAP = "Serpent Wrap"
     SPEED_TAPE = "Speed Tape"
     SPETSNAZ_FIELD_GRIP = "Spetsnaz Field Grip"
-    STIPPLED_GRIP_TAPE = "Stippled Grip Tape"
+    STIPPLED_GRIP_TAPE = "Stippled Grip Tape", ["stippled rear grip"]
     XRK_CR_56_STIPPLED_WRAP = "XRK CR-56 Stippled Wrap"
     XRK_VOID_II = "XRK Void II"
 
@@ -452,7 +452,7 @@ class Stock(NewAttachment):
     RAIDER_PAD = "Raider Pad"
     RAIDER_STOCK = "Raider Stock"
     SA87_ULTRALIGHT_HOLLOW = "SA87 Ultralight Hollow"
-    SAS_COMBAT_STOCK = "SAS Combat Stock"
+    SAS_COMBAT_STOCK = "SAS Combat Stock", ["sas stock"]
     SAWED_OFF_STOCK = "Sawed-off Stock"
     SINGUARD_ARMS_ASSASSIN = "Singuard Arms Assassin"
     SINGUARD_ARMS_EVADER = "Singuard Arms Evader"
@@ -495,24 +495,24 @@ class Underbarrel(NewAttachment):
     BIPOD = "Bipod"
     BIPOD_FOREGRIP = "Bipod Foregrip"
     BRUISER_GRIP = "Bruiser Grip"
-    COMMANDO_FOREGRIP = "Commando Foregrip"
+    COMMANDO_FOREGRIP = "Commando Foregrip", ["commando grip"]
     CRONEN_SHARK_II = "Cronen Shark II"
     FIELD_AGENT_GRIP = "Field Agent Grip"
     FOREGRIP = "Foregrip"
     FTAC_SPEED_GRIP = "FTAC Speed Grip"
-    GRANULATED_GRIP_TAPE_1 = "Granulated Grip Tape 1"
+    GRANULATED_GRIP_TAPE_1 = "Granulated Grip Tape"
     INFILTRATOR_GRIP = "Infiltrator Grip"
     MERC_FOREGRIP = "Merc Foregrip"
     OPERATOR_FOREGRIP = "Operator Foregrip"
     PATROL_GRIP = "Patrol Grip"
     RANGER_FOREGRIP = "Ranger Foregrip"
     RED_CELL_FOREGRIP = "Red Cell Foregrip"
-    RUBBERIZED_GRIP_TAPE_1 = "Rubberized Grip Tape 1"
+    RUBBERIZED_GRIP_TAPE_1 = "Rubberized Grip Tape"
     SFOD_SPEEDGRIP = "SFOD Speedgrip"
     SNATCH_GRIP = "Snatch Grip"
     SPETSNAZ_GRIP = "Spetsnaz Grip"
     SPETSNAZ_SPEEDGRIP = "Spetsnaz Speedgrip"
-    STIPPLED_GRIP_TAPE_1 = "Stippled Grip Tape 1"
+    STIPPLED_GRIP_TAPE_1 = "Stippled Grip Tape", ["stippled grip underbarrel"]
     STRIKER_GRIP = "Striker Grip"
     TACTICAL_FOREGRIP = "Tactical Foregrip"
     XRK_PRECISION_COMB = "XRK Precision Comb"

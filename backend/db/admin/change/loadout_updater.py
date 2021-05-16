@@ -1,4 +1,5 @@
 import logging
+from datetime import datetime
 from typing import Optional, Tuple, Dict, List
 from fuzzywuzzy import fuzz
 from db.admin.change.command_source import CommandSource
@@ -12,12 +13,12 @@ from model.weapon.weapon import Weapon, AssaultRifle, LightMachineGun, MarksmanR
 DELIMITERS = [",", "-", "|"]
 MIN_ATTACHMENTS = 4
 MAX_ATTACHMENTS = 5
-RATIO_THRESHOLD = 50
+RATIO_THRESHOLD = 60
 
 ALL_WEAPONS = list(AssaultRifle) + list(LightMachineGun) + list(MarksmanRifle) + list(Pistol) + list(Shotgun) + \
               list(SniperRifle) + list(SubmachineGun) + list(TacticalRifle)
 
-WEAPON_COMMANDS = set(ALL_COMMANDS)  # TODO: use weapon aliases
+WEAPON_COMMANDS = set(ALL_COMMANDS)  # TODO: use weapon aliases instead
 [WEAPON_COMMANDS.remove(c) for c in {"class", "guns", "loadout", "loadout2", "loadouts"}]
 
 DUAL_GAME_WEAPONS: Dict[Weapon, Weapon] = {
@@ -26,21 +27,24 @@ DUAL_GAME_WEAPONS: Dict[Weapon, Weapon] = {
     SubmachineGun.MP5: SubmachineGun.MP5_CW,
     SubmachineGun.MP5_CW: SubmachineGun.MP5,
     SubmachineGun.AUG: TacticalRifle.AUG_CW,
-    TacticalRifle.AUG_CW: SubmachineGun.AUG
+    TacticalRifle.AUG_CW: SubmachineGun.AUG,
+    AssaultRifle.M4A1: AssaultRifle.XM4,
+    AssaultRifle.XM4: AssaultRifle.M4A1
 }
 
 
 def update_loadouts():
     db = JSONDatabaseEngine()
     players = db.select_players()
-
     success_count, failure_count = 0, 0
 
     for player in players:
         s, f = _update_player(player)
         success_count += s
         failure_count += f
+        db.add_player(player, commit=False)
 
+    db.commit()
     logging.info(f"Loadouts updated: {success_count} ✔ {failure_count} ❌")
 
 
@@ -63,7 +67,7 @@ def _update_player(player: Player):
         if response is None:
             continue
 
-        updated = _update_command(command, response)
+        updated = _update_command(player, command, response)
 
         if updated:
             success_count += 1
@@ -73,13 +77,23 @@ def _update_player(player: Player):
     return success_count, failure_count
 
 
-def _update_command(command: str, response: str) -> bool:
+def _update_command(player: Player, command: str, response: str) -> bool:
     loadout = _find_loadout(command, response)
 
     if loadout is None:
         return False
 
+    now = datetime.now().isoformat()
     weapon, attachments = loadout
+
+    player.last_updated = now
+    player.loadouts[str(weapon)] = {
+        "attachments": {a.__class__.__name__: str(a) for a in attachments.keys()},
+        "game": weapon.game.value,
+        "lastUpdated": now,
+        "source": response,
+        "sourceUrl": f"https://www.twitch.tv/{player.username.lower()}",
+    }
 
     print(f"\t{command}: {response}")
     print(f"\t\t-> {str(weapon)} ({weapon.game.value}): {[f'{str(a)} {r}%' for a, r in attachments.items()]}")
@@ -121,7 +135,7 @@ def _find_attachments(valid_attachments: list, response: str) -> dict:
     if len(parts) < MIN_ATTACHMENTS:
         return attachments
 
-    for part in parts:
+    for part in reversed(parts):  # TODO: check part isn't weapon
 
         attachment, ratio = _find_attachment(part, valid_attachments)
 
@@ -160,9 +174,6 @@ def _find_attachment(part: str, valid_attachments: list) -> Tuple[Optional[NewAt
 
     if max_ratio < RATIO_THRESHOLD:
         return None, 0
-
-    # if max_ratio < 100:
-    #     print("\t" + part, "->", str(matched_attachment), max_ratio)  # TODO: fix these
 
     return matched_attachment, max_ratio
 
