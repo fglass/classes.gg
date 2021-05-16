@@ -1,9 +1,10 @@
 import logging
+import requests
 from datetime import datetime
-from typing import Optional, Tuple, Dict, List
+from typing import Optional, Tuple, Dict
 from fuzzywuzzy import fuzz
 from db.admin.change.command_source import CommandSource
-from db.admin.change.detect_changes import SOURCE_KEY, ALL_COMMANDS
+from db.admin.change.detect_changes import SOURCE_KEY, ALL_COMMANDS, SHEETS_KEY
 from db.json_database_engine import JSONDatabaseEngine
 from model.player import Player
 from model.weapon.new_attachment import *
@@ -33,75 +34,87 @@ DUAL_GAME_WEAPONS: Dict[Weapon, Weapon] = {
 }
 
 
-def update_loadouts():
-    db = JSONDatabaseEngine()
-    players = db.select_players()
-    success_count, failure_count = 0, 0
+class LoadoutUpdater:
 
-    for player in players:
-        s, f = _update_player(player)
-        success_count += s
-        failure_count += f
-        db.add_player(player, commit=False)
+    def __init__(self):
+        self._success_count = 0
+        self._failure_count = 0
 
-    db.commit()
-    logging.info(f"Loadouts updated: {success_count} ✔ {failure_count} ❌")
+    def run(self):
+        self._success_count, self._failure_count = 0, 0
+        db = JSONDatabaseEngine()
+
+        for player in db.select_players():
+            self._update_player(player)
+            db.add_player(player, commit=False)
+
+        db.commit()
+        logging.info(f"Loadouts updated: {self._success_count} ✔ {self._failure_count} ❌")
+
+    def _update_player(self, player: Player):  # TODO: check previous
+        print(player.username)
+
+        if player.spreadsheet:
+            self._update_spreadsheet(player)
+
+        source_name = player.commands.get(SOURCE_KEY)
+
+        if source_name:
+            self._update_commands(player, source_name)
+
+    def _update_spreadsheet(self, player: Player):
+        for entries in _parse_spreadsheets(player.spreadsheet):
+            for entry in entries:
+                self._update_loadout(player, command=entry, response=entry, source_url="TODO")  # TODO: source url
+
+    def _update_commands(self, player: Player, source_name: str):
+        source = CommandSource(source_name)
+        source_url = f"https://www.twitch.tv/{player.username.lower()}"
+
+        current_commands = source.query(player)
+
+        for command in WEAPON_COMMANDS:
+
+            response = current_commands[command] if command in current_commands else current_commands.get("!" + command)
+
+            if response is not None:
+                self._update_loadout(player, command, response, source_url)
+
+    def _update_loadout(self, player: Player, command: str, response: str, source_url: str):
+        loadout = _find_loadout(command, response)
+
+        if loadout is None:
+            self._failure_count += 1
+            return
+
+        now = datetime.now().isoformat()
+        weapon, attachments = loadout
+
+        player.last_updated = now
+        player.loadouts[str(weapon)] = {
+            "attachments": {a.__class__.__name__: str(a) for a in attachments.keys()},
+            "game": weapon.game.value,
+            "lastUpdated": now,
+            "source": response,
+            "sourceUrl": source_url,
+        }
+
+        print(f"\t{command}: {response}")
+        print(f"\t\t-> {str(weapon)} ({weapon.game.value}): {[f'{str(a)} {r}%' for a, r in attachments.items()]}")
+        self._success_count += 1
 
 
-def _update_player(player: Player):
-    success_count, failure_count = 0, 0
-    previous_commands = player.commands
-    source_name = previous_commands.pop(SOURCE_KEY, None)
-
-    if not source_name:
-        return success_count, failure_count
-
-    print(player.username)
-    source = CommandSource(source_name)
-    current_commands = source.query(player)
-
-    for command in WEAPON_COMMANDS:
-
-        response = current_commands[command] if command in current_commands else current_commands.get("!" + command)
-
-        if response is None:
-            continue
-
-        updated = _update_command(player, command, response)
-
-        if updated:
-            success_count += 1
-        else:
-            failure_count += 1
-
-    return success_count, failure_count
-
-
-def _update_command(player: Player, command: str, response: str) -> bool:
-    loadout = _find_loadout(command, response)
-
-    if loadout is None:
-        return False
-
-    now = datetime.now().isoformat()
-    weapon, attachments = loadout
-
-    player.last_updated = now
-    player.loadouts[str(weapon)] = {
-        "attachments": {a.__class__.__name__: str(a) for a in attachments.keys()},
-        "game": weapon.game.value,
-        "lastUpdated": now,
-        "source": response,
-        "sourceUrl": f"https://www.twitch.tv/{player.username.lower()}",
-    }
-
-    print(f"\t{command}: {response}")
-    print(f"\t\t-> {str(weapon)} ({weapon.game.value}): {[f'{str(a)} {r}%' for a, r in attachments.items()]}")
-    return True
+def _parse_spreadsheets(spreadsheet_meta: dict) -> list:
+    for sheet in spreadsheet_meta[SHEETS_KEY]:
+        key = spreadsheet_meta["id"]
+        export_url = f"https://docs.google.com/spreadsheets/d/{key}/export?format=csv&gid={sheet}"
+        response = requests.get(export_url)
+        lines = response.content.decode("utf-8").splitlines()
+        yield lines
 
 
 def _find_loadout(command: str, response: str) -> Optional[Tuple[Weapon, dict]]:
-    weapon = find_weapon(command)
+    weapon = find_weapon(command.lower())
 
     if weapon is None:
         print(f"\tWeapon not found: {command}")
@@ -194,4 +207,4 @@ def _compare_weapon_counterpart(weapon: Weapon, attachments: dict, response: str
 
 if __name__ == "__main__":
     logging.basicConfig(format='%(asctime)s %(message)s', datefmt='%m/%d/%Y %I:%M:%S %p', level=logging.INFO)
-    update_loadouts()
+    LoadoutUpdater().run()

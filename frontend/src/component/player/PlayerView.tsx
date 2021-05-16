@@ -105,7 +105,7 @@ const SourcePanel = (props: any) => {
                                     rel="noopener noreferrer"
                                     className={classes.link}
                                 >
-                                    Twitch
+                                    {loadout.sourceUrl.includes("twitch") ? "Twitch" : "Google Sheets"}
                                 </a>
                         </Typography>
                     </Grid>
