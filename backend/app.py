@@ -3,7 +3,7 @@ import json
 import logging
 
 from apscheduler.schedulers.background import BackgroundScheduler
-from db.json_database_engine import JSONDatabaseEngine, VIEW_COUNTS_FILE
+from db.json_database_engine import JSONDatabaseEngine
 from flask import Flask, Blueprint, abort, jsonify
 from flask_cors import CORS
 from markupsafe import escape
@@ -46,20 +46,8 @@ def increment_player_view_count(username: str):
     return jsonify(success=True)
 
 
-def save_view_counts():
-    players = db.select_players()
-    view_counts = {player.username.lower(): player.views for player in players}
-
-    with open(VIEW_COUNTS_FILE, "r+") as file:
-        file.seek(0)
-        json.dump(view_counts, file, indent=2, sort_keys=True)
-        file.truncate()
-
-    logging.info(f"Saved view counts: {view_counts}")
-
-
 scheduler.remove_all_jobs()
-scheduler.add_job(func=save_view_counts, trigger="interval", hours=1)
+# scheduler.add_job(func=save_view_counts, trigger="interval", hours=1)
 scheduler.start()
 atexit.register(lambda: scheduler.shutdown())
 

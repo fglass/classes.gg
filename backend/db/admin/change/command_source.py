@@ -1,6 +1,5 @@
 from enum import Enum
 from typing import Callable
-
 from db.admin.change.api.fossabot_api import query_fossabot
 from db.admin.change.api.nightbot_api import query_nightbot
 from db.admin.change.api.streamelements_api import query_streamelements

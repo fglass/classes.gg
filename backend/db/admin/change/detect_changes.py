@@ -50,7 +50,7 @@ def _find_new_commands(username: str, previous: dict, current: dict):
         _find_new_command("!" + cmd, username, previous, current)
 
 
-def _find_new_command(cmd: str, username: str, previous: dict, current: dict):
+def _find_new_command(cma: str, username: str, previous: dict, current: dict):
     if cmd not in previous and cmd in current:
         logging.info(f"[{username}] [new]: {cmd}: {current[cmd]}")
 

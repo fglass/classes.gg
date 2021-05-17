@@ -14,6 +14,13 @@ class NewAttachment(Enum):
     def aliases(self) -> list:
         return [self._name.lower()] + self._aliases
 
+    @classmethod
+    def get_class_name(cls):
+        _type = cls.__name__
+        if _type == RearGrip.__name__:
+            return "Rear Grip"
+        return _type
+
 
 class Ammunition(NewAttachment):
     AE_32_ROUND_MAGS_41 = ".41 AE 32-Round Mags"

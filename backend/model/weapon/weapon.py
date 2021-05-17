@@ -27,7 +27,7 @@ class Weapon(Enum):
 
 class AssaultRifle(Weapon):
     AK_47 = "AK-47", Game.MODERN_WARFARE, ["ak"]
-    AN_94 = "AN-94", Game.MODERN_WARFARE, ["an"]
+    AN_94 = "AN-94", Game.MODERN_WARFARE
     CR_56_AMAX = "CR-56 AMAX", Game.MODERN_WARFARE, ["amax", "cr56", "galil"]
     FAL = "FAL", Game.MODERN_WARFARE
     FR = "FR 5.56", Game.MODERN_WARFARE, ["famas", "fr"]

@@ -5,9 +5,8 @@ if __name__ == '__main__':
     players = db.select_players()
 
     for player in players:
-        # player.views = 0
-        # db.add_player(player)
-        player.loadouts = {}
+        player.command_source = db._database[player.username.lower()].get("commands", {}).get("source")
+        player.spreadsheet.pop("source", None)
         db.add_player(player, commit=False)
 
     db.commit()
