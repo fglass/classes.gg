@@ -1,6 +1,7 @@
 import React from "react";
 import Typography from "@material-ui/core/Typography";
 import { makeStyles } from "@material-ui/core/styles";
+import {Button, Grid} from "@material-ui/core";
 
 const useStyles = makeStyles(theme => ({
     footer: {
@@ -29,15 +30,12 @@ const Copyright = (props: any) => {
     )
 }
 
-const AffiliationLink = (props: any) => {
-    const affiliationLink = "https://www.reddit.com/r/MWLoadouts/"
+const SupportButton = () => {
+    const supportLink = "https://www.buymeacoffee.com/classesgg"
     return (
-        <Typography variant="body2" color="textSecondary">
-            {"Affiliated with "}
-            <a href={affiliationLink} target="_blank" rel="noopener noreferrer" className={props.className}>
-                r/MWLoadouts
-            </a>
-        </Typography>
+        <Button variant="outlined" size="small" href={supportLink} target="_blank" rel="noopener noreferrer">
+            <span role="img" aria-label="Coffee">☕ Support</span>
+        </Button>
     )
 }
 
@@ -45,8 +43,17 @@ export default function Footer() {
     const classes = useStyles()
     return (
         <footer className={classes.footer}>
-            <Copyright className={classes.link} />
-            <AffiliationLink className={classes.link} />
+            <Grid container justify="space-between">
+                <Grid item>
+                    <Copyright className={classes.link} />
+                    <Typography variant="body2" color="textSecondary">
+                        Not affiliated with Activision
+                    </Typography>
+                </Grid>
+                <Grid item>
+                   <SupportButton />
+                </Grid>
+            </Grid>
         </footer>
     )
 }
