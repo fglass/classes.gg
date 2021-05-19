@@ -81,7 +81,7 @@ const AttachmentList = (props: any) => {
 const SourcePanel = (props: any) => {
     const { classes, loadout } = props
     return (
-         <ExpansionPanel className={classes.sourcePanel}>
+         <ExpansionPanel classes={{ root: classes.sourcePanel, expanded: classes.sourcePanelExpanded }}>
             <ExpansionPanelSummary
               expandIcon={<ArrowDropDownIcon />}
               aria-controls="source-content"
@@ -98,7 +98,7 @@ const SourcePanel = (props: any) => {
                     </Grid>
                     <Grid item>
                         <Typography className={classes.sourceText} variant="caption">
-                            Updated {new Date(loadout.lastUpdated).toISOString()} from{' '}
+                            Updated from{' '}
                                 <a
                                     href={loadout.sourceUrl}
                                     target="_blank"
@@ -107,6 +107,7 @@ const SourcePanel = (props: any) => {
                                 >
                                     {loadout.sourceUrl.includes("twitch") ? "Twitch" : "Google Sheets"}
                                 </a>
+                            {' '}at {new Date(loadout.lastUpdated).toISOString()}
                         </Typography>
                     </Grid>
                 </Grid>

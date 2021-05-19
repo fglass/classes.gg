@@ -58,17 +58,14 @@ export const useStyles = makeStyles(theme => ({
         paddingBottom: 2,
     },
     sourcePanel: {
-        opacity: 0.5,
+        minHeight: 50,
+        backgroundColor: "rgba(66, 66, 66, 0.4)",
+        color: theme.palette.text.hint,
         boxShadow: "none",
         marginBottom: theme.spacing(1.25),
     },
     sourceText: {
-        color: theme.palette.text.secondary,
-    },
-    sourceIcon: {
-        opacity: "50%",
-        display: "flex",
-        justifyContent: "space-between",
+        color: theme.palette.text.hint,
     },
     link: {
         color: theme.palette.primary.main,

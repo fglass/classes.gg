@@ -25,6 +25,17 @@ const darkTheme = createMuiTheme({
         primary: blue,
         type: "dark",
     },
+    overrides: {
+        MuiExpansionPanel: {
+            root: {
+                "&$expanded": {
+                    "&:last-child": {
+                        marginBottom: "10px"
+                    }
+                }
+            }
+        }
+    }
 });
 
 const useStyles = makeStyles((theme) => ({
