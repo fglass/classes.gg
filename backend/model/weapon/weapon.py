@@ -40,11 +40,12 @@ class AssaultRifle(Weapon):
     AS_VAL = "AS VAL", Game.MODERN_WARFARE, ["val"]
     SCAR = "FN Scar 17", Game.MODERN_WARFARE, ["scar"]
 
-    XM4 = "XM4", Game.COLD_WAR
     AK_47_CW = "AK-47", Game.COLD_WAR, ["ak"]
-    KRIG_6 = "Krig 6", Game.COLD_WAR, ["krig"]
     FFAR_1 = "FFAR 1", Game.COLD_WAR, ["ffar"]
     GROZA = "Groza", Game.COLD_WAR
+    KRIG_6 = "Krig 6", Game.COLD_WAR, ["krig"]
+    QBZ = "QBZ-83", Game.COLD_WAR, ["qbz"]
+    XM4 = "XM4", Game.COLD_WAR
 
 
 class SubmachineGun(Weapon):
@@ -58,34 +59,48 @@ class SubmachineGun(Weapon):
     UZI = "Uzi", Game.MODERN_WARFARE
     ISO = "ISO", Game.MODERN_WARFARE
 
+    KSP_45 = "KSP 45", Game.COLD_WAR, ["ksp"]
+    LC10 = "LC10", Game.COLD_WAR, ["lc"]
     MAC_10 = "MAC-10", Game.COLD_WAR, ["mac"]
+    MILANO_821 = "Milano 821", Game.COLD_WAR, ["milano"]
     MP5_CW = "MP5", Game.COLD_WAR
     AK_74U = "AK-74u", Game.COLD_WAR, ["74", "74u"]
     BULLFROG = "Bullfrog", Game.COLD_WAR
 
 
 class LightMachineGun(Weapon):
-    HOLGER = "Holger-26", Game.MODERN_WARFARE, ["holder"]
-    PKM = "PKM", Game.MODERN_WARFARE
     BRUEN = "MK9 Bruen", Game.MODERN_WARFARE, ["bruen"]
     FINN = "FiNN LMG", Game.MODERN_WARFARE, ["finn"]
+    HOLGER = "Holger-26", Game.MODERN_WARFARE, ["holder"]
+    M60 = "M60", Game.COLD_WAR
+    M91 = "M91", Game.MODERN_WARFARE
+    MG34 = "MG35", Game.MODERN_WARFARE, ["mg"]
+    PKM = "PKM", Game.MODERN_WARFARE
+    RPD = "RPD", Game.COLD_WAR
+    SA87 = "SA87", Game.MODERN_WARFARE
     STONER_63 = "Stoner 63", Game.COLD_WAR, ["stoner"]
 
 
 class SniperRifle(Weapon):
     AX_50 = "AX-50", Game.MODERN_WARFARE, ["ax"]
+    DRAGUNOV = "Dragunov", Game.MODERN_WARFARE
     HDR = "HDR", Game.MODERN_WARFARE
     PELINGTON_703 = "Pelington 703", Game.COLD_WAR, ["pelington"]
-    SPR_208 = "SP-R 208", Game.MODERN_WARFARE, ["spr"]
+    RYTEC_AMR = "Rytec AMR", Game.MODERN_WARFARE, ["rytec"]
 
 
 class MarksmanRifle(Weapon):
-    CROSSBOW = "Crossbow", Game.MODERN_WARFARE
+    CROSSBOW = "Crossbow", Game.MODERN_WARFARE, ["cbow"]
+    EBR = "EBR-14", Game.MODERN_WARFARE, ["ebr"]
     KAR98K = "Kar98k", Game.MODERN_WARFARE, ["kar"]
+    MK2_CARBINE = "MK2 Carbine", Game.MODERN_WARFARE, ["mk2", "carbine"]
+    SKS = "SKS", Game.MODERN_WARFARE
+    SPR_208 = "SP-R 208", Game.MODERN_WARFARE, ["spr"]
 
 
 class TacticalRifle(Weapon):
     AUG_CW = "AUG", Game.COLD_WAR
+    CARV = "CARV.2", Game.COLD_WAR, ["carv"]
     M16 = "M16", Game.COLD_WAR
     DMR = "DMR 14", Game.COLD_WAR, ["dmr"]
     TYPE_63 = "Type 63", Game.COLD_WAR, ["type"]
@@ -98,7 +113,8 @@ class Shotgun(Weapon):
     VLK_ROGUE = "VLK Rogue", Game.MODERN_WARFARE, ["vlk"]
 
 
-class Pistol(Weapon):
+class Handgun(Weapon):
     DIAMATTI = "Diamatti", Game.COLD_WAR
     M19 = "M19", Game.MODERN_WARFARE
     RENETTI = "Renetti", Game.MODERN_WARFARE
+    SYKOV = "Sykov", Game.MODERN_WARFARE

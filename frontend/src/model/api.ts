@@ -12,8 +12,8 @@ export default class Api {
         return this.request<LoadoutMap>(`loadouts/${player.username}`)
     }
 
-    static incrementPlayerViewCount(player: Player) {
-        this.request(`incrementViewCount/${player.username}`, 'POST').catch(err => console.log(err))
+    static viewPlayer(player: Player) {
+        this.request(`view/${player.username}`, 'POST').catch(err => console.log(err))
     }
 
     private static async request<T>(endpoint: string, method: string = "GET"): Promise<T> {

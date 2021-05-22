@@ -131,7 +131,7 @@ class PlayerView extends React.Component<IProps, IState> {
     onLoad() {
         if (this.props.player != null) {
             this.getLoadoutsForPlayer().catch(err => console.log(err))
-            Api.incrementPlayerViewCount(this.props.player)
+            Api.viewPlayer(this.props.player)
         }
     }
 

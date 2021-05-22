@@ -25,6 +25,8 @@ class NewAttachment(Enum):
 class Ammunition(NewAttachment):
     AE_32_ROUND_MAGS_41 = ".41 AE 32-Round Mags"
     AUTO_30_ROUND_MAGS_10MM = "10mm Auto 30-Round Mags"
+    BAKELITE_RND_40 = "Bakelite 40 Rnd"
+    BAKELITE_RND_60 = "Bakelite 60 Rnd"
     BLACKOUT_30_ROUND_MAGS_300 = ".300 Blackout 30-Round Mags"
     CT_100_ROUND_BELTS_556 = "5.56 CT 100-Round Belts"
     CT_75_ROUND_BELTS_556 = "5.56 CT 75-Round Belts"
@@ -33,21 +35,26 @@ class Ammunition(NewAttachment):
     GRU_MAG_CLAMP = "GRU Mag Clamp"
     HOLLOW_POINT_12_R_MAGS_45 = ".45 Hollow Point 12-R Mags"
     JUNGLE_STYLE_MAG = "Jungle-Style Mag"
-    LAPUA_MAG_338 = ".338 Lapua Mag"
+    LAPUA_MAG_338 = ".338 Lapua Mag 5-R Mags"
     M67_10_R_MAGS = "M67 10-R Mags"
     NATO_100_ROUND_BELTS_556 = "5.56 NATO 100-Round Belts"
     NATO_30_ROUND_MAGS_556 = "5.56 NATO 30-Round Mags"
     NATO_60_ROUND_DRUMS_556 = "5.56 NATO 60-Round Drums"
-    NORMA_MAG_300 = ".300 Norma Mag"
+    NORMA_MAG_300 = ".300 Norma Mag 5-R Mags"
     PARA_32_ROUND_MAGS_9MM = "9mm Para 32-Round Mags"
+    RND_120 = "120 Rnd"
+    RND_30 = "30 Rnd"
     RND_38 = "38 Rnd"
     RND_45 = "45 Rnd"
     RND_65 = "65 Rnd"
     RND_DRUM_40 = "40 Rnd Drum"
     RND_DRUM_43 = "43 Rnd Drum"
     RND_DRUM_45 = "45 Rnd Drum"
+    RND_SPEED_MAG_120 = "120 Rnd Speed Mag"
+    RND_SPEED_MAG_30 = "30 Rnd Speed Mag"
     RND_SPEED_MAG_38 = "38 Rnd Speed Mag"
     RND_SPEED_MAG_40 = "40 Rnd Speed Mag"
+    RND_SPEED_MAG_42 = "42 Rnd Speed Mag"
     RND_SPEED_MAG_43 = "43 Rnd Speed Mag"
     RND_SPEED_MAG_45 = "45 Rnd Speed Mag"
     RND_SPEED_MAG_65 = "65 Rnd Speed Mag"
@@ -79,21 +86,31 @@ class Ammunition(NewAttachment):
     ROUND_MAG_50 = "50 Round Mag"
     ROUND_MAG_60 = "60 Round Mag"
     ROUND_MAGS_545X39MM_30 = "5.45x39mm 30-Round Mags"
+    SALVO_150_RND_FAST_MAG = "Salvo 150 Rnd Fast Mag"
+    SALVO_40_RND_FAST_MAG = "Salvo 40 Rnd Fast Mag"
     SALVO_50_RND_FAST_MAG = "Salvo 50 Rnd Fast Mag"
+    SALVO_52_RND_FAST_MAG = "Salvo 52 Rnd Fast Mag"
     SALVO_53_RND_FAST_MAG = "Salvo 53 Rnd Fast Mag"
+    SALVO_54_RND_FAST_MAG = "Salvo 54 Rnd Fast Mag"
     SALVO_60_RND_FAST_MAG = "Salvo 60 Rnd Fast Mag"
     SAS_MAG_CLAMP = "SAS Mag Clamp"
     SOCOM_10_ROUND_MAGS_458 = ".458 SOCOM 10-Round Mags"
-    SPETSNAS_60_RND_DRUM = "Spetsnas 60 Rnd Drum"
+    SPETSNAZ_150_RND = "Spetsnaz 150 Rnd"
+    SPETSNAZ_50_RND_DRUM = "Spetsnaz 50 Rnd Drum"
+    SPETSNAZ_60_RND_DRUM = "Spetsnaz 60 Rnd Drum"
     SPP_10_R_MAGS = "SPP 10-R Mags"
+    STANAG_40_RND = "STANAG 40 Rnd"
     STANAG_50_RND = "STANAG 50 Rnd"
     STANAG_50_RND_DRUM = "STANAG 50 Rnd Drum", ["50 drum mag"]
     STANAG_53_RND_DRUM = "STANAG 53 Rnd Drum", ["53 drum mag"]
+    STANAG_54_RND_DRUM = "STANAG 54 Rnd Drum", ["54 drum mag"]
+    STANAG_55_RND = "STANAG 55 Rnd"
     STANAG_60_RND = "STANAG 60 Rnd"
     STANAG_85_RND = "Stanag 85 Rnd"
     TAPED_MAGS = "Taped Mags"
     THERMITE_5_R_MAGS_25X59MM = "25x59mm Thermite 5-R Mags"
     VANDAL_SPEED_LOADER = "Vandal Speed Loader"
+    VDV_50_RND_FAST_MAG = "VDV 50 Rnd Fast Mag"
     VDV_60_RND_FAST_MAG = "VDV 60 Rnd Fast Mag"
     VDV_85_RND_FAST_MAG = "VDV 85 Rnd Fast Mag"
 
@@ -107,10 +124,7 @@ class Barrel(NewAttachment):
     BULL_BARREL_26 = "26 Bull Barrel"
     CAVALRY = "Cavalry"
     CAVALRY_101 = "10.1 Cavalry"
-    CAVALRY_65 = "6.5 Cavalry"
     CAVALRY_LANCER = "Cavalry Lancer"
-    CAVALRY_LANCER_187 = "18.7 Cavalry Lancer"
-    CAVALRY_LANCER_7 = "7 Cavalry Lancer"
     CMV_MIL_SPEC = "CMV Mil-Spec"
     COMPACT_BARREL_182 = "18.2 Compact Barrel"
     COMPACT_BARREL_510MM = "510mm Compact Barrel"
@@ -122,8 +136,6 @@ class Barrel(NewAttachment):
     DIVISION = "Division"
     EXTENDED = "Extended"
     EXTENDED_407MM = "407mm Extended"
-    EXTENDED_53 = "5.3 Extended"
-    EXTENDED_71 = "7.1 Extended"
     EXTENDED_95 = "9.5 Extended"
     EXTENDED_BARREL_269 = "26.9 Extended Barrel"
     EXTENDED_BARREL_660MM = "660mm Extended Barrel"
@@ -163,11 +175,11 @@ class Barrel(NewAttachment):
     FSS_NIGHTSHADE = "FSS Nightshade"
     FSS_PARA_16 = "16 FSS Para"
     FSS_RANGER = "FSS Ranger"
-    FSS_RECON = "FSS Recon"
+    FSS_RECON = "FSS RECON"
     FSS_REVOLUTION = "FSS Revolution"
-    FSS_STRIKE = "FSS Strike"
+    FSS_STRIKE = "FSS STRIKE"
     FSS_STUBBY = "FSS Stubby"
-    FSS_SWAT = "FSS Swat"
+    FSS_SWAT = "FSS SWAT"
     FTAC_135_COMPACT = "FTAC 13.5 Compact"
     FTAC_225_DOMINATOR = "FTAC 225 Dominator"
     FTAC_448MM_DICTATOR = "FTAC 448mm Dictator"
@@ -182,7 +194,6 @@ class Barrel(NewAttachment):
     HEAVY_BARREL_259 = "25.9 Heavy Barrel", ["25.9 barrel"]
     ISO_140MM_CQB = "ISO 140mm CQB"
     LIBERATOR = "Liberator"
-    LIBERATOR_81 = "8.1 Liberator"
     LIGHTWEIGHT_407MM = "407mm Lightweight"
     LONG_BARREL_622MM = "622mm Long Barrel"
     M91_HEAVY = "M91 Heavy"
@@ -197,17 +208,11 @@ class Barrel(NewAttachment):
     POLYGONAL_87 = "8.7 Polygonal"
     POLY_BARREL_300MM = "300mm Poly Barrel"
     RANGER = "Ranger"
-    RANGER_212 = "21.2 Ranger"
-    RANGER_53 = "5.3 Ranger"
     RANGER_95 = "9.5 Ranger"
     RAPID_FIRE = "Rapid Fire"
     REINFORCED_HEAVY = "Reinforced Heavy"
-    REINFORCED_HEAVY_195 = "19.5 Reinforced Heavy"
-    REINFORCED_HEAVY_61 = "6.1 Reinforced Heavy"
     REINFORCED_HEAVY_95 = "9.5 Reinforced Heavy"
     RIFLED = "Rifled"
-    RIFLED_65 = "6.5 Rifled"
-    RIFLED_76 = "7.6 Rifled"
     RIFLED_91 = "9.1 Rifled"
     ROMANIAN_230 = "23.0 Romanian"
     RPK_BARREL_230 = "23.0 RPK Barrel"
@@ -235,11 +240,7 @@ class Barrel(NewAttachment):
     STRIKE_TEAM = "Strike Team"
     SUBSONIC_INTEGRAL_SUPPRESSOR = "Subsonic Integral Suppressor"
     TAKEDOWN = "Takedown"
-    TAKEDOWN_203 = "20.3 Takedown"
     TASK_FORCE = "Task Force"
-    TASK_FORCE_195 = "19.5 Task Force", ["task force"]
-    TASK_FORCE_59 = "5.9 Task Force", ["task force"]
-    TASK_FORCE_74 = "7.4 Task Force", ["task force"]
     TASK_FORCE_95 = "9.5 Task Force", ["task force"]
     TEMPUS_264_ARCHANGEL = "Tempus 26.4 Archangel", ["archangel"]
     TEMPUS_CYCLONE = "Tempus Cyclone"
@@ -247,10 +248,8 @@ class Barrel(NewAttachment):
     TEMPUS_MINI = "Tempus Mini"
     TITANIUM = "Titanium"
     ULTRALIGHT = "Ultralight"
-    ULTRALIGHT_179 = "17.9 Ultralight"
     ULTRALIGHT_180 = "18.0 Ultralight"
     VDV_REINFORCED = "VDV Reinforced"
-    VDV_REINFORCED_67 = "6.7 VDV Reinforced"
     VLK_105MM_STOVA = "VLK 105mm Stova"
     VLK_200MM_OSA = "VLK 200mm Osa"
     VLK_AN_94_SILA = "VLK AN-94 Sila"
@@ -290,9 +289,12 @@ class Laser(NewAttachment):
 class Muzzle(NewAttachment):
     AGENCY_SUPPRESSOR = "Agency Suppressor", ["agency silencer"]
     AN_94_SONIC_BRAKE = "AN-94 Sonic Brake"
+    BAYONET = "BAYONET"
     COLOSSUS_SUPPRESSOR = "Colossus Suppressor"
     COMPENSATOR = "Compensator"
-    FLASHGUARD = "Flashguard"
+    CQB_BREACHER_DEVICE = "CQB Breacher Device"
+    FLASH_GUARD = "Flash Guard"
+    GRU_SILENCER = "GRU Silencer"
     GRU_SUPPRESSOR = "GRU Suppressor"
     INFANTRY_COMPENSATOR = "Infantry Compensator"
     KGB_ELIMINATOR = "KGB Eliminator"
@@ -300,6 +302,7 @@ class Muzzle(NewAttachment):
     MONOLITHIC_SUPPRESSOR = "Monolithic Suppressor", ["mono", "monolithic"]
     MUZZLE_BRAKE = "Muzzle Brake"
     RYTEC_AMR_SUPPRESSOR = "Rytec AMR Suppressor"
+    SILENCER = "Silencer"
     SOCOM_ELIMINATOR = "SOCOM Eliminator"
     SOUND_SUPPRESSOR = "Sound Suppressor"
     SPETSNAZ_COMPENSATOR = "Spetsnaz Compensator"
@@ -311,7 +314,7 @@ class Muzzle(NewAttachment):
 
 class Optic(NewAttachment):
     AIM_OP_REFLEX_SIGHT = "Aim-Op Reflex Sight"
-    ANPVS_4_THERMAL = "ANPVS-4 Thermal"
+    ANPVS_4_THERMAL = "AN/PVS-4 Thermal"
     APX5_HOLOGRAPHIC = "APX5 Holographic", ["apx5 holo"]
     APX5_HOLOGRAPHIC_SIGHT = "APX5 Holographic Sight", ["apx5 holo"]
     AXIAL_ARMS_3X = "Axial Arms 3x"
@@ -327,6 +330,7 @@ class Optic(NewAttachment):
     FSS_INTEGRAL_REFLEX = "FSS Integral Reflex"
     FSS_RING_SIGHT = "FSS Ring Sight"
     GI_MINI_REFLEX = "G.I. Mini Reflex"
+    HANGMAN_RF = "Hangman RF"
     HAWKSMOOR = "Hawksmoor"
     INTEGRAL_30X_OPTIC = "Integral 3.0x Optic"
     INTEGRAL_HYBRID = "Integral Hybrid"
@@ -358,14 +362,18 @@ class Optic(NewAttachment):
     VIPER_REFLEX_SIGHT = "Viper Reflex Sight"
     VISIONTECH_2X = "Visiontech 2x"
     VLK_30X_OPTIC = "VLK 3.0x Optic", ["vlk"]
+    VULTURE_CUSTOM_ZOOM = "Vulture Custom Zoom"
     XRK_MIDTRAK_40X_SCOPE = "XRK MidTrak 4.0x Scope"
     XRK_RANGEMASTER_VZ = "XRK Rangemaster VZ"
 
 
 class Perk(NewAttachment):
     AKIMBO = "Akimbo"
-    SLEIGHT_OF_HAND = "Sleight of Hand"
+    FMJ = "FMJ"
     FOCUS = "Focus"
+    FULLY_LOADED = "Fully Loaded"
+    RECON = "Recon"
+    SLEIGHT_OF_HAND = "Sleight of Hand"
 
 
 class RearGrip(NewAttachment):
@@ -377,7 +385,7 @@ class RearGrip(NewAttachment):
     FSS_VICE_ISO_GRIP = "FSS Vice ISO Grip"
     FTAC_ELITE_ISO_GRIP = "FTAC Elite ISO Grip"
     FTAC_G_5_EXO = "FTAC G-5 EXO"
-    FTAC_RUBBER = "FTAC Rubber"
+    FTAC_RUBBER = "FTAC R-89 Rubber"
     GRANULATED_GRIP_TAPE = "Granulated Grip Tape"
     GRU_ELASTIC_WRAP = "GRU Elastic Wrap"
     ISO_TAC_FORM = "ISO Tac-Form"
@@ -388,12 +396,15 @@ class RearGrip(NewAttachment):
     SPEED_TAPE = "Speed Tape"
     SPETSNAZ_FIELD_GRIP = "Spetsnaz Field Grip"
     STIPPLED_GRIP_TAPE = "Stippled Grip Tape", ["stippled rear grip"]
-    XRK_CR_56_STIPPLED_WRAP = "XRK CR-56 Stippled Wrap"
+    XRK_CR_56_GRANULATED_WRAP = "XRK CR-56 Granulated Wrap", ["granulated"]
+    XRK_CR_56_RUBBERIZED_WRAP = "XRK CR-56 Rubberized Wrap", ["rubberized"]
+    XRK_CR_56_STIPPLED_WRAP = "XRK CR-56 Stippled Wrap", ["stippled"]
     XRK_VOID_II = "XRK Void II"
 
 
 class Stock(NewAttachment):
     AN_94_FACTORY_HEAVY = "AN-94 Factory Heavy"
+    BUFFER_TUBE = "Buffer Tube"
     CARTRIDGE_SLEEVE = "Cartridge Sleeve"
     CLASSIC_STRAIGHT_LINE_STOCK = "Classic Straight-line Stock"
     COLLAPSED_STOCK = "Collapsed Stock"
@@ -449,6 +460,7 @@ class Stock(NewAttachment):
     FTAC_XL_ELITE_COMB = "FTAC XL Elite Comb"
     HOLLOW_STOCK_MOD = "Hollow Stock Mod"
     ISO_COLLAPSIBLE = "ISO Collapsible"
+    KGC_PAD = "KGB Pad"
     KGB_SKELETAL_STOCK = "KGB Skeletal Stock"
     M13_SKELETON_STOCK = "M13 Skeleton Stock"
     MARATHON_STOCK = "Marathon Stock"
@@ -504,24 +516,27 @@ class Underbarrel(NewAttachment):
     BRUISER_GRIP = "Bruiser Grip"
     COMMANDO_FOREGRIP = "Commando Foregrip", ["commando grip"]
     CRONEN_SHARK_II = "Cronen Shark II"
+    FIELD_AGENT_FOREGRIP = "Field Agent Foregrip"
     FIELD_AGENT_GRIP = "Field Agent Grip"
     FOREGRIP = "Foregrip"
+    FRONT_GRIP = "Front Grip"
     FTAC_SPEED_GRIP = "FTAC Speed Grip"
-    GRANULATED_GRIP_TAPE_1 = "Granulated Grip Tape"
+    GRANULATED_GRIP_TAPE = "Granulated Grip Tape"
     INFILTRATOR_GRIP = "Infiltrator Grip"
     MERC_FOREGRIP = "Merc Foregrip"
     OPERATOR_FOREGRIP = "Operator Foregrip"
     PATROL_GRIP = "Patrol Grip"
     RANGER_FOREGRIP = "Ranger Foregrip"
     RED_CELL_FOREGRIP = "Red Cell Foregrip"
-    RUBBERIZED_GRIP_TAPE_1 = "Rubberized Grip Tape"
+    RUBBERIZED_GRIP_TAPE = "Rubberized Grip Tape"
     SFOD_SPEEDGRIP = "SFOD Speedgrip"
     SNATCH_GRIP = "Snatch Grip"
     SPETSNAZ_GRIP = "Spetsnaz Grip"
     SPETSNAZ_SPEEDGRIP = "Spetsnaz Speedgrip"
-    STIPPLED_GRIP_TAPE_1 = "Stippled Grip Tape", ["stippled grip underbarrel"]
+    STIPPLED_GRIP_TAPE = "Stippled Grip Tape", ["stippled grip underbarrel"]
     STRIKER_GRIP = "Striker Grip"
     TACTICAL_FOREGRIP = "Tactical Foregrip"
+    VDV_SPEEDGRIP = "VDV Speedgrip"
     XRK_PRECISION_COMB = "XRK Precision Comb"
     XRK_TALON = "XRK Talon"
 

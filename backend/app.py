@@ -39,7 +39,7 @@ def get_player_loadouts(username: str):
     return player.loadouts if player else abort(404)
 
 
-@api.route("/incrementViewCount/<username>", methods=['POST'])
+@api.route("/view/<username>", methods=['POST'])
 def increment_player_view_count(username: str):
     sanitised_username = escape(username.lower())
     player = db.select_player(sanitised_username)

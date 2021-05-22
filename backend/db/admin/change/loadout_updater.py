@@ -8,7 +8,7 @@ from db.admin.change.detect_changes import ALL_COMMANDS, SHEETS_KEY
 from db.json_database_engine import JSONDatabaseEngine
 from model.player import Player
 from model.weapon.new_attachment import *
-from model.weapon.weapon import Weapon, AssaultRifle, LightMachineGun, MarksmanRifle, Pistol, Shotgun, SniperRifle, \
+from model.weapon.weapon import Weapon, AssaultRifle, LightMachineGun, MarksmanRifle, Handgun, Shotgun, SniperRifle, \
     SubmachineGun, TacticalRifle
 
 DELIMITERS = [",", "-", "|"]
@@ -17,7 +17,7 @@ MIN_ATTACHMENTS = 4
 MAX_ATTACHMENTS = 5
 RATIO_THRESHOLD = 60
 
-ALL_WEAPONS = list(AssaultRifle) + list(LightMachineGun) + list(MarksmanRifle) + list(Pistol) + list(Shotgun) + \
+ALL_WEAPONS = list(AssaultRifle) + list(LightMachineGun) + list(MarksmanRifle) + list(Handgun) + list(Shotgun) + \
               list(SniperRifle) + list(SubmachineGun) + list(TacticalRifle)
 
 WEAPON_COMMANDS = set(ALL_COMMANDS)  # TODO: use weapon aliases instead

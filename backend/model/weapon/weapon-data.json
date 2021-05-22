@@ -1,5 +1,13 @@
 {
     "AK_47_CW": {
+        "Ammunition": [
+            "RND_45",
+            "TAPED_MAGS",
+            "RND_SPEED_MAG_45",
+            "BAKELITE_RND_60",
+            "GRU_MAG_CLAMP",
+            "VDV_60_RND_FAST_MAG"
+        ],
         "Barrel": [
             "ULTRALIGHT",
             "CAVALRY_LANCER",
@@ -18,7 +26,7 @@
         ],
         "Muzzle": [
             "MUZZLE_BRAKE",
-            "FLASHGUARD",
+            "FLASH_GUARD",
             "SUPPRESSOR",
             "SPETSNAZ_COMPENSATOR",
             "KGB_ELIMINATOR",
@@ -64,11 +72,19 @@
         ]
     },
     "AK_74U": {
+        "Ammunition": [
+            "RND_DRUM_40",
+            "TAPED_MAGS",
+            "RND_SPEED_MAG_40",
+            "SPETSNAZ_50_RND_DRUM",
+            "GRU_MAG_CLAMP",
+            "VDV_50_RND_FAST_MAG"
+        ],
         "Barrel": [
             "EXTENDED",
-            "CAVALRY",
-            "REINFORCED_HEAVY",
-            "RANGER",
+            "CAVALRY_LANCER",
+            "VDV_REINFORCED",
+            "LIBERATOR",
             "RIFLED",
             "TASK_FORCE"
         ],
@@ -82,11 +98,11 @@
         ],
         "Muzzle": [
             "MUZZLE_BRAKE",
-            "FLASHGUARD",
+            "FLASH_GUARD",
             "SOUND_SUPPRESSOR",
-            "INFANTRY_COMPENSATOR",
-            "SOCOM_ELIMINATOR",
-            "AGENCY_SUPPRESSOR"
+            "SPETSNAZ_COMPENSATOR",
+            "KGB_ELIMINATOR",
+            "GRU_SUPPRESSOR"
         ],
         "Optic": [
             "QUICKDOT_LED",
@@ -145,11 +161,13 @@
             "LASER_1MW"
         ],
         "Muzzle": [
-            "LIGHTWEIGHT_SUPPRESSOR",
-            "TACTICAL_SUPPRESSOR",
-            "MONOLITHIC_SUPPRESSOR",
+            "FLASH_GUARD",
             "MUZZLE_BRAKE",
-            "COMPENSATOR"
+            "TACTICAL_SUPPRESSOR",
+            "COMPENSATOR",
+            "LIGHTWEIGHT_SUPPRESSOR",
+            "BAYONET",
+            "MONOLITHIC_SUPPRESSOR"
         ],
         "Optic": [
             "OPERATOR_REFLEX_SIGHT",
@@ -173,6 +191,7 @@
             "THERMAL_HYBRID"
         ],
         "Perk": [
+            "FULLY_LOADED",
             "SLEIGHT_OF_HAND"
         ],
         "RearGrip": [
@@ -193,7 +212,6 @@
             "RANGER_FOREGRIP",
             "COMMANDO_FOREGRIP",
             "TACTICAL_FOREGRIP",
-            "BIPOD",
             "BIPOD"
         ]
     },
@@ -244,6 +262,7 @@
             "POS_M3_THERMAL_SCOPE"
         ],
         "Perk": [
+            "FULLY_LOADED",
             "SLEIGHT_OF_HAND"
         ],
         "RearGrip": [
@@ -264,7 +283,6 @@
             "RANGER_FOREGRIP",
             "TACTICAL_FOREGRIP",
             "OPERATOR_FOREGRIP",
-            "BIPOD",
             "BIPOD"
         ]
     },
@@ -280,8 +298,8 @@
         ],
         "Laser": [
             "LASER_1MW",
-            "TAC_LASER",
-            "LASER_5MW"
+            "LASER_5MW",
+            "TAC_LASER"
         ],
         "Optic": [
             "OPERATOR_REFLEX_SIGHT",
@@ -307,8 +325,7 @@
             "VARIABLE_ZOOM_SCOPE"
         ],
         "Perk": [
-            "SLEIGHT_OF_HAND",
-            "SLEIGHT_OF_HAND",
+            "FULLY_LOADED",
             "SLEIGHT_OF_HAND"
         ],
         "RearGrip": [
@@ -324,7 +341,6 @@
         ],
         "Underbarrel": [
             "MERC_FOREGRIP",
-            "BIPOD",
             "BIPOD",
             "RANGER_FOREGRIP",
             "COMMANDO_FOREGRIP",
@@ -349,11 +365,13 @@
             "LASER_5MW"
         ],
         "Muzzle": [
-            "LIGHTWEIGHT_SUPPRESSOR",
+            "CQB_BREACHER_DEVICE",
             "TACTICAL_SUPPRESSOR",
+            "FLASH_GUARD",
             "MONOLITHIC_SUPPRESSOR",
             "MUZZLE_BRAKE",
-            "COMPENSATOR"
+            "COMPENSATOR",
+            "LIGHTWEIGHT_SUPPRESSOR"
         ],
         "Optic": [
             "OPERATOR_REFLEX_SIGHT",
@@ -377,6 +395,7 @@
             "INTEGRAL_HYBRID"
         ],
         "Perk": [
+            "FULLY_LOADED",
             "SLEIGHT_OF_HAND"
         ],
         "RearGrip": [
@@ -399,7 +418,12 @@
     },
     "AUG_CW": {
         "Ammunition": [
-            "RND_45"
+            "RND_DRUM_45",
+            "JUNGLE_STYLE_MAG",
+            "RND_SPEED_MAG_45",
+            "STANAG_54_RND_DRUM",
+            "SAS_MAG_CLAMP",
+            "SALVO_54_RND_FAST_MAG"
         ],
         "Barrel": [
             "RAPID_FIRE",
@@ -409,14 +433,59 @@
             "MATCH_GRADE",
             "TASK_FORCE"
         ],
+        "Laser": [
+            "STEADY_AIM_LASER",
+            "MOUNTED_FLASHLIGHT",
+            "SOF_TARGET_DESIGNATOR",
+            "SWAT_5MW_LASER_SIGHT",
+            "TIGER_TEAM_SPOTLIGHT",
+            "EMBER_SIGHTING_POINT"
+        ],
         "Muzzle": [
+            "MUZZLE_BRAKE",
+            "FLASH_GUARD",
+            "SILENCER",
+            "INFANTRY_COMPENSATOR",
+            "SOCOM_ELIMINATOR",
             "AGENCY_SUPPRESSOR"
         ],
         "Optic": [
-            "AXIAL_ARMS_3X"
+            "VISIONTECH_2X",
+            "KOBRA_RED_DOT",
+            "AXIAL_ARMS_3X",
+            "MILLSTOP_REFLEX",
+            "ROYAL_AND_CROSS_4X",
+            "QUICKDOT_LED",
+            "HAWKSMOOR",
+            "SILLIX_HOLOSCOUT",
+            "SUSAT_MULTIZOOM",
+            "HANGMAN_RF",
+            "VULTURE_CUSTOM_ZOOM",
+            "ANPVS_4_THERMAL"
+        ],
+        "RearGrip": [
+            "SPEED_TAPE",
+            "DROPSHOT_WRAP",
+            "FIELD_TAPE",
+            "SASR_JUNGLE_GRIP",
+            "SERPENT_WRAP",
+            "AIRBORNE_ELASTIC_WRAP"
+        ],
+        "Stock": [
+            "TACTICAL_STOCK",
+            "MARATHON_STOCK",
+            "DUSTER_PAD",
+            "CQB_PAD",
+            "SAS_COMBAT_STOCK",
+            "RAIDER_PAD"
         ],
         "Underbarrel": [
-            "FIELD_AGENT_GRIP"
+            "FRONT_GRIP",
+            "INFILTRATOR_GRIP",
+            "PATROL_GRIP",
+            "BRUISER_GRIP",
+            "FIELD_AGENT_FOREGRIP",
+            "SFOD_SPEEDGRIP"
         ]
     },
     "AX_50": {
@@ -449,6 +518,10 @@
             "THERMAL_DUAL_POWER_SCOPE"
         ],
         "Perk": [
+            "FMJ",
+            "FOCUS",
+            "FULLY_LOADED",
+            "RECON",
             "SLEIGHT_OF_HAND"
         ],
         "RearGrip": [
@@ -462,7 +535,6 @@
             "SINGUARD_ARMS_ASSASSIN"
         ],
         "Underbarrel": [
-            "BIPOD",
             "BIPOD"
         ]
     },
@@ -511,7 +583,7 @@
             "THERMAL_HYBRID"
         ],
         "Perk": [
-            "SLEIGHT_OF_HAND",
+            "FULLY_LOADED",
             "SLEIGHT_OF_HAND"
         ],
         "RearGrip": [
@@ -531,9 +603,80 @@
             "RANGER_FOREGRIP",
             "OPERATOR_FOREGRIP",
             "BIPOD",
-            "BIPOD",
             "COMMANDO_FOREGRIP",
             "TACTICAL_FOREGRIP"
+        ]
+    },
+    "BULLFROG": {
+        "Ammunition": [
+            "RND_65",
+            "FAST_MAG",
+            "RND_SPEED_MAG_65",
+            "STANAG_85_RND",
+            "VANDAL_SPEED_LOADER",
+            "VDV_85_RND_FAST_MAG"
+        ],
+        "Barrel": [
+            "EXTENDED",
+            "CAVALRY_LANCER",
+            "VDV_REINFORCED",
+            "LIBERATOR",
+            "RIFLED",
+            "TASK_FORCE"
+        ],
+        "Laser": [
+            "STEADY_AIM_LASER",
+            "MOUNTED_FLASHLIGHT",
+            "KGB_TARGET_DESIGNATOR",
+            "GRU_5MW_LASER_SIGHT",
+            "TIGER_TEAM_SPOTLIGHT",
+            "EMBER_SIGHTING_POINT"
+        ],
+        "Muzzle": [
+            "MUZZLE_BRAKE",
+            "FLASH_GUARD",
+            "SOUND_SUPPRESSOR",
+            "SPETSNAZ_COMPENSATOR",
+            "KGB_ELIMINATOR",
+            "GRU_SUPPRESSOR"
+        ],
+        "Optic": [
+            "QUICKDOT_LED",
+            "MILLSTOP_REFLEX",
+            "KOBRA_RED_DOT",
+            "VISIONTECH_2X",
+            "MICROFLEX_LED",
+            "HAWKSMOOR",
+            "SNAPPOINT",
+            "DIAMONDBACK_REFLEX",
+            "SILLIX_HOLOSCOUT",
+            "FASTPOINT_REFLEX",
+            "AXIAL_ARMS_3X",
+            "SUSAT_MULTIZOOM"
+        ],
+        "RearGrip": [
+            "SPEED_TAPE",
+            "DROPSHOT_WRAP",
+            "FIELD_TAPE",
+            "SPETSNAZ_FIELD_GRIP",
+            "SERPENT_WRAP",
+            "GRU_ELASTIC_WRAP"
+        ],
+        "Stock": [
+            "TACTICAL_STOCK",
+            "WIRE_STOCK",
+            "DUSTER_STOCK",
+            "NO_STOCK",
+            "SPETSNAZ_PKM_STOCK",
+            "KGB_SKELETAL_STOCK"
+        ],
+        "Underbarrel": [
+            "FOREGRIP",
+            "RED_CELL_FOREGRIP",
+            "PATROL_GRIP",
+            "BRUISER_GRIP",
+            "SPETSNAZ_GRIP",
+            "VDV_SPEEDGRIP"
         ]
     },
     "CARV": {
@@ -643,13 +786,13 @@
             "THERMAL_HYBRID"
         ],
         "Perk": [
-            "SLEIGHT_OF_HAND",
+            "FULLY_LOADED",
             "SLEIGHT_OF_HAND"
         ],
         "RearGrip": [
             "XRK_CR_56_STIPPLED_WRAP",
-            "RUBBERIZED_GRIP_TAPE",
-            "GRANULATED_GRIP_TAPE"
+            "XRK_CR_56_RUBBERIZED_WRAP",
+            "XRK_CR_56_STIPPLED_WRAP"
         ],
         "Stock": [
             "FSS_CLOSE_QUARTERS_STOCK",
@@ -665,18 +808,79 @@
             "OPERATOR_FOREGRIP",
             "COMMANDO_FOREGRIP",
             "TACTICAL_FOREGRIP",
-            "BIPOD",
             "BIPOD"
         ]
     },
     "DMR": {
+        "Ammunition": [
+            "RND_30",
+            "JUNGLE_STYLE_MAG",
+            "RND_SPEED_MAG_30",
+            "STANAG_40_RND",
+            "SAS_MAG_CLAMP",
+            "SALVO_40_RND_FAST_MAG"
+        ],
         "Barrel": [
             "RAPID_FIRE",
-            "CAVALRY",
+            "CAVALRY_LANCER",
             "STRIKE_TEAM",
             "TITANIUM",
             "MATCH_GRADE",
             "TASK_FORCE"
+        ],
+        "Laser": [
+            "STEADY_AIM_LASER",
+            "MOUNTED_FLASHLIGHT",
+            "SOF_TARGET_DESIGNATOR",
+            "SWAT_5MW_LASER_SIGHT",
+            "TIGER_TEAM_SPOTLIGHT",
+            "EMBER_SIGHTING_POINT"
+        ],
+        "Muzzle": [
+            "MUZZLE_BRAKE",
+            "FLASH_GUARD",
+            "SILENCER",
+            "INFANTRY_COMPENSATOR",
+            "SOCOM_ELIMINATOR",
+            "AGENCY_SUPPRESSOR"
+        ],
+        "Optic": [
+            "VISIONTECH_2X",
+            "KOBRA_RED_DOT",
+            "AXIAL_ARMS_3X",
+            "MILLSTOP_REFLEX",
+            "ROYAL_AND_CROSS_4X",
+            "QUICKDOT_LED",
+            "HAWKSMOOR",
+            "SILLIX_HOLOSCOUT",
+            "SUSAT_MULTIZOOM",
+            "HANGMAN_RF",
+            "VULTURE_CUSTOM_ZOOM",
+            "ANPVS_4_THERMAL"
+        ],
+        "RearGrip": [
+            "SPEED_TAPE",
+            "DROPSHOT_WRAP",
+            "FIELD_TAPE",
+            "SASR_JUNGLE_GRIP",
+            "SERPENT_WRAP",
+            "AIRBORNE_ELASTIC_WRAP"
+        ],
+        "Stock": [
+            "TACTICAL_STOCK",
+            "MARATHON_STOCK",
+            "DUSTER_PAD",
+            "CQB_PAD",
+            "SAS_COMBAT_STOCK",
+            "RAIDER_PAD"
+        ],
+        "Underbarrel": [
+            "FRONT_GRIP",
+            "INFILTRATOR_GRIP",
+            "PATROL_GRIP",
+            "BRUISER_GRIP",
+            "FIELD_AGENT_FOREGRIP",
+            "SFOD_SPEEDGRIP"
         ]
     },
     "DRAGUNOV": {
@@ -708,6 +912,10 @@
             "MERC_THERMAL_OPTIC"
         ],
         "Perk": [
+            "FMJ",
+            "FOCUS",
+            "FULLY_LOADED",
+            "RECON",
             "SLEIGHT_OF_HAND"
         ],
         "Stock": [
@@ -717,7 +925,6 @@
             "FTAC_STALKER_SCOUT"
         ],
         "Underbarrel": [
-            "BIPOD",
             "BIPOD"
         ]
     },
@@ -775,7 +982,6 @@
             "COMMANDO_FOREGRIP",
             "TACTICAL_FOREGRIP",
             "BIPOD",
-            "BIPOD",
             "MERC_FOREGRIP",
             "RANGER_FOREGRIP",
             "OPERATOR_FOREGRIP"
@@ -827,6 +1033,7 @@
             "THERMAL_HYBRID"
         ],
         "Perk": [
+            "FULLY_LOADED",
             "SLEIGHT_OF_HAND"
         ],
         "RearGrip": [
@@ -844,7 +1051,6 @@
             "MERC_FOREGRIP",
             "RANGER_FOREGRIP",
             "OPERATOR_FOREGRIP",
-            "BIPOD",
             "BIPOD",
             "COMMANDO_FOREGRIP",
             "TACTICAL_FOREGRIP"
@@ -869,11 +1075,11 @@
         ],
         "Muzzle": [
             "MUZZLE_BRAKE",
-            "FLASHGUARD",
+            "FLASH_GUARD",
             "SUPPRESSOR",
-            "INFANTRY_COMPENSATOR",
-            "SOCOM_ELIMINATOR",
-            "AGENCY_SUPPRESSOR"
+            "SPETSNAZ_COMPENSATOR",
+            "KGB_ELIMINATOR",
+            "GRU_SUPPRESSOR"
         ],
         "Optic": [
             "MILLSTOP_REFLEX",
@@ -956,7 +1162,7 @@
             "CRONEN_C480_PRO_OPTIC"
         ],
         "Perk": [
-            "SLEIGHT_OF_HAND",
+            "FULLY_LOADED",
             "SLEIGHT_OF_HAND"
         ],
         "RearGrip": [
@@ -988,12 +1194,12 @@
             "SALVO_50_RND_FAST_MAG"
         ],
         "Barrel": [
-            "ULTRALIGHT_179",
-            "CAVALRY_LANCER_187",
-            "REINFORCED_HEAVY_195",
-            "RANGER_212",
-            "TAKEDOWN_203",
-            "TASK_FORCE_195"
+            "ULTRALIGHT",
+            "CAVALRY_LANCER",
+            "REINFORCED_HEAVY",
+            "RANGER",
+            "TAKEDOWN",
+            "TASK_FORCE"
         ],
         "Laser": [
             "STEADY_AIM_LASER",
@@ -1005,7 +1211,7 @@
         ],
         "Muzzle": [
             "MUZZLE_BRAKE",
-            "FLASHGUARD",
+            "FLASH_GUARD",
             "SUPPRESSOR",
             "INFANTRY_COMPENSATOR",
             "SOCOM_ELIMINATOR",
@@ -1112,80 +1318,7 @@
             "TACTICAL_FOREGRIP",
             "RANGER_FOREGRIP",
             "OPERATOR_FOREGRIP",
-            "BIPOD",
             "BIPOD"
-        ]
-    },
-    "BULLFROG": {
-        "Ammunition": [
-            "RND_65",
-            "FAST_MAG",
-            "RND_SPEED_MAG_65",
-            "STANAG_85_RND",
-            "VANDAL_SPEED_LOADER",
-            "VDV_85_RND_FAST_MAG"
-        ],
-        "Barrel": [
-            "EXTENDED_71",
-            "CAVALRY_LANCER_7",
-            "VDV_REINFORCED_67",
-            "LIBERATOR_81",
-            "RIFLED_76",
-            "TASK_FORCE_74"
-        ],
-        "Laser": [
-            "STEADY_AIM_LASER",
-            "MOUNTED_FLASHLIGHT",
-            "KGB_TARGET_DESIGNATOR",
-            "GRU_5MW_LASER_SIGHT",
-            "TIGER_TEAM_SPOTLIGHT",
-            "EMBER_SIGHTING_POINT"
-        ],
-        "Muzzle": [
-            "MUZZLE_BRAKE",
-            "FLASHGUARD",
-            "SOUND_SUPPRESSOR",
-            "SPETSNAZ_COMPENSATOR",
-            "KGB_ELIMINATOR",
-            "GRU_SUPPRESSOR"
-        ],
-        "Optic": [
-            "QUICKDOT_LED",
-            "MILLSTOP_REFLEX",
-            "KOBRA_RED_DOT",
-            "VISIONTECH_2X",
-            "MICROFLEX_LED",
-            "HAWKSMOOR",
-            "SNAPPOINT",
-            "DIAMONDBACK_REFLEX",
-            "SILLIX_HOLOSCOUT",
-            "FASTPOINT_REFLEX",
-            "AXIAL_ARMS_3X",
-            "SUSAT_MULTIZOOM"
-        ],
-        "RearGrip": [
-            "SPEED_TAPE",
-            "DROPSHOT_WRAP",
-            "FIELD_TAPE",
-            "SPETSNAZ_FIELD_GRIP",
-            "SERPENT_WRAP",
-            "GRU_ELASTIC_WRAP"
-        ],
-        "Stock": [
-            "TACTICAL_STOCK",
-            "WIRE_STOCK",
-            "DUSTER_STOCK",
-            "NO_STOCK",
-            "SPETSNAZ_PKM_STOCK",
-            "KGB_SKELETAL_STOCK"
-        ],
-        "Underbarrel": [
-            "FOREGRIP",
-            "RED_CELL_FOREGRIP",
-            "PATROL_GRIP",
-            "BRUISER_GRIP",
-            "SPETSNAZ_GRIP",
-            "SPETSNAZ_SPEEDGRIP"
         ]
     },
     "FR": {
@@ -1251,7 +1384,6 @@
             "OPERATOR_FOREGRIP",
             "RANGER_FOREGRIP",
             "BIPOD",
-            "BIPOD",
             "COMMANDO_FOREGRIP",
             "TACTICAL_FOREGRIP"
         ]
@@ -1303,6 +1435,7 @@
             "THERMAL_HYBRID"
         ],
         "Perk": [
+            "FULLY_LOADED",
             "SLEIGHT_OF_HAND"
         ],
         "RearGrip": [
@@ -1328,7 +1461,7 @@
             "RND_DRUM_45",
             "TAPED_MAGS",
             "RND_SPEED_MAG_45",
-            "SPETSNAS_60_RND_DRUM",
+            "SPETSNAZ_60_RND_DRUM",
             "GRU_MAG_CLAMP",
             "VDV_60_RND_FAST_MAG"
         ],
@@ -1350,7 +1483,7 @@
         ],
         "Muzzle": [
             "MUZZLE_BRAKE",
-            "FLASHGUARD",
+            "FLASH_GUARD",
             "SUPPRESSOR",
             "INFANTRY_COMPENSATOR",
             "SOCOM_ELIMINATOR",
@@ -1425,6 +1558,10 @@
             "THERMAL_DUAL_POWER_SCOPE"
         ],
         "Perk": [
+            "FMJ",
+            "FOCUS",
+            "FULLY_LOADED",
+            "RECON",
             "SLEIGHT_OF_HAND"
         ],
         "Stock": [
@@ -1434,7 +1571,6 @@
             "FTAC_CHAMPION"
         ],
         "Underbarrel": [
-            "BIPOD",
             "BIPOD"
         ]
     },
@@ -1483,7 +1619,6 @@
             "SOLOZERO_K498_40X_INTEGRAL"
         ],
         "Perk": [
-            "SLEIGHT_OF_HAND",
             "SLEIGHT_OF_HAND"
         ],
         "RearGrip": [
@@ -1609,7 +1744,10 @@
         ],
         "Perk": [
             "SLEIGHT_OF_HAND",
-            "FOCUS"
+            "FMJ",
+            "FOCUS",
+            "FULLY_LOADED",
+            "RECON"
         ],
         "RearGrip": [
             "STIPPLED_GRIP_TAPE",
@@ -1672,6 +1810,7 @@
             "VARIABLE_ZOOM_SCOPE"
         ],
         "Perk": [
+            "FULLY_LOADED",
             "SLEIGHT_OF_HAND"
         ],
         "RearGrip": [
@@ -1689,7 +1828,6 @@
             "MERC_FOREGRIP",
             "OPERATOR_FOREGRIP",
             "RANGER_FOREGRIP",
-            "BIPOD",
             "BIPOD",
             "COMMANDO_FOREGRIP",
             "TACTICAL_FOREGRIP"
@@ -1714,7 +1852,7 @@
         ],
         "Muzzle": [
             "MUZZLE_BRAKE",
-            "FLASHGUARD",
+            "FLASH_GUARD",
             "SUPPRESSOR",
             "INFANTRY_COMPENSATOR",
             "SOCOM_ELIMINATOR",
@@ -1778,7 +1916,7 @@
         ],
         "Muzzle": [
             "MUZZLE_BRAKE",
-            "FLASHGUARD",
+            "FLASH_GUARD",
             "SOUND_SUPPRESSOR",
             "INFANTRY_COMPENSATOR",
             "SOCOM_ELIMINATOR",
@@ -1824,6 +1962,14 @@
         ]
     },
     "LC10": {
+        "Ammunition": [
+            "RND_45",
+            "FAST_MAG",
+            "RND_SPEED_MAG_42",
+            "STANAG_55_RND",
+            "VANDAL_SPEED_LOADER",
+            "SALVO_52_RND_FAST_MAG"
+        ],
         "Barrel": [
             "EXTENDED",
             "CAVALRY",
@@ -1842,7 +1988,7 @@
         ],
         "Muzzle": [
             "MUZZLE_BRAKE",
-            "FLASHGUARD",
+            "FLASH_GUARD",
             "SOUND_SUPPRESSOR",
             "INFANTRY_COMPENSATOR",
             "SOCOM_ELIMINATOR",
@@ -1934,6 +2080,7 @@
             "VARIABLE_ZOOM_SCOPE"
         ],
         "Perk": [
+            "FULLY_LOADED",
             "SLEIGHT_OF_HAND"
         ],
         "RearGrip": [
@@ -1952,21 +2099,80 @@
             "RANGER_FOREGRIP",
             "OPERATOR_FOREGRIP",
             "BIPOD",
-            "BIPOD",
             "COMMANDO_FOREGRIP",
             "TACTICAL_FOREGRIP"
         ]
     },
     "M16": {
+        "Ammunition": [
+            "RND_DRUM_45",
+            "JUNGLE_STYLE_MAG",
+            "RND_SPEED_MAG_45",
+            "STANAG_60_RND",
+            "SAS_MAG_CLAMP",
+            "SALVO_60_RND_FAST_MAG"
+        ],
         "Barrel": [
             "RAPID_FIRE",
             "CAVALRY_LANCER",
             "STRIKE_TEAM",
             "TITANIUM",
             "MATCH_GRADE",
-            "TASK_FORCE",
-            "MATCH_GRADE",
             "TASK_FORCE"
+        ],
+        "Laser": [
+            "STEADY_AIM_LASER",
+            "MOUNTED_FLASHLIGHT",
+            "SOF_TARGET_DESIGNATOR",
+            "SWAT_5MW_LASER_SIGHT",
+            "TIGER_TEAM_SPOTLIGHT",
+            "EMBER_SIGHTING_POINT"
+        ],
+        "Muzzle": [
+            "MUZZLE_BRAKE",
+            "FLASH_GUARD",
+            "SILENCER",
+            "INFANTRY_COMPENSATOR",
+            "SOCOM_ELIMINATOR",
+            "AGENCY_SUPPRESSOR"
+        ],
+        "Optic": [
+            "VISIONTECH_2X",
+            "KOBRA_RED_DOT",
+            "AXIAL_ARMS_3X",
+            "MILLSTOP_REFLEX",
+            "ROYAL_AND_CROSS_4X",
+            "QUICKDOT_LED",
+            "HAWKSMOOR",
+            "SILLIX_HOLOSCOUT",
+            "SUSAT_MULTIZOOM",
+            "HANGMAN_RF",
+            "VULTURE_CUSTOM_ZOOM",
+            "ANPVS_4_THERMAL"
+        ],
+        "RearGrip": [
+            "SPEED_TAPE",
+            "DROPSHOT_WRAP",
+            "FIELD_TAPE",
+            "SASR_JUNGLE_GRIP",
+            "SERPENT_WRAP",
+            "AIRBORNE_ELASTIC_WRAP"
+        ],
+        "Stock": [
+            "TACTICAL_STOCK",
+            "WIRE_STOCK",
+            "DUSTER_STOCK",
+            "BUFFER_TUBE",
+            "SAS_COMBAT_STOCK",
+            "RAIDER_PAD"
+        ],
+        "Underbarrel": [
+            "FRONT_GRIP",
+            "INFILTRATOR_GRIP",
+            "PATROL_GRIP",
+            "BRUISER_GRIP",
+            "FIELD_AGENT_FOREGRIP",
+            "SFOD_SPEEDGRIP"
         ]
     },
     "M4A1": {
@@ -2018,6 +2224,7 @@
             "THERMAL_HYBRID"
         ],
         "Perk": [
+            "FULLY_LOADED",
             "SLEIGHT_OF_HAND"
         ],
         "RearGrip": [
@@ -2035,7 +2242,6 @@
             "MERC_FOREGRIP",
             "RANGER_FOREGRIP",
             "OPERATOR_FOREGRIP",
-            "BIPOD",
             "BIPOD",
             "COMMANDO_FOREGRIP",
             "TACTICAL_FOREGRIP"
@@ -2060,7 +2266,7 @@
         ],
         "Muzzle": [
             "MUZZLE_BRAKE",
-            "FLASHGUARD",
+            "FLASH_GUARD",
             "SUPPRESSOR",
             "INFANTRY_COMPENSATOR",
             "SOCOM_ELIMINATOR",
@@ -2183,12 +2389,12 @@
             "SALVO_53_RND_FAST_MAG"
         ],
         "Barrel": [
-            "EXTENDED_53",
-            "CAVALRY_65",
-            "REINFORCED_HEAVY_61",
-            "RANGER_53",
-            "RIFLED_65",
-            "TASK_FORCE_59"
+            "EXTENDED",
+            "CAVALRY_LANCER",
+            "REINFORCED_HEAVY",
+            "RANGER",
+            "RIFLED",
+            "TASK_FORCE"
         ],
         "Laser": [
             "STEADY_AIM_LASER",
@@ -2200,7 +2406,7 @@
         ],
         "Muzzle": [
             "MUZZLE_BRAKE",
-            "FLASHGUARD",
+            "FLASH_GUARD",
             "SOUND_SUPPRESSOR",
             "INFANTRY_COMPENSATOR",
             "SOCOM_ELIMINATOR",
@@ -2307,7 +2513,6 @@
             "OPERATOR_FOREGRIP",
             "RANGER_FOREGRIP",
             "BIPOD",
-            "BIPOD",
             "COMMANDO_FOREGRIP",
             "TACTICAL_FOREGRIP"
         ]
@@ -2331,7 +2536,7 @@
         ],
         "Muzzle": [
             "MUZZLE_BRAKE",
-            "FLASHGUARD",
+            "FLASH_GUARD",
             "SOUND_SUPPRESSOR",
             "INFANTRY_COMPENSATOR",
             "SOCOM_ELIMINATOR",
@@ -2361,7 +2566,7 @@
         ],
         "Stock": [
             "TACTICAL_STOCK",
-            "COLLAPSED_STOCK",
+            "WIRE_STOCK",
             "DUSTER_STOCK",
             "MARATHON_STOCK",
             "SAS_COMBAT_STOCK",
@@ -2621,7 +2826,6 @@
             "OPERATOR_FOREGRIP",
             "COMMANDO_FOREGRIP",
             "TACTICAL_FOREGRIP",
-            "BIPOD",
             "BIPOD"
         ]
     },
@@ -2677,9 +2881,9 @@
             "FSS_HEAVY_STOCK_PRO"
         ],
         "Underbarrel": [
-            "STIPPLED_GRIP_TAPE_1",
-            "RUBBERIZED_GRIP_TAPE_1",
-            "GRANULATED_GRIP_TAPE_1"
+            "STIPPLED_GRIP_TAPE",
+            "RUBBERIZED_GRIP_TAPE",
+            "GRANULATED_GRIP_TAPE"
         ]
     },
     "PKM": {
@@ -2824,7 +3028,7 @@
         ],
         "Muzzle": [
             "MUZZLE_BRAKE",
-            "FLASHGUARD",
+            "FLASH_GUARD",
             "SUPPRESSOR",
             "INFANTRY_COMPENSATOR",
             "SOCOM_ELIMINATOR",
@@ -2952,11 +3156,11 @@
         ],
         "Muzzle": [
             "MUZZLE_BRAKE",
-            "FLASHGUARD",
+            "FLASH_GUARD",
             "SUPPRESSOR",
-            "INFANTRY_COMPENSATOR",
-            "SOCOM_ELIMINATOR",
-            "AGENCY_SUPPRESSOR"
+            "SPETSNAZ_COMPENSATOR",
+            "KGB_ELIMINATOR",
+            "GRU_SUPPRESSOR"
         ],
         "Optic": [
             "MILLSTOP_REFLEX",
@@ -3102,7 +3306,6 @@
             "OPERATOR_FOREGRIP",
             "RANGER_FOREGRIP",
             "BIPOD",
-            "BIPOD",
             "COMMANDO_FOREGRIP",
             "TACTICAL_FOREGRIP"
         ]
@@ -3169,8 +3372,6 @@
         "Underbarrel": [
             "MERC_FOREGRIP",
             "BIPOD_FOREGRIP",
-            "BIPOD_FOREGRIP",
-            "BIPOD_FOREGRIP",
             "OPERATOR_FOREGRIP",
             "COMMANDO_FOREGRIP",
             "TACTICAL_FOREGRIP"
@@ -3218,7 +3419,6 @@
             "THERMAL_HYBRID"
         ],
         "Perk": [
-            "SLEIGHT_OF_HAND",
             "SLEIGHT_OF_HAND"
         ],
         "Stock": [
@@ -3229,7 +3429,6 @@
         "Underbarrel": [
             "COMMANDO_FOREGRIP",
             "TACTICAL_FOREGRIP",
-            "BIPOD",
             "BIPOD",
             "MERC_FOREGRIP",
             "RANGER_FOREGRIP",
@@ -3293,13 +3492,20 @@
             "COMMANDO_FOREGRIP",
             "TACTICAL_FOREGRIP",
             "BIPOD",
-            "BIPOD",
             "MERC_FOREGRIP",
             "RANGER_FOREGRIP",
             "OPERATOR_FOREGRIP"
         ]
     },
     "STONER_63": {
+        "Ammunition": [
+            "RND_120",
+            "FAST_MAG",
+            "RND_SPEED_MAG_120",
+            "SPETSNAZ_150_RND",
+            "VANDAL_SPEED_LOADER",
+            "SALVO_150_RND_FAST_MAG"
+        ],
         "Barrel": [
             "CUT_DOWN",
             "CAVALRY_LANCER",
@@ -3318,7 +3524,7 @@
         ],
         "Muzzle": [
             "MUZZLE_BRAKE",
-            "FLASHGUARD",
+            "FLASH_GUARD",
             "SUPPRESSOR",
             "INFANTRY_COMPENSATOR",
             "SOCOM_ELIMINATOR",
@@ -3407,7 +3613,6 @@
             "THERMAL_HYBRID"
         ],
         "Perk": [
-            "SLEIGHT_OF_HAND",
             "SLEIGHT_OF_HAND"
         ],
         "RearGrip": [
@@ -3437,6 +3642,14 @@
         ]
     },
     "TYPE_63": {
+        "Ammunition": [
+            "RND_30",
+            "TAPED_MAGS",
+            "RND_SPEED_MAG_38",
+            "BAKELITE_RND_40",
+            "GRU_MAG_CLAMP",
+            "VDV_50_RND_FAST_MAG"
+        ],
         "Barrel": [
             "RAPID_FIRE",
             "CAVALRY_LANCER",
@@ -3444,6 +3657,60 @@
             "TITANIUM",
             "MATCH_GRADE",
             "TASK_FORCE"
+        ],
+        "Laser": [
+            "STEADY_AIM_LASER",
+            "MOUNTED_FLASHLIGHT",
+            "SOF_TARGET_DESIGNATOR",
+            "SWAT_5MW_LASER_SIGHT",
+            "TIGER_TEAM_SPOTLIGHT",
+            "EMBER_SIGHTING_POINT"
+        ],
+        "Muzzle": [
+            "MUZZLE_BRAKE",
+            "FLASH_GUARD",
+            "SILENCER",
+            "SPETSNAZ_COMPENSATOR",
+            "KGB_ELIMINATOR",
+            "GRU_SILENCER"
+        ],
+        "Optic": [
+            "VISIONTECH_2X",
+            "KOBRA_RED_DOT",
+            "AXIAL_ARMS_3X",
+            "MILLSTOP_REFLEX",
+            "ROYAL_AND_CROSS_4X",
+            "QUICKDOT_LED",
+            "HAWKSMOOR",
+            "SILLIX_HOLOSCOUT",
+            "SUSAT_MULTIZOOM",
+            "HANGMAN_RF",
+            "VULTURE_CUSTOM_ZOOM",
+            "ANPVS_4_THERMAL"
+        ],
+        "RearGrip": [
+            "SPEED_TAPE",
+            "DROPSHOT_WRAP",
+            "FIELD_TAPE",
+            "SPETSNAZ_FIELD_GRIP",
+            "SERPENT_GRIP",
+            "GRU_ELASTIC_WRAP"
+        ],
+        "Stock": [
+            "TACTICAL_STOCK",
+            "WIRE_STOCK",
+            "DUSTER_PAD",
+            "NO_STOCK",
+            "SPETSNAZ_PKM_STOCK",
+            "KGC_PAD"
+        ],
+        "Underbarrel": [
+            "FRONT_GRIP",
+            "INFILTRATOR_GRIP",
+            "PATROL_GRIP",
+            "BRUISER_GRIP",
+            "SPETSNAZ_GRIP",
+            "VDV_SPEEDGRIP"
         ]
     },
     "UZI": {
@@ -3539,7 +3806,7 @@
         ],
         "Muzzle": [
             "MUZZLE_BRAKE",
-            "FLASHGUARD",
+            "FLASH_GUARD",
             "SUPPRESSOR",
             "INFANTRY_COMPENSATOR",
             "SOCOM_ELIMINATOR",
@@ -3569,11 +3836,11 @@
         ],
         "Stock": [
             "TACTICAL_STOCK",
-            "MARATHON_STOCK",
-            "DUSTER_PAD",
-            "CQB_PAD",
+            "WIRE_STOCK",
+            "DUSTER_STOCK",
+            "BUFFER_TUBE",
             "SAS_COMBAT_STOCK",
-            "RAIDER_STOCK"
+            "RAIDER_PAD"
         ],
         "Underbarrel": [
             "FOREGRIP",
