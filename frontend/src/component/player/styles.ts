@@ -64,6 +64,9 @@ export const useStyles = makeStyles(theme => ({
         boxShadow: "none",
         marginBottom: theme.spacing(1.25),
     },
+    sourcePanelSummary: {
+        maxHeight: 40,
+    },
     sourceText: {
         color: theme.palette.text.hint,
     },

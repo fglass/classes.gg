@@ -34,6 +34,13 @@ const darkTheme = createMuiTheme({
                     }
                 }
             }
+        },
+        MuiExpansionPanelSummary: {
+            root: {
+                "&$expanded": {
+                    minHeight: "none"
+                }
+            }
         }
     }
 });

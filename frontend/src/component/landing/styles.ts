@@ -26,6 +26,9 @@ export const useStyles = makeStyles((theme: Theme) => createStyles({
         textAlign: "center",
         color: theme.palette.text.secondary,
     },
+    highlightText: {
+        color: theme.palette.primary.main,
+    },
     search: {
         position: "relative",
         borderRadius: theme.shape.borderRadius,
@@ -41,9 +44,9 @@ export const useStyles = makeStyles((theme: Theme) => createStyles({
         borderColor: "rgba(255, 255, 255, 0.12)",
     },
     searchIcon: {
-        padding: theme.spacing(0, 2),
         height: "100%",
         position: "absolute",
+        right: theme.spacing(2),
         pointerEvents: "none",
         display: "flex",
         alignItems: "center",
@@ -54,8 +57,8 @@ export const useStyles = makeStyles((theme: Theme) => createStyles({
         color: "inherit",
     },
     input: {
-        padding: theme.spacing(1, 1, 1, 0),
-        paddingLeft: `calc(1em + ${theme.spacing(4)}px)`,
+        padding: theme.spacing(1, 1, 1, 2),
+        height: "25px",
         transition: theme.transitions.create("width"),
     },
     grid: {
@@ -66,7 +69,7 @@ export const useStyles = makeStyles((theme: Theme) => createStyles({
         gap: "15px",
         gridTemplateColumns: "repeat(auto-fit, minmax(160px, 1fr))",
         justifyItems: "center",
-        padding: "25px 0px",
+        padding: "10px 0px 15px 0px",
     },
     card: {
         width: "160px",
@@ -97,11 +100,17 @@ export const useStyles = makeStyles((theme: Theme) => createStyles({
         fontSize: "14px",
         color: theme.palette.text.secondary,
     },
+    alert: {
+        margin: "auto",
+        marginTop: "10px",
+        maxWidth: "1050px",
+        width: "90%",
+    },
     embed: {
         maxWidth: "1050px",
         width: "90%",
         margin: "0px auto",
-        paddingBottom: "25px",
+        paddingTop: "10px",
     },
     iframe: {
         width: "100%",

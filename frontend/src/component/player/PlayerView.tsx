@@ -81,11 +81,12 @@ const AttachmentList = (props: any) => {
 const SourcePanel = (props: any) => {
     const { classes, loadout } = props
     return (
-         <ExpansionPanel classes={{ root: classes.sourcePanel, expanded: classes.sourcePanelExpanded }}>
+         <ExpansionPanel className={classes.sourcePanel}>
             <ExpansionPanelSummary
-              expandIcon={<ArrowDropDownIcon />}
-              aria-controls="source-content"
-              id="source-header"
+                classes={{expanded: classes.sourcePanelSummary}}
+                expandIcon={<ArrowDropDownIcon />}
+                aria-controls="source-content"
+                id="source-header"
             >
                 <Typography>Source</Typography>
             </ExpansionPanelSummary>

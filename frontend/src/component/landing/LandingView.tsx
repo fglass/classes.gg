@@ -3,10 +3,11 @@ import TimeAgo from 'timeago-react';
 import InputBase from "@material-ui/core/InputBase";
 import SearchIcon from "@material-ui/icons/Search";
 import Typography from "@material-ui/core/Typography";
-import {Badge, Icon, Paper} from "@material-ui/core";
+import { Badge, Icon, Paper } from "@material-ui/core";
 import { Link } from "react-router-dom";
 import { Player } from "../../model/player";
 import { useStyles } from "./styles";
+import {Alert} from "@material-ui/lab";
 
 interface IProps {
     classes: any
@@ -47,7 +48,8 @@ class LandingView extends React.Component<IProps, IState> {
 
 
     render() {
-        const { classes } = this.props
+        const { classes, players } = this.props
+        const nLoadouts = players.reduce((sum, player) => sum + player.loadoutKeys.length, 0)
         return (
             <div className={classes.content}>
                 <div className={classes.header}>
@@ -57,15 +59,22 @@ class LandingView extends React.Component<IProps, IState> {
                     <Typography className={classes.subheading}>
                         Call of Duty: Warzone Loadout Repository
                     </Typography>
+                    <Typography className={classes.subheading}>
+                        <span className={classes.highlightText}>{nLoadouts}</span> Loadouts
+                        from <span className={classes.highlightText}>{players.length}</span> Players
+                    </Typography>
                     <SearchInput classes={classes} onSearch={this.onSearch} />
                 </div>
                 <div>
+                    <Alert variant="filled" severity="info" className={classes.alert}>
+                        Loadouts are now auto-updated hourly!
+                    </Alert>
+                    <YouTubeEmbed classes={classes} />
                     <div className={classes.grid}>
                         {this.state.filteredPlayers.map(player =>
                             <PlayerCard classes={classes} player={player} key={player.username} />
                         )}
                     </div>
-                    <YouTubeEmbed classes={classes} />
                 </div>
             </div>
         )
@@ -80,7 +89,7 @@ const SearchInput = (props: any) => {
                 <SearchIcon />
             </div>
             <InputBase
-                placeholder="Search for a player or loadout"
+                placeholder="Search player or loadout"
                 classes={{
                     root: classes.inputRoot,
                     input: classes.input,
@@ -109,7 +118,7 @@ const PlayerCard = (props: any) => {
     )
 }
 
-const EMBED_ID = "mTQpJoWHGf0"
+const EMBED_ID = "g3_IDtnoLBA"
 
 const YouTubeEmbed = (props: any) => {
     const classes = props.classes
