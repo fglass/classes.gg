@@ -3,7 +3,7 @@ import hashlib
 import logging
 import requests
 import time
-from db.admin.change.command_source import CommandSource
+from model.command.command_source import CommandSource
 from db.json_database_engine import JSONDatabaseEngine
 
 SOURCE_KEY = "source"

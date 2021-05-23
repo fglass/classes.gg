@@ -1,4 +1,4 @@
-from db.admin.change.loadout_updater import _find_delimiter, find_weapon, _find_attachments, _compare_weapon_counterpart
+from db.loadout_updater import _find_delimiter, find_weapon, _find_attachments, _compare_weapon_counterpart
 from model.weapon.attachment import Muzzle, Barrel, Optic, Underbarrel, Ammunition
 from model.weapon.weapon import AssaultRifle, SubmachineGun, TacticalRifle
 
@@ -16,11 +16,11 @@ def test_unable_to_find_weapon():
 
 def test_find_attachments():
     expected = [
-       Muzzle.MONOLITHIC_SUPPRESSOR,
-       Barrel.SINGUARD_ARMS_198_PROWLER,
-       Optic.VLK_30X_OPTIC,
-       Underbarrel.COMMANDO_FOREGRIP,
-       Ammunition.ROUND_MAGS_60
+        Ammunition.ROUND_MAGS_60,
+        Underbarrel.COMMANDO_FOREGRIP,
+        Optic.VLK_30X_OPTIC,
+        Barrel.SINGUARD_ARMS_198_PROWLER,
+        Muzzle.MONOLITHIC_SUPPRESSOR,
     ]
     actual = list(_find_attachments(AssaultRifle.KILO_141.attachments, KILO_RESPONSE).keys())
     assert expected == actual

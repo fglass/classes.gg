@@ -1,6 +1,6 @@
 from datetime import datetime
 
-from db.admin.change.command_source import CommandSource
+from model.command.command_source import CommandSource
 from db.json_database_engine import JSONDatabaseEngine
 from model.player import Player
 

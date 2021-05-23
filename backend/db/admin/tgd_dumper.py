@@ -1,14 +1,14 @@
 import json
 import re
 import requests
-from db.admin.change.loadout_updater import find_weapon
+from db.loadout_updater import find_weapon
 from model.weapon.weapon_data_loader import get_attachment_category
 
 WEAPON_TYPES = ["AR", "LMG", "SMG", "MR", "SR"]
 WEAPONS_URL = "https://www.truegamedata.com/SQL_calls/grab_guns.php"
 ATTACHMENTS_URL = "https://www.truegamedata.com/SQL_calls/grab_attachment_names.php"
 TGD_DUMP_FILE = "tgd-dump.json"
-WEAPON_DATA_FILE = "../../../model/weapon/weapon-data.json"
+WEAPON_DATA_FILE = "../../model/weapon/weapon-data.json"
 
 
 def dump_tgd():

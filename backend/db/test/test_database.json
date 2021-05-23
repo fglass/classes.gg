@@ -1,21 +1,31 @@
 {
-  "Scump": {
-    "username": "Scump",
-    "lastUpdated": "2020-07-09T23:06:57.299264",
+  "scump": {
+    "avatar": "https://static-cdn.jtvnw.net/jtv_user_pictures/scump-profile_image-bbaf98441dd6e786-300x300.jpeg",
+    "command_source": "nightbot",
+    "last_updated": "2021-05-23T16:46:14.370767",
     "loadouts": {
-      "Grau 5.56": {
+      "AK-47": {
         "attachments": {
-          "Ammunition": "60 Round Mags",
-          "Barrel": "Tempus 26.4\" Archangel",
-          "Muzzle": "Monolithic Suppressor",
-          "Optic": "VLK 3.0x Optic",
-          "Underbarrel": "Commando Foregrip"
+          "Ammunition": "VDV 60 Rnd Fast Mag",
+          "Barrel": "Liberator",
+          "Rear Grip": "GRU Elastic Wrap",
+          "Stock": "KGB Skeletal Stock",
+          "Underbarrel": "Spetsnaz Grip"
         },
-        "source": "https://www.twitch.tv/scump"
+        "game": "CW",
+        "lastUpdated": "2021-05-23T11:49:57.048440",
+        "source": "AK47,Microflex LED,,\"20\"\" Liberator\",,Spetsnaz Grip ,40 RND,GRU Elastic Wrap,KBG Skeletal Stock",
+        "sourceUrl": "https://docs.google.com/spreadsheets/d/15vy3IVwtrqaTTfIVkpkq49b9k2YFnbRL1sl_bf4dCKg?format=csv&gid=0"
       }
     },
-    "commands": {
-      "!grau": "Monolithic Supressor, Tempus 26.4, Commando Foregrip, 60 Round, XRK Void II"
-    }
+    "spreadsheet": {
+      "id": "15vy3IVwtrqaTTfIVkpkq49b9k2YFnbRL1sl_bf4dCKg",
+      "sheets": [
+        "0",
+        "1811597777"
+      ]
+    },
+    "username": "Scump",
+    "views": 0
   }
 }

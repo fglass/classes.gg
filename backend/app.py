@@ -1,7 +1,7 @@
 import atexit
 import logging
 from apscheduler.schedulers.background import BackgroundScheduler
-from db.admin.change.loadout_updater import LoadoutUpdater
+from db.loadout_updater import LoadoutUpdater
 from db.json_database_engine import db
 from flask import Flask, Blueprint, abort, jsonify
 from flask_cors import CORS

@@ -1,9 +1,9 @@
 from enum import Enum
 from typing import Callable
-from db.admin.change.api.fossabot_api import query_fossabot
-from db.admin.change.api.nightbot_api import query_nightbot
-from db.admin.change.api.streamelements_api import query_streamelements
-from db.admin.change.api.streamlabs_api import query_streamlabs
+from model.command.api.fossabot_api import query_fossabot
+from model.command.api.nightbot_api import query_nightbot
+from model.command.api.streamelements_api import query_streamelements
+from model.command.api.streamlabs_api import query_streamlabs
 
 
 class CommandSource(Enum):
