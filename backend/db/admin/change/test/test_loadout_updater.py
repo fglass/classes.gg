@@ -1,5 +1,5 @@
 from db.admin.change.loadout_updater import _find_delimiter, find_weapon, _find_attachments, _compare_weapon_counterpart
-from model.weapon.new_attachment import Muzzle, Barrel, Optic, Underbarrel, Ammunition
+from model.weapon.attachment import Muzzle, Barrel, Optic, Underbarrel, Ammunition
 from model.weapon.weapon import AssaultRifle, SubmachineGun, TacticalRifle
 
 KILO_RESPONSE = "@[user] Kilo: Monolithic Suppressor, Singuard 19.8, VLK/Holo (blue dot), Commando Foregrip, 60 Round Mags"

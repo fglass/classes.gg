@@ -1,7 +1,7 @@
 from enum import Enum
 
 
-class NewAttachment(Enum):
+class Attachment(Enum):
 
     def __init__(self, name, aliases: list = None):
         self._name = name
@@ -19,10 +19,12 @@ class NewAttachment(Enum):
         _type = cls.__name__
         if _type == RearGrip.__name__:
             return "Rear Grip"
+        if _type == BoltAssembly.__name__:
+            return "Bolt Assembly"
         return _type
 
 
-class Ammunition(NewAttachment):
+class Ammunition(Attachment):
     AE_32_ROUND_MAGS_41 = ".41 AE 32-Round Mags"
     AUTO_30_ROUND_MAGS_10MM = "10mm Auto 30-Round Mags"
     BAKELITE_RND_40 = "Bakelite 40 Rnd"
@@ -115,7 +117,7 @@ class Ammunition(NewAttachment):
     VDV_85_RND_FAST_MAG = "VDV 85 Rnd Fast Mag"
 
 
-class Barrel(NewAttachment):
+class Barrel(Attachment):
     ALUMINUM_87 = "8.7 Aluminum"
     AN_94_FACTORY_330MM = "AN-94 Factory 330mm"
     AN_94_FACTORY_X_438MM = "AN-94 Factory X-438mm", ["438 barrel"]
@@ -272,7 +274,7 @@ class Barrel(NewAttachment):
     ZLR_VERATWIST_96 = "ZLR VeraTwist 9.6"
 
 
-class Laser(NewAttachment):
+class Laser(Attachment):
     EMBER_SIGHTING_POINT = "Ember Sighting Point"
     GRU_5MW_LASER_SIGHT = "GRU 5mW Laser Sight"
     KGB_TARGET_DESIGNATOR = "KGB Target Designator"
@@ -286,7 +288,7 @@ class Laser(NewAttachment):
     TIGER_TEAM_SPOTLIGHT = "Tiger Team Spotlight"
 
 
-class Muzzle(NewAttachment):
+class Muzzle(Attachment):
     AGENCY_SUPPRESSOR = "Agency Suppressor", ["agency silencer"]
     AN_94_SONIC_BRAKE = "AN-94 Sonic Brake"
     BAYONET = "BAYONET"
@@ -312,7 +314,7 @@ class Muzzle(NewAttachment):
     ZLR_SABRE = "ZLR Sabre"
 
 
-class Optic(NewAttachment):
+class Optic(Attachment):
     AIM_OP_REFLEX_SIGHT = "Aim-Op Reflex Sight"
     ANPVS_4_THERMAL = "AN/PVS-4 Thermal"
     APX5_HOLOGRAPHIC = "APX5 Holographic", ["apx5 holo"]
@@ -367,7 +369,7 @@ class Optic(NewAttachment):
     XRK_RANGEMASTER_VZ = "XRK Rangemaster VZ"
 
 
-class Perk(NewAttachment):
+class Perk(Attachment):
     AKIMBO = "Akimbo"
     FMJ = "FMJ"
     FOCUS = "Focus"
@@ -376,7 +378,7 @@ class Perk(NewAttachment):
     SLEIGHT_OF_HAND = "Sleight of Hand"
 
 
-class RearGrip(NewAttachment):
+class RearGrip(Attachment):
     AIRBORNE_ELASTIC_GRIP = "Airborne Elastic Grip"
     AIRBORNE_ELASTIC_WRAP = "Airborne Elastic Wrap"
     CRONEN_SNIPER_ELITE = "Cronen Sniper Elite"
@@ -402,7 +404,7 @@ class RearGrip(NewAttachment):
     XRK_VOID_II = "XRK Void II"
 
 
-class Stock(NewAttachment):
+class Stock(Attachment):
     AN_94_FACTORY_HEAVY = "AN-94 Factory Heavy"
     BUFFER_TUBE = "Buffer Tube"
     CARTRIDGE_SLEEVE = "Cartridge Sleeve"
@@ -510,7 +512,7 @@ class Stock(NewAttachment):
     ZLR_SP_R_OVERSEER = "ZLR SP-R Overseer"
 
 
-class Underbarrel(NewAttachment):
+class Underbarrel(Attachment):
     BIPOD = "Bipod"
     BIPOD_FOREGRIP = "Bipod Foregrip"
     BRUISER_GRIP = "Bruiser Grip"
@@ -541,23 +543,23 @@ class Underbarrel(NewAttachment):
     XRK_TALON = "XRK Talon"
 
 
-class Arms(NewAttachment):
+class Arms(Attachment):
     XRK_CARBON_ELITE = "XRK Carbon Elite"
     XRK_QUILL_100_LB = "XRK Quill 100 Lb"
     XRK_THUNDER_200_LB = "XRK Thunder 200 Lb"
 
 
-class Bolt(NewAttachment):
+class Bolt(Attachment):
     FTAC_BACKBURN_20_BOLTS = "FTAC Backburn 20 Bolts"
     FTAC_FURY_20_BOLTS = "FTAC Fury 20 Bolts"
     FTAC_VENOM_20_BOLTS = "FTAC Venom 20 Bolts"
 
 
-class Cable(NewAttachment):
+class Cable(Attachment):
     STRAND_CABLE_16 = "16 Strand Cable"
     STRAND_CABLE_28 = "28 Strand Cable"
 
 
-class BoltAssembly(NewAttachment):
+class BoltAssembly(Attachment):
     SLOAN_KR_600_FEATHER = "Sloan KR-600 Feather"
     SLOAN_KR_800_DEADEYE = "Sloan KR-800 DeadEye"

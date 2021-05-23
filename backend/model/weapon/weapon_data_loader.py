@@ -1,6 +1,6 @@
 import json
 from typing import Type
-from model.weapon.new_attachment import NewAttachment, Muzzle, Barrel, Underbarrel, Optic, Ammunition, RearGrip, \
+from model.weapon.attachment import Attachment, Muzzle, Barrel, Underbarrel, Optic, Ammunition, RearGrip, \
      Stock, Perk, Laser, Arms, Bolt, Cable, BoltAssembly
 
 WEAPON_DATA_FILE = "model/weapon/weapon-data.json"
@@ -28,7 +28,7 @@ def _load_weapon_data():
     return weapon_data
 
 
-def get_attachment_category(slot: str) -> Type[NewAttachment]:
+def get_attachment_category(slot: str) -> Type[Attachment]:
     slot = slot.replace(" ", "")
     return CATEGORIES[slot]
 

@@ -8,7 +8,7 @@ from db.admin.change.command_source import CommandSource
 from db.admin.change.detect_changes import ALL_COMMANDS, SHEETS_KEY
 from db.json_database_engine import db
 from model.player import Player
-from model.weapon.new_attachment import *
+from model.weapon.attachment import *
 from model.weapon.weapon import Weapon, AssaultRifle, LightMachineGun, MarksmanRifle, Handgun, Shotgun, SniperRifle, \
     SubmachineGun, TacticalRifle
 
@@ -170,7 +170,7 @@ def _find_delimiter(response: str) -> str:
     return max(DELIMITERS, key=lambda delimiter: response.count(delimiter))
 
 
-def _find_attachment(sequence: str, valid_attachments: list) -> Tuple[Optional[NewAttachment], int]:
+def _find_attachment(sequence: str, valid_attachments: list) -> Tuple[Optional[Attachment], int]:
     if sequence == "":
         return None, 0
 
