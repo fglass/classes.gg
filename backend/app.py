@@ -11,7 +11,6 @@ logging.basicConfig(format='%(asctime)s %(message)s', datefmt='%m/%d/%Y %I:%M:%S
 app = Flask(__name__)
 CORS(app)
 api = Blueprint("api", __name__)
-
 scheduler = BackgroundScheduler(daemon=True)
 loadout_updater = LoadoutUpdater()
 
@@ -39,11 +38,16 @@ def get_player_loadouts(username: str):
 
 
 @api.route("/view/<username>", methods=['POST'])
-def increment_player_view_count(username: str):
+def view_player(username: str):
     sanitised_username = escape(username.lower())
     player = db.select_player(sanitised_username)
     player.views += 1
     return jsonify(success=True)
+
+
+@api.route("/recentUpdates")
+def get_recent_updates():
+    return jsonify(list(reversed(loadout_updater.recent_updates)))
 
 
 scheduler.remove_all_jobs()

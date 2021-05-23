@@ -1,3 +1,4 @@
+import collections
 import logging
 import requests
 import time
@@ -41,6 +42,7 @@ class LoadoutUpdater:
     def __init__(self):
         self._success_count = 0
         self._failure_count = 0
+        self.recent_updates = collections.deque(maxlen=100)
 
     def run(self):
         self._success_count, self._failure_count = 0, 0
@@ -102,7 +104,11 @@ class LoadoutUpdater:
 
         logging.debug(f"\t{command}: {response}")
         logging.debug(f"\t\t-> {str(weapon)} ({weapon.game.value}): {[f'{str(a)} {r}%' for a, r in attachments.items()]}")
+
         self._success_count += 1
+        self.recent_updates.append(
+            _to_recent_update_view_model(now, player, command, response, source_url, weapon, attachments)
+        )
 
 
 def _parse_spreadsheets(spreadsheet_meta: dict) -> tuple:
@@ -208,6 +214,26 @@ def _compare_weapon_counterpart(weapon: Weapon, attachments: dict, response: str
             return weapon_counterpart, other_attachments
 
     return weapon, attachments
+
+
+def _to_recent_update_view_model(
+    timestamp: str,
+    player: Player,
+    command: str,
+    response: str,
+    source_url: str,
+    weapon: Weapon,
+    attachments: dict
+) -> dict:
+    return {
+        "attachments": [f"{a.name} {r}%" for a, r in attachments.items()],
+        "command": command if command != response else None,
+        "response": response,
+        "timestamp": timestamp,
+        "source": source_url,
+        "username": player.username,
+        "weapon": weapon.name
+    }
 
 
 if __name__ == "__main__":
