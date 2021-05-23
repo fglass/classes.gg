@@ -14,6 +14,7 @@ from model.weapon.weapon import Weapon, AssaultRifle, LightMachineGun, MarksmanR
     SubmachineGun, TacticalRifle
 
 DELIMITERS = [",", "-", "|"]
+COMMAND_TRIM_THRESHOLD = 20
 MAX_SEQUENCES = 20
 MIN_ATTACHMENTS = 4
 MAX_ATTACHMENTS = 5
@@ -146,6 +147,9 @@ def _find_loadout(player: Player, command: str, response: str) -> Optional[Tuple
 
 
 def find_weapon(command: str) -> Optional[Weapon]:
+    if len(command) > COMMAND_TRIM_THRESHOLD:
+        command = command[:COMMAND_TRIM_THRESHOLD]
+
     for weapon in ALL_WEAPONS:
         if any([alias in command for alias in weapon.aliases]):
             return weapon

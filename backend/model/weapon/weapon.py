@@ -67,7 +67,7 @@ class SubmachineGun(Weapon):
     MAC_10 = "MAC-10", Game.COLD_WAR, ["mac"]
     MILANO_821 = "Milano 821", Game.COLD_WAR, ["milano"]
     MP5_CW = "MP5", Game.COLD_WAR
-    PPSH = "PPSH-41", Game.COLD_WAR, ["ppsh"]
+    PPSH = "PPSh-41", Game.COLD_WAR, ["ppsh"]
 
 
 class LightMachineGun(Weapon):

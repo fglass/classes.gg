@@ -6,17 +6,16 @@ from model.player import Player
 
 
 NEW_PLAYER = Player(
-    username="Crowder",
-    avatar="https://static-cdn.jtvnw.net/jtv_user_pictures/6d8a01d4-323c-42b7-95fe-8df59cd94c0c-profile_image-300x300.png",
-    views=0,
+    username="fifakillvizualz",
+    avatar="https://static-cdn.jtvnw.net/jtv_user_pictures/8b3404ed950b4fda-profile_image-300x300.jpeg",
+    command_source=CommandSource.NIGHTBOT.value,
     last_updated=datetime.now().isoformat(),
     loadouts={},
-    commands={"source": CommandSource.NIGHTBOT.value},
     spreadsheet={
-        "source": "google",
-        "id": "1S8YyLcm0qJGwrtIxb3_9RkzIo_Icf_ld979ucdKllwc",
-        "sheets": ["0"],
+        # "id": "1SWU-40CNrKL1thqffc-877rr-BV5TXQfjyPVL3CzJ1I",
+        # "sheets": ["0"],
     },
+    views=0,
 )
 
 if __name__ == '__main__':

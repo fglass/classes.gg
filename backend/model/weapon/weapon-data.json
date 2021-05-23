@@ -1057,6 +1057,14 @@
         ]
     },
     "FARA": {
+        "Ammunition": [
+            "RND_40",
+            "TAPED_MAGS",
+            "RND_SPEED_MAG_40",
+            "SPETSNAZ_50_RND",
+            "GRU_MAG_CLAMP",
+            "VDV_50_RND_FAST_MAG"
+        ],
         "Barrel": [
             "ULTRALIGHT",
             "CAVALRY_LANCER",
@@ -1898,6 +1906,14 @@
         ]
     },
     "KSP_45": {
+        "Ammunition": [
+            "RND_42",
+            "FAST_MAG",
+            "RND_SPEED_MAG_40",
+            "STANAG_48_RND",
+            "VANDAL_SPEED_LOADER",
+            "SALVO_48_RND_FAST_MAG"
+        ],
         "Barrel": [
             "EXTENDED",
             "CAVALRY",
@@ -2248,6 +2264,14 @@
         ]
     },
     "M60": {
+        "Ammunition": [
+            "RND_100",
+            "FAST_MAG",
+            "RND_SPEED_MAG_100",
+            "STANAG_125_RND",
+            "VANDAL_SPEED_LOADER",
+            "SALVO_125_RND_FAST_MAG"
+        ],
         "Barrel": [
             "CUT_DOWN",
             "CAVALRY_LANCER",
@@ -2518,6 +2542,14 @@
         ]
     },
     "MILANO_821": {
+        "Ammunition": [
+            "RND_DRUM_45",
+            "FAST_MAG",
+            "RND_SPEED_MAG_45",
+            "STANAG_55_RND_DRUM",
+            "VANDAL_SPEED_LOADER",
+            "SALVO_55_RND_FAST_MAG"
+        ],
         "Barrel": [
             "EXTENDED",
             "CAVALRY",
@@ -3010,6 +3042,14 @@
         ]
     },
     "QBZ": {
+        "Ammunition": [
+            "RND_DRUM_40",
+            "JUNGLE_STYLE_MAG",
+            "RND_SPEED_MAG_40",
+            "STANAG_50_RND_DRUM",
+            "SAS_MAG_CLAMP",
+            "SALVO_50_RND_FAST_MAG"
+        ],
         "Barrel": [
             "ULTRALIGHT",
             "CAVALRY_LANCER",
@@ -3138,6 +3178,14 @@
         ]
     },
     "RPD": {
+        "Ammunition": [
+            "RND_100",
+            "FAST_MAG",
+            "RND_SPEED_MAG_100",
+            "SPETSNAZ_125_RND",
+            "VANDAL_SPEED_LOADER",
+            "VDV_125_RND_FAST_MAG"
+        ],
         "Barrel": [
             "CUT_DOWN",
             "SPETSNAZ_RPK_BARREL",
@@ -3634,11 +3682,24 @@
         ]
     },
     "SYKOV": {
+        "Ammunition": [
+            "ROUND_DRUMS_80"
+        ],
         "Barrel": [
             "SOROKIN_140MM_AUTO"
         ],
+        "Laser": [
+            "LASER_5MW",
+            "TAC_LASER"
+        ],
+        "Muzzle": [
+            "MONOLITHIC_SUPPRESSOR"
+        ],
         "Perk": [
             "AKIMBO"
+        ],
+        "RearGrip": [
+            "VLK_PRIZRAK"
         ]
     },
     "TYPE_63": {
