@@ -2,7 +2,7 @@ import atexit
 import logging
 from apscheduler.schedulers.background import BackgroundScheduler
 from db.admin.change.loadout_updater import LoadoutUpdater
-from db.json_database_engine import JSONDatabaseEngine
+from db.json_database_engine import db
 from flask import Flask, Blueprint, abort, jsonify
 from flask_cors import CORS
 from markupsafe import escape
@@ -12,7 +12,6 @@ app = Flask(__name__)
 CORS(app)
 api = Blueprint("api", __name__)
 
-db = JSONDatabaseEngine()
 scheduler = BackgroundScheduler(daemon=True)
 loadout_updater = LoadoutUpdater()
 

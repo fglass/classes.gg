@@ -6,6 +6,8 @@ services:
     build: ./backend
     expose:
       - 5000
+    volumes:
+      - /root/classes.gg/backend/db:/database
 
   frontend:
     container_name: frontend

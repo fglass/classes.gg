@@ -1,9 +1,12 @@
 import json
+import os
 from db.database_engine import DatabaseEngine
 from model.player import Player
 from typing import Optional, ValuesView
 
-DATABASE_FILE = "db/database.json"
+ENVIRONMENT = os.environ.get("ENVIRONMENT", "DEV")
+IS_PROD = ENVIRONMENT == "PROD"
+DATABASE_FILE = "/database/database.json" if IS_PROD else "db/database.json"
 TEST_DATABASE_FILE = "db/test/test_database.json"
 
 
@@ -63,3 +66,6 @@ def _deserialise_player(data: dict) -> Player:
         data.get("spreadsheet", {}),
         data.get("views", 0)
     )
+
+
+db = JSONDatabaseEngine()

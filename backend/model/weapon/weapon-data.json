@@ -71,78 +71,6 @@
             "SPETSNAZ_SPEEDGRIP"
         ]
     },
-    "AK_74U": {
-        "Ammunition": [
-            "RND_DRUM_40",
-            "TAPED_MAGS",
-            "RND_SPEED_MAG_40",
-            "SPETSNAZ_50_RND_DRUM",
-            "GRU_MAG_CLAMP",
-            "VDV_50_RND_FAST_MAG"
-        ],
-        "Barrel": [
-            "EXTENDED",
-            "CAVALRY_LANCER",
-            "VDV_REINFORCED",
-            "LIBERATOR",
-            "RIFLED",
-            "TASK_FORCE"
-        ],
-        "Laser": [
-            "STEADY_AIM_LASER",
-            "MOUNTED_FLASHLIGHT",
-            "KGB_TARGET_DESIGNATOR",
-            "GRU_5MW_LASER_SIGHT",
-            "TIGER_TEAM_SPOTLIGHT",
-            "EMBER_SIGHTING_POINT"
-        ],
-        "Muzzle": [
-            "MUZZLE_BRAKE",
-            "FLASH_GUARD",
-            "SOUND_SUPPRESSOR",
-            "SPETSNAZ_COMPENSATOR",
-            "KGB_ELIMINATOR",
-            "GRU_SUPPRESSOR"
-        ],
-        "Optic": [
-            "QUICKDOT_LED",
-            "MILLSTOP_REFLEX",
-            "KOBRA_RED_DOT",
-            "VISIONTECH_2X",
-            "MICROFLEX_LED",
-            "HAWKSMOOR",
-            "SNAPPOINT",
-            "DIAMONDBACK_REFLEX",
-            "SILLIX_HOLOSCOUT",
-            "FASTPOINT_REFLEX",
-            "AXIAL_ARMS_3X",
-            "SUSAT_MULTIZOOM"
-        ],
-        "RearGrip": [
-            "SPEED_TAPE",
-            "DROPSHOT_WRAP",
-            "FIELD_TAPE",
-            "SPETSNAZ_FIELD_GRIP",
-            "SERPENT_WRAP",
-            "GRU_ELASTIC_WRAP"
-        ],
-        "Stock": [
-            "TACTICAL_STOCK",
-            "WIRE_STOCK",
-            "DUSTER_STOCK",
-            "NO_STOCK",
-            "SPETSNAZ_PKM_STOCK",
-            "KGB_SKELETAL_STOCK"
-        ],
-        "Underbarrel": [
-            "FOREGRIP",
-            "RED_CELL_FOREGRIP",
-            "PATROL_GRIP",
-            "BRUISER_GRIP",
-            "SPETSNAZ_GRIP",
-            "SPETSNAZ_SPEEDGRIP"
-        ]
-    },
     "AK_47": {
         "Ammunition": [
             "ROUND_MAGS_40",
@@ -213,6 +141,78 @@
             "COMMANDO_FOREGRIP",
             "TACTICAL_FOREGRIP",
             "BIPOD"
+        ]
+    },
+    "AK_74U": {
+        "Ammunition": [
+            "RND_DRUM_40",
+            "TAPED_MAGS",
+            "RND_SPEED_MAG_40",
+            "SPETSNAZ_50_RND_DRUM",
+            "GRU_MAG_CLAMP",
+            "VDV_50_RND_FAST_MAG"
+        ],
+        "Barrel": [
+            "EXTENDED",
+            "CAVALRY_LANCER",
+            "VDV_REINFORCED",
+            "LIBERATOR",
+            "RIFLED",
+            "TASK_FORCE"
+        ],
+        "Laser": [
+            "STEADY_AIM_LASER",
+            "MOUNTED_FLASHLIGHT",
+            "KGB_TARGET_DESIGNATOR",
+            "GRU_5MW_LASER_SIGHT",
+            "TIGER_TEAM_SPOTLIGHT",
+            "EMBER_SIGHTING_POINT"
+        ],
+        "Muzzle": [
+            "MUZZLE_BRAKE",
+            "FLASH_GUARD",
+            "SOUND_SUPPRESSOR",
+            "SPETSNAZ_COMPENSATOR",
+            "KGB_ELIMINATOR",
+            "GRU_SUPPRESSOR"
+        ],
+        "Optic": [
+            "QUICKDOT_LED",
+            "MILLSTOP_REFLEX",
+            "KOBRA_RED_DOT",
+            "VISIONTECH_2X",
+            "MICROFLEX_LED",
+            "HAWKSMOOR",
+            "SNAPPOINT",
+            "DIAMONDBACK_REFLEX",
+            "SILLIX_HOLOSCOUT",
+            "FASTPOINT_REFLEX",
+            "AXIAL_ARMS_3X",
+            "SUSAT_MULTIZOOM"
+        ],
+        "RearGrip": [
+            "SPEED_TAPE",
+            "DROPSHOT_WRAP",
+            "FIELD_TAPE",
+            "SPETSNAZ_FIELD_GRIP",
+            "SERPENT_WRAP",
+            "GRU_ELASTIC_WRAP"
+        ],
+        "Stock": [
+            "TACTICAL_STOCK",
+            "WIRE_STOCK",
+            "DUSTER_STOCK",
+            "NO_STOCK",
+            "SPETSNAZ_PKM_STOCK",
+            "KGB_SKELETAL_STOCK"
+        ],
+        "Underbarrel": [
+            "FOREGRIP",
+            "RED_CELL_FOREGRIP",
+            "PATROL_GRIP",
+            "BRUISER_GRIP",
+            "SPETSNAZ_GRIP",
+            "SPETSNAZ_SPEEDGRIP"
         ]
     },
     "AN_94": {

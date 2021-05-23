@@ -1,11 +1,12 @@
 import logging
 import requests
+import time
 from datetime import datetime
 from typing import Optional, Tuple, Dict
 from fuzzywuzzy import fuzz
 from db.admin.change.command_source import CommandSource
 from db.admin.change.detect_changes import ALL_COMMANDS, SHEETS_KEY
-from db.json_database_engine import JSONDatabaseEngine
+from db.json_database_engine import db
 from model.player import Player
 from model.weapon.new_attachment import *
 from model.weapon.weapon import Weapon, AssaultRifle, LightMachineGun, MarksmanRifle, Handgun, Shotgun, SniperRifle, \
@@ -43,17 +44,18 @@ class LoadoutUpdater:
 
     def run(self):
         self._success_count, self._failure_count = 0, 0
-        db = JSONDatabaseEngine()
+        start = time.time()
 
         for player in db.select_players():
             self._update_player(player)
             db.add_player(player, commit=False)
 
         db.commit()
-        logging.info(f"Loadouts updated: {self._success_count} ✔ {self._failure_count} ❌")
+        elapsed = time.time() - start
+        logging.info(f"{self._success_count} loadouts updated in {elapsed:.2f}s ({self._failure_count} ignored)")
 
     def _update_player(self, player: Player):
-        print(player.username)
+        logging.debug(player.username)
 
         if player.command_source:
             self._update_commands(player)
@@ -86,7 +88,7 @@ class LoadoutUpdater:
             self._failure_count += 1
             return
 
-        now = datetime.now().isoformat()
+        now = datetime.utcnow().isoformat()
         weapon, attachments = loadout
 
         player.last_updated = now
@@ -98,8 +100,8 @@ class LoadoutUpdater:
             "sourceUrl": source_url,
         }
 
-        print(f"\t{command}: {response}")
-        print(f"\t\t-> {str(weapon)} ({weapon.game.value}): {[f'{str(a)} {r}%' for a, r in attachments.items()]}")
+        logging.debug(f"\t{command}: {response}")
+        logging.debug(f"\t\t-> {str(weapon)} ({weapon.game.value}): {[f'{str(a)} {r}%' for a, r in attachments.items()]}")
         self._success_count += 1
 
 
@@ -116,11 +118,11 @@ def _find_loadout(player: Player, command: str, response: str) -> Optional[Tuple
     weapon = find_weapon(command.lower())
 
     if weapon is None:
-        print(f"\tWeapon not found: {command}")
+        logging.debug(f"\tWeapon not found: {command}")
         return
 
     if len(weapon.attachments) == 0:
-        print(f"\t{weapon} data missing")
+        logging.debug(f"\t{weapon} data missing")
 
     existing_loadout = player.loadouts.get(str(weapon), {})
     if existing_loadout.get("source") == response:
@@ -209,5 +211,5 @@ def _compare_weapon_counterpart(weapon: Weapon, attachments: dict, response: str
 
 
 if __name__ == "__main__":
-    logging.basicConfig(format='%(asctime)s %(message)s', datefmt='%m/%d/%Y %I:%M:%S %p', level=logging.INFO)
+    logging.basicConfig(format='%(asctime)s %(message)s', datefmt='%m/%d/%Y %I:%M:%S %p', level=logging.DEBUG)
     LoadoutUpdater().run()

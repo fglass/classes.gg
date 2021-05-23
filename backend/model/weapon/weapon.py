@@ -26,8 +26,8 @@ class Weapon(Enum):
 
 
 class AssaultRifle(Weapon):
-    AK_47 = "AK-47", Game.MODERN_WARFARE, ["ak"]
-    AN_94 = "AN-94", Game.MODERN_WARFARE
+    AK_47 = "AK-47", Game.MODERN_WARFARE, ["ak", "ak47"]
+    AN_94 = "AN-94", Game.MODERN_WARFARE, ["an94"]
     CR_56_AMAX = "CR-56 AMAX", Game.MODERN_WARFARE, ["amax", "cr56", "galil"]
     FAL = "FAL", Game.MODERN_WARFARE
     FR = "FR 5.56", Game.MODERN_WARFARE, ["famas", "fr"]
@@ -40,7 +40,8 @@ class AssaultRifle(Weapon):
     AS_VAL = "AS VAL", Game.MODERN_WARFARE, ["val"]
     SCAR = "FN Scar 17", Game.MODERN_WARFARE, ["scar"]
 
-    AK_47_CW = "AK-47", Game.COLD_WAR, ["ak"]
+    AK_47_CW = "AK-47", Game.COLD_WAR, ["ak", "ak47"]
+    FARA = "FARA 83", Game.COLD_WAR, ["fara"]
     FFAR_1 = "FFAR 1", Game.COLD_WAR, ["ffar"]
     GROZA = "Groza", Game.COLD_WAR
     KRIG_6 = "Krig 6", Game.COLD_WAR, ["krig"]
@@ -53,19 +54,20 @@ class SubmachineGun(Weapon):
     FENNEC = "Fennec", Game.MODERN_WARFARE, ["vector"]
     MP5 = "MP5", Game.MODERN_WARFARE
     MP7 = "MP7", Game.MODERN_WARFARE
-    P90 = "P90", Game.MODERN_WARFARE
+    P90 = "P90", Game.MODERN_WARFARE, ["p-90"]
     PP19_BIZON = "PP19 Bizon", Game.MODERN_WARFARE, ["bizon", "pp19"]
     STRIKER_45 = "Striker 45", Game.MODERN_WARFARE, ["striker"]
     UZI = "Uzi", Game.MODERN_WARFARE
     ISO = "ISO", Game.MODERN_WARFARE
 
+    AK_74U = "AK-74u", Game.COLD_WAR, ["74", "74u"]
+    BULLFROG = "Bullfrog", Game.COLD_WAR
     KSP_45 = "KSP 45", Game.COLD_WAR, ["ksp"]
     LC10 = "LC10", Game.COLD_WAR, ["lc"]
     MAC_10 = "MAC-10", Game.COLD_WAR, ["mac"]
     MILANO_821 = "Milano 821", Game.COLD_WAR, ["milano"]
     MP5_CW = "MP5", Game.COLD_WAR
-    AK_74U = "AK-74u", Game.COLD_WAR, ["74", "74u"]
-    BULLFROG = "Bullfrog", Game.COLD_WAR
+    PPSH = "PPSH-41", Game.COLD_WAR, ["ppsh"]
 
 
 class LightMachineGun(Weapon):
@@ -95,7 +97,7 @@ class MarksmanRifle(Weapon):
     KAR98K = "Kar98k", Game.MODERN_WARFARE, ["kar"]
     MK2_CARBINE = "MK2 Carbine", Game.MODERN_WARFARE, ["mk2", "carbine"]
     SKS = "SKS", Game.MODERN_WARFARE
-    SPR_208 = "SP-R 208", Game.MODERN_WARFARE, ["spr"]
+    SPR_208 = "SP-R 208", Game.MODERN_WARFARE, ["spr", "sp-r"]
 
 
 class TacticalRifle(Weapon):
