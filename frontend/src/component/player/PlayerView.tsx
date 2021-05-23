@@ -204,7 +204,7 @@ class PlayerView extends React.Component<IProps, IState> {
                                     {`${player.views} views`}
                                 </Typography>
                                 <Icon className={classes.icon}>calendar_today</Icon>
-                                <TimeAgo className={classes.subText} datetime={player.lastUpdated} live={false} />
+                                <TimeAgo className={classes.subText} datetime={player.lastUpdated + " UTC"} live={false} />
                             </Grid>
                         </Grid>
 

@@ -110,7 +110,7 @@ const PlayerCard = (props: any) => {
                         <img className={classes.avatar} src={player.avatar} alt="" />
                         <Typography>{player.username}</Typography>
                         <Icon className={classes.calendarIcon}>calendar_today</Icon>
-                        <TimeAgo className={classes.timeAgo} datetime={player.lastUpdated + ' UTC'} live={false} />
+                        <TimeAgo className={classes.timeAgo} datetime={player.lastUpdated + " UTC"} live={false} />
                     </Paper>
                 </Link>
             </Badge>
