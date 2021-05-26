@@ -69,12 +69,12 @@ class LandingView extends React.Component<IProps, IState> {
                     <Alert variant="filled" severity="info" className={classes.alert}>
                         Loadouts are now auto-updated hourly!
                     </Alert>
-                    <YouTubeEmbed classes={classes} />
                     <div className={classes.grid}>
                         {this.state.filteredPlayers.map(player =>
                             <PlayerCard classes={classes} player={player} key={player.username} />
                         )}
                     </div>
+                    <YouTubeEmbed classes={classes} />
                 </div>
             </div>
         )
@@ -104,7 +104,11 @@ const PlayerCard = (props: any) => {
     const { classes, player } = props
     return (
         <div>
-            <Badge color="primary" badgeContent={player.loadoutKeys.length} >
+            <Badge
+                color="primary"
+                classes={{anchorOriginTopRightRectangle: classes.badgePosition}}
+                badgeContent={player.loadoutKeys.length}
+            >
                 <Link to={`/${player.username}`}>
                     <Paper className={classes.card} variant="outlined">
                         <img className={classes.avatar} src={player.avatar} alt="" />

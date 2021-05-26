@@ -23,7 +23,7 @@ RATIO_THRESHOLD = 60
 ALL_WEAPONS = list(AssaultRifle) + list(LightMachineGun) + list(MarksmanRifle) + list(Handgun) + list(Shotgun) + \
               list(SniperRifle) + list(SubmachineGun) + list(TacticalRifle)
 
-WEAPON_COMMANDS = set(ALL_COMMANDS)  # TODO: use weapon aliases instead
+WEAPON_COMMANDS = list(ALL_COMMANDS)  # TODO: use weapon aliases instead
 [WEAPON_COMMANDS.remove(c) for c in {"class", "guns", "loadout", "loadout2", "loadouts"}]
 
 DUAL_GAME_WEAPONS: Dict[Weapon, Weapon] = {
@@ -41,21 +41,19 @@ DUAL_GAME_WEAPONS: Dict[Weapon, Weapon] = {
 class LoadoutUpdater:
 
     def __init__(self):
-        self._success_count = 0
-        self._failure_count = 0
         self.recent_updates = collections.deque(maxlen=100)
 
     def run(self):
-        self._success_count, self._failure_count = 0, 0
-        start = time.time()
+        start_s = time.time()
 
-        for player in db.select_players():
-            self._update_player(player)
-            db.add_player(player, commit=False)
+        players = db.select_players()
+        previous_loadouts = {player.username: player.loadouts.copy() for player in players}
 
-        db.commit()
-        elapsed = time.time() - start
-        logging.info(f"{self._success_count} loadouts updated in {elapsed:.2f}s ({self._failure_count} ignored)")
+        [self._update_player(player) for player in players]
+        update_count = _save_changes(previous_loadouts)
+
+        elapsed_s = time.time() - start_s
+        logging.info(f"{update_count} loadouts updated in {elapsed_s:.2f}s")
 
     def _update_player(self, player: Player):
         logging.debug(player.username)
@@ -81,20 +79,18 @@ class LoadoutUpdater:
 
     def _update_spreadsheet(self, player: Player):
         for rows, source_url in _parse_spreadsheets(player.spreadsheet):
-            for row in rows:
-                self._update_loadout(player, command=row, response=row, source_url=source_url)  # TODO: split command
+            for row in reversed(rows):
+                self._update_loadout(player, command=row, response=row, source_url=source_url)
 
     def _update_loadout(self, player: Player, command: str, response: str, source_url: str):
-        loadout = _find_loadout(player, command, response)
+        loadout = _find_loadout(command, response)
 
         if loadout is None:
-            self._failure_count += 1
             return
 
-        now = datetime.utcnow().isoformat()
         weapon, attachments = loadout
+        now = datetime.utcnow().isoformat()
 
-        player.last_updated = now
         player.loadouts[str(weapon)] = {
             "attachments": {a.get_class_name(): str(a) for a in attachments.keys()},
             "game": weapon.game.value,
@@ -106,10 +102,26 @@ class LoadoutUpdater:
         logging.debug(f"\t{command}: {response}")
         logging.debug(f"\t\t-> {str(weapon)} ({weapon.game.value}): {[f'{str(a)} {r}%' for a, r in attachments.items()]}")
 
-        self._success_count += 1
-        self.recent_updates.append(
-            _to_recent_update_view_model(now, player, command, response, source_url, weapon, attachments)
-        )
+        self.recent_updates.append(_to_update_view_model(now, player, command, response, source_url, weapon, attachments))
+
+
+def _save_changes(previous_loadouts: dict) -> int:
+    update_count = 0
+
+    for player in db.select_players():
+        for weapon, loadout in player.loadouts.items():
+
+            previous_loadout = previous_loadouts[player.username].get(weapon, {})
+            is_updated = loadout["source"] != previous_loadout.get("source")
+
+            if is_updated:
+                player.last_updated = loadout["lastUpdated"]
+                update_count += 1
+
+        db.add_player(player, save=False)
+
+    db.save()
+    return update_count
 
 
 def _parse_spreadsheets(spreadsheet_meta: dict) -> tuple:
@@ -121,7 +133,7 @@ def _parse_spreadsheets(spreadsheet_meta: dict) -> tuple:
         yield content.splitlines(), export_url.replace("/export", "")
 
 
-def _find_loadout(player: Player, command: str, response: str) -> Optional[Tuple[Weapon, dict]]:
+def _find_loadout(command: str, response: str) -> Optional[Tuple[Weapon, dict]]:
     weapon = find_weapon(command.lower())
 
     if weapon is None:
@@ -130,10 +142,6 @@ def _find_loadout(player: Player, command: str, response: str) -> Optional[Tuple
 
     if len(weapon.attachments) == 0:
         logging.debug(f"\t{weapon} data missing")
-
-    existing_loadout = player.loadouts.get(str(weapon), {})
-    if existing_loadout.get("source") == response:
-        return  # TODO: not failure
 
     attachments = _find_attachments(weapon.attachments, response)
 
@@ -163,7 +171,7 @@ def _find_attachments(valid_attachments: list, response: str) -> dict:  # TODO: 
     if len(sequences) > MAX_SEQUENCES or len(sequences) < MIN_ATTACHMENTS:
         return attachments
 
-    for sequence in reversed(sequences):  # TODO: check part isn't weapon
+    for sequence in reversed(sequences):
 
         attachment, ratio = _find_attachment(sequence, valid_attachments)
 
@@ -220,7 +228,7 @@ def _compare_weapon_counterpart(weapon: Weapon, attachments: dict, response: str
     return weapon, attachments
 
 
-def _to_recent_update_view_model(
+def _to_update_view_model(
     timestamp: str,
     player: Player,
     command: str,

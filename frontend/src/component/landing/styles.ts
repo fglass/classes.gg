@@ -83,6 +83,10 @@ export const useStyles = makeStyles((theme: Theme) => createStyles({
             borderColor: theme.palette.primary.main
         }
     },
+    badgePosition: {
+        top: "17px",
+        right: "20px"
+    },
     avatar: {
         width: "60px",
         height: "60px",
@@ -110,7 +114,7 @@ export const useStyles = makeStyles((theme: Theme) => createStyles({
         maxWidth: "1050px",
         width: "90%",
         margin: "0px auto",
-        paddingTop: "10px",
+        paddingBottom: "10px",
     },
     iframe: {
         width: "100%",

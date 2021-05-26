@@ -17,8 +17,8 @@ class JSONDatabaseEngine(DatabaseEngine):
         self._file = TEST_DATABASE_FILE if test_mode else DATABASE_FILE
         self._test_mode = test_mode
 
-        with open(self._file, "r+") as f:
-            self._database = json.load(f)
+        with open(self._file, "r+") as file:
+            self._database = json.load(file)
 
         self._player_view = self._create_materialised_view()
 
@@ -31,14 +31,14 @@ class JSONDatabaseEngine(DatabaseEngine):
     def select_players(self) -> ValuesView[Player]:
         return self._player_view.values()
 
-    def add_player(self, player: Player, commit: bool = True):
+    def add_player(self, player: Player, save: bool = True):
         username = player.username.lower()
         self._database[username] = player.serialise()
         self._player_view[username] = player
-        if commit:
-            self.commit()
+        if save:
+            self.save()
 
-    def commit(self):
+    def save(self):
         if self._test_mode:
             return
 
@@ -54,15 +54,7 @@ def _deserialise_player(data: dict) -> Player:
         data.get("avatar", ""),
         data.get("command_source", ""),
         data.get("last_updated", ""),
-        data.get("loadouts", {
-            "N/A": {
-                "attachments": ["N/A", "N/A", "N/A", "N/A", "N/A"],
-                "game": "",
-                "lastUpdated": "",
-                "source": "",
-                "sourceUrl": "",
-            }
-        }),
+        data.get("loadouts", {}),
         data.get("spreadsheet", {}),
         data.get("views", 0)
     )

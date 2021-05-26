@@ -11,7 +11,7 @@ SHEETS_KEY = "sheets"
 GOOGLE_SHEET_KEY = "google"
 DIFF_CONTROL_PREFIXES = {"---", "+++", "@@"}
 DATA_PATH = "db/admin/change/data"
-ALL_COMMANDS = {'ak47', 'ak74u', 'an94', 'as', 'aug', 'ax-50', 'ax50', 'bruen', 'class', 'cr56', 'crossbow', 'dmr', 'fal', 'fennec', 'ffar', 'fr', 'galil', 'grau', 'grau2', 'guns', 'hdr', 'hdr2', 'holger26', 'kar', 'kar98', 'kar98k', 'kilo', 'krig', 'loadout', 'loadout2', 'loadouts', 'm13', 'm132', 'm16', 'm19', 'm4', 'm42', 'm4a1', 'mac10', 'mk9', 'model', 'mp5', 'mp52', 'mp5snipe', 'mp7', 'mp72', 'oden', 'oden2', 'origin', 'p90', 'pelington', 'pkm', 'pp19', 'r90', 'ram', 'ram-7', 'ram7', 'renetti', 'spr', 'stoner', 'striker', 'uzi', 'vector', 'vlk', 'xm4', 'cwaug'}
+ALL_COMMANDS = ['ak47', 'ak74u', 'an94', 'as', 'aug', 'ax-50', 'ax50', 'bruen', 'class', 'cr56', 'crossbow', 'dmr', 'fal', 'fennec', 'ffar', 'fr', 'galil', 'grau', 'grau2', 'guns', 'hdr', 'hdr2', 'holger26', 'kar', 'kar98', 'kar98k', 'kilo', 'krig', 'loadout', 'loadout2', 'loadouts', 'm13', 'm132', 'm16', 'm19', 'm4', 'm42', 'm4a1', 'mac10', 'mk9', 'model', 'mp5', 'mp52', 'mp5snipe', 'mp7', 'mp72', 'oden', 'oden2', 'origin', 'p90', 'pelington', 'pkm', 'pp19', 'r90', 'ram', 'ram-7', 'ram7', 'renetti', 'spr', 'stoner', 'striker', 'uzi', 'vector', 'vlk', 'xm4', 'cwaug']
 
 
 def main():
