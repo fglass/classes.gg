@@ -13,7 +13,7 @@ export default class Api {
     }
 
     static getSecondsUntilNextUpdate(): Promise<number> {
-        return this.request<number>("/nextUpdate")
+        return this.request<number>("nextUpdate")
     }
 
     static viewPlayer(player: Player) {
