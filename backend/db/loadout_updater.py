@@ -50,7 +50,7 @@ class LoadoutUpdater:
         previous_loadouts = {player.username: player.loadouts.copy() for player in players}
 
         [self._update_player(player) for player in players]
-        update_count = _save_changes(previous_loadouts)
+        update_count = self._save_changes(previous_loadouts)
 
         elapsed_s = time.time() - start_s
         logging.info(f"{update_count} loadouts updated in {elapsed_s:.2f}s")
@@ -63,6 +63,25 @@ class LoadoutUpdater:
 
         if player.spreadsheet:
             self._update_spreadsheet(player)
+
+    def _save_changes(self, previous_loadouts: dict) -> int:
+        update_count = 0
+
+        for player in db.select_players():
+            for weapon, loadout in player.loadouts.items():
+
+                previous_loadout = previous_loadouts[player.username].get(weapon, {})
+                is_updated = loadout["source"] != previous_loadout.get("source")
+
+                if is_updated:
+                    self.recent_updates.append(_to_update_view_model(player, weapon, loadout))
+                    player.last_updated = loadout["lastUpdated"]
+                    update_count += 1
+
+            db.add_player(player, save=False)
+
+        db.save()
+        return update_count
 
     def _update_commands(self, player: Player):
         source = CommandSource(player.command_source)
@@ -101,27 +120,6 @@ class LoadoutUpdater:
 
         logging.debug(f"\t{command}: {response}")
         logging.debug(f"\t\t-> {str(weapon)} ({weapon.game.value}): {[f'{str(a)} {r}%' for a, r in attachments.items()]}")
-
-        self.recent_updates.append(_to_update_view_model(now, player, command, response, source_url, weapon, attachments))
-
-
-def _save_changes(previous_loadouts: dict) -> int:
-    update_count = 0
-
-    for player in db.select_players():
-        for weapon, loadout in player.loadouts.items():
-
-            previous_loadout = previous_loadouts[player.username].get(weapon, {})
-            is_updated = loadout["source"] != previous_loadout.get("source")
-
-            if is_updated:
-                player.last_updated = loadout["lastUpdated"]
-                update_count += 1
-
-        db.add_player(player, save=False)
-
-    db.save()
-    return update_count
 
 
 def _parse_spreadsheets(spreadsheet_meta: dict) -> tuple:
@@ -228,23 +226,15 @@ def _compare_weapon_counterpart(weapon: Weapon, attachments: dict, response: str
     return weapon, attachments
 
 
-def _to_update_view_model(
-    timestamp: str,
-    player: Player,
-    command: str,
-    response: str,
-    source_url: str,
-    weapon: Weapon,
-    attachments: dict
-) -> dict:
+def _to_update_view_model(player: Player, weapon: str, loadout: dict) -> dict:
     return {
-        "attachments": [f"{a.name} {r}%" for a, r in attachments.items()],
-        "command": command if command != response else None,
-        "response": response,
-        "timestamp": timestamp,
-        "source": source_url,
+        "attachments": loadout["attachments"],
+        "game": loadout["game"],
+        "lastUpdated": loadout["lastUpdated"],
+        "source": loadout["source"],
+        "sourceUrl": loadout["sourceUrl"],
         "username": player.username,
-        "weapon": weapon.name
+        "weapon": weapon
     }
 
 
