@@ -12,6 +12,10 @@ export default class Api {
         return this.request<LoadoutMap>(`loadouts/${player.username}`)
     }
 
+    static getSecondsUntilNextUpdate(): Promise<number> {
+        return this.request<number>("/nextUpdate")
+    }
+
     static viewPlayer(player: Player) {
         this.request(`view/${player.username}`, 'POST').catch(err => console.log(err))
     }

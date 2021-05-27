@@ -1,5 +1,7 @@
 import React from "react";
 import TimeAgo from 'timeago-react';
+import Api from "../../model/api";
+import Countdown from "react-countdown";
 import InputBase from "@material-ui/core/InputBase";
 import SearchIcon from "@material-ui/icons/Search";
 import Typography from "@material-ui/core/Typography";
@@ -7,7 +9,7 @@ import { Badge, Icon, Paper } from "@material-ui/core";
 import { Link } from "react-router-dom";
 import { Player } from "../../model/player";
 import { useStyles } from "./styles";
-import {Alert} from "@material-ui/lab";
+import { Alert } from "@material-ui/lab";
 
 interface IProps {
     classes: any
@@ -16,6 +18,7 @@ interface IProps {
 
 interface IState {
     filteredPlayers: Array<Player>
+    nextUpdateSeconds: number
 }
 
 class LandingView extends React.Component<IProps, IState> {
@@ -24,7 +27,14 @@ class LandingView extends React.Component<IProps, IState> {
         super(props);
         this.state = {
             filteredPlayers: this.props.players,
+            nextUpdateSeconds: 0
         }
+    }
+
+    async componentDidMount() {
+        this.setState({
+            nextUpdateSeconds: await Api.getSecondsUntilNextUpdate(),
+        })
     }
 
     componentDidUpdate(prevProps: Readonly<IProps>, prevState: Readonly<IState>, snapshot?: any) {
@@ -49,7 +59,11 @@ class LandingView extends React.Component<IProps, IState> {
 
     render() {
         const { classes, players } = this.props
+        const { nextUpdateSeconds, filteredPlayers } = this.state
+
         const nLoadouts = players.reduce((sum, player) => sum + player.loadoutKeys.length, 0)
+        const nextUpdate = Date.now() + (nextUpdateSeconds * 1000)
+
         return (
             <div className={classes.content}>
                 <div className={classes.header}>
@@ -67,10 +81,10 @@ class LandingView extends React.Component<IProps, IState> {
                 </div>
                 <div>
                     <Alert variant="filled" severity="info" className={classes.alert}>
-                        Loadouts are now auto-updated hourly!
+                        Checking loadouts in {nextUpdateSeconds !== 0 ? <Countdown date={nextUpdate} /> : "00:00:00:00"}
                     </Alert>
                     <div className={classes.grid}>
-                        {this.state.filteredPlayers.map(player =>
+                        {filteredPlayers.map(player =>
                             <PlayerCard classes={classes} player={player} key={player.username} />
                         )}
                     </div>

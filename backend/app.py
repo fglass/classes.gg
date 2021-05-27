@@ -1,6 +1,7 @@
 import atexit
 import logging
 from apscheduler.schedulers.background import BackgroundScheduler
+from datetime import datetime
 from db.loadout_updater import LoadoutUpdater
 from db.json_database_engine import db
 from flask import Flask, Blueprint, abort, jsonify
@@ -37,17 +38,25 @@ def get_player_loadouts(username: str):
     return player.loadouts if player else abort(404)
 
 
+@api.route("/nextUpdate")
+def get_seconds_until_next_update():
+    job = scheduler.get_jobs()[0]
+    next_update = job.next_run_time.replace(tzinfo=None)
+    time_remaining = next_update - datetime.now()
+    return jsonify(time_remaining.total_seconds())
+
+
+@api.route("/recentUpdates")
+def get_recent_updates():
+    return jsonify(list(reversed(loadout_updater.recent_updates)))
+
+
 @api.route("/view/<username>", methods=['POST'])
 def view_player(username: str):
     sanitised_username = escape(username.lower())
     player = db.select_player(sanitised_username)
     player.views += 1
     return jsonify(success=True)
-
-
-@api.route("/recentUpdates")
-def get_recent_updates():
-    return jsonify(list(reversed(loadout_updater.recent_updates)))
 
 
 scheduler.remove_all_jobs()

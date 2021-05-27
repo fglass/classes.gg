@@ -85,7 +85,7 @@ export const useStyles = makeStyles((theme: Theme) => createStyles({
     },
     badgePosition: {
         top: "17px",
-        right: "20px"
+        right: "22px"
     },
     avatar: {
         width: "60px",
