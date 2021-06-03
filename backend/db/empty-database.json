@@ -1,4 +1,13 @@
 {
+  "almxnd": {
+    "avatar": "https://static-cdn.jtvnw.net/jtv_user_pictures/6f753f34-cb15-4c61-9cba-615be31cd523-profile_image-300x300.png",
+    "command_source": "nightbot",
+    "last_updated": "2021-06-03T22:21:13.517286",
+    "loadouts": {},
+    "spreadsheet": {},
+    "username": "Almxnd",
+    "views": 0
+  },
   "aydan": {
     "avatar": "https://static-cdn.jtvnw.net/jtv_user_pictures/3c7e4307-f540-4415-84b3-513ce143f0ae-profile_image-300x300.png",
     "command_source": "nightbot",
@@ -13,6 +22,15 @@
     },
     "username": "Aydan",
     "views": 6484
+  },
+  "blazt": {
+    "avatar": "https://static-cdn.jtvnw.net/jtv_user_pictures/1ab57663-9ba7-4a25-83e4-783571f804f6-profile_image-300x300.png",
+    "command_source": "nightbot",
+    "last_updated": "2021-06-03T22:25:41.376686",
+    "loadouts": {},
+    "spreadsheet": {},
+    "username": "Blazt",
+    "views": 0
   },
   "bobbypoffgaming": {
     "avatar": "https://static-cdn.jtvnw.net/jtv_user_pictures/6b2fe2bd-4e73-4bef-a958-7fd217ca5423-profile_image-300x300.png",
@@ -51,6 +69,15 @@
     },
     "username": "Crowder",
     "views": 1613
+  },
+  "destroy": {
+    "avatar": "https://static-cdn.jtvnw.net/jtv_user_pictures/b38bc8a1-9562-4a93-a552-e9f96d23f05d-profile_image-300x300.png",
+    "command_source": "nightbot",
+    "last_updated": "2021-06-03T22:21:03.015040",
+    "loadouts": {},
+    "spreadsheet": {},
+    "username": "Destroy",
+    "views": 0
   },
   "diazbiffle": {
     "avatar": "https://static-cdn.jtvnw.net/jtv_user_pictures/01f7c510-ee7a-4782-8468-d6548bac9c1a-profile_image-300x300.png",
@@ -186,14 +213,14 @@
     "username": "Nadeshot",
     "views": 378
   },
-  "nickmercs": {
-    "avatar": "https://static-cdn.jtvnw.net/jtv_user_pictures/ff13760d-d795-49d9-8f3f-f05035930c81-profile_image-300x300.png",
-    "command_source": "streamlabs",
-    "last_updated": "2020-12-30T18:05:06.632870",
+  "newbz": {
+    "avatar": "https://static-cdn.jtvnw.net/jtv_user_pictures/3e71db15-153f-46f0-a56f-2068362baa4f-profile_image-300x300.png",
+    "command_source": "nightbot",
+    "last_updated": "2021-06-03T22:24:12.742218",
     "loadouts": {},
     "spreadsheet": {},
-    "username": "NICKMERCS",
-    "views": 2557
+    "username": "newbz",
+    "views": 0
   },
   "rated": {
     "avatar": "https://static-cdn.jtvnw.net/jtv_user_pictures/8258e85a-ea5c-47d9-986a-3b756605c4c0-profile_image-300x300.png",
@@ -207,6 +234,20 @@
       ]
     },
     "username": "Rated",
+    "views": 0
+  },
+  "scummn": {
+    "avatar": "https://static-cdn.jtvnw.net/jtv_user_pictures/a1ab18a3-c807-4ad8-bdee-87d8b9a7be49-profile_image-300x300.png",
+    "command_source": "nightbot",
+    "last_updated": "2021-06-03T22:27:57.186162",
+    "loadouts": {},
+    "spreadsheet": {
+      "id": "18KTt5UtHhY5nWqZt7GEMcUPM4UJjkoRqgamnbFAuFaM",
+      "sheets": [
+        "0"
+      ]
+    },
+    "username": "ScummN",
     "views": 0
   },
   "scump": {
@@ -232,6 +273,35 @@
     "spreadsheet": {},
     "username": "Spratt",
     "views": 205
+  },
+  "stukawaki": {
+    "avatar": "https://static-cdn.jtvnw.net/jtv_user_pictures/d85a3681-7e7e-4331-8ddf-29d8bd532d3b-profile_image-300x300.png",
+    "command_source": "nightbot",
+    "last_updated": "2021-06-03T22:26:41.563264",
+    "loadouts": {},
+    "spreadsheet": {},
+    "username": "stukawaki",
+    "views": 0
+  },
+  "superevan": {
+    "avatar": "https://static-cdn.jtvnw.net/jtv_user_pictures/fd667d57-b424-4732-8095-a2e966333776-profile_image-300x300.png",
+    "command_source": "nightbot",
+    "last_updated": "2021-06-03T22:23:22.783066",
+    "loadouts": {},
+    "spreadsheet": {
+      "id": "1yYn-hpUQZceuG_n_-4Sd1zhmtAncWODiuXArz6Q7VH8",
+      "sheets": [
+        "0",
+        "1235473763",
+        "770076574",
+        "921206503",
+        "1467419809",
+        "1042881426",
+        "372278718"
+      ]
+    },
+    "username": "SuperEvan",
+    "views": 0
   },
   "swagg": {
     "avatar": "https://static-cdn.jtvnw.net/jtv_user_pictures/swagg-profile_image-a0898c1b75f6094d-300x300.png",
