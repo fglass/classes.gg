@@ -81,7 +81,7 @@ class LandingView extends React.Component<IProps, IState> {
                 </div>
                 <div>
                     <Alert variant="filled" severity="info" className={classes.alert}>
-                        Checking loadouts in {nextUpdateSeconds !== 0 ? <Countdown date={nextUpdate} /> : "00:00:00:00"}
+                        Updating loadouts in {nextUpdateSeconds !== 0 ? <Countdown date={nextUpdate} /> : "00:00:00:00"}
                     </Alert>
                     <div className={classes.grid}>
                         {filteredPlayers.map(player =>

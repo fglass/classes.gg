@@ -1,5 +1,7 @@
 import { createStyles, fade, makeStyles, Theme } from "@material-ui/core/styles";
 
+const DEFAULT_BORDER = "1px solid rgba(255, 255, 255, 0.12)"
+
 export const useStyles = makeStyles((theme: Theme) => createStyles({
     content: {
         paddingBottom: "4rem",
@@ -8,6 +10,7 @@ export const useStyles = makeStyles((theme: Theme) => createStyles({
         paddingBottom: theme.spacing(3),
         paddingTop: theme.spacing(1),
         backgroundColor: theme.palette.background.paper,
+        borderBottom: DEFAULT_BORDER,
     },
     heading: {
         fontFamily: "Bebas Neue",
@@ -40,8 +43,7 @@ export const useStyles = makeStyles((theme: Theme) => createStyles({
         width: "90%",
         margin: "auto",
         marginTop: "15px",
-        border: "1px solid",
-        borderColor: "rgba(255, 255, 255, 0.12)",
+        border: DEFAULT_BORDER,
     },
     searchIcon: {
         height: "100%",
@@ -72,7 +74,7 @@ export const useStyles = makeStyles((theme: Theme) => createStyles({
         padding: "10px 0px 15px 0px",
     },
     card: {
-        width: "160px",
+        width: "162px",
         height: "147px",
         borderRadius: "7px",
         textAlign: 'center',
@@ -118,7 +120,7 @@ export const useStyles = makeStyles((theme: Theme) => createStyles({
     },
     iframe: {
         width: "100%",
-        border: "1px solid rgba(255, 255, 255, 0.12)",
+        border: DEFAULT_BORDER,
         borderRadius: "7px",
     }
 }));
