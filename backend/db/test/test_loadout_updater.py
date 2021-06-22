@@ -1,4 +1,4 @@
-from db.loadout_updater import _find_delimiter, find_weapon, _find_attachments, _compare_weapon_counterpart
+from db.loadout_updater import _find_delimiter, find_weapon, _find_attachments, _compare_weapon_counterpart, _split_on_and
 from model.weapon.attachment import Muzzle, Barrel, Optic, Underbarrel, Ammunition
 from model.weapon.weapon import AssaultRifle, SubmachineGun, TacticalRifle
 
@@ -45,3 +45,12 @@ def test_find_comma():
 def test_find_hyphen():
     response = KILO_RESPONSE.replace(",", "-")
     assert "-" == _find_delimiter(response)
+
+
+def test_split_on_and():
+    joined_attachments = ["60 Round Mags and Stippled Grip Tape"]
+    separated_attachments = ["60 Round Mags", "Stippled Grip Tape"]
+
+    assert separated_attachments == _split_on_and(joined_attachments)
+    assert separated_attachments == _split_on_and(separated_attachments)
+

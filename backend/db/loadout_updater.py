@@ -161,10 +161,10 @@ def find_weapon(command: str) -> Optional[Weapon]:
             return weapon
 
 
-def _find_attachments(valid_attachments: list, response: str) -> dict:  # TODO: one per attachment category
+def _find_attachments(valid_attachments: list, response: str) -> dict:  # TODO: one per attachment category?
     attachments = {}
-    delimiter = _find_delimiter(response)
-    sequences = response.split(delimiter)
+    sequences = _split_by_delimiter(response)
+    sequences = _split_on_and(sequences)
 
     if len(sequences) > MAX_SEQUENCES or len(sequences) < MIN_ATTACHMENTS:
         return attachments
@@ -182,8 +182,24 @@ def _find_attachments(valid_attachments: list, response: str) -> dict:  # TODO: 
     return attachments
 
 
+def _split_by_delimiter(response: str) -> list:
+    delimiter = _find_delimiter(response)
+    return response.split(delimiter)
+
+
 def _find_delimiter(response: str) -> str:
     return max(DELIMITERS, key=lambda delimiter: response.count(delimiter))
+
+
+def _split_on_and(sequences: list) -> list:
+    and_token = " and "
+    new_sequences = []
+
+    for sequence in sequences:
+        parts = sequence.split(and_token)
+        new_sequences.extend(parts)
+
+    return new_sequences
 
 
 def _find_attachment(sequence: str, valid_attachments: list) -> Tuple[Optional[Attachment], int]:
@@ -195,14 +211,19 @@ def _find_attachment(sequence: str, valid_attachments: list) -> Tuple[Optional[A
     max_ratio = 0
 
     for attachment in valid_attachments:
-
-        if sequence == str(attachment).lower():
-            return attachment, 100
-
         for alias in attachment.aliases:
+
+            if alias == sequence:  # Exact match
+                return attachment, 100
+
             ratio = fuzz.partial_ratio(sequence, alias)
 
             if ratio >= max_ratio:
+
+                is_same_but_shorter = ratio == max_ratio and len(str(attachment)) < len(str(matched_attachment or ""))  # TODO: adjust?
+                if is_same_but_shorter:
+                    continue
+
                 matched_attachment = attachment
                 max_ratio = ratio
 
