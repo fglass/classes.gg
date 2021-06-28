@@ -23,9 +23,6 @@ RATIO_THRESHOLD = 60
 ALL_WEAPONS = list(AssaultRifle) + list(LightMachineGun) + list(MarksmanRifle) + list(Handgun) + list(Shotgun) + \
               list(SniperRifle) + list(SubmachineGun) + list(TacticalRifle)
 
-WEAPON_COMMANDS = list(ALL_COMMANDS)  # TODO: use weapon aliases instead
-[WEAPON_COMMANDS.remove(c) for c in {"class", "guns", "loadout", "loadout2", "loadouts"}]
-
 DUAL_GAME_WEAPONS: Dict[Weapon, Weapon] = {
     AssaultRifle.AK_47: AssaultRifle.AK_47_CW,
     AssaultRifle.AK_47_CW: AssaultRifle.AK_47,
@@ -89,12 +86,13 @@ class LoadoutUpdater:
 
         current_commands = source.query(player)
 
-        for command in WEAPON_COMMANDS:
+        for weapon in ALL_WEAPONS:
+            for command in weapon.aliases:
 
-            response = current_commands[command] if command in current_commands else current_commands.get("!" + command)
+                response = current_commands[command] if command in current_commands else current_commands.get("!" + command)
 
-            if response is not None:
-                self._update_loadout(player, command, response, source_url)
+                if response is not None:
+                    self._update_loadout(player, command, response, source_url)
 
     def _update_spreadsheet(self, player: Player):
         for rows, source_url in _parse_spreadsheets(player.spreadsheet):

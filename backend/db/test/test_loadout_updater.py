@@ -95,8 +95,8 @@ def test_against_legacy_database():
     assert 91 == total == success
 
 
-def _sanitise_legacy_attachment(a: str) -> str:
-    return a \
+def _sanitise_legacy_attachment(attachment: str) -> str:
+    return attachment \
         .lower() \
         .replace("\"", "") \
         .replace("20.3 takedown", "takedown") \

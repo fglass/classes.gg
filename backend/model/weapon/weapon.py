@@ -31,49 +31,49 @@ class AssaultRifle(Weapon):
     CR_56_AMAX = "CR-56 AMAX", Game.MODERN_WARFARE, ["amax", "cr56", "galil"]
     FAL = "FAL", Game.MODERN_WARFARE
     FR = "FR 5.56", Game.MODERN_WARFARE, ["famas", "fr"]
-    GRAU = "Grau 5.56", Game.MODERN_WARFARE, ["grau"]
+    GRAU = "Grau 5.56", Game.MODERN_WARFARE, ["grau", "grau2"]
     KILO_141 = "Kilo 141", Game.MODERN_WARFARE, ["kilo"]
-    M4A1 = "M4A1", Game.MODERN_WARFARE, ["m4"]
-    M13 = "M13", Game.MODERN_WARFARE
-    ODEN = "Oden", Game.MODERN_WARFARE
-    RAM_7 = "RAM-7", Game.MODERN_WARFARE, ["ram"]
+    M4A1 = "M4A1", Game.MODERN_WARFARE, ["m4", "m42"]
+    M13 = "M13", Game.MODERN_WARFARE, ["m132"]
+    ODEN = "Oden", Game.MODERN_WARFARE, ["oden2"]
+    RAM_7 = "RAM-7", Game.MODERN_WARFARE, ["ram", "ram7"]
     AS_VAL = "AS VAL", Game.MODERN_WARFARE, ["val"]
     SCAR = "FN Scar 17", Game.MODERN_WARFARE, ["scar"]
 
-    AK_47_CW = "AK-47", Game.COLD_WAR, ["ak", "ak47"]
+    AK_47_CW = "AK-47", Game.COLD_WAR, ["ak", "ak47", "cwak", "cwak47"]
     FARA = "FARA 83", Game.COLD_WAR, ["fara"]
     FFAR_1 = "FFAR 1", Game.COLD_WAR, ["ffar"]
     GROZA = "Groza", Game.COLD_WAR
     KRIG_6 = "Krig 6", Game.COLD_WAR, ["krig"]
     QBZ = "QBZ-83", Game.COLD_WAR, ["qbz"]
-    XM4 = "XM4", Game.COLD_WAR
+    XM4 = "XM4", Game.COLD_WAR, ["cwm4"]
 
 
 class SubmachineGun(Weapon):
     AUG = "AUG", Game.MODERN_WARFARE
     FENNEC = "Fennec", Game.MODERN_WARFARE, ["vector"]
-    MP5 = "MP5", Game.MODERN_WARFARE
-    MP7 = "MP7", Game.MODERN_WARFARE
+    MP5 = "MP5", Game.MODERN_WARFARE, ["mp52", "mp5snipe"]
+    MP7 = "MP7", Game.MODERN_WARFARE, ["mp72"]
     P90 = "P90", Game.MODERN_WARFARE, ["p-90"]
     PP19_BIZON = "PP19 Bizon", Game.MODERN_WARFARE, ["bizon", "pp19"]
     STRIKER_45 = "Striker 45", Game.MODERN_WARFARE, ["striker"]
     UZI = "Uzi", Game.MODERN_WARFARE
     ISO = "ISO", Game.MODERN_WARFARE
 
-    AK_74U = "AK-74u", Game.COLD_WAR, ["74", "74u"]
+    AK_74U = "AK-74u", Game.COLD_WAR, ["ak74u", "74", "74u"]
     BULLFROG = "Bullfrog", Game.COLD_WAR
     KSP_45 = "KSP 45", Game.COLD_WAR, ["ksp"]
     LC10 = "LC10", Game.COLD_WAR, ["lc"]
     MAC_10 = "MAC-10", Game.COLD_WAR, ["mac"]
     MILANO_821 = "Milano 821", Game.COLD_WAR, ["milano"]
-    MP5_CW = "MP5", Game.COLD_WAR
+    MP5_CW = "MP5", Game.COLD_WAR, ["cwmp5"]
     PPSH = "PPSh-41", Game.COLD_WAR, ["ppsh"]
 
 
 class LightMachineGun(Weapon):
-    BRUEN = "MK9 Bruen", Game.MODERN_WARFARE, ["bruen"]
+    BRUEN = "MK9 Bruen", Game.MODERN_WARFARE, ["bruen", "mk9"]
     FINN = "FiNN LMG", Game.MODERN_WARFARE, ["finn"]
-    HOLGER = "Holger-26", Game.MODERN_WARFARE, ["holder"]
+    HOLGER = "Holger-26", Game.MODERN_WARFARE, ["holger", "holger26"]
     M60 = "M60", Game.COLD_WAR
     M91 = "M91", Game.MODERN_WARFARE
     MG34 = "MG35", Game.MODERN_WARFARE, ["mg"]
@@ -84,9 +84,9 @@ class LightMachineGun(Weapon):
 
 
 class SniperRifle(Weapon):
-    AX_50 = "AX-50", Game.MODERN_WARFARE, ["ax"]
+    AX_50 = "AX-50", Game.MODERN_WARFARE, ["ax", "ax50"]
     DRAGUNOV = "Dragunov", Game.MODERN_WARFARE
-    HDR = "HDR", Game.MODERN_WARFARE
+    HDR = "HDR", Game.MODERN_WARFARE, ["hdr2"]
     PELINGTON_703 = "Pelington 703", Game.COLD_WAR, ["pelington"]
     RYTEC_AMR = "Rytec AMR", Game.MODERN_WARFARE, ["rytec"]
 
@@ -94,14 +94,14 @@ class SniperRifle(Weapon):
 class MarksmanRifle(Weapon):
     CROSSBOW = "Crossbow", Game.MODERN_WARFARE, ["cbow"]
     EBR = "EBR-14", Game.MODERN_WARFARE, ["ebr"]
-    KAR98K = "Kar98k", Game.MODERN_WARFARE, ["kar"]
+    KAR98K = "Kar98k", Game.MODERN_WARFARE, ["kar", "kar98"]
     MK2_CARBINE = "MK2 Carbine", Game.MODERN_WARFARE, ["mk2", "carbine"]
     SKS = "SKS", Game.MODERN_WARFARE
     SPR_208 = "SP-R 208", Game.MODERN_WARFARE, ["spr", "sp-r"]
 
 
 class TacticalRifle(Weapon):
-    AUG_CW = "AUG", Game.COLD_WAR
+    AUG_CW = "AUG", Game.COLD_WAR, ["cwaug"]
     CARV = "CARV.2", Game.COLD_WAR, ["carv"]
     M16 = "M16", Game.COLD_WAR
     DMR = "DMR 14", Game.COLD_WAR, ["dmr"]
@@ -111,7 +111,7 @@ class TacticalRifle(Weapon):
 class Shotgun(Weapon):
     MODEL_680 = "Model 680", Game.MODERN_WARFARE, ["model"]
     ORIGIN_12_SHOTGUN = "Origin 12 Shotgun", Game.MODERN_WARFARE, ["origin"]
-    R9 = "R9-0 Shotgun", Game.MODERN_WARFARE, ["r9"]
+    R9 = "R9-0 Shotgun", Game.MODERN_WARFARE, ["r9", "r90"]
     VLK_ROGUE = "VLK Rogue", Game.MODERN_WARFARE, ["vlk"]
 
 
