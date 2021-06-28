@@ -141,7 +141,7 @@ def _find_loadout(command: str, response: str) -> Optional[Tuple[Weapon, dict]]:
     if len(weapon.attachments) == 0:
         logging.debug(f"\t{weapon} data missing")
 
-    attachments = _find_attachments(weapon.attachments, response)
+    attachments = _find_attachments(weapon, response)
 
     if weapon in DUAL_GAME_WEAPONS:
         weapon, attachments = _compare_weapon_counterpart(weapon, attachments, response)
@@ -161,17 +161,20 @@ def find_weapon(command: str) -> Optional[Weapon]:
             return weapon
 
 
-def _find_attachments(valid_attachments: list, response: str) -> dict:  # TODO: one per attachment category?
+def _find_attachments(weapon: Weapon, response: str) -> dict:  # TODO: one per attachment category?
     attachments = {}
+
+    response = _slice_response_if_dual_game(weapon, response)
     sequences = _split_by_delimiter(response)
-    sequences = _split_on_and(sequences)
+    sequences = _split_on_token(sequences, " and ")
+    sequences = _split_on_token(sequences, " & ")
 
     if len(sequences) > MAX_SEQUENCES or len(sequences) < MIN_ATTACHMENTS:
         return attachments
 
     for sequence in reversed(sequences):
 
-        attachment, ratio = _find_attachment(sequence, valid_attachments)
+        attachment, ratio = _find_attachment(sequence, weapon.attachments)
 
         if attachment is not None:
             attachments[attachment] = ratio
@@ -180,6 +183,13 @@ def _find_attachments(valid_attachments: list, response: str) -> dict:  # TODO: 
             break
 
     return attachments
+
+
+def _slice_response_if_dual_game(weapon: Weapon, response: str) -> str:
+    if weapon in DUAL_GAME_WEAPONS and "MW" in response and "CW" in response:
+        index = max(response.index("MW"), response.index("CW"))
+        response = response[:index]
+    return response
 
 
 def _split_by_delimiter(response: str) -> list:
@@ -191,12 +201,11 @@ def _find_delimiter(response: str) -> str:
     return max(DELIMITERS, key=lambda delimiter: response.count(delimiter))
 
 
-def _split_on_and(sequences: list) -> list:
-    and_token = " and "
+def _split_on_token(sequences: list, token: str) -> list:
     new_sequences = []
 
     for sequence in sequences:
-        parts = sequence.split(and_token)
+        parts = sequence.split(token)
         new_sequences.extend(parts)
 
     return new_sequences
@@ -220,8 +229,10 @@ def _find_attachment(sequence: str, valid_attachments: list) -> Tuple[Optional[A
 
             if ratio >= max_ratio:
 
-                is_same_but_shorter = ratio == max_ratio and len(str(attachment)) < len(str(matched_attachment or ""))  # TODO: adjust?
-                if is_same_but_shorter:
+                is_same_ratio = ratio == max_ratio
+                has_shorter_name = len(str(attachment)) < len(str(matched_attachment or ""))
+
+                if is_same_ratio and has_shorter_name:
                     continue
 
                 matched_attachment = attachment
@@ -235,7 +246,7 @@ def _find_attachment(sequence: str, valid_attachments: list) -> Tuple[Optional[A
 
 def _compare_weapon_counterpart(weapon: Weapon, attachments: dict, response: str):
     weapon_counterpart = DUAL_GAME_WEAPONS[weapon]
-    other_attachments = _find_attachments(weapon_counterpart.attachments, response)
+    other_attachments = _find_attachments(weapon_counterpart, response)
 
     if len(other_attachments) >= len(attachments):
         first_total = sum(attachments.values())

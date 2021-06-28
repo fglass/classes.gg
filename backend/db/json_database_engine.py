@@ -7,7 +7,7 @@ from typing import Optional, ValuesView
 ENVIRONMENT = os.environ.get("ENVIRONMENT", "DEV")
 IS_PROD = ENVIRONMENT == "PROD"
 DATABASE_FILE = "/database/database.json" if IS_PROD else "db/database.json"
-TEST_DATABASE_FILE = "db/test/test_database.json"
+TEST_DATABASE_FILE = "db/test/test-database.json"
 
 
 class JSONDatabaseEngine(DatabaseEngine):

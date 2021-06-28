@@ -25,7 +25,7 @@ class Attachment(Enum):
 
 
 class Ammunition(Attachment):
-    AE_32_ROUND_MAGS_41 = ".41 AE 32-Round Mags"
+    AE_32_ROUND_MAGS_41 = ".41 AE 32-Round Mags", ["41 ae", ".41 ae magazine"]
     AUTO_30_ROUND_MAGS_10MM = "10mm Auto 30-Round Mags"
     BAKELITE_RND_40 = "Bakelite 40 Rnd"
     BAKELITE_RND_60 = "Bakelite 60 Rnd"
@@ -190,7 +190,7 @@ class Barrel(Attachment):
     FSS_MINI = "FSS Mini"
     FSS_NIGHTSHADE = "FSS Nightshade"
     FSS_PARA_16 = "16 FSS Para"
-    FSS_RANGER = "FSS Ranger"
+    FSS_RANGER = "FSS Ranger", ["ranger barrel"]
     FSS_RECON = "FSS RECON"
     FSS_REVOLUTION = "FSS Revolution"
     FSS_STRIKE = "FSS STRIKE"
@@ -206,7 +206,7 @@ class Barrel(Attachment):
     FTAC_VC_8_HARRIER_ADVERSE = "FTAC VC-8 Harrier Adverse"
     GRU_COMPOSITE = "GRU Composite"
     GRU_CUT_DOWN = "GRU Cut Down"
-    HDR_PRO_269 = "26.9 HDR Pro"
+    HDR_PRO_269 = "26.9 HDR Pro", ["hdr pro", "26.9 pro barrel"]
     HEAVY_BARREL_259 = "25.9 Heavy Barrel", ["25.9 barrel"]
     ISO_140MM_CQB = "ISO 140mm CQB"
     LIBERATOR = "Liberator"
@@ -216,7 +216,7 @@ class Barrel(Attachment):
     M91_INFANTRY = "M91 Infantry"
     M91_SPECIAL_FORCES = "M91 Special Forces"
     MATCH_GRADE = "Match Grade"
-    MONOLITHIC_INTEGRAL_SUPPRESSOR = "Monolithic Integral Suppressor"
+    MONOLITHIC_INTEGRAL_SUPPRESSOR = "Monolithic Integral Suppressor", ["mono integral", "monolithic integral", "integral suppressor"]
     ODEN_FACTORY_420MM = "Oden Factory 420mm"
     ODEN_FACTORY_730MM = "Oden Factory 730mm"
     ODEN_FACTORY_810MM = "Oden Factory 810mm", ["810mm"]
@@ -303,7 +303,7 @@ class Laser(Attachment):
 
 
 class Muzzle(Attachment):
-    AGENCY_SUPPRESSOR = "Agency Suppressor", ["agency silencer"]
+    AGENCY_SUPPRESSOR = "Agency Suppressor", ["agency silencer", "agency supressor"]
     AN_94_SONIC_BRAKE = "AN-94 Sonic Brake"
     BAYONET = "BAYONET"
     COLOSSUS_SUPPRESSOR = "Colossus Suppressor"
@@ -335,7 +335,7 @@ class Optic(Attachment):
     APX5_HOLOGRAPHIC_SIGHT = "APX5 Holographic Sight", ["apx5 holo"]
     AXIAL_ARMS_3X = "Axial Arms 3x"
     CANTED_HYBRID = "Canted Hybrid"
-    CORP_COMBAT_HOLO_SIGHT = "Corp Combat Holo Sight", ["corp combat"]
+    CORP_COMBAT_HOLO_SIGHT = "Corp Combat Holo Sight", ["corp combat", "holographic sight", "holo sight", "holo"]
     CRONEN_2X2_ELITE = "Cronen 2x2 Elite"
     CRONEN_C480_PRO_OPTIC = "Cronen C480 Pro Optic"
     CRONEN_LP945_MINI_REFLEX = "Cronen LP945 Mini Reflex"
@@ -395,17 +395,17 @@ class Perk(Attachment):
 class RearGrip(Attachment):
     AIRBORNE_ELASTIC_GRIP = "Airborne Elastic Grip"
     AIRBORNE_ELASTIC_WRAP = "Airborne Elastic Wrap"
-    CRONEN_SNIPER_ELITE = "Cronen Sniper Elite"
+    CRONEN_SNIPER_ELITE = "Cronen Sniper Elite", ["sniper cronen elite"]
     DROPSHOT_WRAP = "Dropshot Wrap"
     FIELD_TAPE = "Field Tape"
     FSS_VICE_ISO_GRIP = "FSS Vice ISO Grip"
     FTAC_ELITE_ISO_GRIP = "FTAC Elite ISO Grip"
     FTAC_G_5_EXO = "FTAC G-5 EXO"
-    FTAC_RUBBER = "FTAC R-89 Rubber"
+    FTAC_RUBBER = "FTAC R-89 Rubber", ["rubberized grip"]
     GRANULATED_GRIP_TAPE = "Granulated Grip Tape"
     GRU_ELASTIC_WRAP = "GRU Elastic Wrap"
     ISO_TAC_FORM = "ISO Tac-Form"
-    RUBBERIZED_GRIP_TAPE = "Rubberized Grip Tape"
+    RUBBERIZED_GRIP_TAPE = "Rubberized Grip Tape", ["rubberized grip"]
     SASR_JUNGLE_GRIP = "SASR Jungle Grip"
     SERPENT_GRIP = "Serpent Grip"
     SERPENT_WRAP = "Serpent Wrap"
@@ -546,7 +546,7 @@ class Underbarrel(Attachment):
     RANGER_FOREGRIP = "Ranger Foregrip"
     RED_CELL_FOREGRIP = "Red Cell Foregrip"
     RUBBERIZED_GRIP_TAPE = "Rubberized Grip Tape"
-    SFOD_SPEEDGRIP = "SFOD Speedgrip"
+    SFOD_SPEEDGRIP = "SFOD Speedgrip", ["sfod foregrip"]
     SNATCH_GRIP = "Snatch Grip"
     SPETSNAZ_GRIP = "Spetsnaz Grip"
     SPETSNAZ_SPEEDGRIP = "Spetsnaz Speedgrip"
