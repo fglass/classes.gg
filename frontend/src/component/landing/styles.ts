@@ -112,12 +112,6 @@ export const useStyles = makeStyles((theme: Theme) => createStyles({
         maxWidth: "1050px",
         width: "90%",
     },
-    embed: {
-        maxWidth: "1050px",
-        width: "90%",
-        margin: "0px auto",
-        paddingBottom: "10px",
-    },
     iframe: {
         width: "100%",
         border: DEFAULT_BORDER,

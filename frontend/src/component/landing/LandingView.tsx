@@ -88,7 +88,6 @@ class LandingView extends React.Component<IProps, IState> {
                             <PlayerCard classes={classes} player={player} key={player.username} />
                         )}
                     </div>
-                    <YouTubeEmbed classes={classes} />
                 </div>
             </div>
         )
@@ -132,24 +131,6 @@ const PlayerCard = (props: any) => {
                     </Paper>
                 </Link>
             </Badge>
-        </div>
-    )
-}
-
-const EMBED_ID = "g3_IDtnoLBA"
-
-const YouTubeEmbed = (props: any) => {
-    const classes = props.classes
-    return (
-        <div className={classes.embed}>
-            <iframe
-                className={classes.iframe}
-                title="Embedded video"
-                src={`https://www.youtube.com/embed/${EMBED_ID}`}
-                frameBorder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-            />
         </div>
     )
 }
