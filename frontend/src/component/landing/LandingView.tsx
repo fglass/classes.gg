@@ -124,7 +124,16 @@ const PlayerCard = (props: any) => {
             >
                 <Link to={`/${player.username}`}>
                     <Paper className={classes.card} variant="outlined">
-                        <img className={classes.avatar} src={player.avatar} alt="" />
+                        <img
+                            className={classes.avatar}
+                            src={player.avatar}
+                            alt=""
+                            onError={(e) => {
+                                const target = e.target as HTMLImageElement;
+                                target.onerror = null;
+                                target.src="images/unknown-user.png"
+                            }}
+                        />
                         <Typography>{player.username}</Typography>
                         <Icon className={classes.calendarIcon}>calendar_today</Icon>
                         <TimeAgo className={classes.timeAgo} datetime={player.lastUpdated + " UTC"} live={false} />

@@ -193,7 +193,16 @@ class PlayerView extends React.Component<IProps, IState> {
 
                         <Grid container item className={classes.topContainer}>
                              <Grid item>
-                                <img className={classes.avatar} src={player.avatar} alt="Avatar" />
+                                 <img
+                                    className={classes.avatar}
+                                    src={player.avatar}
+                                    alt=""
+                                    onError={(e) => {
+                                        const target = e.target as HTMLImageElement;
+                                        target.onerror = null;
+                                        target.src="images/unknown-user.png"
+                                    }}
+                                />
                             </Grid>
                             <Grid item className={classes.titleGridItem}>
                                 <Typography className={classes.title} variant="h4">

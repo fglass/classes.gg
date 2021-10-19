@@ -6,7 +6,7 @@ from datetime import datetime
 from typing import Optional, Tuple, Dict
 from fuzzywuzzy import fuzz
 from model.command.command_source import CommandSource
-from db.admin.change.detect_changes import ALL_COMMANDS, SHEETS_KEY
+from db.admin.change.detect_changes import SHEETS_KEY
 from db.json_database_engine import db
 from model.player import Player
 from model.weapon.attachment import *

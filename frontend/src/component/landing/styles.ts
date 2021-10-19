@@ -111,10 +111,5 @@ export const useStyles = makeStyles((theme: Theme) => createStyles({
         marginTop: "10px",
         maxWidth: "1050px",
         width: "90%",
-    },
-    iframe: {
-        width: "100%",
-        border: DEFAULT_BORDER,
-        borderRadius: "7px",
     }
 }));
