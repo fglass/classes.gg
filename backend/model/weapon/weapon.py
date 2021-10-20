@@ -41,6 +41,7 @@ class AssaultRifle(Weapon):
     SCAR = "FN Scar 17", Game.MODERN_WARFARE, ["scar"]
 
     AK_47_CW = "AK-47", Game.COLD_WAR, ["ak", "ak47", "cwak", "cwak47"]
+    EM2 = "EM2", Game.COLD_WAR, ["em"]
     FARA = "FARA 83", Game.COLD_WAR, ["fara"]
     FFAR_1 = "FFAR 1", Game.COLD_WAR, ["ffar"]
     GROZA = "Groza", Game.COLD_WAR
@@ -66,7 +67,8 @@ class SubmachineGun(Weapon):
     LC10 = "LC10", Game.COLD_WAR, ["lc"]
     MAC_10 = "MAC-10", Game.COLD_WAR, ["mac"]
     MILANO_821 = "Milano 821", Game.COLD_WAR, ["milano"]
-    MP5_CW = "MP5", Game.COLD_WAR, ["cwmp5"]
+    MP5_CW = "MP5", Game.COLD_WAR, ["cwmp5", "mp5cw"]
+    OTS_9 = "OTs 9", Game.COLD_WAR, ["ots", "ots9"]
     PPSH = "PPSh-41", Game.COLD_WAR, ["ppsh"]
 
 
@@ -74,12 +76,14 @@ class LightMachineGun(Weapon):
     BRUEN = "MK9 Bruen", Game.MODERN_WARFARE, ["bruen", "mk9"]
     FINN = "FiNN LMG", Game.MODERN_WARFARE, ["finn"]
     HOLGER = "Holger-26", Game.MODERN_WARFARE, ["holger", "holger26"]
-    M60 = "M60", Game.COLD_WAR
     M91 = "M91", Game.MODERN_WARFARE
-    MG34 = "MG35", Game.MODERN_WARFARE, ["mg"]
+    MG34 = "MG34", Game.MODERN_WARFARE
     PKM = "PKM", Game.MODERN_WARFARE
-    RPD = "RPD", Game.COLD_WAR
     SA87 = "SA87", Game.MODERN_WARFARE
+
+    M60 = "M60", Game.COLD_WAR
+    MG_82 = "MG 82", Game.COLD_WAR, ["mg", "mg82"]
+    RPD = "RPD", Game.COLD_WAR
     STONER_63 = "Stoner 63", Game.COLD_WAR, ["stoner"]
 
 
