@@ -166,7 +166,7 @@
     "views": 1409
   },
   "lenun": {
-    "avatar": "https://static-cdn.jtvnw.net/jtv_user_pictures/ebae3f7c-69a9-4390-b3e2-65c3640a64f1-profile_image-300x300.png",
+    "avatar": "https://static-cdn.jtvnw.net/jtv_user_pictures/b2a9f739-6955-42ac-a573-558ba0124f83-profile_image-300x300.png",
     "command_source": "nightbot",
     "last_updated": "2021-05-23T18:13:53.447529",
     "loadouts": {},
@@ -204,15 +204,6 @@
     "username": "MuTeX",
     "views": 6976
   },
-  "nadeshot": {
-    "avatar": "https://static-cdn.jtvnw.net/jtv_user_pictures/nadeshot-profile_image-117d4d07e78d767a-300x300.png",
-    "command_source": "nightbot",
-    "last_updated": "2020-12-30T17:47:44.698431",
-    "loadouts": {},
-    "spreadsheet": {},
-    "username": "Nadeshot",
-    "views": 378
-  },
   "newbz": {
     "avatar": "https://static-cdn.jtvnw.net/jtv_user_pictures/3e71db15-153f-46f0-a56f-2068362baa4f-profile_image-300x300.png",
     "command_source": "nightbot",
@@ -220,6 +211,20 @@
     "loadouts": {},
     "spreadsheet": {},
     "username": "newbz",
+    "views": 0
+  },
+  "pamaj": {
+    "avatar": "https://static-cdn.jtvnw.net/jtv_user_pictures/c887fe40-a3bb-410a-bd9a-2a3edafe036a-profile_image-300x300.png",
+    "command_source": "nightbot",
+    "last_updated": "2021-12-13T17:47:44.698431",
+    "loadouts": {},
+    "spreadsheet": {
+      "id": "1wWWPFfGZWADapIS1d8Md52R1ssAxnnSJ6hQLGbQYttc",
+      "sheets": [
+        "0"
+      ]
+    },
+    "username": "Pamaj",
     "views": 0
   },
   "rated": {
@@ -237,7 +242,7 @@
     "views": 0
   },
   "scummn": {
-    "avatar": "https://static-cdn.jtvnw.net/jtv_user_pictures/558fccab-ecda-472b-b548-043083a5ddb2-profile_image-300x300.png",
+    "avatar": "https://static-cdn.jtvnw.net/jtv_user_pictures/7b8f21ee-1159-42ec-bab0-c32d9a14961e-profile_image-300x300.png",
     "command_source": "nightbot",
     "last_updated": "2021-06-03T22:27:57.186162",
     "loadouts": {},
@@ -284,7 +289,7 @@
     "views": 0
   },
   "superevan": {
-    "avatar": "https://static-cdn.jtvnw.net/jtv_user_pictures/fd667d57-b424-4732-8095-a2e966333776-profile_image-300x300.png",
+    "avatar": "https://static-cdn.jtvnw.net/jtv_user_pictures/6ed52f1f-e883-423a-96e1-8bd0400c428a-profile_image-300x300.png",
     "command_source": "nightbot",
     "last_updated": "2021-06-03T22:23:22.783066",
     "loadouts": {},
